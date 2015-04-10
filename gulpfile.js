@@ -87,7 +87,12 @@ gulp.task('build-copy', function(cb){
   else cb();
 });
 
+gulp.task('build-src', function(){
+  return gulp.src('./src/**')
+    .pipe(gulp.dest('./asset/280'));
+});
+
 // run tasks in sequential order
 gulp.task('default', function(cb) {
-  runSeq('current-branch', config.tasksClone, 'build-copy', cb);
+  runSeq('current-branch', config.tasksClone, 'build-copy', 'build-src', cb);
 });
