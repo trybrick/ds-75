@@ -3,34 +3,9 @@
     .config(['$routeProvider', '$locationProvider', '$sceDelegateProvider', '$sceProvider', '$httpProvider', 'FacebookProvider', '$analyticsProvider', function ($routeProvider, $locationProvider, $sceDelegateProvider, $sceProvider, $httpProvider, FacebookProvider, $analyticsProvider) {
 
       gsn.applyConfig(window.globalConfig.data || {});
-      
-      if (gsn.config.Theme) {
-        gsn.setTheme(gsn.config.Theme);
-      }
+      gsn.config.ContentBaseUrl = window.location.port > 1000 ? "/asset/75" : gsn.config.ContentBaseUrl;
+      gsn.initAngular($sceProvider, $sceDelegateProvider, $locationProvider, $httpProvider, FacebookProvider, $analyticsProvider);
 
-      FastClick.attach(document.body);
-      FacebookProvider.init(gsn.config.FacebookAppId);
-      $analyticsProvider.init();
-
-      //gets rid of the /#/ in the url and allows things like 'bootstrap collapse' to function
-      $locationProvider.html5Mode(true).hashPrefix('!');
-      $httpProvider.interceptors.push('gsnAuthenticationHandler');
-
-      //#region security config
-      // For security reason, please do not disable $sce 
-      // instead, please use trustHtml filter with data-ng-bind-html for specific trust
-      $sceProvider.enabled(!gsn.browser.isIE);
-
-      $sceDelegateProvider.resourceUrlWhitelist(gsn.config.SceWhiteList || [
-        'self', 'http://localhost:3000/**', 'https://**.gsn2.com/**', 'http://*.gsngrocers.com/**', 'https://*.gsngrocers.com/**']);
-
-      // The blacklist overrides the whitelist so the open redirect here is blocked.
-      // $sceDelegateProvider.resourceUrlBlacklist([
-      //    'http://myapp.example.com/clickThru**']);
-
-      //#endregion
-
-      //#region route config
 
       // setting up home file
       var homeFile = gsn.getContentUrl('/views/home.html');
