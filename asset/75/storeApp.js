@@ -1,12 +1,6 @@
 ﻿var storeApp = angular
     .module('storeApp', ['infinite-scroll', 'ngRoute', 'ngSanitize', 'ngAnimate', 'ngTouch', 'chieffancypants.loadingBar', 'gsn.core', 'ui.bootstrap', 'ui.map', 'ui.keypress', 'ui.event', 'ui.utils', 'facebook', 'angulartics'])
-    .config(['$routeProvider', '$locationProvider', '$sceDelegateProvider', '$sceProvider', '$httpProvider', 'FacebookProvider', '$analyticsProvider', function ($routeProvider, $locationProvider, $sceDelegateProvider, $sceProvider, $httpProvider, FacebookProvider, $analyticsProvider) {
-
-      gsn.applyConfig(window.globalConfig.data || {});
-
-      // override for local debug
-      gsn.config.ContentBaseUrl = window.location.port > 1000 && window.location.port < 5000 ? "/asset/" + gsn.config.ChainId : gsn.config.ContentBaseUrl;
-      gsn.initAngular($sceProvider, $sceDelegateProvider, $locationProvider, $httpProvider, FacebookProvider, $analyticsProvider);
+     .config(['$routeProvider', function ($routeProvider) {
 
       // setting up home file
       var homeFile = gsn.getContentUrl('/views/home.html');
@@ -237,11 +231,6 @@
           });
       //#endregion
 
-    }])
-    .run(['$rootScope', 'gsnGlobal', 'gsnApi', function ($rootScope, gsnGlobal, gsnApi) {
-      var siteMenu = gsnApi.getConfig().SiteMenu || '';
-      $rootScope.siteMenu = siteMenu.length > 10 ? JSON.parse(siteMenu) : [];
-      gsnGlobal.init(true);
     }]);
 
 // ContactUsCtrl
