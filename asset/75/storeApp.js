@@ -239,7 +239,8 @@
 
     }])
     .run(['$rootScope', 'gsnGlobal', 'gsnApi', function ($rootScope, gsnGlobal, gsnApi) {
-      $rootScope.siteMenu = (siteMenu || '').length > 10 ? JSON.parse(siteMenu) : [];
+      var siteMenu = gsnApi.getConfig().SiteMenu || '';
+      $rootScope.siteMenu = siteMenu.length > 10 ? JSON.parse(siteMenu) : [];
       gsnGlobal.init(true);
     }]);
 
