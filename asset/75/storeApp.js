@@ -1,11 +1,6 @@
 ﻿var storeApp = angular
-    .module('storeApp', ['infinite-scroll', 'ngRoute', 'ngSanitize', 'ngAnimate', 'ngTouch', 'chieffancypants.loadingBar', 'gsn.core', 'vcRecaptcha', 'ui.bootstrap', 'ui.map', 'ui.keypress', 'ui.event', 'ui.utils', 'facebook', 'angulartics', 'angulartics.gsn.ga'])
-    .config(['$routeProvider', '$locationProvider', '$sceDelegateProvider', '$sceProvider', '$httpProvider', 'FacebookProvider', '$analyticsProvider', function ($routeProvider, $locationProvider, $sceDelegateProvider, $sceProvider, $httpProvider, FacebookProvider, $analyticsProvider) {
-
-      gsn.applyConfig(window.globalConfig.data || {});
-      gsn.config.ContentBaseUrl = window.location.port > 1000 ? "/asset/75" : gsn.config.ContentBaseUrl;
-      gsn.initAngular($sceProvider, $sceDelegateProvider, $locationProvider, $httpProvider, FacebookProvider, $analyticsProvider);
-
+    .module('storeApp', ['infinite-scroll', 'ngRoute', 'ngSanitize', 'ngAnimate', 'ngTouch', 'chieffancypants.loadingBar', 'gsn.core', 'ui.bootstrap', 'ui.map', 'ui.keypress', 'ui.event', 'ui.utils', 'facebook', 'angulartics'])
+     .config(['$routeProvider', function ($routeProvider) {
 
       // setting up home file
       var homeFile = gsn.getContentUrl('/views/home.html');
@@ -235,21 +230,6 @@
             caseInsensitiveMatch: true
           });
       //#endregion
-
-    }])
-    .run(['$window', '$timeout', '$rootScope', 'gsnApi', 'gsnProfile', 'gsnStore', 'gsnDfp', 'gsnYoutech', 'gsnAdvertising', '$localStorage', function ($window, $timeout, $rootScope, gsnApi, gsnProfile, gsnStore, gsnDfp, gsnYoutech, gsnAdvertising, $localStorage) {
-      /// <summary></summary>
-      /// <param name="$window" type="Object"></param> 
-      /// <param name="$timeout" type="Object"></param>  
-      /// <param name="$rootScope" type="Object"></param>    
-      /// <param name="gsnApi" type="Object"></param>
-      /// <param name="gsnProfile" type="Object"></param>
-      /// <param name="gsnStore" type="Object"></param>
-      /// <param name="gsnDfp" type="Object">kick start dfp</param>
-      /// <param name="gsnYoutech" type="Object">kick start youtech</param>
-
-      // init profile so we can get token
-      gsnProfile.initialize();
 
     }]);
 
