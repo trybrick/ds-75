@@ -129,4 +129,10 @@ asset/roundy
 asset/common
 asset/silver
 asset/bronze
-asset/*.*
+asset/serverApp.js
+asset/no-javascript.html
+asset/unsupported-browser.html
+asset/config.json
+asset/index.cshtml
+asset/README.md
+
