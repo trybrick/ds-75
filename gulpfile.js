@@ -47,13 +47,15 @@ function createCopyTask(chain) {
         .pipe(gulp.dest(destFile));
         return cb();
       } else {
+
         var exec = require('child_process').exec,
           child,
-          cmd = "rsync -avxq '" + path.resolve(srcFile) + "' '" + path.resolve(destFile) + "'";
+          cmd = "rsync -avxq '" + path.resolve(srcFile) + "' '" + path.resolve(destFile.replace('/' + chain, '')) + "'";
 
         if (isWin) {
           cmd = 'xcopy "' + path.resolve(srcFile) + '" "' + path.resolve(destFile) + '" /E /S /R /D /C /Y /I /Q';
         }
+
         console.log(cmd);
         return child = exec(cmd,
           function (error, stdout, stderr) {
