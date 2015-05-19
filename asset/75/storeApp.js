@@ -32,6 +32,7 @@
         , { login: 0, store: 0, path: '/signin', tpl: gsn.getThemeUrl('/views/engine/signin.html') }
         , { login: 0, store: 0, path: '/storelocator', tpl: gsn.getThemeUrl('/views/engine/store-locator.html') }
         , { login: 0, store: 0, path: '/unsubscribe', tpl: gsn.getThemeUrl('/views/engine/unsubscribe.html') }
+        , { login: 0, store: 0, path: '/blog', tpl: gsn.getContentUrl('/views/blog.html') }
       ];
 
       angular.forEach(urls, function(v, k){
@@ -39,6 +40,15 @@
       });
       $routeProvider.otherwise({ templateUrl: gsn.getThemeUrl('/views/engine/static-content.html'), caseInsensitiveMatch: true} );
     }]);
+
+
+storeApp.filter('replaceWith', function() {
+  return function(input, regex, flag, replaceWith) {
+    var patt = new RegExp(regex, flag);      
+      
+    return input.replace(patt, replaceWith);
+  };
+})
 
 // ContactUsCtrl
 storeApp
