@@ -35,37 +35,26 @@ gulp.task('current-branch', function(cb) {
 function createCopyTask(chain) {
   var srcFile = 'git_components/ds-' + chain + '/asset/' + chain;
   var destFile = 'asset/' + chain;
-  if (chain == 'common')
-  {
-    srcFile = 'git_components/ds-' + chain + '/asset/**';
-    destFile = 'asset';
-  }
+
 
   gulp.task('copy-ds-' + chain, function(cb) {
-    if (chain == 'common') {
-        gulp.src(srcFile, { base: srcFile.replace('/**', ''), env: process.env })
-        .pipe(gulp.dest(destFile));
-        return cb();
-      } else {
+    var exec = require('child_process').exec,
+      child,
+      cmd = "rsync -avxq '" + path.resolve(srcFile) + "' '" + path.resolve(destFile.replace('/' + chain, '')) + "'";
 
-        var exec = require('child_process').exec,
-          child,
-          cmd = "rsync -avxq '" + path.resolve(srcFile) + "' '" + path.resolve(destFile.replace('/' + chain, '')) + "'";
+    if (isWin) {
+      cmd = 'xcopy "' + path.resolve(srcFile) + '" "' + path.resolve(destFile) + '" /E /S /R /D /C /Y /I /Q';
+    }
 
-        if (isWin) {
-          cmd = 'xcopy "' + path.resolve(srcFile) + '" "' + path.resolve(destFile) + '" /E /S /R /D /C /Y /I /Q';
+    console.log(cmd);
+    return child = exec(cmd,
+      function (error, stdout, stderr) {
+        cb();
+        if (error !== null) {
+          console.log(chain + ' exec error: ' + error);
         }
-
-        console.log(cmd);
-        return child = exec(cmd,
-          function (error, stdout, stderr) {
-            cb();
-            if (error !== null) {
-              console.log(chain + ' exec error: ' + error);
-            }
-        });
-      } // else
     });
+  });
   
   config.tasksCopy.push('copy-ds-' + chain);
 }
@@ -82,9 +71,7 @@ function createChainTask(chain) {
       // console.log(arg)
       return git.exec({args:arg }, function (err, stdout) {
         if (err) throw err;
-        if (chain != 'common') {
-          createCopyTask(chain);
-        }
+        createCopyTask(chain);
         cb();
       })
     }
@@ -93,9 +80,7 @@ function createChainTask(chain) {
       exec(arg, { cwd: process.cwd() + '/git_components/ds-' + chain },
           function (error, stdout, stderr) {
             if (stdout.indexOf('up-to-date') < 0 || !fs.existsSync('./asset/' + chain)) {
-              if (chain != 'common') {
-                createCopyTask(chain);
-              }
+              createCopyTask(chain);
             }
             cb();
         });
