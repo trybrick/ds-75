@@ -134,8 +134,15 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script><!-- bootstrap -->    
   <script src="http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.js"></script><!-- for circular image map -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/3.0.5/klass.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/photoswipe/3.0.5/code.photoswipe.jquery.min.js"></script><!-- for image gallery popup -->    
-
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/photoswipe/3.0.5/code.photoswipe.jquery.min.js"></script><!-- for image gallery popup --> 
+  <script>
+    <!-- mobile collapse issue: https://github.com/twbs/bootstrap/issues/12852 -->
+    $(document).ready(function () {
+      $(".navbar-nav li.trigger-collapse a").click(function(event) {
+        $(".navbar-collapse").collapse('hide');
+      });
+    });
+  </script>
   <!--begin:analytics-->                 
   <script>
     (function (i, s, o, g, r, a, m) {

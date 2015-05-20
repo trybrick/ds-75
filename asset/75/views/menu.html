@@ -30,8 +30,9 @@
           <a data-ng-href="{{menu.Path}}" data-ng-if="menu.Path != '#'" itemprop="url" target="{{menu.OpenWindow ? '_blank' : ''}}">{{menu.Name}}</a>
           <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-ng-if="menu.Path == '#' || menu.Path == ''" itemprop="name"><i class="fa fa-caret-down pull-right"></i>{{menu.Name}}</a>
           <ul class="dropdown-menu dropdown-menu-touch" data-ng-if="menu.Path == '#'" >
-            <li data-ng-repeat="sm in menu.SubMenu" itemprop="name"><a data-ng-href="{{sm.Path}}" itemprop="url" target="{{menu.OpenWindow ? '_blank' : ''}}">{{sm.Name}}</a></li>  
-            </li>
+            <li data-ng-repeat="sm in menu.SubMenu" itemprop="name">
+              <a data-ng-href="{{sm.Path}}" itemprop="url" target="{{menu.OpenWindow ? '_blank' : ''}}">{{sm.Name}}</a>
+            </li>  
           </ul>
         </li>
       </ul>
