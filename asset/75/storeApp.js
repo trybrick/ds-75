@@ -13,9 +13,9 @@
         , { login: 0, store: 1, path: '/circular', tpl: gsn.getThemeUrl('/views/engine/circular-view.html')}
         , { login: 0, store: 1, path: '/circular/:viewtype', tpl: gsn.getThemeUrl('/views/engine/circular-view.html') }
         , { login: 0, store: 0, path: '/contactus', tpl: gsn.getThemeUrl('/views/engine/contact-us.html') }
-        , { login: 0, store: 1, path: '/coupons/digital', tpl: gsn.getThemeUrl('/views/engine/coupons-view.html') }
-        , { login: 0, store: 1, path: '/coupons/printable', tpl: gsn.getThemeUrl('/views/engine/coupons-view.html') }
-        , { login: 0, store: 1, path: '/coupons/store', tpl: gsn.getThemeUrl('/views/engine/coupons-view.html') }
+        , { login: 0, store: 1, path: '/coupons/digital', tpl: gsn.getContentUrl('/views/engine/coupons-view.html') }
+        , { login: 0, store: 1, path: '/coupons/printable', tpl: gsn.getContentUrl('/views/engine/coupons-view.html') }
+        , { login: 0, store: 1, path: '/coupons/store', tpl: gsn.getContentUrl('/views/engine/coupons-view.html') }
         , { login: 0, store: 0, path: '/mealplannerfull', tpl: gsn.getThemeUrl('/views/engine/meal-planner.html') }
         , { login: 1, store: 0, path: '/savedlists', tpl: gsn.getThemeUrl('/views/engine/saved-lists.html') }
         , { login: 0, store: 0, path: '/mylist', tpl: gsn.getThemeUrl('/views/engine/shopping-list.html') }
