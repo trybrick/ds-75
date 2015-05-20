@@ -27,7 +27,7 @@
 </style>
 <div class="row">
     <div class="col-md-9" data-gsn-partial-content="Home Slideshow">
-        <div data-gsn-carousel="" class="carousel slide" data-interval="5000" data-slides="partialContents">
+        <div data-gsn-carousel="" class="carousel slide" data-interval="5000" data-slides="getContentList()">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-ng-repeat="item in slides" data-ng-class="{ 'active': $index == currentIndex() }" data-ng-click="selectIndex($index)"></li>
@@ -46,9 +46,8 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <!--<div><img src="http://placehold.it/845x300" style="width: 100%;" /></div>-->
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3" data-ng-click="goUrl('/circular')">
         <div>
             <img data-ng-src="{{getContentUrl('/images/HomeWeeklyAd.jpg')}}" alt="Weekly Ad" /> 
         </div>
