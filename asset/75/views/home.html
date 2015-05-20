@@ -26,83 +26,101 @@
 }
 </style>
 <div class="row">
-  <div>
-    <div class="col-md-12 featuredContent" data-gsn-partial-content="Home Slideshow"> 
-      <div data-gsn-carousel="" class="carousel slide" data-interval="5000" data-slides="getContentList()">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-ng-repeat="item in slides" data-ng-class="{ 'active': $index == currentIndex() }" data-ng-click="selectIndex($index)"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox" data-ng-swipe-left="next()" data-ng-swipe-right="prev()" data-ui-event="{'mouseover': 'stop()', 'mouseout': 'play()'}">
-          <div data-ng-repeat="item in slides" data-ng-bind-html="item.Description | removeAspx | trustedHtml" class="slider item" data-ng-class="{ 'active': $index == currentIndex() }"></div>
+    <div class="col-md-9" data-gsn-partial-content="Home Slideshow">
+        <div data-gsn-carousel="" class="carousel slide" data-interval="5000" data-slides="partialContents">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-ng-repeat="item in slides" data-ng-class="{ 'active': $index == currentIndex() }" data-ng-click="selectIndex($index)"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox" data-ng-swipe-left="next()" data-ng-swipe-right="prev()" data-ui-event="{'mouseover': 'stop()', 'mouseout': 'play()'}">
+                <div data-ng-repeat="item in slides" data-ng-bind-html="item.Description | removeAspx | trustedHtml" class="slider item" data-ng-class="{ 'active': $index == currentIndex() }"></div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" data-ng-click="prev()">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" data-ng-click="next()">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-
-
-        <!-- Left and right controls -->
-        <a class="left carousel-control" data-ng-click="prev()">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
+        <!--<div><img src="http://placehold.it/845x300" style="width: 100%;" /></div>-->
+    </div>
+    <div class="col-md-3">
+        <div>
+            <img data-ng-src="{{getContentUrl('/images/HomeWeeklyAd.jpg')}}" alt="Weekly Ad" /> 
+        </div>
+        <div>
+            <img data-ng-src="{{getContentUrl('/images/SignUpNow.jpg')}}" alt="Sign Up" />
+        </div>       
+    </div>
+</div>
+<div class="row features">
+    <div class="col-md-3" data-content-position="1" data-gsn-ft-content="">
+        <a data-ng-href="#">
+            <div><img data-ng-src="{{getContentUrl('/images/crab.png')}}" alt="Blog" style="width: 100%; border-radius: 4px; height:118px;" /></div>
+            <div>
+                <h4>How to Prepare &amp; Crack Crab Legs like a Pro!</h4>
+                <p>Check out our blog to learn how to crack crab legs like a pro.</p>
+            </div>
         </a>
-        <a class="right carousel-control" data-ng-click="next()">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
+    </div>
+    <div class="col-md-3" data-content-position="2" data-gsn-ft-content="">
+        <a data-ng-href="#">
+            <div><img data-ng-src="{{getContentUrl('/images/email.jpg')}}" alt="Email Sign Up" style="width: 100%; border-radius: 4px; height:118px;" /></div>
+            <div>
+                <h4>Sign Up and Save Today</h4>
+                <p>We deliver exclusive savings and our fresh weekly specials to your email inbox every week.</p>
+            </div>
         </a>
-      </div>
     </div>
-  </div>
-  <div>
-    <div class="col-md-8">
-      <div class="row">
-        <div class="col-md-6" data-content-position="1" data-gsn-ft-content="">
-          <div class="featuredBlock fill">
-            <h3>Pharmacy</h3>
-            <img data-ng-src="{{getContentUrl('/images/pharmPic.png')}}" alt="Pharmacy" class="" />
-            <p>At Sun Fresh, our pharmacists do more than fill prescriptions. We'll answer your questions about prescription refills and over-the-counter medications, vitamins and other health related issues.</p>
-          </div>
-        </div>
-        <div class="col-md-6" data-content-position="2" data-gsn-ft-content="">
-          <div class="featuredBlock fill"> 
-            <h3>Digital Coupons</h3>
-            <img data-ng-src="{{getContentUrl('/images/digitalCoupons.png')}}" alt="Digital Coupons" class="" />
-            <p>Sun Fresh now offers digital coupns. No Clipping required! Add coupons directly to your Sun Fresh rewards card.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6" data-content-position="3" data-gsn-ft-content="">
-          <div class="featuredBlock">
-            <h3>Rewards Card</h3>
-            <img data-ng-src="{{getContentUrl('/images/gsnRewardsCard.png')}}" alt="Rewards" class="" />
-            <p>We are always looking for ways to save you money by offering every day low prices and hundreds of sale items every week. Now, we want to do even more, by making your shopping with us a rewarding experience.</p>
-          </div>
-        </div>
-        <div class="col-md-6" data-content-position="4" data-gsn-ft-content="">
-          <div class="featuredBlock">
-            <h3>Party Trays</h3>
-            <img data-ng-src="{{getContentUrl('/images/partyTray.png')}}" alt="Rewards" class="" />
-            <p>We create our party trays right in the Deli - be ready for your next get-together, whether it’s for ten or two hundred guests.</p>
-          </div>
-        </div>
-      </div>
+    <div class="col-md-3" data-content-position="3" data-gsn-ft-content="">
+        <a data-ng-href="#">
+            <div><img data-ng-src="{{getContentUrl('/images/deliver.jpg')}}" alt="Delivery" style="width: 100%; border-radius: 4px; height:118px;" /></div>
+            <div>
+                <h4>Maximize Your Time - We Deliver</h4>
+                <p>We offer convenient, affordable home delivery to the Twin Cities and St. Cloud Metro Areas.</p>
+            </div>
+        </a>
     </div>
-    <div class="col-md-4" data-content-position="5" data-gsn-ft-content="">
-      <div class="rightColumn fill">
-        <h3>In Store Savings</h3>
-        <div class="sideBarRight slotOne">
-          <a data-ng-href="/circular">
-            <h3>Weekly Ad</h3>
-            <img class="homeCirc" data-ng-src="{{getContentServiceUrl('GetCircularImage')}}" alt="Weekly Ad" />
-          </a>
-        </div>
-        <div class="sideBarRight slotTwo">
-          <a data-ng-href="/coupons/printable">
-            <h3>Printable Coupons</h3>
-            <img data-ng-src="{{getContentUrl('/images/coupons.png')}}" alt="Printable Coupons" />
-          </a>
-        </div>
-      </div>
+    <div class="col-md-3" data-content-position="4" data-gsn-ft-content="">
+        <a data-ng-href="#">
+            <div><img data-ng-src="{{getContentUrl('/images/facebook.jpg')}}" alt="Follow on facebook" style="width: 100%; border-radius: 4px; height:118px;" /></div>
+            <div>
+                <h4>Connect With Us On Facebook</h4>
+                <p>21,969 people like this. Sign Up to see what your friends like.</p>
+            </div>
+        </a>
     </div>
-  </div>
+</div>
+<div class="row features">
+    <div class="col-md-3" data-gsn-ft-recipe="" data-content-position="5">
+        <a data-ng-href="/recipe?id={{item.RecipeId}}" data-analytics-on="click" data-analytics-event="ClickRecipeOfTheday" data-analytics-label="{{item.RecipeTitle}}" data-analytics-category="Recipe">
+            <h4 style="background-color: #800000; border-radius: 4px; color: #fff7e0; padding: 5px;">Recipe of the Day</h4>
+            <img alt="Recipe of the day" data-ng-src="{{item.ImageUrl}}" style="witdth: 100%; height: 100px; display: block; margin: 0 auto; border-radius: 4px;" />
+            <p>{{item.RecipeTitle}}</p>
+            <p>Get the Recipe Here</p>
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h4 style="background-color: #800000; border-radius: 4px; color: #fff7e0; padding: 5px;">Our Brands</h4>
+        <div class="row brands">
+            <ul>
+                <li><a data-ng-href="#"><img data-ng-src="{{getContentUrl('/images/beef.png')}}" alt="Beef" /></a></li>
+                <li><a data-ng-href="#"><img data-ng-src="{{getContentUrl('/images/foodclub.png')}}" alt="Food CLub" /></a></li>
+                <li><a data-ng-href="#"><img data-ng-src="{{getContentUrl('/images/fullcircle.png')}}" alt="Full Circle" /></a></li>
+                <li><a data-ng-href="#"><img data-ng-src="{{getContentUrl('/images/topcare.png')}}" alt="Top Care" /></a></li>
+            </ul>
+        </div>
+        <div class="row brands">
+            <ul>
+                <li><a data-ng-href="#"><img data-ng-src="{{getContentUrl('/images/harvestclub.png')}}" alt="Beef" /></a></li>
+                <li><a data-ng-href="#"><img data-ng-src="{{getContentUrl('/images/signature.png')}}" alt="Food CLub" /></a></li>
+                <li><a data-ng-href="#"><img data-ng-src="{{getContentUrl('/images/paws.png')}}" alt="Full Circle" /></a></li>
+                <li><a data-ng-href="#"><img data-ng-src="{{getContentUrl('/images/valuetime.png')}}" alt="Top Care" /></a></li>
+            </ul>
+        </div>
+    </div>
 </div>

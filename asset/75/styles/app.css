@@ -1,0 +1,98 @@
+body
+{
+	background-color: #fff7e0;
+}
+
+a
+{
+	color: #800000;
+}
+
+/*------ Menu ------*/
+.navbar-default
+{
+	background-color: #800000;
+	border: none;
+}
+
+.navbar-default .navbar-nav > li > a
+{
+	color: #fff7e0;
+}
+
+/*------ Shopping List ------*/
+.list
+{
+	background-color: #fff7e0;
+	color: #000000 !important;
+	margin-top: 4px;
+	padding: 10px !important;
+}
+
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover
+{
+	border: none;
+}
+
+/*------ Home ------*/
+.features
+{
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+.features h4
+{
+	color: #800000;
+	font-size: 16px;
+	text-align: center;
+}
+
+.features a
+{
+	color: #000000;
+}
+
+.features p
+{
+	text-align: center;
+}
+
+.brands li
+{
+	display: inline-block;
+}
+
+.brands li a
+{
+	padding-left: 10px;
+	padding-right: 50px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	.brands {
+		margin-left: 24px;
+	}
+}
+
+/*------ Footer ------*/
+footer
+{
+	margin-top: 30px;
+}
+
+footer .container
+{
+	border-top: 1px solid #800000;
+	padding-top: 15px;
+}
+
+.your-store, .company-info, .social
+{
+	text-align: center;
+}
+
+.social li
+{
+	display: inline-block;
+}
