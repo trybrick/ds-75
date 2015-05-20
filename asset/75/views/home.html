@@ -28,7 +28,7 @@
 <div class="row">
   <div>
     <div class="col-md-12 featuredContent" data-gsn-partial-content="Home Slideshow"> 
-      <div data-gsn-carousel="" class="carousel slide" data-interval="5000" data-slides="partialContents">
+      <div data-gsn-carousel="" class="carousel slide" data-interval="5000" data-slides="getContentList()">
         <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-ng-repeat="item in slides" data-ng-class="{ 'active': $index == currentIndex() }" data-ng-click="selectIndex($index)"></li>

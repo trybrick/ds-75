@@ -20,22 +20,19 @@
   <meta name="keywords" content="Weekly Specials, Recipes, Coupons, Meal Planning, Cooking Videos, Low Prices, Shop Online">     
 
   <title>Coborn's</title>
-  <!--[if lt IE 8]><meta http-equiv="refresh" content="5;URL=/unsupported-browser.htm" /><![endif]-->
-
   <link href="http://cdn-staging.gsngrocers.com/script/lib/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
   <link href="http://cdn-staging.gsngrocers.com/asset/common/styles/global.css" rel="stylesheet" type="text/css">    
   <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="/asset/75/styles/app.css?nocache=1_4_12" rel="stylesheet" type="text/css">  
   <script>var globalConfig = { data: {}, apiUrl: 'https://clientapix.gsn2.com/api/v1' };</script>
+  <!--[if lt IE 10]>
+    <script src="http://cdn-staging.gsngrocers.com/script/lib/proxy/xdomain.min.js" data-slave="http://cdn-staging.gsngrocers.com/script/lib/proxy/proxy.html"></script>  
+  <![endif]-->
   <!--endhead-->
 </head>
-<body ng-cload="">
+<body ng-cloak="">
   <div data-bs-display-mode="bsDisplayMode"><!-- do not hide this div, it is use to detect display size --></div> 
-  <!-- sticky message -->                      
-  <div class="container" data-gsn-ft-config="message-top">
-    <div style="width: 100%" data-gsn-sticky="" data-fixed-width="true" data-ng-if="item.Description" data-ng-bind-html="item.Description | trustedHtml"></div>
-  </div>                     
-
+  
   <!-- begin: main container -->
   <div class="layout-container">
     <!-- Header -->
@@ -123,7 +120,7 @@
 
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.js"></script>   
   <script src="https://clientapix.gsn2.com/api/v1/store/sitecontentscript/75?nocache=1_4_15"></script>                                                  
-  <script data-gsnid="75" src="http://cdn-staging.gsngrocers.com/script/gsndfp/gsndfp.js"></script>  
+  <script data-gsnid="75" src="http://cdn-staging.gsngrocers.com/script/gsndfp/gsndfp.js"></script>
   <script src="http://cdn-staging.gsngrocers.com/script/gsncore/1.4.15/gsncore.js"></script>  
   <script src="/asset/75/storeApp.js?nocache=1_4_15"></script>      
                                     
