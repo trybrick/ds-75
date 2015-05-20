@@ -138,8 +138,10 @@
   <script>
     <!-- mobile collapse issue: https://github.com/twbs/bootstrap/issues/12852 -->
     $(document).ready(function () {
-      $(".navbar-nav li.trigger-collapse a").click(function(event) {
-        $(".navbar-collapse").collapse('hide');
+      $(document).on('click.nav','.navbar-collapse.in',function(e) {
+        if( $(e.target).is('a') ) {
+            $(this).removeClass('in').addClass('collapse');
+        }
       });
     });
   </script>
