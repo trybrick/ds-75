@@ -15,9 +15,16 @@ a
 	border: none;
 }
 
-.navbar-default .navbar-nav > li > a
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:focus
 {
 	color: #fff7e0;
+}
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:active
+{
+	color: #ffff00;
 }
 
 /*------ Shopping List ------*/

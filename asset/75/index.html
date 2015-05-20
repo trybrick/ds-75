@@ -44,7 +44,7 @@
           </a>
           <div style="padding:17px;" class="dropdown-menu dropdown-menu-touch">
             <a href="/profile"><i class="fa fa-user"></i> Profile </a><br /><br />
-            <a href="/">Sign-out</a><br />
+            <a href="javascript:void(0)" data-ng-click="logout()">Sign-out</a><br />
           </div>
         </div>
         <div class="hidden-print dropdown pull-right menu-login" data-ng-if="!isLoggedIn" data-gsn-login="" style="padding-top: 5px">
@@ -75,7 +75,7 @@
             <img data-ng-src="{{getContentUrl('/images/logo.png')}}" alt="Store Logo" class="logo" />
           </a>
         </div>
-        <div data-ng-include="getContentUrl('/views/menu.html')" class="hidden-print" data-gsn-sticky="" style="width: 100%; left: 0"></div>
+        <div data-ng-include="getThemeUrl('/views/menu.html')" class="hidden-print" data-gsn-sticky="" style="width: 100%; left: 0"></div>
       </div>
     </header>
 
