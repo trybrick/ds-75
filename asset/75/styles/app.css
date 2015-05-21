@@ -8,6 +8,11 @@ a
 	color: #800000;
 }
 
+ul
+{
+	padding: 0;
+}
+
 /*------ Menu ------*/
 .navbar-default
 {
@@ -18,6 +23,11 @@ a
 .navbar-default .navbar-nav > li > a
 {
 	color: #fff7e0;
+}
+
+.fa
+{
+	margin-top: 4px;
 }
 
 /*------ Shopping List ------*/
@@ -35,6 +45,11 @@ a
 }
 
 /*------ Home ------*/
+.slider-side-column
+{
+	margin-left: 18px;
+}
+
 .features
 {
 	margin-bottom: 15px;
@@ -58,6 +73,11 @@ a
 	text-align: center;
 }
 
+.brands ul
+{
+	margin-left: 24px;
+}
+
 .brands li
 {
 	display: inline-block;
@@ -71,7 +91,7 @@ a
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	.brands {
-		margin-left: 24px;
+		margin-left: 38px;
 	}
 }
 
@@ -87,7 +107,7 @@ footer .container
 	padding-top: 15px;
 }
 
-.your-store, .company-info, .social
+.your-store, .company-info, .social, .yourStore
 {
 	text-align: center;
 }
@@ -115,12 +135,16 @@ footer .container
 		padding-right: 15px;
 	}
 
-	.description p {
-		padding: 0 22px;
-	}
-
 	.sortBy button {
 		margin-bottom: 5px;
+	}
+
+	.list-view-search input {
+		margin-bottom:5px;
+	}
+
+	.list-view-sort .btn-group {
+		margin-left: 16px;
 	}
 }
 
@@ -128,6 +152,7 @@ footer .container
 {
 	border: 1px dashed #d3d3d3;
 	border-radius: 5px;
+	height: 144px;
 	margin-bottom: 10px;
 }
 
@@ -156,6 +181,7 @@ footer .container
 {
 	font-size: 10px;
 	padding: 0 8px;
+	width: 90%;
 }
 
 .controls
@@ -168,4 +194,27 @@ footer .container
 	margin-right: 40px;
 }
 
+/*------ Circular flyer view thumbnail alignment ------*/
+/*------ These are a temporary fix ------*/
+.dcircular-list-single
+{
+	height: 295px;
+	width: 25%;
+}
 
+.dcircular-caption h3
+{
+	font-size: 15px;
+}
+
+/*------ Circular Views ------*/
+.view-type
+{
+	margin-left: -28px;
+	margin-bottom: 15px;
+}
+
+.view-type-sort
+{
+	margin-left: -60px;
+}
