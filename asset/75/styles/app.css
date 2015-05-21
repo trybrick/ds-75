@@ -145,14 +145,6 @@ footer .container
 	.sortBy button {
 		margin-bottom: 5px;
 	}
-
-	.list-view-search input {
-		margin-bottom:5px;
-	}
-
-	.list-view-sort .btn-group {
-		margin-left: 16px;
-	}
 }
 
 .coupon-container
@@ -212,16 +204,4 @@ footer .container
 .dcircular-caption h3
 {
 	font-size: 15px;
-}
-
-/*------ Circular Views ------*/
-.view-type
-{
-	margin-left: -28px;
-	margin-bottom: 15px;
-}
-
-.view-type-sort
-{
-	margin-left: -60px;
 }
