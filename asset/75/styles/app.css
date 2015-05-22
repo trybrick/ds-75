@@ -40,8 +40,7 @@ ul
 /*------ Shopping List ------*/
 .list
 {
-	background-color: #fff7e0;
-	color: #000000 !important;
+	color: #555 !important;
 	margin-top: 4px;
 	padding: 10px !important;
 }
@@ -135,4 +134,14 @@ footer .container
 .dcircular-caption h3
 {
 	font-size: 15px;
+}
+
+.btn-primary {
+	background: #ccc;
+	border-color: #ccc;
+}
+
+.btn-primary:hover {
+	background: #800000 !important;
+	color: #ffff00 !important;
 }
