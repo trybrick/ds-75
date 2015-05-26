@@ -10,16 +10,18 @@ var header =     require('gulp-header');
 var git =        require('gulp-git');
 var runSeq =     require('run-sequence');
 var fs =         require('fs');
+var replace =    require('gulp-replace');
 var exec =       require('child_process').exec;
-                 require('gulp-grunt')(gulp);
+var path =       require('path');
 
 var config = {
-  chains: ['silver', 'common'],
+  chains: ['common', 'bootstrap'],
   tasks: [ 'clone-ds', 'copy-ds'],
   tasksClone: [],
   tasksCopy: [],
   branch: 'master'
 };
+var isWin = /^win/.test(process.platform);
 
 // get the current branch name
 gulp.task('current-branch', function(cb) {
@@ -31,23 +33,35 @@ gulp.task('current-branch', function(cb) {
 });
 
 function createCopyTask(chain) {
-  var srcFile = 'git_components/ds-' + chain + '/asset/' + chain + '/**';
+  var srcFile = 'git_components/ds-' + chain + '/asset/' + chain;
   var destFile = 'asset/' + chain;
-  if (chain == 'common')
-  {
-    srcFile = 'git_components/ds-' + chain + '/asset/**';
-    destFile = 'asset';
-  }
-  
-  // create copy tasks
-  gulp.task('copy-ds-' + chain, function() {
-    return gulp.src(srcFile,
-      { base: srcFile.replace('/**', ''), env: process.env })
-      .pipe(gulp.dest(destFile));
-  });
 
+
+  gulp.task('copy-ds-' + chain, function(cb) {
+    var exec = require('child_process').exec,
+      child,
+      cmd = "rsync -avxq '" + path.resolve(srcFile) + "' '" + path.resolve(destFile.replace('/' + chain, '')) + "'";
+
+    if (isWin) {
+      cmd = 'xcopy "' + path.resolve(srcFile) + '" "' + path.resolve(destFile) + '" /E /S /R /D /C /Y /I /Q';
+    }
+
+    console.log(cmd);
+    return child = exec(cmd,
+      function (error, stdout, stderr) {
+        cb();
+        if (error !== null) {
+          console.log(chain + ' exec error: ' + error);
+        }
+    });
+  });
+  
   config.tasksCopy.push('copy-ds-' + chain);
 }
+
+gulp.task('clean', function(cb) {
+  del(['./git_components/**'], cb);
+});
 
 function createChainTask(chain) {
   // create clone tasks
@@ -62,7 +76,7 @@ function createChainTask(chain) {
       })
     }
     else {
-      var arg = 'git pull origin ' + config.branch;
+      var arg = 'git fetch && git merge --ff-only origin/' + config.branch;
       exec(arg, { cwd: process.cwd() + '/git_components/ds-' + chain },
           function (error, stdout, stderr) {
             if (stdout.indexOf('up-to-date') < 0 || !fs.existsSync('./asset/' + chain)) {
@@ -87,12 +101,13 @@ gulp.task('build-copy', function(cb){
   else cb();
 });
 
-gulp.task('build-src', function(){
-  return gulp.src('./src/**')
-    .pipe(gulp.dest('./asset/280'));
+gulp.task('ds-common-config-for-local-cdn', function(){
+  return gulp.src(['./git_components/ds-common/asset/config.json'])
+    .pipe(replace('http://cdn-staging.gsngrocers.com', ''))
+    .pipe(gulp.dest('./asset'));
 });
 
 // run tasks in sequential order
 gulp.task('default', function(cb) {
-  runSeq('current-branch', config.tasksClone, 'build-copy', 'build-src', cb);
+  runSeq('current-branch', config.tasksClone, 'build-copy', 'ds-common-config-for-local-cdn', cb);
 });

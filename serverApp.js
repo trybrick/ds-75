@@ -7,7 +7,7 @@ var express = require('express'),
     url = require('url');
     
 var config = require('./asset/config.json');
-var servicePath = path.join(__dirname, 'asset');
+var servicePath = __dirname;
 var apps = {};
 
 function startServer(chainId) {
@@ -15,20 +15,20 @@ function startServer(chainId) {
   apps[chainId] = app;
   
   // Configuration
-  app.set('views', path.join(servicePath, chainId, 'views'));
-  app.engine('html', require('ejs').renderFile);
   app.use('/proxy', function (req, res) {
     var newUrl = config.GsnApiUrl + req.url.replace('/proxy', '');
     req.pipe(request({ uri: newUrl, method: req.method })).pipe(res);
   });
-
   app.use(methodOverride());
-  app.use('/asset', express.static(servicePath));
 
+  // make sure that asset folder access are static file 
+  app.use('/asset', express.static(path.join(servicePath, 'asset')));
+
+  // handle the rest as html
   app.get('*', function (request, response) {
     var myPath = url.parse(request.url).pathname.toLowerCase();
-    if (myPath.length <= 2)
-      myPath = path.join(chainId, "index.html");
+    if (myPath.length <= 2 || myPath.indexOf('.') < 0)
+      myPath = path.join('asset', chainId, "index.html");
      console.log(myPath);
     if (myPath.indexOf('.') > 0 && myPath.indexOf('.aspx') < 0) {
       
@@ -38,7 +38,9 @@ function startServer(chainId) {
         return;
       }
 
-      response.sendFile(fullPath);
+      var k = fs.readFileSync(fullPath, 'utf8');
+      response.send(k.replace(/\?nocache=[^'"]+/gi, "?nocache=" + (new Date().getTime())));
+      //response.sendFile(fullPath);
     }
   });
 

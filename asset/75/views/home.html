@@ -1,67 +1,125 @@
-﻿<div data-ctrl-home="">
-    <div class="row homeContent">
-        <div class="col-md-8 noPadWidth slideShow">
-            <div data-gsn-partial="Home"> 
-                <div data-gsn-carousel="" class="carousel slide" data-interval="5000" data-slides="partialContents">
-                <!-- Wrapper for slides -->
-                    <div class="slide-container" data-ng-swipe-left="next()" data-ng-swipe-right="prev()" data-ui-event="{'mouseover': 'stop()', 'mouseout': 'play()'}">
-                        <div data-ng-repeat="item in slides | pagingFilter:1:currentIndex()" data-ng-bind-html="item.Description | removeAspx | trustedHtml" class="slide"></div>
-                    </div>
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-ng-repeat="item in slides" data-ng-class="{ 'active': $index == currentIndex() }" data-ng-click="selectIndex($index)"></li>
-                    </ol>
-                </div>
+﻿<style>
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slider {
+  top: 0;
+  width: 100%;
+}
+
+.slider.active-add
+{
+  left: 100%;
+}
+
+.slider.active-add-active,.active-remove
+{
+  left: 0;
+}
+
+.slider.active-remove-active
+{
+  left: -100%;
+}
+</style>
+<div class="row">
+    <div class="col-md-9" data-gsn-partial-content="Home Slideshow">
+        <div data-gsn-carousel="" class="carousel slide" data-interval="5000" data-slides="getContentList()">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-ng-repeat="item in slides" data-ng-class="{ 'active': $index == currentIndex() }" data-ng-click="selectIndex($index)"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox" data-ng-swipe-left="next()" data-ng-swipe-right="prev()" data-ui-event="{'mouseover': 'stop()', 'mouseout': 'play()'}">
+                <div data-ng-repeat="item in slides" data-ng-bind-html="item.Description | removeAspx | trustedHtml" class="slider item" data-ng-class="{ 'active': $index == currentIndex() }"></div>
             </div>
-        </div>
-        <div class="col-md-4 noPadWidth promoColumn">
-            <h1>In Store Savings!</h1>
-            <div class="promoBlock pull-left" data-gsn-ft-content="" data-content-position="3">
-                <a data-ng-href="/circular">
-                    <img class="homeCirc" data-ng-src="{{getContentServiceUrl('GetCircularImage')}}" />
-                    <h3>Weekly Ad</h3>
-                    <p>Check out our weekly ad for this weeks in store savings</p>
-                </a>
-            </div>
-            <div class="promoBlock pull-left">
-                <a data-ng-href="/coupons/printable">
-                    <img data-ng-src="{{getContentUrl('/images/couponsSmall.png')}}" alt="Store Logo" class="" />
-                    <h3>Printable Coupons</h3>
-                    <p>Print in store coupons to add to your savings!</p>
-                </a>
-            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" data-ng-click="prev()">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" data-ng-click="next()">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-4 noPadWidth" data-gsn-ft-recipe="" data-content-position="1">
-            <div class="featuredBlock one">
-                <img data-ng-src="{{item.ImageUrl}}" />
-                <div class="featuredContent">
-                    <h3>Featured Recipe</h3>
-                    <p>{{item.RecipeTitle}}</p>
-                </div>
-                <a data-ng-href="/recipe?id={{item.RecipeId}}" data-analytics-on="click" data-analytics-event="ClickRecipeOfTheday" data-analytics-label="{{item.RecipeTitle}}" data-analytics-category="Recipe" class="btn btn-link">more</a>
-            </div>
+    <div class="col-md-3" data-ng-click="goUrl('/circular')">
+        <div>
+            <img style="width: 100%; margin-bottom: 15px;" data-ng-src="{{getContentUrl('/images/HomeWeeklyAd.jpg')}}" alt="Weekly Ad" /> 
         </div>
-        <div class="col-md-4 noPadWidth" data-gsn-ft-article="" data-content-position="2">
-            <div class="featuredBlock two">
-                <img data-ng-src="{{item.ImageUrl}}" />
-                <div class="featuredContent">
-                    <h3>Featured Article</h3>
-                    <p>{{item.Title}}</p>
-                </div>
-                <a data-ng-href="/article?id={{item.ArticleId}}" data-analytics-on="click" data-analytics-event="ClickFeaturedArticle" data-analytics-label="{{item.Title}}" data-analytics-category="Article"class="btn btn-link">more</a>
+        <div>
+            <img style="width: 100%;" data-ng-src="{{getContentUrl('/images/SignUpNow.jpg')}}" alt="Sign Up" />
+        </div>       
+    </div>
+</div>
+<div class="row features">
+    <div class="col-md-3" data-content-position="1" data-gsn-ft-content="">
+        <a data-ng-href="#">
+            <div><img data-ng-src="{{getContentUrl('/images/crab.png')}}" alt="Blog" style="width: 100%; border-radius: 4px; height:118px;" /></div>
+            <div>
+                <h4>How to Prepare &amp; Crack Crab Legs like a Pro!</h4>
+                <p>Check out our blog to learn how to crack crab legs like a pro.</p>
             </div>
+        </a>
+    </div>
+    <div class="col-md-3" data-content-position="2" data-gsn-ft-content="">
+        <a data-ng-href="#">
+            <div><img data-ng-src="{{getContentUrl('/images/email.jpg')}}" alt="Email Sign Up" style="width: 100%; border-radius: 4px; height:118px;" /></div>
+            <div>
+                <h4>Sign Up and Save Today</h4>
+                <p>We deliver exclusive savings and our fresh weekly specials to your email inbox every week.</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3" data-content-position="3" data-gsn-ft-content="">
+        <a data-ng-href="#">
+            <div><img data-ng-src="{{getContentUrl('/images/deliver.jpg')}}" alt="Delivery" style="width: 100%; border-radius: 4px; height:118px;" /></div>
+            <div>
+                <h4>Maximize Your Time - We Deliver</h4>
+                <p>We offer convenient, affordable home delivery to the Twin Cities and St. Cloud Metro Areas.</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3" data-content-position="4" data-gsn-ft-content="">
+        <a data-ng-href="#">
+            <div><img data-ng-src="{{getContentUrl('/images/facebook.jpg')}}" alt="Follow on facebook" style="width: 100%; border-radius: 4px; height:118px;" /></div>
+            <div>
+                <h4>Connect With Us On Facebook</h4>
+                <p>21,969 people like this. Sign Up to see what your friends like.</p>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="row features">
+    <div class="col-md-3" data-gsn-ft-recipe="" data-content-position="5">
+        <a data-ng-href="/recipe?id={{item.RecipeId}}" data-analytics-on="click" data-analytics-event="ClickRecipeOfTheday" data-analytics-label="{{item.RecipeTitle}}" data-analytics-category="Recipe">
+            <h4 style="background-color: #800000; border-radius: 4px; color: #fff7e0; padding: 5px;">Recipe of the Day</h4>
+            <img alt="Recipe of the day" data-ng-src="{{item.ImageUrl}}" style="witdth: 100%; height: 100px; display: block; margin: 0 auto; border-radius: 4px;" />
+            <p>{{item.RecipeTitle}}</p>
+            <p>Get the Recipe Here</p>
+        </a>
+    </div>
+    <div class="col-md-9">
+        <h4 style="background-color: #800000; border-radius: 4px; color: #fff7e0; padding: 5px;">Our Brands</h4>
+        <div class="row brands">
+            <ul>
+                <li><a data-ng-href="#"><img data-ng-src="{{getContentUrl('/images/beef.png')}}" alt="Beef" /></a></li>
+                <li><a data-ng-href="#"><img data-ng-src="{{getContentUrl('/images/foodclub.png')}}" alt="Food CLub" /></a></li>
+                <li><a data-ng-href="#"><img data-ng-src="{{getContentUrl('/images/fullcircle.png')}}" alt="Full Circle" /></a></li>
+                <li><a data-ng-href="#"><img data-ng-src="{{getContentUrl('/images/topcare.png')}}" alt="Top Care" /></a></li>
+            </ul>
         </div>
-        <div class="col-md-4 noPadWidth" data-gsn-ft-video="" data-content-position="3">
-            <div class="featuredBlock three">
-                <img data-ng-src="{{item.Thumbnail}}" />
-                <div class="featuredContent">
-                    <h3>Featured Video</h3>
-                    <p>{{item.Title}}</p>
-                </div>
-                <a data-ng-href="/recipevideo?title={{item.Title}}" data-analytics-on="click" data-analytics-event="ClickFeaturedVideo" data-analytics-label="{{item.Title}}" data-analytics-category="Video" class="btn btn-link">more</a>
-            </div>
+        <div class="row brands">
+            <ul>
+                <li><a data-ng-href="#"><img data-ng-src="{{getContentUrl('/images/harvestclub.png')}}" alt="Beef" /></a></li>
+                <li><a data-ng-href="#"><img data-ng-src="{{getContentUrl('/images/signature.png')}}" alt="Food CLub" /></a></li>
+                <li><a data-ng-href="#"><img data-ng-src="{{getContentUrl('/images/paws.png')}}" alt="Full Circle" /></a></li>
+                <li><a data-ng-href="#"><img data-ng-src="{{getContentUrl('/images/valuetime.png')}}" alt="Top Care" /></a></li>
+            </ul>
         </div>
     </div>
 </div>

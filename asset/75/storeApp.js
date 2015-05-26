@@ -1,237 +1,54 @@
 ﻿var storeApp = angular
     .module('storeApp', ['infinite-scroll', 'ngRoute', 'ngSanitize', 'ngAnimate', 'ngTouch', 'chieffancypants.loadingBar', 'gsn.core', 'ui.bootstrap', 'ui.map', 'ui.keypress', 'ui.event', 'ui.utils', 'facebook', 'angulartics'])
-     .config(['$routeProvider', function ($routeProvider) {
+    .config(['$routeProvider', function ($routeProvider) {
+      // disable theme
+      gsn.config.SiteTheme = 'bootstrap';
+      gsn.config.defaultMobileListView = false;
 
-      // setting up home file
-      var homeFile = gsn.getContentUrl('/views/home.html');
-      if (gsn.config.HomePage.ConfigData) {
-        var homeFileConfig = gsn.config.HomePage.ConfigData.homefile;
-        if (homeFileConfig) {
-          homeFile = gsn.getThemeUrl('/views/' + homeFileConfig.Description)
-        }
-      }
 
-      // storeRequired attribute identify route require a store selection
-      $routeProvider
-        .when('/', {
-          templateUrl: homeFile,
-          caseInsensitiveMatch: true
-        })
-        .when('/article', {
-          templateUrl: gsn.getThemeUrl('/views/engine/article.html'),
-          caseInsensitiveMatch: true
-        })
-        .when('/employment', {
-          templateUrl: gsn.getContentUrl('/views/engine/employment.html'),
-          //controller: 'EmploymentCtrl',
-          caseInsensitiveMatch: true
-        })
-        .when('/careers', {
-          templateUrl: gsn.getContentUrl('/views/engine/employment.html'),
-          //controller: 'EmploymentCtrl',
-          caseInsensitiveMatch: true
-        })
-        .when('/careers/apply', {
-          templateUrl: gsn.getContentUrl('/views/engine/employment-apply.html'),
-          //controller: 'EmploymentCtrl',
-          caseInsensitiveMatch: true
-        })
-          .when('/changepassword', {
-            templateUrl: gsn.getThemeUrl('/views/engine/profile-change-password.html'),
-            requireLogin: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/circular', {
-            templateUrl: gsn.getThemeUrl('/views/engine/circular-view.html'),
-            storeRequired: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/circular/flyer', {
-            templateUrl: gsn.getThemeUrl('/views/engine/circular-view.html'),
-            storeRequired: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/circular/text', {
-            templateUrl: gsn.getThemeUrl('/views/engine/circular-view.html'),
-            storeRequired: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/circular/list', {
-            templateUrl: gsn.getThemeUrl('/views/engine/circular-view.html'),
-            storeRequired: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/circular/grid', {
-            templateUrl: gsn.getThemeUrl('/views/engine/circular-view.html'),
-            storeRequired: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/contactus', {
-            templateUrl: gsn.getThemeUrl('/views/engine/contact-us.html'),
-            controller: 'ContactUsCtrl',
-            caseInsensitiveMatch: true
-          })
-          .when('/coupons', {
-            templateUrl: gsn.getContentUrl('/views/coupons-view.html'),
-            storeRequired: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/coupons/printable', {
-            templateUrl: gsn.getThemeUrl('/views/engine/coupons-printable.html'),
-            storeRequired: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/coupons/digital', {
-            templateUrl: gsn.getThemeUrl('/views/engine/coupons-digital.html'),
-            storeRequired: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/coupons/store', {
-            templateUrl: gsn.getThemeUrl('/views/engine/coupons-instore.html'),
-            storeRequired: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/mealplannerfull', {
-            templateUrl: gsn.getThemeUrl('/views/engine/meal-planner.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/savedlists', {
-            templateUrl: gsn.getThemeUrl('/views/engine/saved-lists.html'),
-            requireLogin: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/mylist', {
-            templateUrl: gsn.getThemeUrl('/views/engine/shopping-list.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/mylist/print', {
-            templateUrl: gsn.getThemeUrl('/views/engine/shopping-list-print.html'),
-            layout: gsn.getThemeUrl('/views/layout-print.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/mylist/email', {
-            templateUrl: gsn.getThemeUrl('/views/engine/shopping-list-email.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/emailpreview/registration', {
-            templateUrl: gsn.getThemeUrl('/views/email/registration.html'),
-            layout: gsn.getThemeUrl('/views/layout-empty.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/emailpreview/registration-facebook', {
-            templateUrl: gsn.getThemeUrl('/views/email/registration-facebook.html'),
-            layout: gsn.getThemeUrl('/views/layout-empty.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/mypantry', {
-            templateUrl: gsn.getThemeUrl('/views/engine/my-pantry.html'),
-            requireLogin: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/myrecipes', {
-            templateUrl: gsn.getThemeUrl('/views/engine/my-recipes.html'),
-            requireLogin: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/myspecials', {
-            templateUrl: gsn.getThemeUrl('/views/engine/my-specials.html'),
-            requireLogin: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/product', {
-            templateUrl: gsn.getThemeUrl('/views/engine/product.html'),
-            storeRequired: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/product/search', {
-            templateUrl: gsn.getThemeUrl('/views/engine/product-search.html'),
-            storeRequired: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/profile', {
-            templateUrl: gsn.getContentUrl('/views/engine/profile-rewardcard.html'),
-            requireLogin: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/profile/rewardcard', {
-            templateUrl: gsn.getContentUrl('/views/engine/profile-rewardcard.html'),
-            requireLogin: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/profile/rewardcard/updated', {
-            templateUrl: gsn.getThemeUrl('/views/engine/profile-edit.html'),
-            requireLogin: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/recipe', {
-            templateUrl: gsn.getThemeUrl('/views/engine/recipe-details.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/recipe/print', {
-            templateUrl: gsn.getThemeUrl('/views/engine/recipe-print.html'),
-            layout: gsn.getThemeUrl('/views/layout-print.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/recipecenter', {
-            templateUrl: gsn.getThemeUrl('/views/engine/recipe-center.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/recipe/search', {
-            templateUrl: gsn.getThemeUrl('/views/engine/recipe-search.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/recipevideo', {
-            templateUrl: gsn.getThemeUrl('/views/engine/recipe-video.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/recoverpassword', {
-            templateUrl: gsn.getThemeUrl('/views/engine/recover-password.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/recoverusername', {
-            templateUrl: gsn.getThemeUrl('/views/engine/recover-username.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/redirect', {
-            templateUrl: gsn.getThemeUrl('/views/engine/redirect.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/registration', {
-            templateUrl: gsn.getContentUrl('/views/engine/registration.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/registration/facebook', {
-            templateUrl: gsn.getThemeUrl('/views/engine/registration.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/search', {
-            templateUrl: gsn.getThemeUrl('/views/engine/custom/search.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/signin', {
-            templateUrl: gsn.getThemeUrl('/views/engine/login.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/specials', {
-            templateUrl: gsn.getThemeUrl('/views/engine/specials.html'),
-            storeRequired: true,
-            caseInsensitiveMatch: true
-          })
-          .when('/storelocator', {
-            templateUrl: gsn.getThemeUrl('/views/engine/store-locator.html'),
-            caseInsensitiveMatch: true
-          })
-          .when('/unsubscribe', {
-            templateUrl: gsn.getThemeUrl('/views/engine/unsubscribe.html'),
-            caseInsensitiveMatch: true
-          })
-          .otherwise({
-            templateUrl: gsn.getContentUrl('/views/engine/static-content.html'),
-            caseInsensitiveMatch: true
-          });
-      //#endregion
+      var urls = [
+        { login: 0, store: 0, path: '/', tpl: gsn.getContentUrl('/views/home.html') }
+        , { login: 0, store: 0, path: '/article', tpl: gsn.getThemeUrl('/views/engine/article.html') }
+        , { login: 0, store: 0, path: '/article/:id', tpl: gsn.getThemeUrl('/views/engine/article.html') }
+        , { login: 0, store: 1, path: '/circular', tpl: gsn.getThemeUrl('/views/engine/circular-view.html')}
+        , { login: 0, store: 1, path: '/circular/:viewtype', tpl: gsn.getThemeUrl('/views/engine/circular-view.html') }
+        , { login: 0, store: 0, path: '/contactus', tpl: gsn.getThemeUrl('/views/engine/contact-us.html') }
+        , { login: 0, store: 1, path: '/coupons/digital', tpl: gsn.getThemeUrl('/views/engine/coupons-view.html') }
+        , { login: 0, store: 1, path: '/coupons/printable', tpl: gsn.getThemeUrl('/views/engine/coupons-view.html') }
+        , { login: 0, store: 1, path: '/coupons/store', tpl: gsn.getThemeUrl('/views/engine/coupons-view.html') }
+        , { login: 0, store: 0, path: '/mealplannerfull', tpl: gsn.getThemeUrl('/views/engine/meal-planner.html') }
+        , { login: 1, store: 0, path: '/savedlists', tpl: gsn.getThemeUrl('/views/engine/saved-lists.html') }
+        , { login: 0, store: 0, path: '/mylist', tpl: gsn.getThemeUrl('/views/engine/shopping-list.html') }
+        , { login: 0, store: 0, path: '/mylist/print', tpl: gsn.getThemeUrl('/views/engine/shopping-list-print.html') }
+        , { login: 0, store: 0, path: '/mylist/email', tpl: gsn.getThemeUrl('/views/engine/shopping-list-email.html') }
+        , { login: 1, store: 0, path: '/myrecipes', tpl: gsn.getThemeUrl('/views/engine/my-recipes.html') }
+        , { login: 1, store: 0, path: '/profile', tpl: gsn.getThemeUrl('/views/engine/profile.html') }
+        , { login: 0, store: 0, path: '/recipe', tpl: gsn.getThemeUrl('/views/engine/recipe-details.html') }
+        , { login: 0, store: 0, path: '/recipe/search', tpl: gsn.getThemeUrl('/views/engine/recipe-search.html') }
+        , { login: 0, store: 0, path: '/recipe/:id', tpl: gsn.getThemeUrl('/views/engine/recipe-details.html') }
+        , { login: 0, store: 0, path: '/recipecenter', tpl: gsn.getThemeUrl('/views/engine/recipe-center.html') }
+        , { login: 0, store: 0, path: '/recipevideo', tpl: gsn.getThemeUrl('/views/engine/recipe-video.html') }
+        , { login: 0, store: 0, path: '/registration', tpl: gsn.getThemeUrl('/views/engine/registration.html') }
+        , { login: 0, store: 0, path: '/signin', tpl: gsn.getThemeUrl('/views/engine/signin.html') }
+        , { login: 0, store: 0, path: '/storelocator', tpl: gsn.getThemeUrl('/views/engine/store-locator.html') }
+        , { login: 0, store: 0, path: '/unsubscribe', tpl: gsn.getThemeUrl('/views/engine/unsubscribe.html') }
+        , { login: 0, store: 0, path: '/blog', tpl: gsn.getContentUrl('/views/blog.html') }
+      ];
 
+      angular.forEach(urls, function(v, k){
+        $routeProvider.when(v.path, { templateUrl: v.tpl, caseInsensitiveMatch: true, storeRequired: v.store, requireLogin: v.login })
+      });
+      $routeProvider.otherwise({ templateUrl: gsn.getThemeUrl('/views/engine/static-content.html'), caseInsensitiveMatch: true} );
     }]);
+
+
+storeApp.filter('replaceWith', function() {
+  return function(input, regex, flag, replaceWith) {
+    var patt = new RegExp(regex, flag);      
+      
+    return input.replace(patt, replaceWith);
+  };
+})
 
 // ContactUsCtrl
 storeApp
@@ -366,66 +183,50 @@ storeApp
     }
 }]);
 
-// Silver Demo Account
-storeApp.controller('SilverDemoAccountCtrl', ['$scope', 'gsnProfile', 'gsnApi', '$timeout', 'gsnStore', '$rootScope', function controller($scope, gsnProfile, gsnApi, $timeout, gsnStore, $rootScope) {
+(function (angular, undefined) {
+  'use strict';
+  var myModule = angular.module('gsn.core');
 
-  $scope.activate = activate;
-  $scope.profile = { PrimaryStoreId: gsnApi.getSelectedStoreId(), ReceiveEmail: true };
+  myModule.directive('gsnDigiCirc', ['$timeout', '$rootScope', '$analytics', 'gsnApi', function ($timeout, $rootScope, $analytics, gsnApi) {
+    // Usage: create classic hovering digital circular
+    //
+    // Creates: 2013-12-12 TomN
+    //
+    var directive = {
+      restrict: 'EA',
+      scope: false,
+      link: link
+    };
+    return directive;
 
-  $scope.hasSubmitted = false;    // true when user has click the submit button
-  $scope.isValidSubmit = true;    // true when result of submit is valid
-  $scope.isSubmitting = false;    // true if we're waiting for result from server
-  $scope.isFacebook = false;
-  $scope.profileStatus = { profileUpdated: 0 };
-
-  function activate() {
-    gsnStore.getStores().then(function (rsp) {
-      $scope.stores = rsp.response;
-    });
-
-    gsnProfile.getProfile().then(function (p) {
-      if (p.success) {
-        $scope.profile = angular.copy(p.response);
-        $scope.isFacebook = (gsnApi.isNull($scope.profile.FacebookUserId, '').length > 0);
-      }
-    });
-  }
-
-  $scope.updateProfile = function () {
-    var profile = $scope.profile;
-    if ($scope.myForm.$valid) {
-
-      // prevent double submit
-      if ($scope.isSubmitting) return;
-
-      $scope.hasSubmitted = true;
-      $scope.isSubmitting = true;
-      gsnProfile.updateProfile(profile)
-          .then(function (result) {
-            $scope.isSubmitting = false;
-            $scope.isValidSubmit = result.success;
-            if (result.success) {
-              gsnApi.setSelectedStoreId(profile.PrimaryStoreId);
-
-              // trigger profile retrieval
-              gsnProfile.getProfile(true);
-
-              // Broadcast the update.
-              $rootScope.$broadcast('gsnevent:updateprofile-successful', result);
-            }
-          });
+    function link(scope, element, attrs) {
+      scope.$watch(attrs.gsnDigiCirc, function (newValue) {
+        if (newValue) {
+          if (newValue.Circulars.length > 0) {
+            var el = element.find('div');
+            el.digitalCirc({
+              data: newValue,
+              browser: gsnApi.browser,
+              templateCircularSingle: '<div id="gallery">' +
+'{{#Circular.Pages}}<a href="{{ImageUrl}}" style="padding-left: 5px">' +
+'<img src="{{SmallImageUrl}}" alt="{{../Circular.CircularTypeName}}-{{PageIndex}} of {{../Circular.Pages.length}}"/>' +
+'</a>{{/Circular.Pages}}' +
+'</div>',
+              templatePagerTop: '',
+              templatePagerBottom: '',
+              onItemSelect: function (plug, evt, item) {},
+              onCircularDisplayed: function (plug, circIdx, pageIdx) {
+                $timeout(function() {
+                  angular.element('#gallery a').photoSwipe({
+                    enableMouseWheel: false,
+                    enableKeyboard: false
+                  });
+                }, 50);
+              }
+            });
+          }
+        }
+      });
     }
-  };
-
-  $scope.activate();
-
-  ////
-  // Handle the event 
-  ////
-  $scope.$on('gsnevent:updateprofile-successful', function (evt, result) {
-
-    // We just updated the profile; update the counter.
-    $scope.profileStatus.profileUpdated++;
-  });
-
-}]);
+  }]);
+})(angular);

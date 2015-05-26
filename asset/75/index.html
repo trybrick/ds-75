@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" id="ng-app" ng-app="storeApp" xmlns:ng="http://angularjs.org" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8" id="ng-app" ng-app="storeApp" xmlns:ng="http://angularjs.org" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9" id="ng-app" ng-app="storeApp" xmlns:ng="http://angularjs.org" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10" id="ng-app" ng-app="storeApp" xmlns:ng="http://angularjs.org" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (!IE)|(gt IE 9)]><!-->
+<html class="no-js" data-ng-app="storeApp">
+<!--<![endif]-->
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">                 
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">                             
+  <meta name="format-detection" content="telephone=no">
+
+  <meta name="author" content="Grocery Shopping Network">
+  <meta name="description" content="Shop for groceries with our meal planning solutions, save hundreds of dollars with printable coupons and find all recipes and meal ideas.">
+  <meta name="keywords" content="Weekly Specials, Recipes, Coupons, Meal Planning, Cooking Videos, Low Prices, Shop Online">     
+
+  <title>Coborn's</title>
+  <link href="http://cdn-staging.gsngrocers.com/script/lib/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+  <link href="http://cdn-staging.gsngrocers.com/asset/common/styles/global.css" rel="stylesheet" type="text/css">    
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Your custom css goes below here -->
+  <link href="/asset/75/styles/app.css?nocache=1_4_12" rel="stylesheet" type="text/css">  
+
+  <!-- This is to support IE8 and 9, remove if you do not need -->
+  <!--[if lt IE 10]>
+    <script src="http://cdn-staging.gsngrocers.com/script/lib/proxy/xdomain.min.js" data-slave="http://cdn-staging.gsngrocers.com/script/lib/proxy/proxy.html"></script>  
+  <![endif]-->
+  <!--endhead-->
+  <!-- do not remove the endhead comment above.
+    It is use to remove any script injected by library such as facebook and google on the server-side.
+    This is to clean-up the html for SEO.
+  -->
+</head>
+<body ng-cloak="">
+  <div data-bs-display-mode="bsDisplayMode"><!-- do not hide this div, it is use to detect display size --></div> 
+  
+  <div class="layout-container">
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="hidden-print dropdown pull-right menu-login ng-cloak" data-ng-show="isLoggedIn" style="padding-top: 5px">
+          <a data-toggle="dropdown" href="javascript:void(0)" class="dropdown-toggle">
+            {{profile.FirstName + ' ' + profile.LastName}} <i class="fa fa-caret-down"></i>
+          </a>
+          <div style="padding:17px;" class="dropdown-menu dropdown-menu-touch">
+            <a href="/profile"><i class="fa fa-user"></i> Profile </a><br /><br />
+            <a href="javascript:void(0)" data-ng-click="logout()">Sign-out</a><br />
+          </div>
+        </div>
+        <div class="hidden-print dropdown pull-right menu-login" data-ng-if="!isLoggedIn" data-gsn-login="" style="padding-top: 5px">
+          <a data-toggle="dropdown" href="javascript:void(0)" class="dropdown-toggle">
+            Sign in <i class="fa fa-caret-down"></i>
+          </a>
+          <div style="padding:17px; width: 300px" class="dropdown-menu">
+            <form role="form" name="myLoginForm" data-ng-submit="login()"> 
+                <label>Sign in</label> 
+                <input id="usernameField" name="usernameField" type="text" class="form-control" placeholder="Email or username" data-ng-model="profile.UserName" required="required" />
+                <input id="passwordField" name="passwordField" type="password" class="form-control" placeholder="Password" data-ng-model="profile.Password" required="required" />
+                <div class="form-group" data-ng-show="hasSubmitted && !isValidSubmit">
+                  <div class="alert alert-danger">
+                    Email or password is incorrect.
+                  </div>
+                </div> 
+                <div data-gsn-spinner="{radius:30, width:8, length: 16}" data-show-if="isSubmitting"></div>
+                <button type="submit" class="btn btn-primary pull-right">Sign in</button>
+            </form><br />
+            <a href="/registration">New User? Sign-up..</a><br /><br />
+            <a href="javascript:void(0)" class="col-md-6" data-gsn-modal="getThemeUrl('/views/engine/modal-recover-username.html')" data-ng-click="showModal()">Forgot username?</a>
+            <a href="javascript:void(0)" class="col-md-6" data-gsn-modal="getThemeUrl('/views/engine/modal-recover-password.html')" data-ng-click="showModal()">password?</a>
+          </div>
+        </div>
+        <div data-gsn-ft-config="logo">
+          <div data-ng-if="item.Description" data-ng-bind-html="item.Description"></div>
+          <a href="javascript:void(0)" data-ng-if="!item.Description" data-ng-click="goUrl('/')">
+            <img data-ng-src="{{getContentUrl('/images/logo.png')}}" alt="Store Logo" class="logo" />
+          </a>
+        </div>
+
+        <!-- Full control of menu either through GSN Admin or replace the dive below with your own menu -->
+        <div data-ng-include="getThemeUrl('/views/menu.html')" class="hidden-print" data-gsn-sticky="" style="width: 100%; left: 0">
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content container-->
+    <div class="mainContent container" data-ng-view=""></div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="col-md-4">
+            <div class="your-store" data-gsn-store-info="[store.StoreName] <a href='/storelocator'>(View all Stores)</a>">
+                <a href='/storelocator'>Locate your Store</a>
+            </div>
+            <div class="yourStore" data-gsn-store-info="[store.PrimaryAddress] <br/> [store.City], [store.StateName] [store.PostalCode] <br/>[store.Phone], <br/>[store.OpenHoursDisplay]"></div>
+        </div>
+        <div class="col-md-4 company-info hidden-print">
+            <ul>
+          <li data-ng-class="{'underlined': currentPath == '/aboutus'}"><a data-ng-href="/aboutus">About Us</a></li>
+          <li data-ng-class="{'underlined': currentPath == '/careers'}"><a data-ng-href="/careers">Careers</a></li>
+          <li data-ng-class="{'underlined': currentPath == '/contactus'}"><a data-ng-href="/contactus">Contact Us</a></li>
+          <li data-ng-class="{'underlined': currentPath == '/registration'}"><a data-ng-href="/registration">Register</a></li>
+        </ul>
+        </div>
+        <div class="col-md-4 social hidden-print">
+            <h4 style="margin-top: 0;">Stay Connected</h4>
+             <ul style="padding-left: 0;"> 
+                <li><a href="https://www.facebook.com/groceryshoppingnetwork"><i style="color: #3B5998" class="fa fa-facebook-square fa-2x"></i></a></li>
+                <li><a href="https://twitter.com/grocerynetwork"><i style="color: #4099FF" class="fa fa-twitter-square fa-2x"></i></a></li>
+                <li><a href="#"><i style="color: #cb2027" class="fa fa-pinterest fa-2x"></i></a></li> 
+             </ul>
+        </div>
+      </div>
+    </footer>
+  </div>    
+
+  <!-- above the fold scripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.js"></script>   
+  <script src="https://clientapix.gsn2.com/api/v1/store/sitecontentscript/75?nocache=1"></script>                                                  
+  <script data-gsnid="75" src="http://cdn-staging.gsngrocers.com/script/gsndfp/gsndfp.js?nocache=1"></script>
+  <script src="http://cdn-staging.gsngrocers.com/script/gsncore/1.4.15/gsncore.js?nocache=1"></script>  
+  <script src="/asset/75/storeApp.js?nocache=1"></script>      
+                                    
+  <!-- angular depencencies -->                                             
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-sanitize.min.js"></script><!-- security -->   
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.min.js"></script><!-- routing and history -->  
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-animate.min.js"></script><!-- carousel -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-touch.min.js"></script> <!-- touch polyfill for ng-click -->
+
+  <!-- below the fold: js -->                                                                                 
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script><!-- bootstrap -->    
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script><!-- bootstrap to angular bridge --> 
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script><!-- for circular imagemap --> 
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.js"></script><!-- for circular image map -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/3.0.5/klass.min.js"></script><!-- required for photoswipe -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/photoswipe/3.0.5/code.photoswipe.jquery.min.js"></script><!-- for image gallery --> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/3.0.5/photoswipe.min.css" rel="stylesheet" type="text/css"> 
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.css" rel="stylesheet" type="text/css"><!-- for circular imagemap -->
+
+  <!--begin:analytics-->                 
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  </script>
+  <div class="hidden" data-gsn-path-pixel="https://secure.adnxs.com/getuid?https://dataapi.gsn2.com/api/v1/partner/linkadnx/[[ProfileId]]/[[ChainId]]?adnxs_uid=$UID&nocache=[[CACHEBUSTER]]"></div>
+  <!--end:analytics-->  
+  <script>
+    <!-- mobile collapse issue: https://github.com/twbs/bootstrap/issues/12852 -->
+    $(document).ready(function () {
+      $(document).on('click.nav','.navbar-collapse.in',function(e) {
+        if( $(e.target).is('a') ) {
+            $(this).removeClass('in').addClass('collapse');
+        }
+      });
+    });
+  </script>   
+</body>
+</html>
