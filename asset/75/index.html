@@ -10,8 +10,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">                 
-
   <meta name="apple-mobile-web-app-capable" content="yes">
+
   <meta name="apple-mobile-web-app-status-bar-style" content="black">                             
   <meta name="format-detection" content="telephone=no">
 
@@ -44,17 +44,17 @@
     <!-- Header -->
     <header>
       <div class="container">
-        <div class="hidden-print dropdown pull-right menu-login ng-cloak" data-ng-show="isLoggedIn" style="padding-top: 5px">
-          <a data-toggle="dropdown" href="javascript:void(0)" class="dropdown-toggle">
+        <div class="hidden-print dropdown pull-right menu-login ng-cloak" data-ng-show="isLoggedIn" style="padding-top: 5px" data-ng-class="{ 'open': gvm.loginMenuActive }">
+          <a href="javascript:void(0)" data-ng-click="gvm.loginMenuActive = !gvm.loginMenuActive">
             {{profile.FirstName + ' ' + profile.LastName}} <i class="fa fa-caret-down"></i>
           </a>
           <div style="padding:17px;" class="dropdown-menu dropdown-menu-touch">
             <a href="/profile"><i class="fa fa-user"></i> Profile </a><br /><br />
-            <a href="javascript:void(0)" data-ng-click="logout()">Sign-out</a><br />
+            <a href="/">Sign-out</a><br />
           </div>
         </div>
-        <div class="hidden-print dropdown pull-right menu-login" data-ng-if="!isLoggedIn" data-gsn-login="" style="padding-top: 5px">
-          <a data-toggle="dropdown" href="javascript:void(0)" class="dropdown-toggle">
+        <div class="hidden-print dropdown pull-right menu-login" data-ng-if="!isLoggedIn" data-gsn-login="" style="padding-top: 5px" data-ng-class="{ 'open': gvm.loginMenuActive }" >
+          <a href="javascript:void(0)" data-ng-click="gvm.loginMenuActive = !gvm.loginMenuActive">
             Sign in <i class="fa fa-caret-down"></i>
           </a>
           <div style="padding:17px; width: 300px" class="dropdown-menu">
