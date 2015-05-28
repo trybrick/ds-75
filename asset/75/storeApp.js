@@ -1,10 +1,15 @@
 ﻿var storeApp = angular
     .module('storeApp', ['infinite-scroll', 'ngRoute', 'ngSanitize', 'ngAnimate', 'ngTouch', 'chieffancypants.loadingBar', 'gsn.core', 'ui.bootstrap', 'ui.map', 'ui.keypress', 'ui.event', 'ui.utils', 'facebook', 'angulartics'])
     .config(['$routeProvider', function ($routeProvider) {
-      // disable theme
-      gsn.config.SiteTheme = 'bootstrap';
+      // disable theme, views has been fork from bootstrap theme
+      gsn.config.SiteTheme = null;  // 'bootstrap' to use bootstrap theme
       gsn.config.defaultMobileListView = false;
 
+      // though we recommend that you should 'bootstrap' theme because any bugfix would be automatically apply
+      // otherwise, you handle your own bugfixes in your fork theme
+      
+      // force not to use proxy, comment out the line before for IE8 and 9 support
+      gsn.applyConfig(gsn.config, true);
 
       var urls = [
         { login: 0, store: 0, path: '/', tpl: gsn.getContentUrl('/views/home.html') }
