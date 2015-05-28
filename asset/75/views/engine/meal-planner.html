@@ -1,0 +1,25 @@
+<div data-ctrl-meal-planner="">
+  <h1>Meals Planner</h1>
+  <div data-gsn-ad-unit="1" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div> 
+  <div class="row">
+    <div class="col-md-9" style="padding-top: 5px">
+      <div class="row">
+        <div class="col-md-3">
+          <div data-gsn-ad-unit="6" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div> 
+        </div>
+        <div class="col-md-9">
+          <div data-ng-repeat="group in vm.mealPlanners | orderBy:'key'">
+            <h3>{{group.items[0].DisplayDate}}</h3>
+            <div class="row" data-ng-repeat="item in group.items">
+              <a data-ng-href="/recipe/{{item.RecipeId}}">{{item.RecipeTitle}}</a>
+            </div>
+          </div>
+          <button class="btn btn-primary" data-ng-click="goBack()">Back</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3" style="margin-left: -15px;">
+      <div class="row" data-gsn-ad-unit="4" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div> 
+    </div>
+  </div>
+</div>
