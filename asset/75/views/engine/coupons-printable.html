@@ -1,0 +1,49 @@
+<div class="col-md-10 col-sm-12" data-ctrl-coupon-classic="" data-ng-init="sortByName = 'About to Expire';">
+  <h1>Printable Coupons</h1>
+  <div data-gsn-ad-unit="1" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div>
+  <div class="row savings-sort">
+    <div class="col-md-3">
+      <div style="margin-top: 6px;">
+        <span>Total Savings - ${{selectedCoupons.totalSavings}}</span>
+      </div>
+    </div>
+    <div class="col-md-9">            
+      <span>Search for:</span>
+      <div class="btn-group">
+        <input type="text" placeholder="enter keyword" data-ng-model="filterBy" name="filterby" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div data-ng-show="selectedCoupons.items.length <= 0 && filterBy">No results returned.</div>
+    <div data-infinite-scroll="loadMore()">
+      <div class="col-md-4 col-sm-6 coupons" data-ng-repeat="item in selectedCoupons.items">
+        <div class="coupon-container">
+          <div class="row">
+            <div class="image-container">
+              <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
+            </div>
+            <div class="description">
+              <h4>{{item.Description1}}</h4>
+              <p>{{item.Description2 | truncate:false:100:' ...'}}</p>
+              <p style="font-weight: bold;">expires: {{item.EndDate | date: 'M / dd / yyyy'}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="controls">
+              <button class="btn btn-primary btn-xs" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add To List"}}</button>
+              <button class="btn btn-primary btn-xs" data-ng-click="printManufacturerCoupon($event, item)" data-ng-if="!gsnApi.browser.isMobile">Print Now</button>
+              <p class="coupon-message coupon-message-{{item.ProductCode}}"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-2 adUnit6">
+  <div class="" data-ng-non-bindable="">
+    <div class="circplus"></div>
+  </div>
+  <div data-gsn-ad-unit="6" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0" data-gsn-sticky=".adUnit6" data-bottom="200" data-top="60"></div>
+</div>

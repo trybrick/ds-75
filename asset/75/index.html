@@ -7,9 +7,9 @@
 <html class="no-js" data-ng-app="storeApp">
 <!--<![endif]-->
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">                 
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">   
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">   
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">                             
@@ -22,20 +22,10 @@
   <title>Coborn's</title>
   <link href="http://cdn-staging.gsngrocers.com/script/lib/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
   <link href="http://cdn-staging.gsngrocers.com/asset/common/styles/global.css" rel="stylesheet" type="text/css">    
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
   <!-- Your custom css goes below here -->
   <link href="/asset/75/styles/app.css?nocache=1_4_12" rel="stylesheet" type="text/css">  
-
-  <!-- This is to support IE8 and 9, remove if you do not need -->
-  <!--[if lt IE 10]>
-    <script src="http://cdn-staging.gsngrocers.com/script/lib/proxy/xdomain.min.js" data-slave="http://cdn-staging.gsngrocers.com/script/lib/proxy/proxy.html"></script>  
-  <![endif]-->
-  <!--endhead-->
-  <!-- do not remove the endhead comment above.
-    It is use to remove any script injected by library such as facebook and google on the server-side.
-    This is to clean-up the html for SEO.
-  -->
 </head>
 <body ng-cloak="">
   <div data-bs-display-mode="bsDisplayMode"><!-- do not hide this div, it is use to detect display size --></div> 
@@ -44,17 +34,17 @@
     <!-- Header -->
     <header>
       <div class="container">
-        <div class="hidden-print dropdown pull-right menu-login ng-cloak" data-ng-show="isLoggedIn" style="padding-top: 5px">
-          <a data-toggle="dropdown" href="javascript:void(0)" class="dropdown-toggle">
+        <div class="hidden-print dropdown pull-right menu-login ng-cloak" data-ng-show="isLoggedIn" style="padding-top: 5px" data-ng-class="{ 'open': gvm.loginMenuActive }">
+          <a href="javascript:void(0)" data-ng-click="gvm.loginMenuActive = !gvm.loginMenuActive">
             {{profile.FirstName + ' ' + profile.LastName}} <i class="fa fa-caret-down"></i>
           </a>
           <div style="padding:17px;" class="dropdown-menu dropdown-menu-touch">
             <a href="/profile"><i class="fa fa-user"></i> Profile </a><br /><br />
-            <a href="javascript:void(0)" data-ng-click="logout()">Sign-out</a><br />
+            <a href="/">Sign-out</a><br />
           </div>
         </div>
-        <div class="hidden-print dropdown pull-right menu-login" data-ng-if="!isLoggedIn" data-gsn-login="" style="padding-top: 5px">
-          <a data-toggle="dropdown" href="javascript:void(0)" class="dropdown-toggle">
+        <div class="hidden-print dropdown pull-right menu-login" data-ng-if="!isLoggedIn" data-gsn-login="" style="padding-top: 5px" data-ng-class="{ 'open': gvm.loginMenuActive }" >
+          <a href="javascript:void(0)" data-ng-click="gvm.loginMenuActive = !gvm.loginMenuActive">
             Sign in <i class="fa fa-caret-down"></i>
           </a>
           <div style="padding:17px; width: 300px" class="dropdown-menu">
@@ -121,28 +111,28 @@
   </div>    
 
   <!-- above the fold scripts -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.js"></script>   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.js"></script>   
   <script src="https://clientapix.gsn2.com/api/v1/store/sitecontentscript/75?nocache=1"></script>                                                  
   <script data-gsnid="75" src="http://cdn-staging.gsngrocers.com/script/gsndfp/gsndfp.js?nocache=1"></script>
-  <script src="http://cdn-staging.gsngrocers.com/script/gsncore/1.4.15/gsncore.js?nocache=1"></script>  
+  <script src="http://cdn-staging.gsngrocers.com/script/gsncore/1.4.17/gsncore.js"></script>  
   <script src="/asset/75/storeApp.js?nocache=1"></script>      
                                     
   <!-- angular depencencies -->                                             
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-sanitize.min.js"></script><!-- security -->   
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.min.js"></script><!-- routing and history -->  
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-animate.min.js"></script><!-- carousel -->
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-touch.min.js"></script> <!-- touch polyfill for ng-click -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-sanitize.min.js"></script><!-- security -->   
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.min.js"></script><!-- routing and history -->  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-animate.min.js"></script><!-- carousel -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-touch.min.js"></script> <!-- touch polyfill for ng-click -->
 
   <!-- below the fold: js -->                                                                                 
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script><!-- bootstrap -->    
-  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script><!-- bootstrap to angular bridge --> 
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script><!-- for circular imagemap --> 
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.js"></script><!-- for circular image map -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script><!-- bootstrap -->    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script><!-- bootstrap to angular bridge --> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script><!-- for circular imagemap --> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.js"></script><!-- for circular image map -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/3.0.5/klass.min.js"></script><!-- required for photoswipe -->
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/photoswipe/3.0.5/code.photoswipe.jquery.min.js"></script><!-- for image gallery --> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/3.0.5/code.photoswipe.jquery.min.js"></script><!-- for image gallery --> 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/3.0.5/photoswipe.min.css" rel="stylesheet" type="text/css"> 
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.css" rel="stylesheet" type="text/css"><!-- for circular imagemap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.css" rel="stylesheet" type="text/css"><!-- for circular imagemap -->
 
   <!--begin:analytics-->                 
   <script>

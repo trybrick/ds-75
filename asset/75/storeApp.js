@@ -1,10 +1,15 @@
 ﻿var storeApp = angular
     .module('storeApp', ['infinite-scroll', 'ngRoute', 'ngSanitize', 'ngAnimate', 'ngTouch', 'chieffancypants.loadingBar', 'gsn.core', 'ui.bootstrap', 'ui.map', 'ui.keypress', 'ui.event', 'ui.utils', 'facebook', 'angulartics'])
     .config(['$routeProvider', function ($routeProvider) {
-      // disable theme
-      gsn.config.SiteTheme = 'bootstrap';
+      // disable theme, views has been fork from bootstrap theme
+      gsn.config.SiteTheme = null;  // 'bootstrap' to use bootstrap theme
       gsn.config.defaultMobileListView = false;
 
+      // though we recommend that you should 'bootstrap' theme because any bugfix would be automatically apply
+      // otherwise, you handle your own bugfixes in your fork theme
+      
+      // force not to use proxy, comment out the line before for IE8 and 9 support
+      gsn.applyConfig(gsn.config, true);
 
       var urls = [
         { login: 0, store: 0, path: '/', tpl: gsn.getContentUrl('/views/home.html') }
@@ -24,10 +29,11 @@
         , { login: 1, store: 0, path: '/myrecipes', tpl: gsn.getThemeUrl('/views/engine/my-recipes.html') }
         , { login: 1, store: 0, path: '/profile', tpl: gsn.getThemeUrl('/views/engine/profile.html') }
         , { login: 0, store: 0, path: '/recipe', tpl: gsn.getThemeUrl('/views/engine/recipe-details.html') }
-        , { login: 0, store: 0, path: '/recipe/search', tpl: gsn.getThemeUrl('/views/engine/recipe-search.html') }
         , { login: 0, store: 0, path: '/recipe/:id', tpl: gsn.getThemeUrl('/views/engine/recipe-details.html') }
+        , { login: 0, store: 0, path: '/recipe/search', tpl: gsn.getThemeUrl('/views/engine/recipe-search.html') }
         , { login: 0, store: 0, path: '/recipecenter', tpl: gsn.getThemeUrl('/views/engine/recipe-center.html') }
         , { login: 0, store: 0, path: '/recipevideo', tpl: gsn.getThemeUrl('/views/engine/recipe-video.html') }
+        , { login: 0, store: 0, path: '/recipevideo/:id', tpl: gsn.getThemeUrl('/views/engine/recipe-video.html') }
         , { login: 0, store: 0, path: '/registration', tpl: gsn.getThemeUrl('/views/engine/registration.html') }
         , { login: 0, store: 0, path: '/signin', tpl: gsn.getThemeUrl('/views/engine/signin.html') }
         , { login: 0, store: 0, path: '/storelocator', tpl: gsn.getThemeUrl('/views/engine/store-locator.html') }
