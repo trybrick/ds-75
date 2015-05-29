@@ -9,7 +9,7 @@
         <div style="display: block; height: 300px; width: 100%; overflow-y: scroll;">
           <div class="list-group list-groupPns">
             <div data-ng-repeat="video in vm.videos | orderBy : 'Title'" style="cursor: pointer">
-              <a class="list-group-item list-group-itemPns" data-ng-class="{ active: vm.video.id == {{video.VideoId}}}" title="{{video.Title}}" data-ng-href="{{'/recipevideo/' + video.VideoId }}">{{video.Title}}</a>
+              <a class="list-group-item list-group-itemPns" data-ng-class="{ active: vm.video.VideoId == {{video.VideoId}}}" title="{{video.Title}}" data-ng-href="{{'/recipevideo/' + video.VideoId }}">{{video.Title}}</a>
             </div>
           </div>
         </div>
