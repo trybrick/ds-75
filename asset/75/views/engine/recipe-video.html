@@ -1,29 +1,26 @@
 <div class="hidden" data-gsn-title="{{ChainName}} Cooking Videos"></div>
-<div data-ctrl-recipe-center="" class="row text-center">
+<div data-ctrl-recipe-video="" class="row text-center">
   <div class="col-md-9">
     <h1>Cooking Videos</h1>
     <div data-gsn-ad-unit="1" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div>
     <div class="row">
-      <div data-gsn-flow-player="VideoPlayerTarget" data-swf="http://cdn.gsngrocers.com/script/lib/flowplayer-3.2.18.swf" data-base-url="http://upload.gsngrocers.com/recipe/video/flv/">
-        <div class="col-md-4" data-ng-init="videoTitle = 'Artichokes'; videoName = 'GSN-Artichokes';">
-          <h3>Videos</h3>
-          <div style="display: block; height: 300px; width: 100%; overflow-y: scroll;">
-            <div class="list-group list-groupPns">
-              <div data-ng-repeat="video in vm.videos | orderBy : 'Title' " style="cursor: pointer">
-                <a class="list-group-item list-group-itemPns" data-ng-class="{ active: videoTitle == '{{video.Title}}'}" title="{{video.Title}}" data-ng-click="play('{{video.Url}}','{{video.Title}}');">{{video.Title}}</a>
-              </div>
+      <div class="col-md-4">
+        <h3>Videos</h3>
+        <div style="display: block; height: 300px; width: 100%; overflow-y: scroll;">
+          <div class="list-group list-groupPns">
+            <div data-ng-repeat="video in vm.videos | orderBy : 'Title'" style="cursor: pointer">
+              <a class="list-group-item list-group-itemPns" data-ng-class="{ active: vm.video.id == {{video.VideoId}}}" title="{{video.Title}}" data-ng-href="{{'/recipevideo/' + video.VideoId }}">{{video.Title}}</a>
             </div>
           </div>
         </div>
-        <div class="col-md-8 noPadLeft">
-          <h1>5 Minute Cooking Classes</h1>
-          <div class="videoColumn" id="VideoPlayer">
-            <h3>{{videoTitle}}</h3>
-            <a id="VideoPlayerTarget" class="VideoPlayerTarget"></a>
-          </div>
-        </div>
-        
       </div>
+      <div class="col-md-8 noPadLeft">
+        <h1>5 Minute Cooking Classes</h1>
+        <div class="videoColumn" id="VideoPlayer">
+          <h3>{{videoTitle}}</h3>
+          <a id="RecipeVideoPlayer" class="RecipeVideoPlayer"></a>
+        </div>
+      </div>        
     </div>
   </div>
   <div class="col-md-3" style="text-align: left">
@@ -31,7 +28,7 @@
   </div>
 </div>
 <script>
-  flowplayer("VideoPlayerTarget", "http://cdn.gsngrocers.com/script/lib/flowplayer-3.2.18.swf", {
+  flowplayer("RecipeVideoPlayer", "http://cdn.gsngrocers.com/script/lib/flowplayer-3.2.18.swf", {
     clip: {
       // these two configuration variables does the trick
       autoPlay: false,
@@ -46,7 +43,7 @@ a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.acti
   border: none;
 }
 
-.VideoPlayerTarget
+.RecipeVideoPlayer
 {
   display: block; 
   width: 100%; 
