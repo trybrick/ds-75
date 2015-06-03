@@ -34,14 +34,14 @@
         </div>
     </div>
     <div class="row" data-ng-repeat-end=""></div>
+
+    <div class="gsn-popover">
+      <div class="popover-content"></div>
+    </div>
     <div>
       <h5>Disclaimer:</h5>
       <div class="disclaimer">We reserve the right to limit quantities and correct all printed errors. Prices subject to state and local taxes, if applicable. No sales to dealers. Purchase requirements exclude discounts, coupons, gift cards.</div>
     </div>
-  </div>
-  <div class="gsn-popover">
-    <div class="popover-title"></div>
-    <div class="popover-content"></div>
   </div>
 </div>
 <style>
@@ -55,22 +55,23 @@
   }
 }
 
-.dcircular-popover
+.gsn-popover
 {
   position: fixed; 
-  z-index: 10; 
+  z-index: 100; 
   width: 300px;
   padding: 5px; 
   background: #fff
 }
+
 /* logo responsive */
 @media(max-width: 767px){
-  .dcircular-popover {
+  .gsn-popover {
     width: 200px;
   }
 }
 @media(min-width:768px) and (max-width:991px) {
-  .dcircular-popover {
+  .gsn-popover {
     width: 250px;
   }
 }
