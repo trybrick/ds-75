@@ -11,7 +11,7 @@
           <div data-ng-repeat="group in vm.mealPlanners | orderBy:'key'">
             <h3>{{group.items[0].DisplayDate}}</h3>
             <div class="row" data-ng-repeat="item in group.items">
-              <a data-ng-href="/recipe/{{item.RecipeId}}">{{item.RecipeTitle}}</a>
+              <a href="javascript:void(0)" data-ng-click="goUrl('/recipe/' + item.RecipeId)">{{item.RecipeTitle}}</a>
             </div>
           </div>
           <button class="btn btn-primary" data-ng-click="goBack()">Back</button>

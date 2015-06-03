@@ -50,7 +50,7 @@
         <div class="checkbox">  
           <label><input type="checkbox" name="receiveemail" data-ng-model="profile.ReceiveEmail"/>
           Receive Weekly Email - Yes, I'd like to receive specials, recipe of the week, events, coupon savings, weekly circular, and featured articles.</label>
-          <p><i class="fa fa-lock fa-2x"></i> Your trust is important to us. View our <a data-ng-href="/privacy" target="_blank">Privacy Policy</a> for detailed information.</p>
+          <p><i class="fa fa-lock fa-2x"></i> Your trust is important to us. View our <a data-ng-click="goUrl('/privacy', '_blank')" href="javascript:void(0)">Privacy Policy</a> for detailed information.</p>
         </div> 
         <div class="form-group" data-ng-class="{'has-success': !myForm.primarystoreid.$invalid, 'has-error': myForm.primarystoreid.$invalid}">
           <label for="primarystoreid">
