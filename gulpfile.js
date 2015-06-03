@@ -15,7 +15,7 @@ var exec =       require('child_process').exec;
 var path =       require('path');
 
 var config = {
-  chains: ['common', 'bootstrap'],
+  chains: [],
   tasks: [ 'clone-ds', 'copy-ds'],
   tasksClone: [],
   tasksCopy: [],
