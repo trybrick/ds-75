@@ -39,6 +39,10 @@
       <div class="disclaimer">We reserve the right to limit quantities and correct all printed errors. Prices subject to state and local taxes, if applicable. No sales to dealers. Purchase requirements exclude discounts, coupons, gift cards.</div>
     </div>
   </div>
+  <div class="gsn-popover">
+    <div class="popover-title"></div>
+    <div class="popover-content"></div>
+  </div>
 </div>
 <style>
 .circularItem img {
@@ -51,4 +55,23 @@
   }
 }
 
+.dcircular-popover
+{
+  position: fixed; 
+  z-index: 10; 
+  width: 300px;
+  padding: 5px; 
+  background: #fff
+}
+/* logo responsive */
+@media(max-width: 767px){
+  .dcircular-popover {
+    width: 200px;
+  }
+}
+@media(min-width:768px) and (max-width:991px) {
+  .dcircular-popover {
+    width: 250px;
+  }
+}
 </style>
