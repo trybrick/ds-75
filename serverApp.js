@@ -4,46 +4,19 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     methodOverride = require('method-override'),
     fs = require('fs'),
+    gulp = require('gulp'),
     url = require('url');
     
-var config = require('./asset/config.json');
 var servicePath = __dirname;
 var apps = {};
 
 function startServer(chainId) {
   var app = express();
   apps[chainId] = app;
-  
-  // Configuration
-  app.use('/proxy', function (req, res) {
-    var newUrl = config.GsnApiUrl + req.url.replace('/proxy', '');
-    req.pipe(request({ uri: newUrl, method: req.method })).pipe(res);
-  });
-  app.use(methodOverride());
+  gulp.src('asset/' + chainId + '/*.*').pipe(gulp.dest('.', { overwrite: true }));
 
   // make sure that asset folder access are static file 
-  app.use('/asset', express.static(path.join(servicePath, 'asset')));
-
-  // handle the rest as html
-  app.get('*', function (request, response) {
-    var myPath = url.parse(request.url).pathname.toLowerCase();
-    if (myPath.length <= 2 || myPath.indexOf('.') < 0)
-      myPath = path.join('asset', chainId, "index.html");
-     console.log(myPath);
-    if (myPath.indexOf('.') > 0 && myPath.indexOf('.aspx') < 0) {
-      
-      var fullPath = path.join(servicePath, myPath);
-      if (!fs.existsSync(fullPath)) {
-        response.status(404).send(fullPath + ' not found.');
-        return;
-      }
-
-      var k = fs.readFileSync(fullPath, 'utf8');
-      response.send(k.replace(/\?nocache=[^'"]+/gi, "?nocache=" + (new Date().getTime())));
-      //response.sendFile(fullPath);
-    }
-  });
-
+  app.use('/', express.static(servicePath));
   
   // Start server
   var port = 3000 + parseInt(chainId);

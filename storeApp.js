@@ -1,4 +1,4 @@
-﻿var storeApp = angular
+var storeApp = angular
     .module('storeApp', ['infinite-scroll', 'ngRoute', 'ngSanitize', 'ngAnimate', 'ngTouch', 'chieffancypants.loadingBar', 'gsn.core', 'ui.bootstrap', 'ui.map', 'ui.keypress', 'ui.event', 'ui.utils', 'facebook', 'angulartics'])
     .config(['$routeProvider', function ($routeProvider) {
       // disable theme, views has been fork from bootstrap theme
@@ -191,7 +191,7 @@ storeApp
 
 (function (angular, undefined) {
   'use strict';
-  var myModule = angular.module('gsn.core');
+  var myModule = angular.module('gsncore');
 
   myModule.directive('gsnDigiCirc', ['$timeout', '$rootScope', '$analytics', 'gsnApi', function ($timeout, $rootScope, $analytics, gsnApi) {
     // Usage: create classic hovering digital circular
