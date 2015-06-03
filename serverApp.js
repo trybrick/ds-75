@@ -13,11 +13,35 @@ var apps = {};
 function startServer(chainId) {
   var app = express();
   apps[chainId] = app;
+
   gulp.src('asset/' + chainId + '/*.*').pipe(gulp.dest('.', { overwrite: true }));
 
   // make sure that asset folder access are static file 
   app.use('/', express.static(servicePath));
-  
+
+  // handle the rest as html
+  app.get('*', function (request, response) {
+    var myPath = url.parse(request.url).pathname.toLowerCase();
+    if (myPath.length <= 2 || myPath.indexOf('.') < 0)
+      myPath = path.join('asset', chainId, "index.html");
+    else 
+      myPath = path.join('asset', chainId, myPath);
+    
+    console.log(myPath);
+
+    if (myPath.indexOf('.') > 0 && myPath.indexOf('.aspx') < 0) {
+      
+      var fullPath = path.join(servicePath, myPath);
+      if (!fs.existsSync(fullPath)) {
+        response.status(404).send(fullPath + ' not found.');
+        return;
+      }
+
+      var k = fs.readFileSync(fullPath, 'utf8');
+      response.send(k.replace(/\?nocache=[^'"]+/gi, "?nocache=" + (new Date().getTime())));
+      //response.sendFile(fullPath);
+    }
+  });
   // Start server
   var port = 3000 + parseInt(chainId);
   app.listen(port, function() {
