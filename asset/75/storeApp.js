@@ -36,6 +36,7 @@
         , { login: 0, store: 0, path: '/recipevideo/:id', tpl: gsn.getThemeUrl('/views/engine/recipe-video.html') }
         , { login: 0, store: 0, path: '/registration', tpl: gsn.getThemeUrl('/views/engine/registration.html') }
         , { login: 0, store: 0, path: '/signin', tpl: gsn.getThemeUrl('/views/engine/signin.html') }
+        , { login: 0, store: 0, path: '/store/:id', tpl: gsn.getThemeUrl('/views/engine/store-info.html') }
         , { login: 0, store: 0, path: '/storelocator', tpl: gsn.getThemeUrl('/views/engine/store-locator.html') }
         , { login: 0, store: 0, path: '/unsubscribe', tpl: gsn.getThemeUrl('/views/engine/unsubscribe.html') }
         , { login: 0, store: 0, path: '/blog', tpl: gsn.getContentUrl('/views/blog.html') }
