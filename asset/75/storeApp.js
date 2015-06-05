@@ -27,7 +27,7 @@
         , { login: 0, store: 0, path: '/mylist/print', tpl: gsn.getThemeUrl('/views/engine/shopping-list-print.html') }
         , { login: 0, store: 0, path: '/mylist/email', tpl: gsn.getThemeUrl('/views/engine/shopping-list-email.html') }
         , { login: 1, store: 0, path: '/myrecipes', tpl: gsn.getThemeUrl('/views/engine/my-recipes.html') }
-        , { login: 1, store: 0, path: '/profile', tpl: gsn.getThemeUrl('/views/engine/profile.html') }
+        , { login: 1, store: 0, path: '/profile', tpl: gsn.getThemeUrl('/views/engine/profile-edit.html') }
         , { login: 0, store: 0, path: '/recipe/search', tpl: gsn.getThemeUrl('/views/engine/recipe-search.html') }
         , { login: 0, store: 0, path: '/recipe', tpl: gsn.getThemeUrl('/views/engine/recipe-details.html') }
         , { login: 0, store: 0, path: '/recipe/:id', tpl: gsn.getThemeUrl('/views/engine/recipe-details.html') }
