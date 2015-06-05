@@ -1,4 +1,9 @@
 <div data-ctrl-recipe="" itemscope itemtype="https://schema.org/Recipe">
+  <div class="hidden-meta" data-gsn-title="{{ChainName}} | {{vm.recipe.RecipeTitle}}"></div>
+  <div class="hidden-meta" data-gsn-og-title="{{ChainName}} | {{vm.recipe.RecipeTitle}}"></div>
+  <div class="hidden-meta" data-gsn-og-type="recipe"></div>
+  <div class="hidden-meta" data-gsn-og-image="{{vm.recipe.ImageUrl}}"></div>
+
   <div class="col-md-9" data-ng-include="getThemeUrl('/views/engine/recipe-content.html')"></div>
   <div class="hidden-print col-md-3">
     <div class="row" data-gsn-ad-unit="4" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0 && scrollTop < 200"></div>

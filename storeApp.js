@@ -191,7 +191,7 @@ storeApp
 
 (function (angular, undefined) {
   'use strict';
-  var myModule = angular.module('gsncore');
+  var myModule = angular.module('gsn.core');
 
   myModule.directive('gsnDigiCirc', ['$timeout', '$rootScope', '$analytics', 'gsnApi', function ($timeout, $rootScope, $analytics, gsnApi) {
     // Usage: create classic hovering digital circular

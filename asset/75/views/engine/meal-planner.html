@@ -1,3 +1,4 @@
+<div class="hidden-meta" data-gsn-title="{{ChainName}} | meal planner"></div>
 <div data-ctrl-meal-planner="">
   <h1>Meals Planner</h1>
   <div data-gsn-ad-unit="1" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div> 
@@ -11,7 +12,7 @@
           <div data-ng-repeat="group in vm.mealPlanners | orderBy:'key'">
             <h3>{{group.items[0].DisplayDate}}</h3>
             <div class="row" data-ng-repeat="item in group.items">
-              <a data-ng-href="/recipe/{{item.RecipeId}}">{{item.RecipeTitle}}</a>
+              <a href="javascript:void(0)" data-ng-click="goUrl('/recipe/' + item.RecipeId)">{{item.RecipeTitle}}</a>
             </div>
           </div>
           <button class="btn btn-primary" data-ng-click="goBack()">Back</button>

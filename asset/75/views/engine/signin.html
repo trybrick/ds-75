@@ -1,4 +1,4 @@
-<div class="hidden-meta" data-gsn-title="{{ChainName}} login"></div>
+<div class="hidden-meta" data-gsn-title="{{ChainName}} | login"></div>
 <div data-ctrl-login="">
   <h1>Sign In</h1>
   <div class="col-md-9">
@@ -11,7 +11,7 @@
       </div>
       <div class="col-md-9">
 
-         <h3 data-ng-show="fromUrl">You must login or register to view <a data-ng-href="{{fromUrl}}">{{fromUrl}}</a>.</h3>
+         <h3 data-ng-show="fromUrl">You must login or register to view <a href="javascript:void(0)" data-ng-click="goUrl(fromUrl)">{{fromUrl}}</a>.</h3>
          <h4>Use the header button to login.</h4>
       </div>
     </div>

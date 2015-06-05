@@ -3,7 +3,7 @@
     <h4>{{vm.selectedItem.Description}}</h4>
   </div>
   <div class="recipeIdeas" data-ng-if="vm.selectedItem.RecipeSearch">
-    <a data-ng-href="/recipe/search?q={{vm.selectedItem.RecipeSearch}}">Recipe Ideas</a>
+    <a href="javascript:void(0)" data-ng-click="goUrl('/recipe/search?q=' + vm.selectedItem.RecipeSearch)">Recipe Ideas</a>
   </div>
   <div>
     <img class="availableVarietiesImage" data-ng-src="{{vm.selectedItem.SmallImageUrl  || getThemeUrl('/images/no_image.jpg')}}" />
