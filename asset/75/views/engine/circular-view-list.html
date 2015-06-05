@@ -3,7 +3,8 @@
     <div class="pull-left" data-ng-include="getThemeUrl('/views/engine/circular-view-type.html')"></div>
   </div>
   <div class="col-md-8 col-xs-12">
-     <!--  <span>
+    <div style="margin-left: -42px;">
+      <span>
         <span>Search By:</span>
         <div class="btn-group">
           <input class="searchfield btn btn-primary" type="text" placeholder="enter keyword" data-ng-model="vm.filterBy" name="filterby" />
@@ -19,11 +20,12 @@
             <li><a href="javascript:void(0)" data-ng-click="toggleSort('BrandName');sortByName='brand'">brand</a></li>
           </ul>
         </div>
-      </span> -->
+      </span>
+    </div>
   </div>
   <div class="sponsor" data-gsn-ad-unit="9" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div>
 </div>
-<div class="col-md-12">
+<div class="row">
   <div data-infinite-scroll="loadMore()">
     <div data-ng-repeat-start="item in allItems" data-ng-class="{ '': $index == 0 || allItems[$index-1][sortBy] != item[sortBy] }">
       <div data-ng-if="$index == 0 || allItems[$index-1][sortBy] != item[sortBy]">
@@ -50,7 +52,8 @@
         </div>
     </div>
     <div class="row" data-ng-repeat-end=""></div>
-    <div class="gsn-popover" style="display: none">
+
+    <div class="gsn-popover">
       <div class="popover-content"></div>
     </div>
     <div>
@@ -70,16 +73,24 @@
   }
 }
 
-.gsn-popover 
+.gsn-popover
 {
   position: fixed; 
   z-index: 100; 
+  width: 300px;
   padding: 5px; 
   background: #fff
 }
 
-.gsn-popover img {
-  width: 200px;
+/* logo responsive */
+@media(max-width: 767px){
+  .gsn-popover {
+    width: 200px;
+  }
 }
-
+@media(min-width:768px) and (max-width:991px) {
+  .gsn-popover {
+    width: 250px;
+  }
+}
 </style>

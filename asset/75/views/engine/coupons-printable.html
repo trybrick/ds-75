@@ -1,7 +1,7 @@
 <div class="col-md-10 col-sm-12" data-ctrl-coupon-classic="" data-ng-init="sortByName = 'About to Expire';">
   <h1>Printable Coupons</h1>
-  <div data-gsn-sticky="" data-bottom="0" data-ng-class="{ 'stuck-collappsed': gvm.adsCollapsed }">
-    <div class="stuck-collapser" data-ng-click="gvm.adsCollapsed = !gvm.adsCollapsed"><i class="fa" data-ng-class="{ 'fa-chevron-up': gvm.adsCollapsed, 'fa-chevron-down': !gvm.adsCollapsed }"></i></div><div class="gsnunit" data-sizes="leaderboard" data-targeting='{"tile": "1"}'></div>
+  <div data-gsn-sticky="" data-bottom="0" data-ng-class="{ 'stuck-collappsed': gvm.stuckCollapsedLeaderboard }">
+    <div class="stuck-collapser" data-ng-click="gvm.stuckCollapsedLeaderboard = !gvm.stuckCollapsedLeaderboard"><i class="fa" data-ng-class="{ 'fa-chevron-up': gvm.stuckCollapsedLeaderboard, 'fa-chevron-down': !gvm.stuckCollapsedLeaderboard }"></i></div><div class="gsnunit" data-sizes="leaderboard" data-targeting='{"tile": "1"}'></div>
 
   </div>
   <div class="row savings-sort">
@@ -26,21 +26,18 @@
             <div class="image-container">
               <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
             </div>
-            <div class="product-description">
+            <div class="description">
               <h4>{{item.Description1}}</h4>
               <p>{{item.Description2 | truncate:false:100:' ...'}}</p>
               <p style="font-weight: bold;">expires: {{item.EndDate | date: 'M / dd / yyyy'}}</p>
             </div>
-            <div class="hidden meta">
-              <div class="product-code">{{item.ProductCode}}</div>
-              <div class="product-id">{{item.Id}}</div>
-              <div class="product-brand">{{item.BrandName}}</div>
-            </div>
           </div>
-          <div class="text-center">
-            <button class="btn btn-primary btn-xs" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add To List"}}</button>
-            <button class="btn btn-primary btn-xs" data-ng-click="printManufacturerCoupon($event, item)" data-ng-if="!gsnApi.browser.isMobile">Print Now</button>
-            <p class="coupon-message coupon-message-{{item.ProductCode}}"></p>
+          <div class="row">
+            <div class="controls">
+              <button class="btn btn-primary btn-xs" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add To List"}}</button>
+              <button class="btn btn-primary btn-xs" data-ng-click="printManufacturerCoupon($event, item)" data-ng-if="!gsnApi.browser.isMobile">Print Now</button>
+              <p class="coupon-message coupon-message-{{item.ProductCode}}"></p>
+            </div>
           </div>
         </div>
       </div>

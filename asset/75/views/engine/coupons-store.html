@@ -30,7 +30,7 @@
       <div class="col-md-4 col-sm-4 col-xs-12" data-ng-repeat="item in selectedCoupons.items">
         <div class="text-center">
           <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
-          <div class="product-description">
+          <div class="description inStoreCoupon">
             <h4>{{item.Description1}}</h4>
             <p>{{item.Description2}}</p>
             <h5>expires: {{item.EndDate | date: 'M / dd / yyyy'}}</h5>
@@ -39,7 +39,7 @@
             <p>{{item.Description3}}{{item.Description4}}</p>
             <p >{{item.BottomTagLine}}</p> 
           </div>
-          <div class="text-center">
+          <div class="printCouponBtns">
             <button class="btn btn-primary btn-xs" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add To List"}}</button>
             <button class="btn btn-primary btn-xs" data-ng-click="printManufacturerCoupon($event, item)">Print Now</button>
             <p class="coupon-message coupon-message-{{item.ProductCode}}" data-ng-bindonce=""></p>

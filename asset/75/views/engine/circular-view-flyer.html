@@ -1,15 +1,17 @@
 <div class="row">
-	<div class="col-md-12" data-ng-include="getThemeUrl('/views/engine/circular-view-type.html')"></div>
+  <div class="pull-left" data-ng-include="getThemeUrl('/views/engine/circular-view-type.html')"></div>
+  <div class="sponsor" data-gsn-ad-unit="9" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div>
 </div>
-<br/>
-<div data-gsn-digital-circ="vm.digitalCirc" data-ng-if="!gsnApi.browser.isMobile && ',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0">
+<div class="row gsn-circular-container" data-gsn-digital-circ="vm.digitalCirc" data-ng-if="!gsnApi.browser.isMobile && ',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0">
+  <br />
   <div data-ng-non-bindable=""></div>
 </div>
-<div data-gsn-digi-circ="vm.digitalCirc" data-ng-if="gsnApi.browser.isMobile || ',visible-lg,visible-md'.indexOf(bsDisplayMode) < 0">
+<div class="row gsn-circular-container" data-gsn-digi-circ="vm.digitalCirc" data-ng-if="gsnApi.browser.isMobile || ',visible-lg,visible-md'.indexOf(bsDisplayMode) < 0">
+  <br />
   <div data-ng-non-bindable=""></div>
 </div>
 
-<div class="dcircular-popup" style="display: none">
+<div class="dcircular-popup">
   <div class="popup-title"></div>
   <div class="popup-content"></div>
 </div>
