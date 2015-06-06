@@ -1,0 +1,16 @@
+<!-- engine layout -->
+<div class="row">
+  <div class="col-lg-1" style="margin-left: -180px" data-gsn-ad-unit="6" data-ng-if="',visible-lg,'.indexOf(bsDisplayMode) > 0" data-gsn-sticky="" data-top="60"></div>
+  <div class="col-md-8" data-ng-view=""></div>
+  <div class="col-md-4">
+    <div data-gsn-sticky="" data-top="60">
+      <div class="circplus"></div>
+      <div data-ng-include="getThemeUrl('/views/engine/available-varieties.html')"></div>
+      <div data-gsn-ad-unit="4" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div> 
+      <div data-gsn-ad-unit="5" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div>
+    </div>
+  </div>
+</div>
+<div data-gsn-sticky="" data-bottom="0" data-ng-class="{ 'stuck-collapsed': gvm.adsCollapsed }">
+	<div class="stuck-collapser" data-ng-click="gvm.adsCollapsed = !gvm.adsCollapsed"><i class="fa" data-ng-class="{ 'fa-chevron-up': gvm.adsCollapsed, 'fa-chevron-down': !gvm.adsCollapsed }"></i></div><div class="gsnunit" data-sizes="leaderboard" data-targeting='{"tile": "1"}'></div>
+</div>

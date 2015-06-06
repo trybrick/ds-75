@@ -1,5 +1,4 @@
 <h1 itemprop="name">{{vm.recipe.RecipeTitle}}</h3>
-<div data-gsn-ad-unit="1" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div> 
 <div class="row">
   <div class="col-md-6 col-sm-6">
     <div><strong>Prep Time: </strong><span itemprop="prepTime" content="PT{{vm.recipe.PrepTime}}M">{{vm.recipe.PrepTime}} minutes</span></div>
@@ -47,7 +46,9 @@
   </ul>
   <br />
 </div>
-<button class="btn btn-primary hidden-print" data-ng-click="goBack()">Back</button>
+<div class="form-group">
+  <button class="btn btn-primary hidden-print" data-ng-click="goBack()">Back</button>
+</div>
 <style>
 
 /*----- Recipe Detail -----*/

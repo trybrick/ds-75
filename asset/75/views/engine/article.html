@@ -4,28 +4,21 @@
   <div class="hidden-meta" data-gsn-og-type="article"></div>
   <div class="hidden-meta" data-gsn-og-image="{{article.ImageUrl}}"></div>
   
-  <div class="col-md-9">
-    <div style="width: 100%">
-      <h1 itemprop="name">{{article.Title}}</h1>
-      <h4 itemprop="about">{{article.Teaser}}</h2>
-      <h4 itemprop="alternateName">{{article.SubTitle}}</h2>
-      <div class="hidden"><i>Author: </i><span itemprop="author">{{article.Author}}</span></div>
-      <div class="hidden"><i>Created: </i><span itemprop="dateCreated">{{article.CreateDate | date: 'yyyy-MM-dd'}}</span></div>
-      <div class="hidden"><i>keywords: </i>
-        <span itemprop="keywords">
-        {{(['', 'Ask the Chef', 'Featured Articles', 'Cooking Tips'])[article.ArticleTypeId || 0]}}, cooking, grocery, web, online, recipe
-        </span>
-      </div>
-      <div data-gsn-ad-unit="1" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div> 
-      <br />
-      <div class="thumbnail">
-        <img data-ng-src="{{article.ImageUrl}}" class="pull-right" itemprop="image"/>
-        <div data-ng-bind-html="article.Body | removeAspx | trustedHtml" itemprop="description"></div>	
-      </div>
-      <br />
+  <div style="width: 100%">
+    <h1 itemprop="name">{{article.Title}}</h1>
+    <h4 itemprop="about">{{article.Teaser}}</h2>
+    <h4 itemprop="alternateName">{{article.SubTitle}}</h4>
+    <div class="hidden"><i>Author: </i><span itemprop="author">{{article.Author}}</span></div>
+    <div class="hidden"><i>Created: </i><span itemprop="dateCreated">{{article.CreateDate | date: 'yyyy-MM-dd'}}</span></div>
+    <div class="hidden"><i>keywords: </i>
+      <span itemprop="keywords">
+      {{(['', 'Ask the Chef', 'Featured Articles', 'Cooking Tips'])[article.ArticleTypeId || 0]}}, cooking, grocery, web, online, recipe
+      </span>
     </div>
-  </div>
-  <div class="col-md-3" style="text-align: left">
-    <div data-gsn-ad-unit="6" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0" data-gsn-sticky="" data-top="60"></div>
+    <br />
+    <div class="thumbnail">
+      <img data-ng-src="{{article.ImageUrl}}" class="pull-right" itemprop="image" />
+      <div data-ng-bind-html="article.Body | removeAspx | trustedHtml" itemprop="description"></div>	
+    </div>
   </div>
 </div>

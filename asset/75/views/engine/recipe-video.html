@@ -1,35 +1,28 @@
-<div data-ctrl-recipe-video="" class="row text-center">
+<div data-ctrl-recipe-video="" class="row">
 
   <div class="hidden-meta" data-gsn-title="{{ChainName}} | {{video ? 'cooking video' : video.Title}}"></div>
   <div class="hidden-meta" data-gsn-og-title="{{ChainName}} | {{video ? 'cooking video' : video.Title"></div>
   <div class="hidden-meta" data-gsn-og-type="video"></div>
   <div class="hidden-meta" data-gsn-og-image="{{video.Thumbnail}}"></div>
-
-  <div class="col-md-9">
-    <h1>Cooking Videos</h1>
-    <div data-gsn-ad-unit="1" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div>
-    <div class="row">
-      <div class="col-md-4">
-        <h3>Videos</h3>
-        <div style="display: block; height: 300px; width: 100%; overflow-y: scroll;">
-          <div class="list-group list-groupPns">
-            <div data-ng-repeat="video in vm.videos | orderBy : 'Title'" style="cursor: pointer">
-              <a href="javascript:void(0)" class="list-group-item list-group-itemPns" data-ng-class="{ active: vm.video.VideoId == {{video.VideoId}}}" title="{{video.Title}}" data-ng-click="goUrl('/recipevideo/' + video.VideoId)">{{video.Title}}</a>
-            </div>
+  <h1>Cooking Videos</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <h3>Videos</h3>
+      <div style="display: block; height: 300px; width: 100%; overflow-y: scroll;">
+        <div class="list-group list-groupPns">
+          <div data-ng-repeat="video in vm.videos | orderBy : 'Title'" style="cursor: pointer">
+            <a href="javascript:void(0)" class="list-group-item list-group-itemPns" data-ng-class="{ active: vm.video.VideoId == {{video.VideoId}}}" title="{{video.Title}}" data-ng-click="goUrl('/recipevideo/' + video.VideoId)">{{video.Title}}</a>
           </div>
         </div>
       </div>
-      <div class="col-md-8 noPadLeft">
-        <h1>5 Minute Cooking Classes</h1>
-        <div class="videoColumn" id="VideoPlayer">
-          <h3>{{videoTitle}}</h3>
-          <a id="RecipeVideoPlayer" class="RecipeVideoPlayer"></a>
-        </div>
-      </div>        
     </div>
-  </div>
-  <div class="col-md-3" style="text-align: left">
-    <div data-gsn-ad-unit="6" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0" data-gsn-sticky="" data-top="60"></div>
+    <div class="col-md-8 noPadLeft">
+      <h1>5 Minute Cooking Classes</h1>
+      <div class="videoColumn" id="VideoPlayer">
+        <h3>{{videoTitle}}</h3>
+        <a id="RecipeVideoPlayer" class="RecipeVideoPlayer"></a>
+      </div>
+    </div>        
   </div>
 </div>
 <script>

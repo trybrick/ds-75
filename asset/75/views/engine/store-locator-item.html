@@ -10,6 +10,10 @@
      <span itemprop="addressLocality">{{marker.location.City}}</span>, <span itemprop="addressRegion">{{marker.location.StateName}}</span> <span itemprop="postalCode">{{marker.location.PostalCode}}</span><br />
      <span itemprop="telephone">{{marker.location.Phone}}</span>
    </address>
+   <div class="hidden meta">
+     <div class="store-number">{{marker.location.StoreNumber}}</div>
+     <div class="store-id">{{marker.location.StoreId}}</div>
+   </div>
   </div>
   <div>
      <a href="javascript:void(0)" data-ng-click="selectStore(marker, true)" class="btn btn-primary">

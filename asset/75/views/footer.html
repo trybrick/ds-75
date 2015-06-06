@@ -1,9 +1,9 @@
 <div class="container hidden-printer">
   <div class="col-md-4">
       <div class="your-store">
-          <a href="javascript:void(0)" data-ng-click="goUrl('/storelocator')">Locate your Store</a>
+          {{gvm.currentStore.StoreName}} (<a href="javascript:void(0)" data-ng-click="goUrl('/storelocator')">Locate your Store</a>)
       </div>
-      <div class="yourStore"  data-ng-if="gvm.currentStore.StoreId">
+      <div class="yourStore" data-ng-if="gvm.currentStore.StoreId">
         {{gvm.currentStore.PrimaryAddress}} <br />
         {{gvm.currentStore.City}}, {{gvm.currentStore.StateName}} {{gvm.currentStore.PostalCode}} <br />
         {{gvm.currentStore.Phone}} <br />
