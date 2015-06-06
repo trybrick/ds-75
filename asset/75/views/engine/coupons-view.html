@@ -1,6 +1,6 @@
 <div class="hidden-meta" data-gsn-title="{{ChainName}} | coupons"></div>
 <ul class="nav nav-tabs" data-ng-include="getThemeUrl('/views/engine/coupons-tabs.html')"></ul>
-<div data-ctrl-coupon-classic="" data-ng-init="sortByName = 'About to Expire';">
+<div data-ctrl-coupon-classic="" class="col-md-12" data-ng-init="sortByName = 'About to Expire';">
   <div data-ng-include="getThemeUrl('/views/engine/coupons-digital.html')" data-ng-if="currentPath.indexOf('/coupons/digital') == 0"></div>
   <div data-ng-include="getThemeUrl('/views/engine/coupons-printable.html')" data-ng-if="currentPath.indexOf('/coupons/printable') == 0"></div>
   <div data-ng-include="getThemeUrl('/views/engine/coupons-store.html')" data-ng-if="currentPath.indexOf('/coupons/store') == 0"></div>

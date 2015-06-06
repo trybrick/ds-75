@@ -11,6 +11,11 @@
       // force not to use proxy, comment out the line before for IE8 and 9 support
       gsn.applyConfig(gsn.config, true);
 
+
+      var le1 = gsn.getThemeUrl('/views/layout-gsn1.html');
+      var le2 = gsn.getThemeUrl('/views/layout-gsn2.html');
+      var le3 = gsn.getThemeUrl('/views/layout-gsn3.html');
+      
       var urls = [
         {   login: 0, store: 0, path: '/', tpl: gsn.getContentUrl('/views/home.html') }
         , { login: 0, store: 0, layout: le3, path: '/article', tpl: gsn.getThemeUrl('/views/engine/article.html') }
