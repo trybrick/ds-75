@@ -43,9 +43,9 @@
       ];
 
       angular.forEach(urls, function(v, k){
-        $routeProvider.when(v.path, { templateUrl: v.tpl, caseInsensitiveMatch: true, storeRequired: v.store, requireLogin: v.login })
+        $routeProvider.when(v.path, { templateUrl: v.tpl, caseInsensitiveMatch: true, storeRequired: v.store, requireLogin: v.login, layout: v.layout })
       });
-      $routeProvider.otherwise({ templateUrl: gsn.getThemeUrl('/views/engine/static-content.html'), caseInsensitiveMatch: true} );
+      $routeProvider.otherwise({ templateUrl: gsn.getThemeUrl('/views/engine/static-content.html'), caseInsensitiveMatch: true, layout: v.layout } );
     }]);
 
 
