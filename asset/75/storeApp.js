@@ -20,8 +20,8 @@
         {   login: 0, store: 0, path: '/', tpl: gsn.getContentUrl('/views/home.html') }
         , { login: 0, store: 0, layout: le[3], path: '/article', tpl: gsn.getThemeUrl('/views/engine/article.html') }
         , { login: 0, store: 0, layout: le[3], path: '/article/:id', tpl: gsn.getThemeUrl('/views/engine/article.html') }
-        , { login: 0, store: 1, layout: le[3], path: '/circular', tpl: gsn.getThemeUrl('/views/engine/circular-view.html')}
-        , { login: 0, store: 1, layout: le[3], path: '/circular/:viewtype', tpl: gsn.getThemeUrl('/views/engine/circular-view.html') }
+        , { login: 0, store: 1, layout: le[4], path: '/circular', tpl: gsn.getThemeUrl('/views/engine/circular-view.html')}
+        , { login: 0, store: 1, layout: le[4], path: '/circular/:viewtype', tpl: gsn.getThemeUrl('/views/engine/circular-view.html') }
         , { login: 0, store: 0, layout: le[3], path: '/contactus', tpl: gsn.getThemeUrl('/views/engine/contact-us.html') }
         , { login: 0, store: 1, layout: le[3], path: '/coupons/digital', tpl: gsn.getThemeUrl('/views/engine/coupons-view.html') }
         , { login: 0, store: 1, layout: le[3], path: '/coupons/printable', tpl: gsn.getThemeUrl('/views/engine/coupons-view.html') }
