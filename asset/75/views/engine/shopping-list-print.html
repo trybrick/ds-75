@@ -1,4 +1,4 @@
-<div class="row">
+<div class="col-md-12">
   <div class="col-md-10">
     <h1>My Shopping List</h1>
     <p data-gsn-store-info="[store.StoreName] [store.PrimaryAddress], [store.City] location only"></p>
@@ -7,7 +7,7 @@
     <button class="btn btn-primary btn-xs pull-right" type="button" onclick="javascript:window.print();" data-analytics-on="click" data-analytics-event="ClickPrint" data-analytics-category="ShoppingList">Print</button>
   </div>
 </div>
-<div class="row" data-gsn-shopping-list="">
+<div class="col-md-12" data-gsn-shopping-list="">
   <div data-ng-init="canPrint = true">
     <div data-ng-repeat="groupItem in allItems" data-ng-hide="groupItem.fitems.length <= 0">
       <div class="col-md-6 col-xs-6 itemInfo printCouponCategory">
@@ -25,9 +25,6 @@
     </div>        
   </div>
   <!-- Ad Pods -->
-  <div class="row">
-    <div class="col-md-12" data-gsn-ad-unit="2"></div>
-  </div>
   <div class="row">    	
     <div class="col-md-10 printCouponCategory">
       <h4>Manufacturer Coupon Print Status (must submit all coupons to redeem savings)</h4>
@@ -92,7 +89,7 @@
     </div>
   </div>
 </div>
-<div class="row" data-ng-if="!gsnApi.browser.isMobile">
+<div class="col-md-12" data-ng-if="!gsnApi.browser.isMobile">
   <p>Trouble printing manufacturer coupons? Download and install the Coupon Printing Plugin:<br />
     <a href="http://cdn.coupons.com/ftp.coupons.com/Partners/CouponPrinter.exe">Windows Coupon Printing Plugin</a>
     <span>| </span>

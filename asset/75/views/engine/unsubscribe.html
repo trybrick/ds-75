@@ -1,16 +1,16 @@
 <div class="hidden-meta" data-gsn-title="{{ChainName}} | unsubscribe"></div>
-<div class="row pure-g" data-ctrl-recovery="">
+<div class="col-md-12" data-ctrl-recovery="">
   <form role="form" name="myRecoveryForm" data-ng-submit="unsubscribeEmail()" data-ng-hide="hasSubmitted && !isSubmitting && isValidSubmit">
     <h1>Unsubscribe</h1>
     <p>Use the form below if you no longer wish to receive email from {{ChainName}}</p>
-    <div class="form-group row pure-g">
+    <div class="form-group">
       <label for="usernameField">Email Address or Username: <span class="required" data-ng-hide="usernameField">Required</span></label>
       <input name="usernameField" type="text" data-ng-required="true" class="form-control" placeholder="Enter email address or username" data-ng-model="profile.Email" />
       <div class="form-group" data-ng-show="hasClickSubmit && myRecoveryForm.$invalid">
         <div class="alert alert-danger" data-ng-show="myRecoveryForm.usernameField.$error.required">* This field is required.</div>
       </div>
     </div>
-    <div class="row pure-g">
+    <div class="form-group">
       <button type="button" class="btn btn-primary" data-ng-click="goUrl('/')" tabindex="-1">Cancel</button>
       <button type="submit" class="btn btn-primary">Submit</button>
     </div>

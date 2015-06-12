@@ -1,30 +1,9 @@
 <div class="hidden-meta" data-gsn-title="{{ChainName}} | recipe search"></div>
-<div data-ctrl-recipe-search=""> 
+<div data-ctrl-recipe-search="" class="col-md-12"> 
   <h1>Recipe Search Result</h1>
-  <div class="col-md-9">
-    <div data-gsn-ad-unit="1" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div> 
-    <div style="padding-top: 5px">
-      <div class="col-md-3" style="text-align: left; padding-left: 0; margin-left: 0;">
-        <div data-gsn-ad-unit="6" 
-          data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0" 
-          data-gsn-sticky=".adUnit6" data-top="60"></div>
-      </div>
-      <div class="col-md-9">
-       <div data-ng-if="vm.searchResult">
-          <button class="btn btn-primary btn-xs" data-ng-click="goBack()">Back</button><br />
-          <div data-pagination="" data-max-size="12" data-total-items="totalItems" data-page="currentPage" data-items-per-page="itemsPerPage"></div>
-          <div class="recipeSearchResults" data-ng-repeat="item in vm.searchResult | orderBy:'Relevance':true | pagingFilter:itemsPerPage:(currentPage-1)">
-              <a href="javascript:void(0)" data-ng-click="goUrl('/recipe/' + item.RecipeId)">{{item.RecipeTitle}}</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div data-ng-non-bindable="">
-      <div class="circplus"></div>
-    </div>
-    <div data-ng-include="getThemeUrl('/views/engine/available-varieties.html')"></div>
-    <div data-gsn-ad-unit="4" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0" style="margin-top: -6px;"></div> 
+  <button class="btn btn-primary btn-xs" data-ng-click="goBack()">Back</button><br />
+  <div data-pagination="" data-max-size="12" data-total-items="totalItems" data-page="currentPage" data-items-per-page="itemsPerPage"></div>
+  <div class="recipeSearchResults" data-ng-repeat="item in vm.searchResult | orderBy:'Relevance':true | pagingFilter:itemsPerPage:(currentPage-1)">
+      <a href="javascript:void(0)" data-ng-click="goUrl('/recipe/' + item.RecipeId)">{{item.RecipeTitle}}</a>
   </div>
 </div>

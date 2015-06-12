@@ -1,0 +1,29 @@
+<div class="container hidden-printer">
+  <div class="col-md-4">
+      <div class="your-store">
+          {{gvm.currentStore.StoreName}} (<a href="javascript:void(0)" data-ng-click="goUrl('/storelocator')">Locate your Store</a>)
+      </div>
+      <div class="yourStore" data-ng-if="gvm.currentStore.StoreId">
+        {{gvm.currentStore.PrimaryAddress}} <br />
+        {{gvm.currentStore.City}}, {{gvm.currentStore.StateName}} {{gvm.currentStore.PostalCode}} <br />
+        {{gvm.currentStore.Phone}} <br />
+        {{gvm.currentStore.OpenHoursDisplay}}
+      </div>
+  </div>
+  <div class="col-md-4 company-info">
+      <ul>
+    <li data-ng-class="{'underlined': currentPath == '/aboutus'}"><a href="javascript:void(0)" data-ng-click="goUrl('/aboutus')">About Us</a></li>
+    <li data-ng-class="{'underlined': currentPath == '/careers'}"><a href="javascript:void(0)" data-ng-click="goUrl('/careers')">Careers</a></li>
+    <li data-ng-class="{'underlined': currentPath == '/contactus'}"><a href="javascript:void(0)" data-ng-click="goUrl('/contactus')">Contact Us</a></li>
+    <li data-ng-class="{'underlined': currentPath == '/registration'}"><a href="javascript:void(0)" data-ng-click="goUrl('/registration')">Register</a></li>
+  </ul>
+  </div>
+  <div class="col-md-4 social">
+      <h4 style="margin-top: 0;">Stay Connected</h4>
+       <ul style="padding-left: 0;"> 
+          <li><a href="https://www.facebook.com/groceryshoppingnetwork"><i style="color: #3B5998" class="fa fa-facebook-square fa-2x"></i></a></li>
+          <li><a href="https://twitter.com/grocerynetwork"><i style="color: #4099FF" class="fa fa-twitter-square fa-2x"></i></a></li>
+          <li><a href="#"><i style="color: #cb2027" class="fa fa-pinterest fa-2x"></i></a></li> 
+       </ul>
+  </div>
+</div>
