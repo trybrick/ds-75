@@ -7,84 +7,55 @@
 <html class="no-js" data-ng-app="storeApp">
 <!--<![endif]-->
 <head>
+  <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">   
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">                             
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no">
 
-  <meta name="author" content="Grocery Shopping Network">
+  <meta name="author" content="[chainname]">
   <meta name="description" content="Shop for groceries with our meal planning solutions, save hundreds of dollars with printable coupons and find all recipes and meal ideas.">
-  <meta name="keywords" content="Weekly Specials, Recipes, Coupons, Meal Planning, Cooking Videos, Low Prices, Shop Online">     
+  <meta name="keywords" content="Weekly Specials, Recipes, Coupons, Meal Planning, Cooking Videos, Low Prices, Shop Online">
 
-  <!-- Open Graph data to be fill in later -->
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:description" content="" /> 
-
-  <title>Coborn's</title>
-  <link href="http://cdn-staging.gsngrocers.com/script/lib/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
-  <link href="http://cdn-staging.gsngrocers.com/asset/common/styles/global.css" rel="stylesheet" type="text/css">    
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <title>[chainname]</title>
+  <link href="http://cdn-staging.gsngrocers.com/script/lib/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="http://cdn-staging.gsngrocers.com/asset/common/styles/global.css" rel="stylesheet" type="text/css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
   <!-- Your custom css goes below here -->
-  <link href="/asset/75/styles/app.css?nocache=1" rel="stylesheet" type="text/css">  
+  <style type="text/less">
+      @import "//clientapix.gsn2.com/api/v1/content/meta/[chainid]/?name=home%20page&meta=less&type=text/less";
+      @import "//cdn-staging.gsngrocers.com/asset/bootstrap/styles/theme.less";
+  </style>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
 </head>
-<body ng-cloak="">
-  <div data-bs-display-mode="bsDisplayMode"><!-- do not hide this div, it is use to detect display size --></div> 
-  
-  <div class="layout-container">
-    <!-- Header -->
-    <header>
-      <div class="container">
-        <div class="hidden-print pull-right" style="padding-top: 5px" data-ng-include="getContentUrl('/views/menu-login.html')"></div>
-        <div data-gsn-ft-config="logo">
-          <div data-ng-if="item.Description" data-ng-bind-html="item.Description"></div>
-          <a href="javascript:void(0)" data-ng-if="!item.Description" data-ng-click="goUrl('/')">
-            <img data-ng-src="{{getContentUrl('/images/logo.png')}}" alt="Store Logo" class="logo" />
-          </a>
-        </div>
-
-        <!-- Full control of menu either through GSN Admin or replace the dive below with your own menu -->
-        <div data-ng-include="getContentUrl('/views/menu.html')" class="hidden-print" data-gsn-sticky="" style="width: 100%; left: 0">
-        </div>
-      </div>
-    </header>
-
-    <!-- Main Content container-->
-    <div class="mainContent container" data-ng-include="currentLayout"></div>
-
-    <!-- Footer -->     
-    <footer data-ng-include="getContentUrl('/views/footer.html')"></footer>
-  </div>    
+<body data-ng-cloak="">
+  <div class="layout-container" data-ng-include="'http://clientapix.gsn2.com/api/v1/content/meta/[chainid]/?name=home page&meta=template&type=text/html'"></div>
 
   <!-- above the fold scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.js"></script>   
-  <script src="https://clientapix.gsn2.com/api/v1/store/sitecontentscript/75?nocache=1"></script>                                                  
-  <script data-gsnid="75" src="http://cdn-staging.gsngrocers.com/script/gsndfp/gsndfp.min.js?nocache=1"></script>
-  <script src="http://cdn-staging.gsngrocers.com/script/gsncore/latest/gsncore.js"></script>  
-  <script src="/asset/75/storeApp.js?nocache=1"></script>      
-                                    
-  <!-- angular depencencies -->                                             
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-sanitize.min.js"></script><!-- security -->   
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.min.js"></script><!-- routing and history -->  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js?nocache=1"></script>
+
+  <!-- gsn scripts -->
+  <script src="http://cdn-staging.gsngrocers.com/script/gcprinter/gcprinter.min.js?nocache=1"></script>                                         
+  <script data-gsnid="[chainid]" src="http://cdn-staging.gsngrocers.com/script/gsndfp/gsndfp.min.js?nocache=1"></script>  
+  <script src="https://clientapix.gsn2.com/api/v1/store/sitecontentscript/[chainid]?nocache=1"></script>
+  <script src="http://cdn-staging.gsngrocers.com/script/gsncore/latest/gsncore.min.js?nocache=1"></script>
+  <script src="https://clientapix.gsn2.com/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/[chainid]/storeApp.js?nocache=1"></script>
+
+  <!-- angular depencencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-sanitize.min.js"></script><!-- security -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.min.js"></script><!-- routing and history -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-animate.min.js"></script><!-- carousel -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-touch.min.js"></script> <!-- touch polyfill for ng-click -->
 
-  <!-- below the fold: js -->                                                                                 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script><!-- bootstrap -->    
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script><!-- bootstrap to angular bridge --> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script><!-- for circular imagemap --> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/3.0.5/klass.min.js"></script><!-- required for photoswipe -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/3.0.5/code.photoswipe.jquery.min.js"></script><!-- for image gallery --> 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/3.0.5/photoswipe.min.css" rel="stylesheet" type="text/css"> 
+  <!-- below the fold: js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script><!-- bootstrap -->
 
-  <!--begin:analytics-->                 
+  <!--begin:analytics-->
   <script>
     (function (i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -94,17 +65,26 @@
       m.parentNode.insertBefore(a, m);
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
   </script>
-  <div class="hidden" data-gsn-path-pixel="https://secure.adnxs.com/getuid?https://dataapi.gsn2.com/api/v1/partner/linkadnx/[[ProfileId]]/[[ChainId]]?adnxs_uid=$UID&nocache=[[CACHEBUSTER]]"></div>
-  <!--end:analytics-->  
+    <div class="hidden" data-gsn-path-pixel="http://ads.exactdrive.com/seg?add=1701275&t=2&redir=https://secure.adnxs.com/getuid?https://clientapi.gsn2.com/api/v1/partner/linkadnx/[[ProfileId]]/[[ChainId]]?adnxs_uid=$UID&nocache=[[CACHEBUSTER]]"></div>
+  <div data-bs-display-mode="bsDisplayMode"></div>
+  <!--end:analytics-->
   <script>
     <!-- mobile collapse issue: https://github.com/twbs/bootstrap/issues/12852 -->
     $(document).ready(function () {
-      $(document).on('click.nav','.navbar-collapse.in',function(e) {
-        if( $(e.target).is('a') ) {
-            $(this).removeClass('in').addClass('collapse');
+      setTimeout(less.refreshStyles, 1000);
+      $(document.body).on('click','.navbar-collapse',function(e) {
+        // get anchor tag
+        var myTarget = $(e.target);
+        if (!myTarget.is('a')) {
+          myTarget = $(e.target).parent('a');
+        }
+
+        // if next element is not a dropdown then collapse
+        if (!myTarget.next().hasClass('dropdown-menu')) {
+          $('.navbar-collapse').removeClass('in').addClass('collapse');
         }
       });
     });
-  </script>   
+  </script>
 </body>
 </html>

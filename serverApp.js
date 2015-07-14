@@ -12,9 +12,8 @@ var apps = {};
 
 function startServer(chainId) {
   var app = express();
+  var port = 3000 + parseInt(chainId);
   apps[chainId] = app;
-  gulp.src('asset/' + chainId + '/*.*').pipe(gulp.dest('.', { overwrite: true }));
-
   app.engine('html', require('ejs').renderFile);
   app.use('/proxy', function (req, res) {
     var newUrl = 'http://clientapix.gsn2.com/api/v1' + req.url.replace('/proxy', '');
@@ -29,7 +28,7 @@ function startServer(chainId) {
   app.get('*', function (request, response) {
     var myPath = url.parse(request.url).pathname.toLowerCase();
     if (myPath.length <= 2 || myPath.indexOf('.') < 0)
-      myPath = path.join('asset', chainId, "index.html");
+      myPath = path.join('asset/' + chainId + '/index.html');
 
     console.log(myPath);
     if (myPath.indexOf('.') > 0 && myPath.indexOf('.aspx') < 0) {
@@ -41,12 +40,15 @@ function startServer(chainId) {
       }
 
       var k = fs.readFileSync(fullPath, 'utf8');
-      response.send(k.replace(/\?nocache=[^'"]+/gi, "?nocache=" + (new Date().getTime())));
+      k = k.replace('https://clientapix.gsn2.com/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/[chainid]/storeApp.js?nocache=1', '/asset/[chainid]/storeApp.js');
+      k = k.replace(/\[chainname\]/gi, 'localhost:' + port).replace(/\[chainid\]/gi, chainId);
+      k = k.replace('cdn-staging.gsngrocers.com/asset/' + chainId, 'localhost:' + port + '/asset/' + chainId);
+      k = k.replace(/.min.js\?nocache=[^'"]+/gi, ".js?nocache=2");
+      response.send(k);
     }
   });
 
   // Start server
-  var port = 3000 + parseInt(chainId);
   app.listen(port, function() {
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
   });
