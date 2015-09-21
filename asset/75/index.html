@@ -1,90 +1,645 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" id="ng-app" ng-app="storeApp" xmlns:ng="http://angularjs.org" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie10 lt-ie9 lt-ie8" id="ng-app" ng-app="storeApp" xmlns:ng="http://angularjs.org" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie10 lt-ie9" id="ng-app" ng-app="storeApp" xmlns:ng="http://angularjs.org" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"> <![endif]-->
-<!--[if IE 9]>    <html class="no-js lt-ie10" id="ng-app" ng-app="storeApp" xmlns:ng="http://angularjs.org" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"> <![endif]-->
-<!--[if (!IE)|(gt IE 9)]><!-->
-<html class="no-js" data-ng-app="storeApp">
-<!--<![endif]-->
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Coborn's</title>
 
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="format-detection" content="telephone=no">
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
-  <meta name="author" content="[chainname]">
-  <meta name="description" content="Shop for groceries with our meal planning solutions, save hundreds of dollars with printable coupons and find all recipes and meal ideas.">
-  <meta name="keywords" content="Weekly Specials, Recipes, Coupons, Meal Planning, Cooking Videos, Low Prices, Shop Online">
+<!--<link href="http://marcoceppi.github.io/bootstrap-glyphicons/css/bootstrap.icon-large.min.css" rel="stylesheet">-->
 
-  <title>[chainname]</title>
-  <link href="http://cdn-staging.gsngrocers.com/script/lib/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="http://cdn-staging.gsngrocers.com/asset/common/styles/global.css" rel="stylesheet" type="text/css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!---icons--->
+<link href="http://glyphsearch.com/bower_components/ionicons/css/ionicons.css" rel="stylesheet">
+<link href="css/ionicons.css" rel="stylesheet">
+<link href="css/ionicons.min.css" rel="stylesheet">
 
-  <!-- Your custom css goes below here -->
-  <style type="text/less">
-      @import "//clientapix.gsn2.com/api/v1/content/meta/[chainid]/?name=home%20page&meta=less&type=text/less&nocache=1";
-      @import "//cdn-staging.gsngrocers.com/asset/bootstrap/styles/theme.less";
-  </style>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
+
+
+<!----Megamenu----------->
+<link rel="stylesheet" type="text/css" href="assets/css/et-line.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/mdf_megamenu.css" />
+
+<!-- Custom CSS -->
+<link href="css/Cobstyle.css" rel="stylesheet">
+<link href="css/Cob-customicons.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,600,600italic' rel='stylesheet' type='text/css'>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
-<body data-ng-cloak="">
-  <div class="layout-container" data-ng-include="'https://clientapix.gsn2.com/api/v1/content/meta/[chainid]/?name=home page&meta=template&type=text/html&nocache=1'"></div>
 
-  <!-- above the fold scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js?nocache=1"></script>
+<body id="page-top" class="index">
 
-  <!-- gsn scripts -->
-  <script src="http://cdn-staging.gsngrocers.com/script/gcprinter/gcprinter.min.js?nocache=1"></script>                                         
-  <script data-gsnid="[chainid]" src="http://cdn-staging.gsngrocers.com/script/gsndfp/gsndfp.min.js?nocache=1"></script>  
-  <script src="https://clientapix.gsn2.com/api/v1/store/sitecontentscript/[chainid]?nocache=1"></script>
-  <script src="http://cdn-staging.gsngrocers.com/script/gsncore/latest/gsncore.min.js?nocache=1"></script>
-  <script src="https://clientapix.gsn2.com/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/[chainid]/storeApp.js?nocache=1"></script>
+<!-- Navigation )ri -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  
+  <nav id="mdf_menu" class="navbar navbar-default">
+     <div class="container">
+         <div class="navbar-header">
+           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+             </button>
+          <!-----------------------Logo------------------------>
+            <div class="Coblogo"><a class="navbar-brand page-scroll" href="index.html"><img src="img/logo_Coborns_082615.png" class="img-responsive" alt="Coborn's"></a></div>
+            <!-----------------------end------------------------>
+         </div>
+         <div id="navbar" class="collapse navbar-collapse">
+      
+            <!-----------------------Start Main  Menu------------------------>
+            <ul class="nav navbar-nav">
+        <!---------------------Deals------------------------>
+                <li class="menu-el"><a><!--<i class="glyphicon glyphicon-list-alt"></i>-->Deals</a>
+          <ul class="mdf_child_menu dropdown" data-width="200px" style="display: block; width: 300px;">
+            <li><a href="#"><i class="fa fa-file-text-o"></i>
+ weekly ads</a></li>
+                        <li><a href="#"><i class="fa fa-scissors"></i>
+ coupons</a></li>
+            <li><a href="#"><i class="fa fa-list-alt"></i>
+ coupon policy &amp; instructions</a></li>
+                        <li><a href="#"><i class="fa fa-envelope"></i>
 
-  <!-- angular depencencies -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-sanitize.min.js"></script><!-- security -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.min.js"></script><!-- routing and history -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-animate.min.js"></script><!-- carousel -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-touch.min.js"></script> <!-- touch polyfill for ng-click -->
+ sign up for email deals</a></li>         
+          </ul> 
+        </li>
+                <!-----------------------end Deals------------------------>
+                
+                <!-----------------------Order Online------------------------>
+        <li class="menu-el">
+          <a><!--<i class="glyphicon glyphicon-circle-arrow-down"></i>-->Order Online</a>
+          <ul class="mdf_child_menu dropdown" data-width="200px" style="display: block; width: 300px;">
+                    
+                <li><a href="http://www.cobornsdelivers.com" target="_blank"><i class="fa fa-truck"></i>
+ cobornsdelivers.com</a></li>
+            <li><a href="#"><i class="fa fa-gift"></i>
+ gift cards</a></li>
+        <li><a href="#"><i class="icon ion-ios-flower"></i> floral</a></li>
+                <li><a href="#"><i class="fa fa-camera"></i>
+ photo</a></li>
+            
+            
+          </ul>
+        </li>
+                <!-----------------------end------------------------>
+                
+                <!-----------------------Departments------------------------>
+        <li class="menu-el"><a><!--<i class="icon-basket"></i>-->Departments</a>
+          <div class="mdf_sub_wrap mdf_flip row lists">
+            <div class="col-sm-3 col-xs-6">
+              <div class="cl-title">
+                <span style="height:1px;">&nbsp;</span>
+              </div>  
+              <ul class="mdf_child_menu">
+                <li><a href="#"><i class="fa fa-child"></i> baby</a></li>
+                                <li><a href="#"><img id="Cob-icon_bakery" src="img/customicons/Cob_customicons.png" alt="Bakery">
 
-  <!-- below the fold: js -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script><!-- bootstrap -->
+ bakery</a></li>
+                                <li><a href="#"><i class="icon ion-android-restaurant"></i>
+ catering</a></li>
+                                <li><a href="#"><i class="fa fa-coffee"></i> coffee shop</a></li>
+                                <li><a href="#"><img id="Cob-icon_convenience" src="img/customicons/Cob_customicons.png" alt="Convenience stores"> convenience stores</a></li>
+                                
+                                
+                                <li><a href="#"><i class="ionicons ion-egg"></i> dairy</a></li>
+                                <li><a href="#"><i class="icon ion-pizza"></i> deli</a></li>
+              </ul> 
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <div class="cl-title">
+                <span style="height:1px;">&nbsp;</span>
+              </div>
+              <ul class="mdf_child_menu">
+                <li><a href="#"><i class="icon ion-ios-flower"></i> floral</a></li>
+                                <li><a href="#"><i class="icon ion-icecream"></i>
+ frozen</a></li>
+                                <li><a href="#"><img id="Cob-icon_generalMerchandise" src="img/customicons/Cob_customicons.png" alt="General Merchandise"> general merchandise</a></li>
+                                <li><a href="#"><img id="Cob-icon_grocery" src="img/customicons/Cob_customicons.png" alt="Grocery"> grocery</a></li>
+                                <li><a href="#"><i class="icon ion-beer"></i>
+ liquor</a></li>
+                                <li><a href="#"><img id="Cob-icon_meat" src="img/customicons/Cob_customicons.png" alt="Meat and Seafood"> meat and seafood</a></li>
+                               
+                                <li><a href="#"><img id="Cob-icon_natural" src="img/customicons/Cob_customicons.png" alt="Natural Organic"> natural foods</a></li>
+              </ul> 
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <div class="cl-title">
+                <span style="height:1px;">&nbsp;</span>
+              </div>  
+              <ul class="mdf_child_menu">
+                <li><a href="#"><img id="Cob-icon_personalCare" src="img/customicons/Cob_customicons.png" alt="Personal Care"> personal care</a></li>
+                                <li><a href="#"><i class="fa fa-paw"></i> pet</a></li>
+                                <li><a href="#"><i class="icon ion-ios-pulse-strong"></i>
+ pharmacy</a></li>
+                                <li><a href="#"><i class="fa fa-camera"></i> photo</a></li>
+                                <!--<li><a href="#"><i class="fa fa-leaf"></i>
+ produce</a></li>-->
+                <li><a href="#"><img id="Cob-icon_produce" src="img/customicons/Cob_customicons.png" alt="Produce">
+ produce</a></li>
+ 
+                                <li><a href="#"><i class="glyphicon glyphicon-facetime-video"></i> video</a></li>
+              </ul> 
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <div class="cl-title">
+                <span style="height:1px;">&nbsp;</span>
+              </div>  
+              <ul class="mdf_child_menu">
+                <li><a href="#"> <i class="icon ion-tshirt-outline"></i>dry cleaning</a></li>
+                                <li><a href="#"><i class="fa fa-ticket"></i>
+ lottery</a></li>
+                                <li><a href="#"><i class="fa fa-money"></i>
+ money order</a></li>
+                                <li><a href="#"><i class="fa fa-envelope-o"></i>
+ postage</a></li>
+                                <li><a href="#"><i class="fa fa-spinner"></i>
+ rug doctor</a></li>
+                                <li><a href="#"><img id="Cob-icon_tobacco" src="img/customicons/Cob_customicons.png" alt="Tobacco">
+ tobacco</a></li>
+              </ul> 
+            </div>
+          </div>  
+        </li>
+                <!-----------------------end ------------------------>
+                <!-----------------------Food & Recipes------------------------>
+                
+        <li class="menu-el">
+          <a><!--<i class="icon-envelope"></i>-->Food &amp; Recipes</a>
+          <ul class="mdf_child_menu dropdown" data-width="200px" style="display: block; width: 300px;">
+                    
+               <li><a href="#"><img id="Cob-icon_FourBrothers" src="img/customicons/Cob_customicons.png" alt="Four Brothers"> four brothers</a></li>
+                                <li><a href="#"><i class="icon ion-bonfire"></i> great summer grilling</a></li>
+                <li><a href="#"><i class="icon ion-ios-filing"></i> recipe center</a></li>
+                                <li><a href="#"><i class="icon ion-ios-paper-outline"></i> weekly ad recipes</a></li>
+                                <li><a href="#"><i class="icon ion-social-rss"></i> from our blog</a></li>
+            
+            
+          </ul> 
+        </li>
+                <!-----------------------end------------------------>
+                
+                <!-----------------------Health & Nutrition------------------------>
+        <li class="menu-el">
+          <a><!--<i class="glyphicon glyphicon-info-sign"></i>-->Health &amp; Nutrition</a>
+          <ul class="mdf_child_menu dropdown" data-width="200px" style="display: block; width: 300px;">
+                    
+                        <li><a href="#"><img id="Cob-icon_nuval" src="img/customicons/Cob_customicons.png" alt="Nuval"> nuval</a></li>
+                                <li><a href="#"><i class="icon ion-ios-nutrition"></i> dietitians corner</a></li>
+                <li><a href="#"><i class="fa fa-calendar"></i>
+ events</a></li>
+                                <li><a href="#"><i class="icon ion-thermometer"></i> food safety</a></li>
+            
+            
+          </ul> 
+        </li>
+                
+                <!-----------------------end ------------------------>
+                
+                <!-----------------------Locations------------------------>
+        <li class="menu-el">
+          <a><!--<i class="glyphicon glyphicon-th"></i>-->Locations</a>
+          <div class="mdf_sub_wrap mdf_flip row lists">
+            <div class="col-sm-3 col-xs-6">
+              <div class="cl-title">
+                <span style="height:1px;">&nbsp;</span>
+              </div>  
+              <ul class="mdf_child_menu">
+                <li><span class="glyphicon glyphicon-map-marker"></span> <a href="#">Albertville, MN</a></li>
+                                <li><span class="glyphicon glyphicon-map-marker"></span> <a href="#">Belle Plaine, MN</a></li>
+                      <li><span class="glyphicon glyphicon-map-marker"></span> <a href="#">Big Lake, MN</a></li>
+                      <li><span class="glyphicon glyphicon-map-marker"></span> <a href="#">Buffalo, MN</a></li>
+                <li><span class="glyphicon glyphicon-map-marker"></span> <a href="#">Cleawater, MN</a></li>
+                      <li><span class="glyphicon glyphicon-map-marker"></span> <a href="#">Delano, MN</a></li>
+                    <li><span class="glyphicon glyphicon-map-marker"></span> <a href="#">Elk River, MN</a></li>
+              </ul> 
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <div class="cl-title">
+                <span style="height:1px;">&nbsp;</span>
+              </div>
+              <ul class="mdf_child_menu">
+                <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> Foley, MN</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> Glencoe, MN</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> Hastings, MN</a></li>
+                      <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> Little Falls, MN</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> Long Prairie, MN</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> Melrose, MN</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> Mora, MN</a></li>
+              </ul> 
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <div class="cl-title">
+                <span style="height:1px;">&nbsp;</span>
+              </div>  
+              <ul class="mdf_child_menu">
+                <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> New Prague, MN</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> Park Rapids, MN</a></li>
+                <li><a href="#"> <span class="glyphicon glyphicon-map-marker"></span>Ramsey, MN</a></li>
+                <li><a href="#"> <span class="glyphicon glyphicon-map-marker"></span>Sartell, MN Riverside</a></li>
+                <li><a href="#"> <span class="glyphicon glyphicon-map-marker"></span>Sartell, MN Pine Cone</a></li>
+                <li><a href="#"> <span class="glyphicon glyphicon-map-marker"></span>Sauk Centre, MN</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> Pipestone, MN</a></li>
+              </ul> 
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <div class="cl-title">
+                <span style="height:1px;">&nbsp;</span>
+              </div>  
+              <ul class="mdf_child_menu">
+                
+                      <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> Sauk Rapids, MN</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> St. Cloud, MN Centennial</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> St. Cloud, MN Cooper Ave.</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> St. Joseph, MN</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> Huron, SD</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> Mitchell, SD</a></li>
+              </ul> 
+            </div>
+          </div>  
+        </li>
+                <!-----------------------end------------------------>
+                
+                <!-----------------------For Our Guests------------------------>
+        <li class="menu-el">
+          <a><!--<i class="icon-layers"></i>-->For Our Guests</a>
+          <div class="mdf_sub_wrap demo-grid row mdf_flip">
+              
+            <div class="row">
+                        <div class="col-md-4">
+                        <div class="cl-title">
+                <span style="height:1px;">&nbsp;</span>
+              </div>  <ul class="mdf_child_menu">
+                <li><a href="insidepage_3cols.html"><i class="fa fa-smile-o"></i>
+about us</a></li>
+                                <li><a href="#"><i class="icon ion-cash"></i> more rewards</a></li>
+                <li><a href="#"><i class="icon ion-briefcase"></i> careers</a></li>
+                                <li><a href="#"><i class="fa fa-heart"></i>
+ coborn's cares</a></li>
+                                <li><a href="#"> <i class="icon ion-ios-people"></i>
+get social</a></li>
+                                <li><a href="#"><i class="fa fa-microphone"></i>
+ news room</a></li>
+ 
+ <li><a href="insidepage_3cols.html"><i class="fa fa-external-link"></i>
+3 column page</a></li>
+<li><a href="insidepage_2cols.html"><i class="fa fa-external-link"></i>
+2 column page</a></li>
 
-  <!--begin:analytics-->
-  <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments);
-      }, i[r].l = 1 * new Date(); a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g;
-      m.parentNode.insertBefore(a, m);
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-  </script>
-    <div class="hidden" data-gsn-path-pixel="http://ads.exactdrive.com/seg?add=1701275&t=2&redir=https://secure.adnxs.com/getuid?https://clientapi.gsn2.com/api/v1/partner/linkadnx/[[ProfileId]]/[[ChainId]]?adnxs_uid=$UID&nocache=[[CACHEBUSTER]]"></div>
-  <div data-bs-display-mode="bsDisplayMode"></div>
-  <!--end:analytics-->
-  <script>
-    <!-- mobile collapse issue: https://github.com/twbs/bootstrap/issues/12852 -->
-    $(document).ready(function () {
-      setTimeout(less.refreshStyles, 1000);
-      $(document.body).on('click','.navbar-collapse',function(e) {
-        // get anchor tag
-        var myTarget = $(e.target);
-        if (!myTarget.is('a')) {
-          myTarget = $(e.target).parent('a');
-        }
+<li><a href="insidepage_wide.html"><i class="fa fa-external-link"></i>
+wide page</a></li>
+                
+              </ul></div>
+              <div class="col-md-8">
+                            <div class="cl-title">
+                <span style="height:1px;">&nbsp;</span>
+              </div>
+                          <!----------form------------>
+                          <div class="scrollableform">
+                            <div id="wufoo-z1ocz5n71jwabqe">Fill out an <a href="https://coborns.wufoo.com/forms/z1ocz5n71jwabqe">online form</a>.</div>
+<script type="text/javascript">var z1ocz5n71jwabqe;(function(d, t) {
+var s = d.createElement(t), options = {
+'userName':'coborns',
+'formHash':'z1ocz5n71jwabqe',
+'autoResize':true,
+'height':'1499',
+'async':true,
+'host':'wufoo.com',
+'header':'show',
+'ssl':true};
+s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+s.onload = s.onreadystatechange = function() {
+var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+try { z1ocz5n71jwabqe = new WufooForm();z1ocz5n71jwabqe.initialize(options);z1ocz5n71jwabqe.display(); } catch (e) {}};
+var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+})(document, 'script');</script>
 
-        // if next element is not a dropdown then collapse
-        if (!myTarget.next().hasClass('dropdown-menu')) {
-          $('.navbar-collapse').removeClass('in').addClass('collapse');
-        }
-      });
-    });
-  </script>
+</div>
+<!-------------end form--------------------->
+
+                            </div>
+                
+            </div>
+            
+          </div>
+        </li>
+                <!-----------------------end------------------------>
+      </ul>
+            <!-----------------------end Main menu------------------------>
+      
+            <!-----------------------Search------------------------>
+            <ul class="right-nav">
+        <li>
+           <div class="search-box">
+                    <input type="text" placeholder="Find Stuff">
+                    <a href="#" class="search-button"><span style="font-size: 16pt; color: rgb(51, 51, 51); margin-top:5px; padding-left:5px;" class="glyphicon glyphicon-search"></span></a>
+                  </div>
+        </li>
+      </ul>
+            <!-----------------------end search------------------------>
+    </div>
+    </div>
+  </nav>
+  <!-- /.container-fluid --> 
+</nav>
+
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-lead-in">Produce Sale!</div>
+      <div class="intro-heading">5 for $15</div>
+      <a href="#portfolio" class="page-scroll btn btn-xl"><i class="fa fa-angle-double-down fa-4x"></i></a> </div>
+  </div>
+</header>
+
+
+<!-------- Login Social Bar--------->
+<section id="loginSocialbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+       
+      </div>
+    </div>
+    <div class="row text-center services">
+      
+      
+      
+      <div id="socialBar"> 
+      <div style="float:left; padding:8px 10px 0px 10px;"><a href="#">Login/Register</a></div>
+      <div id="socialicons" style="float:right;">
+       <div style="float:right;">
+       <a class="btn btn-social-icon btn-youtube"><i class="fa fa-youtube"></i></a>
+       </div>
+       <div style="float:right;">
+       <a class="btn btn-social-icon btn-pinterest"><i class="fa fa-pinterest"></i></a>
+       </div>
+       <div style="float:right;">
+       <a class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i></a>
+       </div>
+       <div style="float:right;">
+       <a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
+       </div>
+       <div style="float:right;">
+       <a class="btn btn-social-icon btn-rss"><i class="fa fa-rss"></i></a>
+       </div>
+        <div style="float:right;">
+       <a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
+       </div>
+       </div>
+       
+      <div style="clear:both; height:1px;"></div>
+     
+      
+       
+      </div>
+      
+      
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Promo -->
+<section id="portfolio" class="bg-light-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <!--<h2 class="section-heading">Portfolio</h2>-->
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-6 portfolio-item"> <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+        <div class="portfolio-hover">
+          <div><i><img src="img/promo/hover/featuredDeal1_400.jpg" class="img-responsive" alt=""></i></div>
+        </div>
+        <img src="img/promo/featuredDeal1_400.jpg" class="img-responsive" alt=""> </a>
+        <!--<div class="portfolio-caption">
+          <h4>Typi non habent</h4>
+          <p class="text-muted">Claritas est etiam processus dynamicus</p>
+        </div>-->
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item"> <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+        <div class="portfolio-hover">
+          <div><i><img src="img/promo/hover/featuredDeal2_400.jpg" class="img-responsive" alt=""></i> </div>
+        </div>
+        <img src="img/promo/featuredDeal2_400.jpg" class="img-responsive" alt=""> </a>
+        <!--<div class="portfolio-caption">
+          <h4>Claritas est etiam</h4>
+          <p class="text-muted">Donec quam felis, ultricies nec</p>
+        </div>-->
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item"> <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"> <i class="fa fa-search-plus fa-3x"></i> </div>
+        </div>
+        <img src="img/promo/weeklyAds_400.jpg" class="img-responsive" alt=""> </a>
+        <!--<div class="portfolio-caption">
+          <h4>Mirum est notare</h4>
+          <p class="text-muted">Duis autem vel eum iriure dolor</p>
+        </div>-->
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item"> <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"> <i class="fa fa-search-plus fa-3x"></i> </div>
+        </div>
+        <img src="img/promo/featuredDeal3_400.jpg" class="img-responsive" alt=""> </a>
+        <!--<div class="portfolio-caption">
+          <h4>Facilisis at vero eros et</h4>
+          <p class="text-muted">Eodem modo typi qui nunc</p>
+        </div>-->
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item"> <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"> <i class="fa fa-search-plus fa-3x"></i> </div>
+        </div>
+        <img src="img/promo/featuredDeal4_400.jpg" class="img-responsive" alt=""> </a>
+        <!--<div class="portfolio-caption">
+          <h4>Quam nunc putamus</h4>
+          <p class="text-muted">Duis autem vel eum iriure dolor</p>
+        </div>-->
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item"> <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"> <i class="fa fa-search-plus fa-3x"></i> </div>
+        </div>
+        <img src="img/promo/featuredBlog_400.jpg" class="img-responsive" alt=""> </a>
+        <!--<div class="portfolio-caption">
+          <h4>Fiant sollemnes in futurum</h4>
+          <p class="text-muted">Investigationes demonstraverunt lectores</p>
+        </div>-->
+      </div>
+      
+      <div class="col-md-4 col-sm-6 portfolio-item"> <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"> <i class="fa fa-search-plus fa-3x"></i> </div>
+        </div>
+        <img src="img/promo/featuredDeal5_400.jpg" class="img-responsive" alt=""> </a>
+        <!--<div class="portfolio-caption">
+          <h4>Typi non habent</h4>
+          <p class="text-muted">Claritas est etiam processus dynamicus</p>
+        </div>-->
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item"> <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"> <i class="fa fa-search-plus fa-3x"></i> </div>
+        </div>
+        <img src="img/promo/featuredDeal6_400.jpg" class="img-responsive" alt=""> </a>
+        <!--<div class="portfolio-caption">
+          <h4>Claritas est etiam</h4>
+          <p class="text-muted">Donec quam felis, ultricies nec</p>
+        </div>-->
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item"> <a href="#portfolioModal9" class="portfolio-link" data-toggle="modal">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"> <i class="fa fa-search-plus fa-3x"></i> </div>
+        </div>
+        <img src="img/promo/featuredRecipe_400.jpg" class="img-responsive" alt=""> </a>
+        <!--<div class="portfolio-caption">
+          <h4>Mirum est notare</h4>
+          <p class="text-muted">Duis autem vel eum iriure dolor</p>
+        </div>-->
+      </div>
+      
+      <div class="col-md-4 col-sm-6 portfolio-item"> <a href="#portfolioModal10" class="portfolio-link" data-toggle="modal">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"> <i class="fa fa-search-plus fa-3x"></i> </div>
+        </div>
+        <img src="img/promo/featuredPromo_400.jpg" class="img-responsive" alt=""> </a>
+        <!--<div class="portfolio-caption">
+          <h4>Typi non habent</h4>
+          <p class="text-muted">Claritas est etiam processus dynamicus</p>
+        </div>-->
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item"> <a href="#portfolioModal11" class="portfolio-link" data-toggle="modal">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"> <i class="fa fa-search-plus fa-3x"></i> </div>
+        </div>
+        <img src="img/promo/futurePromo_400.jpg" class="img-responsive" alt=""> </a>
+        <!--<div class="portfolio-caption">
+          <h4>Claritas est etiam</h4>
+          <p class="text-muted">Donec quam felis, ultricies nec</p>
+        </div>-->
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item"> <a href="#portfolioModal12" class="portfolio-link" data-toggle="modal">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"> <i class="fa fa-search-plus fa-3x"></i> </div>
+        </div>
+        <img src="img/promo/signupExclusiveDeals_400.jpg" class="img-responsive" alt=""> </a>
+        <!--<div class="portfolio-caption">
+          <h4>Mirum est notare</h4>
+          <p class="text-muted">Duis autem vel eum iriure dolor</p>
+        </div>-->
+      </div>
+      
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+    
+    <div class="col-md-4">
+      
+      <div class="footernav"><a href="#page-top" class="btn btn-primary btn-default, page-scroll" style="border:none; background-color:transparent; color:#999;"><span class="glyphicon glyphicon-circle-arrow-up"></span> </a> &nbsp;<a href="#">Privacy Policy</a> | <a href="#">Site Map</a> | <a href="#">Email Sign Up</a> </div>
+      <div>
+      
+      <span class="copyright">Copyright &copy; <script type="text/javascript">var d = new Date();document.write(d.getFullYear());</script> Coborn's Inc, All Rights Reserved.</span> </div>
+      </div>
+      
+      <div class="col-md-4">
+      &nbsp;
+     </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+      
+          
+          
+          <li><a href="#"><i class="fa fa-facebook"></i></a> </li>
+          <li><a href="#"><i class="fa fa-rss"></i></a> </li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a> </li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a> </li>
+          <li><a href="#"><i class="fa fa-pinterest"></i></a> </li>
+          <li><a href="#"><i class="fa fa-youtube"></i></a> </li>
+         
+         
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<!-------------------Megamenu jQuery--------------------------->
+<!--  google maps api call / do not defer it, it will mess up your map -->
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<!-- jQuery library -->
+<script src="assets/js/jquery-1.9.1.min.js"></script>
+<!--  owl carousel plugin jQuery file -->
+<script src="assets/js/owl.carousel.min.js" defer></script>
+<!--  gmap3 jQuery plugin -->
+<script src="assets/js/gmap3.min.js" defer></script>
+<!--  bootstrap plugin -->
+<script src="assets/js/bootstrap.min.js" defer></script>
+<!--  main plugin jQuery file -->
+<script src="assets/js/mdf_js.js" defer></script>
+<!--  custom jQuery script that initializes the plugins -->
+<script src="assets/js/demo.js" defer></script>
+<!------------------------------------------------------------------>
+
+<!-- jQuery --> 
+<script src="js/jquery.js"></script> 
+
+<!-- Bootstrap Core JavaScript --> 
+<script src="js/bootstrap.min.js"></script> 
+
+<!-- Plugin JavaScript --> 
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> 
+<script src="js/classie.js"></script> 
+<script src="js/cbpAnimatedHeader.js"></script> 
+
+<!-- Contact Form JavaScript --> 
+<script src="js/jqBootstrapValidation.js"></script> 
+<script src="js/contact_me.js"></script> 
+
+<!-- Custom Theme JavaScript --> 
+<script src="js/Cob.js"></script>
+
+
 </body>
 </html>
