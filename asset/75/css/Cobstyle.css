@@ -37,8 +37,10 @@ a {
 	font-weight:bold;
 }
 a:hover, a:focus, a:active, a.active {
-	color: #8b1e1a;
-	text-decoration:underline;
+	/*color: #8b1e1a;*/
+	color: #630502;
+	font-weight:bold;
+	/*text-decoration:underline;*/
 }
 h1, h2, h3, h4, h6 {
 	text-transform: uppercase;
