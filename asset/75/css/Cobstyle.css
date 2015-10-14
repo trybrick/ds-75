@@ -34,6 +34,7 @@ a, a:hover, a:focus, a:active, a.active {
 a {
 	color: #8b1e1a;
 	text-decoration:none;
+	font-weight:bold;
 }
 a:hover, a:focus, a:active, a.active {
 	color: #8b1e1a;
