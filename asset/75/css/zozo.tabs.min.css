@@ -244,7 +244,7 @@ article, aside, figcaption, figure, footer, header, hgroup, nav, section {
 	height: 55px;
 	margin: -28px 0 0 -50px;
 	padding: 24px;
-	background: rgb(255, 255, 255) url(../img/loading-image.gif) no-repeat 50% 50%;
+	background: rgb(255, 255, 255) url(http://upload.gsngrocers.com/chainfiles/75/creative/201510/635804157563972175-loading-image.gif) no-repeat 50% 50%;
 }
 .z-tabs.z-rounded span.z-spinner {
 	-webkit-border-radius: 5px;
@@ -1631,7 +1631,7 @@ margin : 10px 0 10px 0;
 .z-tabs.mobile > ul.z-tabs-mobile > li > a > span.z-arrow {
 	position: absolute;
 	top: 50%;
-	background: url(../img/z-tabs-icons.png) no-repeat top left;
+	background: url(http://upload.gsngrocers.com/chainfiles/75/creative/201510/635804157647278311-z-tabs-icons.png) no-repeat top left;
 	background-position: -1470px -3px;
 	width: 30px;
 	height: 30px;
