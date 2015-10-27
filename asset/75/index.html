@@ -361,8 +361,16 @@ var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s
 
 <footer>
 
-
-
+<div>
+  
+  {{gvm.currentStore.StoreName}} (<a href="javascript:void(0)" data-ng-click="goUrl('/storelocator')">Locate your Store</a>)
+  <div data-ng-if="gvm.currentStore.StoreId">
+    {{gvm.currentStore.PrimaryAddress}} <br />
+    {{gvm.currentStore.City}}, {{gvm.currentStore.StateName}} {{gvm.currentStore.PostalCode}} <br />
+    {{gvm.currentStore.Phone}} <br />
+    {{gvm.currentStore.OpenHoursDisplay}}
+  </div>
+</div>
 
   <div class="container">
     <div class="row">
