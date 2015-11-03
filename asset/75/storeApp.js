@@ -2,7 +2,7 @@
     .module('storeApp', ['infinite-scroll', 'ngRoute', 'ngSanitize', 'ngAnimate', 'ngTouch', 'chieffancypants.loadingBar', 'gsn.core', 'ui.map', 'ui.keypress', 'ui.event', 'ui.utils', 'angulartics'])
     .config(['$routeProvider', function ($routeProvider) {
       // disable theme
-      gsn.config.SiteTheme = 'bootstrap';
+      gsn.config.SiteTheme = '75';
       gsn.config.defaultMobileListView = true;
 
       var le = [gsn.getThemeUrl('/views/layout.html')];

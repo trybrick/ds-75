@@ -1,0 +1,36 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="btn btn-default btn-xs pull-right" data-ng-click="doFacebookLogin()" data-analytics-on="click" data-analytics-event="ClickFacebookLogin" data-analytics-category="HeaderLink" data-ng-show="gsnApi.getConfig().FacebookAppId">
+      <i class="fa fa-facebook" style="background-color: #3C599F; padding: 5px 10px;"></i> Facebook Login
+    </button>
+    <h3>Sign in</h3>
+  </div>
+  <div class="modal-body" data-gsn-login="">
+    <form role="form" class="myLoginForm" name="myLoginForm" data-ng-submit="login()" data-stop-event="click" class="generic-content">
+        <input id="usernameField" name="usernameField" type="text" class="form-control" placeholder="Email or username" data-ng-model="profile.UserName" required="required" />
+        <input id="passwordField" name="passwordField" type="password" class="form-control" placeholder="Password" data-ng-model="profile.Password" required="required" />
+        <div class="form-group" data-ng-show="hasSubmitted && !isValidSubmit">
+          <div class="alert alert-danger">
+            Email or password is incorrect.
+          </div>
+        </div> 
+        <div data-gsn-spinner="{radius:30, width:8, length: 16}" data-show-if="isSubmitting"></div>
+        <div style="padding-top: 5px">
+        <button type="submit" class="btn btn-default btn-sm pull-right">Sign in</button>
+        <button type="button" class="btn btn-default btn-sm pull-right" data-ng-click="closeModal();">Cancel</button>
+        </div>
+    </form>
+    <br />
+    <div style="height: 80px">
+      <a href="javascript:void(0)" data-ng-click="goUrl('/registration')">New User? Register..</a><br /><br />
+      <a href="javascript:void(0)" class="col-md-6" data-gsn-modal="getThemeUrl('/views/engine/modal-recover-username.html')" data-ng-click="closeModal();showModal()" data-force-show="true">Forgot username?</a>
+      <a href="javascript:void(0)" class="col-md-6" data-gsn-modal="getThemeUrl('/views/engine/modal-recover-password.html')" data-ng-click="closeModal();showModal()" data-force-show="true">Forgot password?</a>
+    </div>
+  </div>
+</div>
+
+<style>
+.gmodal {
+  background: none !important;
+}
+</style>

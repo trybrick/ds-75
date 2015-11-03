@@ -467,8 +467,32 @@ var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s
       m.parentNode.insertBefore(a, m);
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
   </script>
-    <div class="hidden" data-gsn-path-pixel="http://ib.adnxs.com/seg?add=3623329&t=2&redir=https://secure.adnxs.com/getuid?https://clientapi.gsn2.com/api/v1/partner/linkadnx/[[ProfileId]]/[[ChainId]]?adnxs_uid=$UID&nocache=[[CACHEBUSTER]]"></div>
+    <div class="hidden" data-gsn-path-pixel="http://ib.adnxs.com/seg?add=3623329&t=2&redir=http://ib.adnxs.com/getuid?http://clientapi.gsn2.com/api/v1/partner/linkadnx/[[ProfileId]]/[[ChainId]]?adnxs_uid=$UID&nocache=[[CACHEBUSTER]]"></div>
   <div data-bs-display-mode="bsDisplayMode"></div>
+<script>var clickySiteId = ((globalConfig || {}).data || {}).ClickySiteId;
+var clicky_site_ids = clicky_site_ids || [];
+var clicky_custom = { pageview_disable : 1, history_disable : 1 };
+if (clickySiteId) {
+  clicky_site_ids.push(clickySiteId);
+  (function() {
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = '//static.getclicky.com/js';
+    ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+  })();
+}
+</script>         
+  <div data-bs-display-mode="bsDisplayMode"></div>
+  <script>var googleTagId = ((globalConfig || {}).data || {}).GoogleTagId;
+if (googleTagId) {
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+     })(window,document,'script','dataLayer',googleTagId);
+}
+</script>  
   <!--end:analytics-->
 
 </body>

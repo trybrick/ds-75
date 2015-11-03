@@ -1,0 +1,79 @@
+<div class="row">
+  <div class="col-md-12 featuredContent" data-gsn-partial-content="Home Slideshow"> 
+    <div class="carousel slide" id="myCarousel" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-ng-repeat="item in getContentList()" data-ng-class="{ 'active': $index == 0 }" data-target="#myCarousel" data-slide-to="{{$index}}"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+          <div data-ng-repeat="item in getContentList()" data-ng-bind-html="item.Description | removeAspx | trustedHtml" class="item"  data-ng-class="{ 'active': $index == 0 }"></div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" data-slide="prev" role="button" href="javascript:void(0)" data-target="#myCarousel">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" data-slide="next" role="button" href="javascript:void(0)" data-target="#myCarousel">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="row" style="margin-top: 15px; margin-left: -10px; margin-right: -10px;">
+  <div class="col-md-4 col-sm-4 col-xs-12 featuredhome " data-content-position="1" data-gsn-ft-content="">
+    <a href="javascript:void(0)" data-ng-click="goUrl('/circular')" class="featuredhome-default text-center">
+      <i class="fa fa-newspaper-o fa-5x pull-left theme-default" style="padding: 5px"></i>
+      <h4>Weekly Ad</h4>
+      See the Weekly Ad for your store
+    </a>
+  </div>
+   <div class="col-md-4 col-sm-4 col-xs-12 featuredhome" data-content-position="2" data-gsn-ft-content="">
+    <a href="javascript:void(0)" data-ng-click="goUrl('/coupons')" class="featuredhome-default text-center">
+      <i class="fa fa-usd fa-5x pull-left theme-default" style="padding: 5px 20px"></i>
+      <h4>Coupons</h4>
+      Get the best deals with Coupon Savings
+    </a>
+  </div>
+   <div class="col-md-4 col-sm-4 col-xs-12 featuredhome" data-content-position="3" data-gsn-ft-content="">
+    <a href="javascript:void(0)" data-ng-click="goUrl('/registration')" class="featuredhome-default text-center">
+      <i class="fa fa-envelope-o fa-5x pull-left theme-default" style="padding: 5px"></i>
+      <h4>Sign Up</h4>
+      Receive the latest news and updates
+    </a>
+  </div>
+</div>
+<div class="row" style="margin-top: 15px; margin-left: -10px; margin-right: -10px;">
+  <div class="col-md-4 col-sm-4 col-xs-12 featuredhome" data-content-position="4" data-gsn-ft-recipe="">
+    <a href="javascript:void(0)" data-ng-click="goUrl('/recipe/' + item.RecipeId)" class="featuredhome-default text-center">
+      <img class="pull-left" data-ng-src="{{item.ImageUrl}}" />
+      <h4>Featured Recipe</h4>
+      {{item.RecipeTitle}}
+      
+    </a>
+  </div>
+   <div class="col-md-4 col-sm-4 col-xs-12 featuredhome" data-content-position="5" data-gsn-ft-article="">
+    <a href="javascript:void(0)" data-ng-click="goUrl('/article/' + item.ArticleId)" class="featuredhome-default text-center">
+        <img class="pull-left" data-ng-src="{{item.ImageUrl}}" />
+        <h4>Featured Article</h4>
+        {{item.Title}}
+    </a>
+  </div>
+   <div class="col-md-4 col-sm-4 col-xs-12 featuredhome" data-content-position="6" data-gsn-ft-video="">
+    <a href="javascript:void(0)" data-ng-click="goUrl('/recipevideo/' + item.VideoId)" class="featuredhome-default text-center">
+        <img class="pull-left" data-ng-src="{{item.Thumbnail}}" />
+        <h4>Featured Video</h4>
+        {{item.Title}}
+    </a>
+  </div>
+</div>
+<script>
+setTimeout(function() {
+  jQuery('.carousel').carousel({
+    interval: 5000
+  });
+}, 1000);
+</script>
