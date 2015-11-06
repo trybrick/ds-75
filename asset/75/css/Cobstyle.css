@@ -125,15 +125,9 @@ h5 {
 	background-color: #888;
 }
 .navbar-default {
-	border-color: transparent;
-	/*background-color: #630502;*/
-	background: -moz-linear-gradient(top, rgba(187,172,169,0.65) 0%, rgba(213,205,203,0.71) 16%, rgba(231,226,225,0.77) 33%, rgba(245,236,235,0.82) 47%, rgba(231,226,225,0.87) 63%, rgba(213,205,203,0.93) 80%, rgba(187,172,169,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(187,172,169,0.65)), color-stop(16%,rgba(213,205,203,0.71)), color-stop(33%,rgba(231,226,225,0.77)), color-stop(47%,rgba(245,236,235,0.82)), color-stop(63%,rgba(231,226,225,0.87)), color-stop(80%,rgba(213,205,203,0.93)), color-stop(100%,rgba(187,172,169,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, rgba(187,172,169,0.65) 0%,rgba(213,205,203,0.71) 16%,rgba(231,226,225,0.77) 33%,rgba(245,236,235,0.82) 47%,rgba(231,226,225,0.87) 63%,rgba(213,205,203,0.93) 80%,rgba(187,172,169,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(187,172,169,0.65) 0%,rgba(213,205,203,0.71) 16%,rgba(231,226,225,0.77) 33%,rgba(245,236,235,0.82) 47%,rgba(231,226,225,0.87) 63%,rgba(213,205,203,0.93) 80%,rgba(187,172,169,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(187,172,169,0.65) 0%,rgba(213,205,203,0.71) 16%,rgba(231,226,225,0.77) 33%,rgba(245,236,235,0.82) 47%,rgba(231,226,225,0.87) 63%,rgba(213,205,203,0.93) 80%,rgba(187,172,169,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom, rgba(187,172,169,0.65) 0%,rgba(213,205,203,0.71) 16%,rgba(231,226,225,0.77) 33%,rgba(245,236,235,0.82) 47%,rgba(231,226,225,0.87) 63%,rgba(213,205,203,0.93) 80%,rgba(187,172,169,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6bbaca9', endColorstr='#bbaca9',GradientType=0 );
+	background-image: url(http://upload.gsngrocers.com/chainfiles/75/creative/201511/635824066450013933-mainnav_bg.png);
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
 }
 .navbar-default .navbar-brand {
 	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
