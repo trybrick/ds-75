@@ -16,7 +16,7 @@ var cbpAnimatedHeader = (function() {
 		changeHeaderOn = 300;
 
 	function init() {
-		jQuery.scroll(function( event ) {
+		jQuery(window).scroll(function( event ) {
 			if( !didScroll ) {
 				didScroll = true;
 				setTimeout( scrollPage, 250 );
