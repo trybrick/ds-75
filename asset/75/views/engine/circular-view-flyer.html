@@ -18,12 +18,12 @@
   	<div class="col-md-12" data-ng-include="getThemeUrl('/views/engine/circular-view-type.html')"></div>
   </div>
   <br/>
-  <div style="padding-right: 10px;" data-ng-click="vm.activeItem = null">
+  <div style="padding-right: 10px;" data-ng-click="vm.activeItem = null" data-ng-if="!win.html5">
     <div class="dcircular-list" data-ng-hide="vm.circIdx > 0 && vm.pageIdx > 0">
     	<div class="dcircular-list-content">
     		<div class="col-md-4 col-sm-6 dcircular-list-single" data-ng-repeat="item in vm.digitalCirc.Circulars">
          <a class="thumbnail dcircular-thumbnail" href="javascript:void(0)" data-ng-click="vm.circIdx = ($index + 1); vm.pageIdx = 1">
-           <img class="dcircular-image" alt="" data-ng-src="{{item.SmallImageUrl}}"> 
+           <img class="dcircular-image" alt="" data-ng-src="{{item.SmallImageUrl}}">
            <div class="caption dcircular-caption"><h3 style="width: 100%; text-align: center;">{{item.CircularTypeName}}</h3></div>
          </a>
        </div>
@@ -37,8 +37,8 @@
         <div class="myImageMap" data-stop-event="click"
             data-ng-swipe-right="vm.pageIdx = (vm.pageIdx <= 1) ? vm.pageIdx = vm.digitalCirc.Circulars[vm.circIdx - 1].Pages.length : vm.pageIdx - 1"
             data-ng-swipe-left="vm.pageIdx = (vm.pageIdx >= vm.digitalCirc.Circulars[vm.circIdx - 1].Pages.length) ? 1 : vm.pageIdx + 1">
-          <div data-ng-repeat="item in vm.page.Items" 
-            class="myContent" 
+          <div data-ng-repeat="item in vm.page.Items"
+            class="myContent"
             data-ui-event="{'mouseover': 'vm.activeItem = item', 'mouseout': 'vm.activeItem = null'}"
             data-ng-class="{'active': vm.activeItem.ItemId == item.ItemId }"
             data-ng-click="vm.activeItem = item"
@@ -54,21 +54,28 @@
             </div>
           </div>
           <div class="dcircular-static" data-ng-if="vm.page.Items.length <= 0"><strong>* image only/non-interactive flyer</strong></div>
-          <svg id="myFlyer" version="1.1" 
-            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+          <svg id="myFlyer" version="1.1"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             xml:space="preserve" preserveAspectRatio="xMinYMin meet">
             <image width="1" height="1" xlink:href="" class="circImage" style="display: none"></image>
-            <rect ng:attr:x="{{item.rect.x}}" ng:attr:y="{{item.rect.y}}" ng:attr:width="{{item.rect.width}}" ng:attr:height="{{item.rect.height}}" opacity="0" data-ng-repeat="item in vm.page.Items | orderBy:['-ItemId']" ng-cloak="" data-gsn-hover-sync="#item_{{item.ItemId}}" data-ng-click="vm.activeItem = item" 
+            <rect ng:attr:x="{{item.rect.x}}" ng:attr:y="{{item.rect.y}}" ng:attr:width="{{item.rect.width}}" ng:attr:height="{{item.rect.height}}" opacity="0" data-ng-repeat="item in vm.page.Items | orderBy:['-ItemId']" ng-cloak="" data-gsn-hover-sync="#item_{{item.ItemId}}" data-ng-click="vm.activeItem = item"
             data-ng-class="{'onlist' : isOnList(item)}"></rect>
           </svg>
         </div>
         <div style="width: 100%;" class="text-center">
         <ul class="pagination" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')"></ul></div>
       </div>
-      <div class="myFakeFlyer" data-sync-height="#myFlyer" 
+      <div class="myFakeFlyer" data-sync-height="#myFlyer"
         data-gsn-svg-image=".circImage" data-src="{{vm.page.ImageUrl}}" data-watch="vm.pageIdx"></div>
     </div>
   </div>
+  <div class="row gsn-circular-container" data-gsn-digital-circ="vm.digitalCirc" data-ng-if="win.html5">
+    <div data-ng-non-bindable=""></div>
+  </div>
+</div>
+<div class="dcircular-popup">
+  <div class="popup-title"></div>
+  <div class="popup-content"></div>
 </div>
 <style>
 .myFakeFlyer {
@@ -125,12 +132,12 @@
   transition: all 0.3s ease-in-out;
 }
 
-.hover-zoom a:hover, .hover-zoom a:active { 
+.hover-zoom a:hover, .hover-zoom a:active {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
-  transform: scale(1.2); 
+  transform: scale(1.2);
 }
 
 .link-inline a {
