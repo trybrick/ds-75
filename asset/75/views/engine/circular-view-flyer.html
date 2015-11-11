@@ -18,7 +18,7 @@
   	<div class="col-md-12" data-ng-include="getThemeUrl('/views/engine/circular-view-type.html')"></div>
   </div>
   <br/>
-  <div style="padding-right: 10px;" data-ng-click="vm.activeItem = null" data-ng-if="!win.html5">
+  <div style="padding-right: 10px;" data-ng-click="vm.activeItem = null" data-ng-if="win.html5">
     <div class="dcircular-list" data-ng-hide="vm.circIdx > 0 && vm.pageIdx > 0">
     	<div class="dcircular-list-content">
     		<div class="col-md-4 col-sm-6 dcircular-list-single" data-ng-repeat="item in vm.digitalCirc.Circulars">
@@ -69,7 +69,7 @@
         data-gsn-svg-image=".circImage" data-src="{{vm.page.ImageUrl}}" data-watch="vm.pageIdx"></div>
     </div>
   </div>
-  <div class="row gsn-circular-container" data-gsn-digital-circ="vm.digitalCirc" data-ng-if="win.html5">
+  <div class="row" data-gsn-digital-circ="vm.digitalCirc" data-ng-if="!win.html5">
     <div data-ng-non-bindable=""></div>
   </div>
 </div>
