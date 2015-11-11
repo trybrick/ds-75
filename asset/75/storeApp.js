@@ -1,18 +1,22 @@
 ﻿var storeApp = angular
     .module('storeApp', ['infinite-scroll', 'ngRoute', 'ngSanitize', 'ngAnimate', 'ngTouch', 'chieffancypants.loadingBar', 'gsn.core', 'ui.map', 'ui.keypress', 'ui.event', 'ui.utils', 'angulartics'])
-    .config(['$routeProvider', function ($routeProvider) {
+    .config(['$routeProvider',  '$locationProvider', function ($routeProvider, $locationProvider) {
       // disable theme
       gsn.config.SiteTheme = '75';
       gsn.config.defaultMobileListView = true;
+
+      gsn.applyConfig(gsn.config, false);
+      $locationProvider.html5Mode(true).hashPrefix('!');
+      $locationProvider.rewriteLinks = false;
+
 
       var le = [gsn.getThemeUrl('/views/layout.html')];
       for(var i = 1; i < 5; i++){
         le.push(gsn.getThemeUrl('/views/layout-gsn' + i + '.html'));
       }
       var homeFile = gsn.config.ApiUrl + '/Content/meta/' + gsn.config.ChainId + '/?name=home page&meta=home&type=text/html';
-      var blog =  gsn.config.ApiUrl + '/Content/meta/' + gsn.config.ChainId + '/?name=home page&meta=blog&type=text/html';
       var urls = [
-        {   login: 0, store: 0, path: '/', tpl: homeFile }
+        {   login: 0, store: 0, path: '/', tpl: gsn.getThemeUrl('/views/home.html') }
         , { login: 0, store: 0, layout: le[3], path: '/article', tpl: gsn.getThemeUrl('/views/engine/article.html') }
         , { login: 0, store: 0, layout: le[3], path: '/article/:id', tpl: gsn.getThemeUrl('/views/engine/article.html') }
         , { login: 0, store: 1, layout: le[4], path: '/circular', tpl: gsn.getThemeUrl('/views/engine/circular-view-flyer.html')}
@@ -28,6 +32,8 @@
         , { login: 0, store: 0, path: '/mylist/print', tpl: gsn.getThemeUrl('/views/engine/shopping-list-print.html') }
         , { login: 0, store: 0, layout: le[2], path: '/mylist/email', tpl: gsn.getThemeUrl('/views/engine/shopping-list-email.html') }
         , { login: 1, store: 0, layout: le[3], path: '/myrecipes', tpl: gsn.getThemeUrl('/views/engine/my-recipes.html') }
+        , { login: 0, store: 1, layout: le[4], path: '/product', tpl: gsn.getThemeUrl('/views/engine/product.html') }
+        , { login: 0, store: 1, layout: le[4], path: '/product/search', tpl: gsn.getThemeUrl('/views/engine/product-search.html') }
         , { login: 1, store: 0, path: '/profile', tpl: gsn.getThemeUrl('/views/engine/profile-edit.html') }
         , { login: 0, store: 0, layout: le[3], path: '/recipe/search', tpl: gsn.getThemeUrl('/views/engine/recipe-search.html') }
         , { login: 0, store: 0, layout: le[2], path: '/recipe', tpl: gsn.getThemeUrl('/views/engine/recipe-details.html') }
@@ -36,11 +42,11 @@
         , { login: 0, store: 0, layout: le[3], path: '/recipevideo', tpl: gsn.getThemeUrl('/views/engine/recipe-video.html') }
         , { login: 0, store: 0, layout: le[3], path: '/recipevideo/:id', tpl: gsn.getThemeUrl('/views/engine/recipe-video.html') }
         , { login: 0, store: 0, path: '/registration', tpl: gsn.getThemeUrl('/views/engine/registration.html') }
+        , { login: 0, store: 0, path: '/registration/facebook', tpl: gsn.getThemeUrl('/views/engine/registration.html') }
         , { login: 0, store: 0, layout: le[3], path: '/signin', tpl: gsn.getThemeUrl('/views/engine/signin.html') }
         , { login: 0, store: 0, layout: le[1], path: '/store/:id', tpl: gsn.getThemeUrl('/views/engine/store-info.html') }
         , { login: 0, store: 0, layout: le[2], path: '/storelocator', tpl: gsn.getThemeUrl('/views/engine/store-locator.html') }
         , { login: 0, store: 0, layout: le[3], path: '/unsubscribe', tpl: gsn.getThemeUrl('/views/engine/unsubscribe.html') }
-        , { login: 0, store: 0, layout: le[2], path: '/blog', tpl: blog }
       ];
 
 
@@ -53,6 +59,13 @@
           controller: v.controller,
           layout: v.layout })
       });
+
+      $routeProvider.when('/coupons/printable', {redirectTo: '/coupons', caseInsensitiveMatch: true});
+
       $routeProvider.otherwise({ templateUrl: gsn.getThemeUrl('/views/engine/static-content.html'), caseInsensitiveMatch: true} );
     }]);
 
+angular.element(document).ready(function() {
+  angular.bootstrap(document, ['storeApp']);
+  angular.element("a").not('[target]').prop('target', '_self');
+});
