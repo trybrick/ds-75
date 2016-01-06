@@ -449,6 +449,10 @@ input{
 	}
 	}
 @media only screen and (max-width: 768px){
+	#mdf_menu ul {
+		padding-left: 28px !important;	
+	}
+	
 	#mdf_menu ul li.menu-el{
 		display: block;
 		border-bottom: 1px solid #ddd;
