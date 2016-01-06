@@ -11,8 +11,27 @@
 	.Coblogo {
 		padding-right:0px !important;
 	}
-	
-	
+	.homestoreselection {
+		font-size: 11px;
+		margin-top: 3px;
+	}
+	#socialicons {
+		float:left !important;
+		padding: 15px 0px 5px 0px;
+	}
+	.btn-social-icon {
+		font-size: 20px !important;
+		padding: 6px 15px !important;	
+	}
+	section {
+		padding:0px !important;	
+	}
+	.footernav {
+		margin-left: -20px;	
+	}
+	.footerstorename {
+		font-size: 10px !important;	
+	}
 }
 
 
