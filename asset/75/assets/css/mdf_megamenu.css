@@ -444,9 +444,9 @@ input{
 		}
 		
 		a.navbar-brand img {
-		height:88% !important;
-		width:88% !important;
-		margin-top: 4px !important;
+		height: 36px !important;
+		width: 200px !important;
+		margin-top: 9px !important;
 	}
 	}
 @media only screen and (max-width: 768px){

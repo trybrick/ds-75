@@ -3,6 +3,21 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
+/*  Let's go ahead and fix some mobile silly business  */
+
+@media only screen and (max-width: 438px){
+	
+	.Coblogo {
+		padding-right:0px !important;
+	}
+	
+	
+}
+
+
+/*   You may resume your regularly scheduled styling below this line  */
+
 body {
 	overflow-x: hidden;
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
