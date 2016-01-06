@@ -370,8 +370,9 @@ var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s
 
 <div>
 <p>
-  {{gvm.currentStore.StoreName}}
+  
   <div data-ng-if="gvm.currentStore.StoreId">
+    {{gvm.currentStore.StoreName}} &bull;
     {{gvm.currentStore.PrimaryAddress}} &bull;
     {{gvm.currentStore.City}}, {{gvm.currentStore.StateName}} {{gvm.currentStore.PostalCode}} &bull;
     {{gvm.currentStore.Phone}} &bull;
@@ -385,24 +386,14 @@ var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s
 
     <div class="col-md-4">
 
-      <div class="footernav"><a href="#page-top" class="btn btn-primary btn-default, page-scroll" style="border:none; background-color:transparent; color:#999;"><span class="glyphicon glyphicon-circle-arrow-up"></span> </a> &nbsp;<a href="#">Privacy Policy</a> | <a href="#">Site Map</a> | <div class="dropdown pull-right" style="background-color: none !important" data-ng-cloak="" data-ng-show="isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }">
-  <a href="javascript:void(0)" data-ng-click="gvm.loginMenuActive = !gvm.loginMenuActive">
-    <i class="fa fa-user"></i> {{ gvm.profile.FirstName + ' ' + gvm.profile.LastName}} <i class="fa fa-caret-down"></i>
-  </a>
-  <div style="padding:17px;" class="dropdown-menu dropdown-menu-touch generic-content">
-    <a href="javascript:void(0)" data-ng-click="goUrl('/profile')"><i class="fa fa-user"></i> Profile </a><br /><br />
+      <div class="footernav"><a href="#page-top" class="btn btn-primary btn-default, page-scroll" style="border:none; background-color:transparent; color:#999;"><span class="glyphicon glyphicon-circle-arrow-up"></span> </a> &nbsp;<a href="#">Privacy Policy</a> | <a href="#">Site Map</a> | 
+      
+      <div class="dropdown pull-right" style="background-color: none !important" data-ng-cloak="" data-ng-show="isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }">
+    <a href="javascript:void(0)" data-ng-click="goUrl('/profile')"><i class="fa fa-user"></i> Profile </a> | 
     <a href="javascript:void(0)" data-ng-click="logout()">Sign-out</a><br />
   </div>
-</div>
-<div class="pull-right" style="background-color: none !important" data-ng-cloak="" data-ng-if="!isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }">
-  <a href="javascript:void(0)" data-gsn-modal="getThemeUrl('/views/engine/modal-login.html')" data-show-if="gvm.loginCounter" data-ng-click="showModal()">
-    Sign in
-  </a>
-  |
-  <a href="javascript:void(0)" data-ng-click="goUrl('/registration')">
-    Register
-  </a>
-</div> </div>
+
+ </div>
       <div>
 
       <span class="copyright">Copyright &copy; <script type="text/javascript">var d = new Date();document.write(d.getFullYear());</script> Coborn's Inc, All Rights Reserved.</span> </div>
