@@ -127,7 +127,7 @@ $(document).ready(function(){
 
 	function resize(){		
 		var width = $(window).outerWidth(); 
-		if( width < 770 ){ 
+		if( width < 1207 ){ 
 			if( $('.right-nav li .search-box').length === 1 ) $('.search-box').detach().appendTo('.navbar-header');
 			$('.mdf_sub_wrap, .mdf_child_menu .mdf_child_menu, .dropdown .mdf_child_menu, .mdf_child_menu.dropdown').css('display', 'none');
 			$('.mdf_child_menu').addClass('bmt');
