@@ -60,9 +60,9 @@ a:hover{
 	padding: 20px 15px;
 	text-decoration: none;
 }
-a.navbar-brand{
+/* a.navbar-brand{
 	padding: 20px 15px;
-}
+} */
 a.navbar-brand img{
 	/*height:50px;*/
 	margin: 5px;
@@ -521,9 +521,9 @@ input{
 		position: relative;
 		float: right;
 	}
-	a.navbar-brand{
+/*	a.navbar-brand{
 		padding: 15px;
-	}
+	} */
 	a.navbar-brand img {
 	    margin: 0px;
 	    padding: 0px;
