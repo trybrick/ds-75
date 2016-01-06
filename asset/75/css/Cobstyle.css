@@ -505,9 +505,9 @@ footer {
 footer span.copyright {
 	text-transform: uppercase;
 	text-transform: none;
-	line-height: 40px;
 	color: #888;
 	font-weight: 400;
+	font-size:12px;
 }
 footer span.copyright a {
 	color: #888;
