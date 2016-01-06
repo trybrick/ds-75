@@ -972,7 +972,7 @@ p {
 	font-weight: 300;
 	line-height: 1.4
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .lead {
 	font-size: 21px
 }
@@ -1111,7 +1111,7 @@ dt {
 dd {
 	margin-left: 0
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .dl-horizontal dt {
 	float: left;
 	width: 160px;
@@ -1227,7 +1227,7 @@ pre code {
 	margin-right: auto;
 	margin-left: auto
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .container {
 	/*width: 750px*/
 	width: 100%;
@@ -1429,7 +1429,7 @@ pre code {
 .col-xs-offset-0 {
 	margin-left: 0
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
 	float: left
 }
@@ -2334,7 +2334,7 @@ textarea.input-lg, textarea.form-group-lg .form-control, select[multiple].input-
 	margin-bottom: 10px;
 	color: #737373
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .form-inline .form-group {
 	display: inline-block;
 	margin-bottom: 0;
@@ -2391,7 +2391,7 @@ textarea.input-lg, textarea.form-group-lg .form-control, select[multiple].input-
 	margin-right: -15px;
 	margin-left: -15px
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .form-horizontal .control-label {
 	padding-top: 7px;
 	margin-bottom: 0;
@@ -2401,12 +2401,12 @@ textarea.input-lg, textarea.form-group-lg .form-control, select[multiple].input-
 .form-horizontal .has-feedback .form-control-feedback {
 	right: 15px
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .form-horizontal .form-group-lg .control-label {
 	padding-top: 14.3px
 }
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .form-horizontal .form-group-sm .control-label {
 	padding-top: 6px
 }
@@ -2809,7 +2809,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(enabled=false)
 
 
 
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .navbar-right .dropdown-menu {
 	right: 0;
 	left: auto;
@@ -3155,7 +3155,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	top: auto;
 	left: auto
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .nav-tabs.nav-justified>li {
 	display: table-cell;
 	width: 1%
@@ -3171,7 +3171,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 .nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:hover, .nav-tabs.nav-justified>.active>a:focus {
 	border: 1px solid #ddd
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .nav-tabs.nav-justified>li>a {
 	border-bottom: 1px solid #ddd;
 	border-radius: 4px 4px 0 0
@@ -3214,7 +3214,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	top: auto;
 	left: auto
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .nav-justified>li {
 	display: table-cell;
 	width: 1%
@@ -3233,7 +3233,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 .nav-tabs-justified>.active>a, .nav-tabs-justified>.active>a:hover, .nav-tabs-justified>.active>a:focus {
 	border: 1px solid #ddd
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .nav-tabs-justified>li>a {
 	border-bottom: 1px solid #ddd;
 	border-radius: 4px 4px 0 0
@@ -3261,12 +3261,12 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	margin-bottom: 20px;
 	border: 1px solid transparent
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .navbar {
 	border-radius: 4px
 }
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .navbar-header {
 	float: left
 }
@@ -3283,7 +3283,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 .navbar-collapse.in {
 	overflow-y: auto
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .navbar-collapse {
 	width: auto;
 	border-top: 0;
@@ -3318,7 +3318,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	margin-right: -15px;
 	margin-left: -15px
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .container>.navbar-header, .container-fluid>.navbar-header, .container>.navbar-collapse, .container-fluid>.navbar-collapse {
 	margin-right: 0;
 	margin-left: 0
@@ -3328,7 +3328,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	z-index: 1000;
 	border-width: 0 0 1px
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .navbar-static-top {
 	border-radius: 0
 }
@@ -3339,7 +3339,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	left: 0;
 	z-index: 1030
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .navbar-fixed-top, .navbar-fixed-bottom {
 	border-radius: 0
 }
@@ -3366,7 +3366,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 .navbar-brand>img {
 	display: block
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
 	margin-left: -15px
 }
@@ -3395,7 +3395,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 .navbar-toggle .icon-bar+.icon-bar {
 	margin-top: 4px
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .navbar-toggle {
 	display: none
 }
@@ -3430,7 +3430,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	color: #8b1e1a;
 }
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .navbar-nav {
 	float: left;
 	margin: 0
@@ -3454,7 +3454,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
 	box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1)
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .navbar-form .form-group {
 	display: inline-block;
 	margin-bottom: 0;
@@ -3507,7 +3507,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	margin-bottom: 0
 }
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .navbar-form {
 	width: auto;
 	padding-top: 0;
@@ -3544,14 +3544,14 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	margin-top: 15px;
 	margin-bottom: 15px
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .navbar-text {
 	float: left;
 	margin-right: 15px;
 	margin-left: 15px
 }
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .navbar-left {
 	float: left!important
 }
@@ -3963,7 +3963,7 @@ a.list-group-item.active>.badge, .nav-pills>.active>a>.badge {
 .jumbotron .container {
 	max-width: 100%
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width:1207px) {
 .jumbotron {
 	padding: 48px 0
 }
@@ -4759,7 +4759,7 @@ button.close {
 	height: 50px;
 	overflow: scroll
 }
-@media (min-width:768px) {
+@media (min-width:1207px) {
 .modal-dialog {
 	width: 600px;
 	margin: 30px auto
@@ -5173,7 +5173,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', end
 .carousel-caption .btn {
 	text-shadow: none
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width:1207px) {
 .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {
 	width: 30px;
 	height: 30px;
@@ -5274,7 +5274,7 @@ th.visible-xs, td.visible-xs {
 	display: inline-block!important
 }
 }
-@media (min-width:768px) and (max-width:991px) {
+@media (min-width:1207px) and (max-width:991px) {
 .visible-sm {
 	display: block!important
 }
@@ -5288,17 +5288,17 @@ th.visible-sm, td.visible-sm {
 	display: table-cell!important
 }
 }
-@media (min-width:768px) and (max-width:991px) {
+@media (min-width:1207px) and (max-width:991px) {
 .visible-sm-block {
 	display: block!important
 }
 }
-@media (min-width:768px) and (max-width:991px) {
+@media (min-width:1207px) and (max-width:991px) {
 .visible-sm-inline {
 	display: inline!important
 }
 }
-@media (min-width:768px) and (max-width:991px) {
+@media (min-width:1207px) and (max-width:991px) {
 .visible-sm-inline-block {
 	display: inline-block!important
 }
@@ -5366,7 +5366,7 @@ th.visible-lg, td.visible-lg {
 	display: none!important
 }
 }
-@media (min-width:768px) and (max-width:991px) {
+@media (min-width:1207px) and (max-width:991px) {
 .hidden-sm {
 	display: none!important
 }

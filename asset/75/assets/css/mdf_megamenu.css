@@ -449,7 +449,7 @@ input{
 		margin-top: 9px !important;
 	}
 	}
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1207px){
 	#mdf_menu ul {
 		padding-left: 28px !important;	
 	}
@@ -539,7 +539,7 @@ input{
 	    padding: 10px;
 	}
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 1207px){
 	
 	#mdf_menu .navbar-collapse {
 	    padding-right: 0;
