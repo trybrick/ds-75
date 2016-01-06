@@ -371,11 +371,10 @@ var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s
 <div>
 <p>
   
-  <div style="font-size:12px;" data-ng-if="gvm.currentStore.StoreId">
+  <div style="font-size:12px; padding: 0px 15px 10px 15px;" data-ng-if="gvm.currentStore.StoreId">
     <strong>{{gvm.currentStore.StoreName}}</strong> &bull;
     {{gvm.currentStore.PrimaryAddress}} &bull;
-    {{gvm.currentStore.City}}, {{gvm.currentStore.StateName}} {{gvm.currentStore.PostalCode}} &bull;
-    {{gvm.currentStore.Phone}} &bull;
+    {{gvm.currentStore.City}}, {{gvm.currentStore.StateName}} {{gvm.currentStore.PostalCode}} <br />
     {{gvm.currentStore.OpenHoursDisplay}}
   </div>
 </p>  
@@ -386,7 +385,7 @@ var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s
 
     <div class="col-md-4">
 
-      <div class="footernav" style="line-height:0px; font-size:12px; margin-bottom:25px;"><a href="#page-top" class="btn btn-primary btn-default, page-scroll" style="border:none; background-color:transparent; color:#999;"><span class="glyphicon glyphicon-circle-arrow-up"></span> </a> &nbsp;<a href="#">Privacy Policy</a> | <a href="#">Site Map</a> | 
+      <div class="footernav" style="line-height:0px; font-size:11px; margin-bottom:25px;"><a href="#page-top" class="btn btn-primary btn-default, page-scroll" style="border:none; background-color:transparent; color:#999;"><span class="glyphicon glyphicon-circle-arrow-up"></span> </a> &nbsp;<a href="#">Privacy Policy</a> | <a href="#">Site Map</a> | 
       
      
     <a data-ng-cloak="" data-ng-show="isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }" href="javascript:void(0)" data-ng-click="goUrl('/profile')"><i class="fa fa-user"></i> Profile </a> <span data-ng-cloak="" data-ng-show="isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }">|</span> 
@@ -420,7 +419,7 @@ var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s
         </ul>
       </div>
  
-      <div class="col-md-4">
+      <div class="col-md-4" style="padding-top:20px;">
 
       <span class="copyright">Copyright &copy; <script type="text/javascript">var d = new Date();document.write(d.getFullYear());</script> Coborn's Inc, All Rights Reserved.</span> </div>
       </div>
