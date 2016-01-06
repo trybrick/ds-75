@@ -8,6 +8,7 @@
 
 @media only screen and (max-width: 438px){
 	
+	
 	.Coblogo {
 		padding-right:0px !important;
 	}
@@ -31,6 +32,24 @@
 	}
 	.footerstorename {
 		font-size: 10px !important;	
+	}
+	
+	/* Subscription Box */
+	
+	.gmodal-left, .gmodal-right {
+		width: 0px
+	}
+	.modal-body {
+		font-size: 10px;	
+	}
+	col-md-6 ng-scope {
+		font-weight: normal;
+	}
+	.form-control {
+		margin: 10px;	
+	}
+	.btn {
+		margin-right: 5px;	
 	}
 }
 
