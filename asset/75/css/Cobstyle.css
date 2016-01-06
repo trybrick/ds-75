@@ -45,9 +45,6 @@
 	col-md-6 ng-scope {
 		font-weight: normal;
 	}
-	.form-control {
-		margin: 10px;	
-	}
 	.btn {
 		margin-right: 5px;	
 	}
@@ -56,10 +53,24 @@
 
 /*   You may resume your regularly scheduled styling below this line  */
 
+
 body {
 	overflow-x: hidden;
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+/* Login Stuff */
+
+	.form-control {
+		margin: 10px;	
+	}
+	.btn {
+		margin-right: 10px;
+		
+	}
+
+/* End Login Stuff */
+
 .text-muted {
 	color: #666;
 }
