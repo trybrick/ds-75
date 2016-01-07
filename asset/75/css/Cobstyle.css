@@ -828,7 +828,7 @@ body {
 /**********************Inside Pages************************/
 
 .Cob-section-heading {
-	color: #000 !important;
+	color: #000 /*!important*/;
 }
 
 #insideHeader {
@@ -872,7 +872,29 @@ body {
 	}
 	
 	.col-lg-12.text-center .clear {
-		margin-top:53%
+		margin-top:52%
+	}
+	
+	h1.Cob-section-heading {
+		position: relative;
+		top: 300px;
+		font-size: 7em;
+		color: #ffffff;
+		text-shadow: 4px 4px 5px rgb(0, 0, 0);
+		-moz-text-shadow: 4px 4px 5px rgb(0, 0, 0);
+		-webkit-text-shadow: 4px 4px 5px rgb(0, 0, 0);
+		text-transform:none;
+			
+	}
+	
+	h4.about-heading {
+		position: relative;
+		top: 300px;
+		color: #ffffff;
+		text-shadow: 2px 2px 1px rgb(0, 0, 0);
+		-moz-text-shadow: 2px 2px 1px rgb(0, 0, 0);
+		-webkit-text-shadow: 2px 2px 1px rgb(0, 0, 0);
+			
 	}
 	
 }
