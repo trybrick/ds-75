@@ -849,7 +849,7 @@ body {
 
 /* Brandon's starting to code now!! */
 
-@media and (min-width: 1207px) {
+@media (min-width: 1207px) {
 	
 	#insideHeader {
 			width: 100%;
