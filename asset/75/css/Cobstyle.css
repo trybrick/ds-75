@@ -347,12 +347,13 @@ header .intro-text .intro-heading {
 }
 
 #insideHeader .container .Inside-intro-text .intro-lead-in {
-	margin-bottom: 25px;
+	/*margin-bottom: 25px;*/
 	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 40px;
 	font-style: italic;
 	line-height: 40px;
 	text-shadow: -2px 2px 4px #000000;
+	color:#FFF;
 }
 #insideHeader .container .Inside-intro-text .intro-heading {
 	margin-bottom: 50px;
@@ -845,3 +846,18 @@ body {
 }
 	
 }
+
+/* Brandon's starting to code now!! */
+
+@media and (min-width: 1207px) {
+	
+	#insideHeader {
+			width: 100%;
+			position: absolute;
+			left:0px;
+			top:0px;
+			margin-top:0;
+	}
+}
+
+/* End of Brandon's Code */
