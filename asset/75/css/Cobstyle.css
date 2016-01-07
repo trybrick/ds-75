@@ -857,6 +857,10 @@ body {
 		padding: 0px;
 	}
 	
+	.DesktopDownArrow {
+		display: none;	
+	}
+	
 	
 @media (min-width: 1207px) {
 	
@@ -895,6 +899,12 @@ body {
 		-moz-text-shadow: 2px 2px 1px rgb(0, 0, 0);
 		-webkit-text-shadow: 2px 2px 1px rgb(0, 0, 0);
 			
+	}
+	
+	.DesktopDownArrow {
+		display:inline;
+		font-size: 30px;
+		margin-left: 15px;			
 	}
 	
 }
