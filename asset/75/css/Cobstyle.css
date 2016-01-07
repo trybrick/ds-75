@@ -69,7 +69,24 @@ body {
 		
 	}
 
-/* End Login Stuff */
+/* End Login Stuff - BEGIN REGISTRATION STUFF */
+
+.registrationWrapper {
+	padding: 70px 15px 0px 15px;
+}
+glyphicon.form-control-feedback.glyphicon-remove {
+	display:none;
+}
+
+.glyphicon.form-control-feedback {
+	position:absolute;
+	left: 15px;
+	margin-top:5px;
+}
+
+}
+
+/* End Registration Stuff */
 
 .text-muted {
 	color: #666;
