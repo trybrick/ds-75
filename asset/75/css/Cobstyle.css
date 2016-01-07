@@ -888,6 +888,7 @@ body {
 		-moz-text-shadow: 4px 4px 5px rgb(0, 0, 0);
 		-webkit-text-shadow: 4px 4px 5px rgb(0, 0, 0);
 		text-transform:none;
+		opacity:0.5;
 			
 	}
 	
@@ -898,6 +899,7 @@ body {
 		text-shadow: 2px 2px 1px rgb(0, 0, 0);
 		-moz-text-shadow: 2px 2px 1px rgb(0, 0, 0);
 		-webkit-text-shadow: 2px 2px 1px rgb(0, 0, 0);
+		opacity:0.5;
 			
 	}
 	
