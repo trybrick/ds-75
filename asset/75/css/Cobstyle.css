@@ -87,6 +87,13 @@ body {
 	padding-left:25px;	
 }
 
+@media screen(min-width:1207px) {
+
+	.FormWaist {
+		width:650px;
+		margin-left:auto;
+		margin-right:auto;
+	}
 
 }
 
