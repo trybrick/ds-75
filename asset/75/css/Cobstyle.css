@@ -74,15 +74,19 @@ body {
 .registrationWrapper {
 	padding: 70px 15px 0px 15px;
 }
-glyphicon.form-control-feedback.glyphicon-remove {
+.glyphicon.form-control-feedback.glyphicon-remove {
 	display:none;
 }
 
 .glyphicon.form-control-feedback {
 	position:absolute;
-	left: 15px;
-	margin-top:5px;
+	left: 17px;
+	margin-top:20px;
 }
+.has-feedback .form-control {
+	padding-left:25px;	
+}
+
 
 }
 
