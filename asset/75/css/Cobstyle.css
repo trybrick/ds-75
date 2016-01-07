@@ -814,7 +814,7 @@ body {
 
 @media(max-width:767px) {
 	#insideHeader {
-	margin-top: 4em;
+	/**margin-top: 4em;**/
 }
 
 #inside-socialBar {
