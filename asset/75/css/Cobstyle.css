@@ -341,6 +341,29 @@ header .intro-text .intro-heading {
 	text-shadow: -2px 2px 4px #000000;
 	
 }
+#insideHeader .container .Inside-intro-text {
+	padding-top: 300px;
+	padding-bottom: 200px;
+}
+
+#insideHeader .container .Inside-intro-text .intro-lead-in {
+	margin-bottom: 25px;
+	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 40px;
+	font-style: italic;
+	line-height: 40px;
+	text-shadow: -2px 2px 4px #000000;
+}
+#insideHeader .container .Inside-intro-text .intro-heading {
+	margin-bottom: 50px;
+	text-transform: uppercase;
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 75px;
+	font-weight: 700;
+	line-height: 75px;
+	text-shadow: -2px 2px 4px #000000;
+	
+}
 }
 section {
 	padding: 10px 0;
