@@ -88,7 +88,7 @@ body {
 }
 
 .confirmationbox div.row.col-md-12 {
-	
+	float:right;
 }
 
 @media (min-width:992px) {
@@ -97,7 +97,6 @@ body {
 		width:650px;
 		margin-left:auto;
 		margin-right:auto;
-		float:right;
 	}
 
 }
