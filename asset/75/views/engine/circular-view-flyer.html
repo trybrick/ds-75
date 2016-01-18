@@ -1,0 +1,171 @@
+<div class="col-md-12" data-ctrl-circular="" data-ng-init="isListView = (currentPath == '/circular/list' || currentPath == '/circular/text')">
+  <div class="hidden-meta" data-gsn-title="{{ChainName}} | circulars"></div>
+  <div class="hidden-meta" data-gsn-og-title="{{ChainName}} | circulars"></div>
+  <div class="hidden-meta" data-gsn-og-type="circular"></div>
+  <div class="hidden-meta" data-gsn-og-image="{{vm.digitalCirc.Circulars[vm.circIdx - 1].Pages[vm.pageIdx - 1].ImageUrl}}"></div>
+
+  <h1>Weekly Ads</h1>
+  <div data-ng-show="vm.noCircular">
+    <h3>No circular for this store.</h3>
+  </div>
+  <div class="productImagePopOver hidden" data-ng-non-bindable="">
+    <img data-ng-src="{{item.ImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
+  </div>
+  <div data-gsn-spinner="{radius:30, width:8, length: 16}" data-show-if="vm.digitalCirc == null || vm.noCircular">
+  </div>
+
+  <div class="row">
+  	<div class="col-md-12" data-ng-include="getThemeUrl('/views/engine/circular-view-type.html')"></div>
+  </div>
+  <br/>
+  <div style="padding-right: 10px;" data-ng-click="vm.activeItem = null" data-ng-if="!win.html5">
+    <div class="dcircular-list" data-ng-hide="vm.circIdx > 0 && vm.pageIdx > 0">
+    	<div class="dcircular-list-content">
+    		<div class="col-md-4 col-sm-6 dcircular-list-single" data-ng-repeat="item in vm.digitalCirc.Circulars">
+         <a class="thumbnail dcircular-thumbnail" href="javascript:void(0)" data-ng-click="vm.circIdx = ($index + 1); vm.pageIdx = 1">
+           <img class="dcircular-image" alt="" data-ng-src="{{item.SmallImageUrl}}">
+           <div class="caption dcircular-caption"><h3 style="width: 100%; text-align: center;">{{item.CircularTypeName}}</h3></div>
+         </a>
+       </div>
+     </div>
+    </div>
+    <div class="dcircular-content" data-ng-show="vm.circIdx > 0 && vm.pageIdx > 0" style="position: relative; padding-right: 15px">
+      <div style="margin: 0 auto; height: auto; position: relative" data-ng-click="vm.activeItem = null">
+        <div data-ng-if="vm.digitalCirc.Circulars.length > 1"><a href="javascript:void(0)" data-ng-click="vm.circIdx = 0" class="dcircular-back-to-list">&larr; Choose Another Ad</a><br /></div>
+        <div style="width: 100%;" class="text-center">
+        <ul class="pagination" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')"></ul></div>
+        <div class="myImageMap" data-stop-event="click"
+            data-ng-swipe-right="vm.pageIdx = (vm.pageIdx <= 1) ? vm.pageIdx = vm.digitalCirc.Circulars[vm.circIdx - 1].Pages.length : vm.pageIdx - 1"
+            data-ng-swipe-left="vm.pageIdx = (vm.pageIdx >= vm.digitalCirc.Circulars[vm.circIdx - 1].Pages.length) ? 1 : vm.pageIdx + 1">
+          <div data-ng-repeat="item in vm.page.Items"
+            class="myContent"
+            data-ui-event="{'mouseover': 'vm.activeItem = item', 'mouseout': 'vm.activeItem = null'}"
+            data-ng-class="{'active': vm.activeItem.ItemId == item.ItemId }"
+            data-ng-click="vm.activeItem = item"
+            id="item_{{item.ItemId}}" data-ng-cloak="">
+            <div style="position: relative" class="hover-zoom">
+              <a class="btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)" data-ng-class="{'circAddButton': !isOnList(item)}">
+                <i class="fa" data-ng-class="{'fa-square-o': !isOnList(item), 'fa-check-square-o': isOnList(item)}"></i> {{ !isOnList(item) ? 'ADD ITEM' : 'ON LIST'}}
+              </a>
+              <a class="btn btn-default btn-xs circInfoButton" title="View item details..." data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="showModal()" data-show-if="vm['item' + $index]" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }">
+                <i class="fa fa-info-circle"></i>
+              </a>
+              <div class="ripple" style="opacity: 0.3"></div>
+            </div>
+          </div>
+          <div class="dcircular-static" data-ng-if="vm.page.Items.length <= 0"><strong>* image only/non-interactive flyer</strong></div>
+          <svg id="myFlyer" version="1.1"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            xml:space="preserve" preserveAspectRatio="xMinYMin meet">
+            <image width="1" height="1" xlink:href="" class="circImage" style="display: none"></image>
+            <rect ng:attr:x="{{item.rect.x}}" ng:attr:y="{{item.rect.y}}" ng:attr:width="{{item.rect.width}}" ng:attr:height="{{item.rect.height}}" opacity="0" data-ng-repeat="item in vm.page.Items | orderBy:['-ItemId']" ng-cloak="" data-gsn-hover-sync="#item_{{item.ItemId}}" data-ng-click="vm.activeItem = item"
+            data-ng-class="{'onlist' : isOnList(item)}"></rect>
+          </svg>
+        </div>
+        <div style="width: 100%;" class="text-center">
+        <ul class="pagination" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')"></ul></div>
+      </div>
+      <div class="myFakeFlyer" data-sync-height="#myFlyer"
+        data-gsn-svg-image=".circImage" data-src="{{vm.page.ImageUrl}}" data-watch="vm.pageIdx"></div>
+    </div>
+  </div>
+  <div class="row" data-gsn-digital-circ="vm.digitalCirc" data-ng-if="win.html5">
+    <div data-ng-non-bindable=""></div>
+  </div>
+</div>
+<div class="dcircular-popup">
+  <div class="popup-title"></div>
+  <div class="popup-content"></div>
+</div>
+<style>
+.myFakeFlyer {
+  display: none;
+}
+
+.myImageMap {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+.myContent {
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  display: table;
+}
+
+.myContent > div {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+
+.circularAddButton {
+  left: 50%;
+}
+
+.circInfoButton {
+  position: absolute; right: 8px; top: 8px; padding: 5px 10px 5px 10px; z-index: 1;
+}
+
+.circAddButton, .circInfoButton {
+  opacity: 0;
+  position: absolute;
+  margin-left: -35px;
+  margin-top: -10px;
+  z-index: -99;
+}
+
+.myContent.active .circAddButton, .myContent.active .circInfoButton {
+  opacity: 1;
+  position: absolute;
+  z-index: 1;
+}
+
+.hover-zoom a {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-zoom a:hover, .hover-zoom a:active {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.link-inline a {
+  margin-left: -95px;
+}
+
+.modal-dialog {
+  margin-top: 100px;
+}
+
+.myContent.active .ripple {
+  -webkit-animation:ripple 0.65s linear;
+   -moz-animation:ripple 0.65s linear;
+    -ms-animation:ripple 0.65s linear;
+     -o-animation:ripple 0.65s linear;
+        animation:ripple 0.65s linear;
+}
+
+
+@media (max-width: 767px) {
+
+  .circAddButton, .circInfoButton {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .link-inline a {
+    margin-left: 0;
+  }
+}
+</style>

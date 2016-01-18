@@ -1,0 +1,36 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <button style="background-color: #3C599F; color: #ffffff; padding: 5px 15px 5px 5px; margin-top: 10px;" type="button" class="btn btn-default btn-xs pull-right" data-ng-click="doFacebookLogin()" data-analytics-on="click" data-analytics-event="ClickFacebookLogin" data-analytics-category="HeaderLink" data-ng-show="gsnApi.getConfig().FacebookAppId">
+      <i class="fa fa-facebook" style="color:#ffffff; background-color: #3C599F; padding: 5px 10px;"></i> | Login with Facebook
+    </button>
+    <h3 style="margin-top:15px; margin-bottom: 10px; margin-left: 11px;">Sign in</h3>
+  </div>
+  <div class="modal-body" data-gsn-login="">
+    <form role="form" class="myLoginForm" name="myLoginForm" data-ng-submit="login()" data-stop-event="click" class="generic-content">
+        <input id="usernameField" name="usernameField" type="text" style="width:96.5%;" class="form-control" placeholder="Email or username" data-ng-model="profile.UserName" required="required" />
+        <input id="passwordField" name="passwordField" type="password" style="width:96.5%;" class="form-control" placeholder="Password" data-ng-model="profile.Password" required="required" />
+        <div class="form-group" data-ng-show="hasSubmitted && !isValidSubmit">
+          <div class="alert alert-danger">
+            Email or password is incorrect.
+          </div>
+        </div> 
+        <div data-gsn-spinner="{radius:30, width:8, length: 16}" data-show-if="isSubmitting"></div>
+        <div style="padding-top: 5px">
+        <button type="submit" class="btn btn-default btn-sm pull-right">Sign in</button>
+        <button type="button" class="btn btn-default btn-sm pull-right" data-ng-click="closeModal();">Cancel</button>
+        </div>
+    </form>
+    <br />
+    <div style="height: 80px">
+      <a class="col-md-6" href="javascript:void(0)" data-ng-click="goUrl('/registration')">New User? Register &rarr;</a><br /><br />
+      <p style="text-align:right;"><a style="width:auto; font-weight:normal;" href="javascript:void(0)" class="col-md-6" data-gsn-modal="getThemeUrl('/views/engine/modal-recover-username.html')" data-ng-click="closeModal();showModal()" data-force-show="true">Forgot username?</a>
+      <a style="width:auto; font-weight:normal;" href="javascript:void(0)" class="col-md-6" data-gsn-modal="getThemeUrl('/views/engine/modal-recover-password.html')" data-ng-click="closeModal();showModal()" data-force-show="true">Forgot password?</a></p>
+    </div>
+  </div>
+</div>
+
+<style>
+.gmodal {
+  background: none !important;
+}
+</style>

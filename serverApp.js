@@ -5,10 +5,24 @@ var express = require('express'),
     methodOverride = require('method-override'),
     fs = require('fs'),
     gulp = require('gulp'),
+    http = require('http'),
     url = require('url');
     
 var servicePath = __dirname;
 var apps = {};
+
+var download = function(url, dest, cb) {
+  var file = fs.createWriteStream(dest);
+  var request = http.get(url, function(response) {
+    response.pipe(file);
+    file.on('finish', function() {
+      file.close(cb);  // close() is async, call cb after close completes.
+    });
+  }).on('error', function(err) { // Handle errors
+    fs.unlink(dest); // Delete the file async. (But we don't check the result)
+    if (cb) cb(err.message);
+  });
+};
 
 function startServer(chainId) {
   var app = express();
@@ -19,6 +33,38 @@ function startServer(chainId) {
     var newUrl = 'http://clientapix.gsn2.com/api/v1' + req.url.replace('/proxy', '');
     req.pipe(request({ uri: newUrl, method: req.method })).pipe(res);
   });
+  var doDownload = function (req, res) {
+    var dest = '/asset/' + chainId + url.parse(req.url).pathname;
+    dest = path.join(servicePath, dest);
+    console.log('ab' + dest);
+    if (!fs.existsSync(dest)){
+
+      console.log(dest);
+      var newUrl = 'http://files.coborns.com/coborns.com/' + url.parse(req.url).pathname;
+      download(newUrl, dest, function() {
+        console.log('hi');
+        res.status(404).send('Not found');
+      });
+      return;
+    }
+    res.status(404).send('Not found');
+  };
+  
+  app.use('/js', express.static(servicePath + '/asset/75/js'));
+  app.use('/assets/css', express.static(servicePath + '/asset/75/assets/css'));
+  app.use('/assets/js', express.static(servicePath + '/asset/75/assets/js'));
+  app.use('/css', express.static(servicePath + '/asset/75/css'));
+  app.use('/img', express.static(servicePath + '/asset/75/img'));
+  app.use('/fonts', express.static(servicePath + '/asset/75/fonts'));
+  
+  /**/
+  
+  //app.get('/js/*', doDownload);
+  //app.get('/fonts/*', doDownload);
+  //app.get('/assets/fonts/*', doDownload);
+  //app.get('/css/*', doDownload);
+  //app.get('/img/*', doDownload);
+
   app.use(methodOverride());
 
   // make sure that asset folder access are static file 
