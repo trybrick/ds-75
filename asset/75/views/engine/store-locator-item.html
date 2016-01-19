@@ -36,7 +36,7 @@
   <div class="generic-content" data-ng-if="marker.location.PharmacyHours" itemscope itemtype="http://schema.org/Pharmacy">
     <h5 itemprop="name">{{marker.location.StoreName}} Pharmacy</h5>
     <div itemprop="description"></div><br />
-    <div>Open: <span itemprop="openingHours">{{marker.location.PharmacyHours}}</span></div><br />
+    <div>Open: <span itemprop="openingHours" data-ng-bind-html="marker.location.PharmacyHours"></span></div><br />
     <div data-ng-if="marker.location.PharmacyPhone">Phone: <span itemprop="telephone">{{marker.location.PharmacyPhone}}</span></div><br />
   </div>
   <div class="generic-content">
