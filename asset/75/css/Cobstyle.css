@@ -3,12 +3,6 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-/*  NO MORE AUTO CAPITALIZATION!!!  */
-
-h1, h2, h3, h4, h5, h6 {
-	text-transform: none;	
-}
-
 /*  Let's go ahead and fix some mobile silly business  */
 
 @media only screen and (max-width: 438px){
@@ -148,7 +142,6 @@ a:hover, a:focus, a:active, a.active {
 	/*text-decoration:underline;*/
 }
 h1, h2, h3, h4, h6 {
-	text-transform: uppercase;
 	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 700;
 }
