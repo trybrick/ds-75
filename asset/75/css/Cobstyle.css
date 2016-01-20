@@ -62,6 +62,29 @@ body {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.faq {
+			counter-reset: my-more-counter;
+		}
+		.faq dt {
+			position: relative;
+			padding: 4px 0 10px 0;
+		}
+		.faq dt:before {
+			content: counter(my-more-counter);
+			counter-increment: my-more-counter;
+			position: absolute;
+			left: 0;
+			top: 0;
+			font: bold 75px/1 'Open Sans';
+			color:#ffedb6;
+		}
+		.faq dd {
+			margin: 0 0 50px 0;
+		}	
+		.faq dt, .faq dd {
+			padding-left: 50px;
+}
+
 /* Login Stuff */
 
 	.form-control {
