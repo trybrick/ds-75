@@ -442,6 +442,13 @@ section {
 	color: #666;
 	font-weight: 500;
 }
+.about-heading_small {
+	margin: 20px 0 30px 0;
+	text-transform: none;
+	font-size: 22px;
+	color: #666;
+	font-weight: 500;
+}
 #about p {
 	margin: 0;
 	font-size: 14px;
@@ -867,6 +874,10 @@ body {
 	color: #000 /*!important*/;
 }
 
+.Cob-section-heading_small {
+	color: #000 /*!important*/;
+}
+
 #insideHeader {
 	margin-top: 1.5em;
 }
@@ -927,6 +938,19 @@ body {
 	
 	h1.Cob-section-heading {
 		position: relative;
+		top: 150px;
+		font-size: 7em;
+		color: #ffffff;
+		text-shadow: 4px 4px 5px rgb(0, 0, 0);
+		-moz-text-shadow: 4px 4px 5px rgb(0, 0, 0);
+		-webkit-text-shadow: 4px 4px 5px rgb(0, 0, 0);
+		text-transform:none;
+		opacity:0.5;
+			
+	}
+	
+	h1.Cob-section-heading_small {
+		position: relative;
 		top: 300px;
 		font-size: 7em;
 		color: #ffffff;
@@ -941,6 +965,17 @@ body {
 	h4.about-heading {
 		position: relative;
 		top: 300px;
+		color: #ffffff;
+		text-shadow: 2px 2px 1px rgb(0, 0, 0);
+		-moz-text-shadow: 2px 2px 1px rgb(0, 0, 0);
+		-webkit-text-shadow: 2px 2px 1px rgb(0, 0, 0);
+		opacity:0.5;
+			
+	}
+	
+		h4.about-heading_small {
+		position: relative;
+		top: 150px;
 		color: #ffffff;
 		text-shadow: 2px 2px 1px rgb(0, 0, 0);
 		-moz-text-shadow: 2px 2px 1px rgb(0, 0, 0);
