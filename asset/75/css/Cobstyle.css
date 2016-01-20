@@ -3,6 +3,11 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+/*  NO MORE AUTO CAPITALIZATION!!!  */
+
+h1, h2, h3, h4, h5, h6 {
+	text-transform: none;	
+}
 
 /*  Let's go ahead and fix some mobile silly business  */
 
