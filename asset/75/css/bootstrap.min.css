@@ -4341,7 +4341,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 	margin-bottom: 20px;
 	background-color: #fff;
 	border: 1px solid transparent;
-	border-radius: 4px;
+	/* border-radius: 4px; */
 	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
 	box-shadow: 0 1px 1px rgba(0,0,0,.05)
 }
@@ -4484,7 +4484,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel-default>.panel-heading {
 	color: #333;
 	background-color: #f5f5f5;
-	border-color: #ddd;
+	/* border-color: #ddd; */
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ece6da+0,cfc2ab+50,c2b496+100 */
 
 background: rgb(236,230,218); /* Old browsers */
