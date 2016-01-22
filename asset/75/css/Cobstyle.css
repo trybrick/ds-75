@@ -925,6 +925,16 @@ body {
 	margin-bottom: 30px;
 }
 
+
+#FeaturedPerson {
+	clear: both;
+    padding: 15px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #CCC;
+    margin-bottom: 10px;
+}
+
 /* Brandon's starting to code now!! */
 	
 	div.col-md-12.ng-scope {
