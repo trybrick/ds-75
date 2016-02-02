@@ -3,5 +3,5 @@
   <ul class="nav nav-tabs">
   	<li data-ng-class="{'active' : $index == pcvm.tab}" data-ng-repeat="item in partialContents"><a class="btn-default" href="javascript:void(0)" data-ng-click="goUrl('?tab=' + $index)">{{item.Headline}}</a></li>
   </ul>
-  <div class="staticContent" data-gsn-dynamic="" dynamic="item.Description | trustedHtml" data-ng-repeat="item in partialContents" data-ng-if="$index == pcvm.tab"></div>
+  <div class="staticContent" data-gsn-dynamic="" dynamic="item.Description" data-ng-repeat="item in partialContents" data-ng-if="$index == pcvm.tab"></div>
 </div>
