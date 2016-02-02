@@ -1,3 +1,4 @@
+<div class="hidden-meta" data-ng-if="partialContents[0]" data-gsn-title="{{ ChainName + ' | ' + (getConfig('title').Description || partialContents[0].Headline || contentDetail.name)}}"></div>
 <style>
 footer {
 	padding: 30px 0;
@@ -43,7 +44,7 @@ footer {
       <button data-ng-click="pcvm.tabToggle = !pcvm.tabToggle" class="btn btn-default" type="button">Menu</button>
     </p>
     <div class="row">
-      <div class="staticContent" data-ng-bind-html="item.Description | trustedHtml" data-ng-repeat="item in partialContents" data-ng-if="$index == pcvm.tab"></div>
+      <div class="staticContent" data-gsn-dynamic="" dynamic="item.Description | trustedHtml" data-ng-repeat="item in partialContents" data-ng-if="$index == pcvm.tab"></div>
     </div><!--/row-->
   </div><!--/.col-xs-12.col-sm-9-->
 
