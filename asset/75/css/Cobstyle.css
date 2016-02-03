@@ -1053,3 +1053,11 @@ body {
 }
 
 /* End of Brandon's Code */
+
+
+/***** Store Location *******/
+img.storedirector {
+    min-width: 160px !important;
+    max-width: 160px !important;
+    max-height: 217px !important;
+}
