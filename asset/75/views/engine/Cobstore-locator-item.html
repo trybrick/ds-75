@@ -28,7 +28,7 @@
     </a>
   </div>
   <div data-ng-hide="marker.location.Redirect" class="generic-content hidden-info">
-    <a href="javascript:void(0)" data-ng-click="goUrl('/store/' + marker.location.StoreNumber)">
+    <a href="javascript:void(0)" data-ng-click="goUrl('/store-' + marker.location.StoreNumber)">
       <h5 class="CobStoreDetails">Store Details</h5>
     </a>
   </div>
@@ -52,10 +52,4 @@ h5.CobStoreDetails {
 	max-width:200px;
 }
 
-h5.CobStoreDetails a:hover {
-    background-color: #CCCCCC;
-	padding: 4px;
-    color: #FFF;
-	max-width:200px;
-}
 </style>
