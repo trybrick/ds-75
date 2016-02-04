@@ -1005,6 +1005,19 @@ body {
 			
 	}
 	
+	h1.Cob-section-heading2a {
+		position: relative;
+		top: 300px;
+		font-size: 5em;
+		color: #ffffff;
+		text-shadow: 4px 4px 5px rgb(0, 0, 0);
+		-moz-text-shadow: 4px 4px 5px rgb(0, 0, 0);
+		-webkit-text-shadow: 4px 4px 5px rgb(0, 0, 0);
+		text-transform:none;
+		opacity:0.5;
+			
+	}
+	
 	h1.Cob-section-heading_small {
 		position: relative;
 		top: 150px;
