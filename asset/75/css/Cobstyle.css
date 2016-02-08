@@ -67,10 +67,16 @@ body {
 }
 
 .cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
-	padding: 11px !important;	
+	padding: 11px !important;
+	width: 35px !important;
+	height: 35px !important;	
 }
 #adBlock {
 	display:none !important;	
+}
+.gscb_a {
+	padding: 4px;
+	margin-top:3px;	
 }
 
 .faq {
