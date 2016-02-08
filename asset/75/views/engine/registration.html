@@ -1,4 +1,46 @@
 ﻿<div class="hidden-meta" data-gsn-title="{{ChainName}} | registration"></div>
+<!-- scrolling -->
+<script>
+$('a[href^="#"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+
+});</script>
+<!-- bootstrap Javascript -->
+<script type="text/javascript" src="http://cdn-staging.gsngrocers.com/asset/75/js/bootstrap.min.js"></script>
+<!-- end -->
+<style type="text/css">
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+	background-color: #ABD300;	
+}
+</style>
+
+
+<div id="insideHeader" class="insideHeader"> 
+  <div class="container">
+  <img class="img-responsive" src="http://files.coborns.com/more/moreheader.jpg" alt="more"> </div>
+</div>
+<section>
+  <div class="container">
+    <div class="row">
+ <div class="col-lg-12 text-center">
+        <h1 style="opacity: .9;" class="Cob-section-heading_small">
+Sign Up for Exclusive Deals</h1>
+</div>
+    </div>
+    
+    <div class="row">
+ <div class="col-lg-12 text-center">
+ <h4 style="opacity:.9;" class="about-heading_small">Get an exclusive coupon sent to your inbox each week!<span class="DesktopDownArrow"><a href="#InnerTop" id="InnerTop"><i class="fa fa-arrow-circle-down"></i></a></span></h4>
+     <div class="clear_small"></div>  
+
 <div class="registrationWrapper">
 <div data-ctrl-Registration="" class="col-md-12">
   <h1>Sign Up for Exclusive Email Offers</h1>
