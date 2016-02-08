@@ -69,14 +69,28 @@ body {
 .cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
 	padding: 11px !important;
 	width: 35px !important;
-	height: 35px !important;	
+	height: 35px !important;
+	margin-top:5px !important;	
 }
-#adBlock {
-	display:none !important;	
-}
+
 .gscb_a {
-	padding: 4px;
-	margin-top:3px;	
+	padding: 4px !important;
+	margin-top:3px !important;	
+}
+.gsc-selected-option-container {
+	min-width: 80px !important;	
+}
+.gsc-result-info {
+	font-size: 12px !important;	
+}
+.gsc-control-cse {
+	font-size: 11px !important;	
+}
+.gsc-control-cse, .gsc-control-cse .gsc-table-result {
+	font-family: "Open Sans", Arial, Helvetica, sans-serif !important;	
+}
+.gsc-control-cse {
+	font-family: "Open Sans", Arial, Helvetica, sans-serif !important;	
 }
 
 .faq {
