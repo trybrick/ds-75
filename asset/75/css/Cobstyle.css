@@ -62,6 +62,14 @@ body {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.gsc-input-box {
+	height:35px !important;	
+}
+
+.cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
+	padding: 11px !important;	
+}
+
 .faq {
 			counter-reset: my-more-counter;
 		}
