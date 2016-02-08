@@ -93,6 +93,18 @@ body {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif !important;	
 }
 
+.gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:link b, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b {
+	color: #8B1E1A !important;	
+}
+.gs-result .gs-title, .gs-result .gs-title * {
+	color: #8B1E1A !important;	
+	text-decoration: none !important;
+	text-align: left !important;
+}
+.gsc-result .gs-title {
+	height: auto !important;	
+}
+
 .faq {
 			counter-reset: my-more-counter;
 		}
