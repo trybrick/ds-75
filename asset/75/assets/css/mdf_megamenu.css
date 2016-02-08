@@ -379,7 +379,7 @@ a.navbar-brand img{
 }
 .search-box{
 	position: relative;
-	top: 12px;
+	top: 18px;
 }
 .search-box:hover input{
 	width: 180px;
@@ -405,14 +405,15 @@ a.navbar-brand img{
 	right: 34px;
 	width: 0;
 	border: none;
-	border-radius: 1px;
-	-webkit-border-radius: 1px;
-	-moz-border-radius: 1px;
-	-o-border-radius: 1px;
-	-ms-border-radius: 1px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
 	z-index: 2;
 	height: 33px!important;
 	transition: width 0.34s ease;
+	padding-left: 10px;
 }
 #mdf_menu.traditional .search-box a,
 #mdf_menu.wireframed ul .search-box a{
@@ -529,7 +530,7 @@ input{
 	    padding: 0px;
 	}
 	.search-box {
-	    top: 7px;
+	    top: 13px;
 	    width: 35px;
 	    position: relative;
 	    float: right;
@@ -537,6 +538,9 @@ input{
 	}
 	#mdf_menu ul li a:not(.thumbnail) {
 	    padding: 10px;
+	}
+	.search-box input {
+			display:none;
 	}
 }
 @media only screen and (min-width: 1207px){
