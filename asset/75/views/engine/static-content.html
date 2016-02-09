@@ -24,13 +24,13 @@
 </div>
      
 <!-- end header -->
-    <h1>Page is unavailable</h1>
+    <div class="errorContent"><h1>Page is unavailable</h1>
     The page you are trying to reach is temporarily unavailable or may no longer exist.
     <h2>Here's what you can do:</h2>
     Click your browser's Refresh button to try reconnecting<br />
     Check the spelling of the URL to make sure the address is correct (capitalization and punctuation are important) and then click your browser's Refresh button<br />
     Go to <a href="javascript:void(0)" data-ng-click="goUrl('/')">Home Page</a> or <a href="javascript:void(0)" data-ng-click="goBack()">Back to previous page</a>
-    <br />
+    <br /></div>
     <br />
   </div>
   <div data-ng-if="!pcvm.notFound" data-ng-include="getThemeUrl('/views/static-content/' + pcvm.layout + '.html')"></div>
