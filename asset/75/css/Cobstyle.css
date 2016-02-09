@@ -1017,6 +1017,10 @@ body {
 	a.btn.btn-default.btn-xs.pull-right:hover {
 		background: rgb(0, 0, 0) none repeat scroll 0% 0%;
 	}
+		
+	.pull-right.glyphicon.glyphicon-remove {
+		top: 0px !important;	
+	}
 	
 	
 @media (min-width: 1207px) {
