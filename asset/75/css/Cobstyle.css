@@ -62,6 +62,49 @@ body {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.gsc-input-box {
+	height:35px !important;	
+}
+
+.cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
+	padding: 11px !important;
+	width: 35px !important;
+	height: 35px !important;
+	margin-top:5px !important;	
+}
+
+.gscb_a {
+	padding: 4px !important;
+	margin-top:3px !important;	
+}
+.gsc-selected-option-container {
+	min-width: 80px !important;	
+}
+.gsc-result-info {
+	font-size: 12px !important;	
+}
+.gsc-control-cse {
+	font-size: 11px !important;	
+}
+.gsc-control-cse, .gsc-control-cse .gsc-table-result {
+	font-family: "Open Sans", Arial, Helvetica, sans-serif !important;	
+}
+.gsc-control-cse {
+	font-family: "Open Sans", Arial, Helvetica, sans-serif !important;	
+}
+
+.gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:link b, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b {
+	color: #8B1E1A !important;	
+}
+.gs-result .gs-title, .gs-result .gs-title * {
+	color: #8B1E1A !important;	
+	text-decoration: none !important;
+	text-align: left !important;
+}
+.gsc-result .gs-title {
+	height: auto !important;	
+}
+
 .faq {
 			counter-reset: my-more-counter;
 		}
@@ -98,7 +141,7 @@ body {
 /* End Login Stuff - BEGIN REGISTRATION STUFF */
 
 .registrationWrapper {
-	padding: 70px 15px 0px 15px;
+	padding: 0px 15px 0px 15px;
 }
 .glyphicon.form-control-feedback.glyphicon-remove {
 	display:none;
@@ -106,8 +149,8 @@ body {
 
 .glyphicon.form-control-feedback {
 	position:absolute;
-	left: 17px;
-	margin-top:20px;
+	left: 5px;
+	margin-top:10px;
 }
 .has-feedback .form-control {
 	padding-left:25px;	
