@@ -995,7 +995,7 @@ body {
 /* Brandon's starting to code now!! */
 	
 	div.col-md-12.ng-scope {
-		padding: 0px 15px 0px 15px !important;
+		padding: 0px !important;
 		
 	}
 	.insideHeader .container {
