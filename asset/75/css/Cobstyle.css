@@ -1007,9 +1007,7 @@ body {
 	}
 	
 	a.btn.btn-default.btn-xs.pull-right {
-		
-		padding: 10px !important;
-		margin-top: 10px;
+		margin: 0px -10px 0px 15px !important;
 		background: rgb(186, 12, 47) none repeat scroll 0% 0%;
 		color: rgb(255, 255, 255);
 		border: medium none;
