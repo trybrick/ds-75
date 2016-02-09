@@ -1006,6 +1006,20 @@ body {
 		display: none;	
 	}
 	
+	a.btn.btn-default.btn-xs.pull-right {
+		
+		padding: 10px !important;
+		margin-top: 10px;
+		background: rgb(186, 12, 47) none repeat scroll 0% 0%;
+		color: rgb(255, 255, 255);
+		border: medium none;
+		transition: all .5s ease;
+	}
+	
+	a.btn.btn-default.btn-xs.pull-right:hover {
+		background: rgb(0, 0, 0) none repeat scroll 0% 0%;
+	}
+	
 	
 @media (min-width: 1207px) {
 	
