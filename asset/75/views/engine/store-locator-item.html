@@ -1,7 +1,8 @@
-<div style="overflow-y:hidden" class="store-info-item">
- <a href="javascript:void(0)" data-ng-click="openMarkerInfo(marker, 14)" scroll-to="map_canvas">
+<div class="panel panel-default"><div style="overflow-y:hidden" class="store-info-item">
+ <div class="panel-heading"><div class="panel-title"><a href="javascript:void(0)" data-ng-click="openMarkerInfo(marker, 14)" scroll-to="map_canvas">
     <h4 itemprop="name">{{marker.location.StoreName}}</h4>
-  </a>
+  </a></div></div>
+  <div class="panel-body">
   <div class="hidden meta">
     <div class="store-number">{{marker.location.StoreNumber}}</div>
     <div class="store-id">{{marker.location.StoreId}}</div>
@@ -42,4 +43,4 @@
   <div class="generic-content">
     <a data-ng-href="https://maps.google.com?saddr=Current+Location&amp;daddr={{marker.location.Latitude}},{{marker.location.Longitude}}" target="_blank">Get Directions</a>
   </div>
-</div>
+</div></div></div>
