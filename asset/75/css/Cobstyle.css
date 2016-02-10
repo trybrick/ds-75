@@ -618,6 +618,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
  @media(min-width:767px) {
 #portfolio .portfolio-item {
 	margin: 0 0 30px;
+	padding: 0 15px;
 }
 }
 .team-member {
