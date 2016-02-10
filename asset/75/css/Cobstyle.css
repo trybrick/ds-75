@@ -62,7 +62,10 @@ body {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-div.ng
+section#portfolio {
+	padding:0px 15px;
+	margin:0px 15px;	
+}
 
 div.errorpage {
 	margin-left: auto;
