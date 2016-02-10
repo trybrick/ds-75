@@ -1038,10 +1038,11 @@ body {
 	margin-bottom: 30px;
 }
 
-#InnerTop {
-	padding-left: 50px;
-    padding-right: 50px;
-}
+/*	#InnerTop {
+		padding-left: 50px;
+   		padding-right: 50px;
+	}
+*/
 
 #FeaturedPerson {
 	clear: both;
@@ -1110,7 +1111,7 @@ body {
 	
 	h1.Cob-section-heading {
 		position: relative;
-		top: 150px;
+		top: 300px;
 		font-size: 7em;
 		color: #ffffff;
 		text-shadow: 4px 4px 5px rgb(0, 0, 0);
