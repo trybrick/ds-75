@@ -68,6 +68,10 @@ body {
 	padding: 0px 15px;	
 }
 
+.col-md-4 {
+	padding: 0px 15px;	
+}
+
 div.intro-text a {
 	color: rgba(255, 255, 255, 0.7);
 	font-size: 4.5em;
