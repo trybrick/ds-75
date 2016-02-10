@@ -246,7 +246,7 @@
       redirectTo: '/All-Store-Locations',
       caseInsensitiveMatch: true
     });
-
+	
     $routeProvider.when('/coupons/printable', {
       redirectTo: '/coupons',
       caseInsensitiveMatch: true
