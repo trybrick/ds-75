@@ -64,6 +64,10 @@ body {
 	overflow-x: hidden;
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.col-md-6 {
+	padding: 0px 15px;	
+}
+
 .col-md-5 {
 	padding: 0px 15px;	
 }
