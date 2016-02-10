@@ -604,6 +604,7 @@ section {
 	margin: 0 auto;
 	/*max-width: 320px;*/
 	max-width: 400px;
+	max-height: 249px;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
 	position: absolute;
