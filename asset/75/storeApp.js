@@ -241,11 +241,6 @@
         layout: v.layout
       })
     });
-
-	$routeProvider.when('/storelocator', {
-      redirectTo: '/All-Store-Locations',
-      caseInsensitiveMatch: true
-    });
 	
     $routeProvider.when('/coupons/printable', {
       redirectTo: '/coupons',
