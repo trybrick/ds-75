@@ -81,6 +81,18 @@ div.intro-text a:hover {
 	font-weight:normal !important;	
 }
 
+div.intro-text a:hover {
+	color: rgba(255, 255, 255, 1);
+	font-weight:normal !important;	
+}
+
+div.intro-text a:active {
+	color: rgba(255, 255, 255, 1);
+	font-weight:normal !important;
+	text-decoration:none !important;
+	border:0 !important;	
+}
+
 section#portfolio {
 	padding:0px 15px;
 	margin:0px 15px;	
