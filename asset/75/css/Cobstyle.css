@@ -64,6 +64,9 @@ body {
 	overflow-x: hidden;
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.col-md-5 {
+	padding: 0px 15px;	
+}
 
 div.intro-text a {
 	color: rgba(255, 255, 255, 0.7);
