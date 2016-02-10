@@ -16,7 +16,7 @@
   </div>
   <div class="col-md-6 col-sm-6 text-center">
     <div>
-      <img itemprop="image" data-ng-src="{{vm.recipe.ImageUrl}}" data-ng-if="vm.recipe.ImageUrl" style="width: 100%">
+      <img itemprop="image" data-ng-src="{{vm.recipe.ImageUrl}}" data-ng-if="vm.recipe.ImageUrl" style="max-width: 100%">
       <i class="fa fa-cutlery fa-5x" data-ng-if="!vm.recipe.ImageUrl"></i>
     </div>
     <div data-ng-hide="currentPath.indexOf('print') > 0">
