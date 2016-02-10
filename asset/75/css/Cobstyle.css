@@ -93,6 +93,12 @@ div.intro-text a:active {
 	border:0 !important;	
 }
 
+div.intro-text a:visited {
+	font-weight:normal !important;
+	text-decoration:none !important;
+	border:0 !important;	
+}
+
 section#portfolio {
 	padding:0px 15px;
 	margin:0px 15px;	
