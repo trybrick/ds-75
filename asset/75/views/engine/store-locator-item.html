@@ -1,4 +1,4 @@
-<div class="store-info-item">
+<div style="overflow-y:hidden" class="store-info-item">
  <a href="javascript:void(0)" data-ng-click="openMarkerInfo(marker, 14)" scroll-to="map_canvas">
     <h4 itemprop="name">{{marker.location.StoreName}}</h4>
   </a>
@@ -14,7 +14,7 @@
    </address>
   </div>
   <div>
-     <a href="javascript:void(0)" data-ng-click="selectStore(marker, true)" class="btn btn-default">
+     <a href="/" data-ng-click="selectStore(marker, true)" class="btn btn-default">
       <i class="fa fa-square-o" data-ng-hide="isCurrentStore(marker)"></i>
       <i class="fa fa-check-square-o" data-ng-show="isCurrentStore(marker)"></i> My Store
     </a>
@@ -23,12 +23,12 @@
   <div class="generic-content">Store Hours:</div>
   <div class="generic-content" data-ng-bind-html="marker.location.OpenHoursDisplay" itemprop="openingHours"></div>
   <div data-ng-show="marker.location.Redirect" class="generic-content hidden-info">
-    <a href="javascript:void(0)" data-ng-click="goUrl(decodeServerUrl(marker.location.Redirect))">
+   <a href="javascript:void(0)" data-ng-click="goUrl(decodeServerUrl(marker.location.Redirect))"> 
       <h5>Store Details</h5>
     </a>
   </div>
   <div data-ng-hide="marker.location.Redirect" class="generic-content hidden-info">
-    <a href="javascript:void(0)" data-ng-click="goUrl('/store/' + marker.location.StoreNumber)">
+    <a href="javascript:void(0)" data-ng-click="goUrl('/Cobstore' + marker.location.StoreNumber)">
       <h5>Store Details</h5>
     </a>
   </div>
@@ -40,6 +40,6 @@
     <div data-ng-if="marker.location.PharmacyPhone">Phone: <span itemprop="telephone">{{marker.location.PharmacyPhone}}</span></div><br />
   </div>
   <div class="generic-content">
-    <a data-ng-href="https://maps.google.com?saddr=Current+Location&amp;daddr={{marker.location.Latitude}},{{marker.location.Longitude}}" target="_blank">Get Direction</a>
+    <a data-ng-href="https://maps.google.com?saddr=Current+Location&amp;daddr={{marker.location.Latitude}},{{marker.location.Longitude}}" target="_blank">Get Directions</a>
   </div>
 </div>
