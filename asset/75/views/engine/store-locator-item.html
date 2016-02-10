@@ -1,8 +1,8 @@
-<div style="overflow-y:hidden" class="store-info-item"><div class="panel panel-default">
- <div class="panel-heading"><div class="panel-title"><a href="javascript:void(0)" data-ng-click="openMarkerInfo(marker, 14)" scroll-to="map_canvas">
+<div style="overflow-y:hidden" class="store-info-item">
+ <a href="javascript:void(0)" data-ng-click="openMarkerInfo(marker, 14)" scroll-to="map_canvas">
     <h4 itemprop="name">{{marker.location.StoreName}}</h4>
-  </a></div></div>
-  <div class="panel-body">
+  </a>
+  
   <div class="hidden meta">
     <div class="store-number">{{marker.location.StoreNumber}}</div>
     <div class="store-id">{{marker.location.StoreId}}</div>
@@ -15,7 +15,7 @@
    </address>
   </div>
   <div>
-     <a href="/" data-ng-click="selectStore(marker, true)" class="btn btn-default">
+     <a href="/circular" data-ng-click="selectStore(marker, true)" class="btn btn-default">
       <i class="fa fa-square-o" data-ng-hide="isCurrentStore(marker)"></i>
       <i class="fa fa-check-square-o" data-ng-show="isCurrentStore(marker)"></i> My Store
     </a>
@@ -43,4 +43,4 @@
   <div class="generic-content">
     <a data-ng-href="https://maps.google.com?saddr=Current+Location&amp;daddr={{marker.location.Latitude}},{{marker.location.Longitude}}" target="_blank">Get Directions</a>
   </div>
-</div></div></div>
+</div>
