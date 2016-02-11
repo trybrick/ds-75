@@ -59,6 +59,10 @@
 
 /*   You may resume your regularly scheduled styling below this line  */
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 body {
 	overflow-x: hidden;
