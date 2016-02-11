@@ -1173,6 +1173,8 @@ body {
 		-moz-text-shadow: 2px 2px 1px rgb(0, 0, 0);
 		-webkit-text-shadow: 2px 2px 1px rgb(0, 0, 0);
 		opacity:0.5;
+		font-family: "droid serif", Georgia, sans-serif;
+		font-style: italic;
 			
 	}
 	
@@ -1184,6 +1186,8 @@ body {
 		-moz-text-shadow: 2px 2px 1px rgb(0, 0, 0);
 		-webkit-text-shadow: 2px 2px 1px rgb(0, 0, 0);
 		opacity:0.5;
+		font-family: "droid serif", Georgia, sans-serif;
+		font-style: italic;
 			
 	}
 	
