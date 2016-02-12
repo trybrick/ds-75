@@ -214,13 +214,14 @@
         path: '/store/:id',
         tpl: gsn.getThemeUrl('/views/engine/store-info.html')
       }
-      , {
+ /*     , {
         login: 0,
         store: 0,
         layout: le[0],
         path: '/storelocator',
         tpl: gsn.getThemeUrl('/views/engine/store-locator.html')
       }
+*/
       , {
         login: 0,
         store: 0,
