@@ -614,6 +614,12 @@ section {
 	max-width: 400px;
 	max-height: 249px;
 }
+
+div.portfolio-caption {
+	height: auto !important;
+	max-height:213px;	
+}
+
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
 	position: absolute;
 	width: 100%;
@@ -651,7 +657,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 }
 #portfolio .portfolio-item .portfolio-caption {
 	margin: 0 auto;
-	padding: 25px;
+	padding: 5px;
 	max-width: 400px;
 	text-align: center;
 	background-color: #dedede;
@@ -678,7 +684,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
  @media(min-width:767px) {
 #portfolio .portfolio-item {
 	margin: 0 0 30px;
-	padding: 0 15px;
 }
 }
 .team-member {
@@ -1028,6 +1033,10 @@ body {
 
 #inside-socialBar {
 	margin-top:-10px;
+}
+
+div.portfolio-caption {
+	max-height:201px;	
 }
 	
 }
