@@ -39,6 +39,12 @@
 	
 }
 
+@media (min-width: 439px) and (max-width: 767px) {
+	#portfolio .portfolio-item {
+		padding: 40px;	
+	}
+}
+
 @media (max-width: 767px) {
 
 /* Subscription Box */
@@ -616,7 +622,6 @@ section {
 }
 
 div.portfolio-caption {
-	height: auto !important;
 	max-height:213px;	
 }
 
