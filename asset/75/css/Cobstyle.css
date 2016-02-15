@@ -75,15 +75,15 @@ body {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .col-md-6 {
-	padding: 15px;	
+	padding: 0 15px;	
 }
 
 .col-md-5 {
-	padding: 15px;	
+	padding: 0 15px;	
 }
 
 .col-md-4 {
-	padding: 15px;	
+	padding: 0 15px;	
 }
 
 div.intro-text a {
