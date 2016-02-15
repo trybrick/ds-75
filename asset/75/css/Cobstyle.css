@@ -79,6 +79,15 @@ body {
 	width: 100%;	
 }
 
+.img-responsive#bgvid {
+	width: 100%;	
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
 .col-md-6 {
 	padding: 0 15px;	
 }
