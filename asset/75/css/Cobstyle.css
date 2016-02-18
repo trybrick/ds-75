@@ -1070,11 +1070,11 @@ div.portfolio-caption {
 	margin-bottom: 30px;
 }
 
-/*	#InnerTop {
+#InnerTop {
 		padding-left: 50px;
    		padding-right: 50px;
 	}
-*/
+
 
 #FeaturedPerson {
 	clear: both;
@@ -1255,7 +1255,4 @@ img.storedirector {
 	border-color: #630502;
 }
 
-.PayPalcol-md-6 {
-	padding: 0 15px;
-	margin:0 0 20px 0;	
-}
+
