@@ -1246,7 +1246,8 @@ img.storedirector {
 .PayPalbtn-info {
 	color: #000;
 	background-color: #c2b69c;
-	border-color: #8b1e1a2;
+	border-color: #b1a68e;
+    font-weight: bold;
 }
 .PayPalbtn-info:hover, .PayPalbtn-info:focus, .PayPalbtn-info.focus, .PayPalbtn-info:active, .PayPalbtn-info.active, .open>.dropdown-toggle.btn-info {
 	color: #fff;
