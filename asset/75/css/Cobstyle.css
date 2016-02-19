@@ -522,6 +522,7 @@ header .intro-text .intro-lead-in {
 	font-style: italic;
 	line-height: 40px;
 	text-shadow: -2px 2px 4px #000000;
+	opacity: 0.6;
 }
 header .intro-text .intro-heading {
 	margin-bottom: 50px;
@@ -531,6 +532,7 @@ header .intro-text .intro-heading {
 	font-weight: 700;
 	line-height: 75px;
 	text-shadow: -2px 2px 4px #000000;
+	opacity: 0.6;
 	
 }
 #insideHeader .container .Inside-intro-text {
