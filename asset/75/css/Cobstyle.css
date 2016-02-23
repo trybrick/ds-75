@@ -1119,7 +1119,19 @@ div.portfolio-caption {
 		top: 0px !important;	
 	}
 	
-	
+@media(max-width:1206px) {
+
+	section#portfolio {
+		box-shadow: none !important;	
+	}
+	section#loginSocialbar div.container {
+		padding-left: 0px !important;
+		padding-right: 0px !important;	
+	}
+		div.intro-text {
+			padding-bottom: 0 !important;	
+		}
+}
 @media (min-width: 1207px) {
 	
 	#insideHeader {
