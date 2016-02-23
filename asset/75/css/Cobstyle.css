@@ -582,8 +582,9 @@ section h3.section-subheading {
  @media(min-width:768px) {
 section {
 	padding: 0px 0;
-	background-color: #ffffff;
+	/*background-color: #ffffff;*/
 	color: #666;
+	background-color: transparent;
 }
 }
 .service-heading {
