@@ -1168,7 +1168,7 @@ img.storedirector {
 	font-weight: normal;
 }
 
-,videoList td {
+.videoList td {
 	padding-right: 1.5em;
     padding-bottom: .5em;
 }
