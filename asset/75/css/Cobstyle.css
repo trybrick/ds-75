@@ -1163,6 +1163,14 @@ img.storedirector {
 }
 /***** Video Page *******/
 
+.videoList {
+    padding: 20px;
+    border-width: thin;
+    border-style: solid;
+    margin: 5px;
+    border-color: #cecece;
+}
+
 .videoList h3 {
 	font-size: medium;
 	font-weight: normal;
