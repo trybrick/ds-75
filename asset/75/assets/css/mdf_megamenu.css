@@ -380,6 +380,7 @@ a.navbar-brand img{
 .search-box{
 	position: relative;
 	top: 18px;
+	z-index: 9999;
 }
 .search-box:hover input{
 	width: 180px;
