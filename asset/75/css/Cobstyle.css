@@ -1165,4 +1165,10 @@ img.storedirector {
 
 .videoList h3 {
 	font-size: medium;
+	font-weight: normal;
+}
+
+,videoList td {
+	padding-right: 1.5em;
+    padding-bottom: .5em;
 }
