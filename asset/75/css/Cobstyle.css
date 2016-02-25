@@ -1180,3 +1180,19 @@ img.storedirector {
 	padding-right: 1.5em;
     padding-bottom: .5em;
 }
+
+/***** Food Safety Page *******/
+.FoodSafetytable th {
+    padding: 5px;
+    text-align: center;
+}
+
+.FoodSafetytable td {
+    border-right-color: #fff;
+    border-right-style: solid;
+    border-right-width: thin;
+    border-bottom-color: #fff;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    padding: 5px;
+}
