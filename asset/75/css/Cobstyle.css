@@ -1196,3 +1196,20 @@ img.storedirector {
     border-bottom-width: thin;
     padding: 5px;
 }
+
+/***** Event Page *******/
+
+.CobEventCalendar {
+	padding-left:10px; 
+	padding-right:10px;
+}
+	
+
+.CobEventCalendar .mv-daynames-table {
+    background: #c2b69c !important;
+    color: #000 !important;
+}
+
+
+
+
