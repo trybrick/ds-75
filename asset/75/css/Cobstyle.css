@@ -3,6 +3,17 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+/*  Large screen fixes  */
+
+@media only screen and (min-width: 1679px) {
+	p#InnerTop {
+			background-color: #fff;
+			position: relative;
+			padding: 15px;
+	}
+}
+
+
 /*  Let's go ahead and fix some mobile silly business  */
 
 @media only screen and (max-width: 438px) {
