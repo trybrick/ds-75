@@ -21,7 +21,7 @@
 			
 	}
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1596px) {
 
 
 header.ng-scope:before {
@@ -29,7 +29,7 @@ header.ng-scope:before {
 		position: relative;
 		top: 755px;
 		right: 0;
-		bottom: 335;
+		bottom: 0;
 		left: 0;
 		background-image: linear-gradient(to bottom,rgba(255,255,255,0), rgba(255,255,255,1));
 		color: rgba(255,255,255,0);
@@ -119,9 +119,8 @@ body {
 	padding: 0 15px;
 }
 div.intro-text a {
-	color: rgba(255, 255, 255, 0.7);
-	font-size: 4.5em;
-	text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+	color: rgba(255, 255, 255, .9);
+	font-size: inherit;
 	transition: all .5s ease;
 	-webkit-transition: all .5s ease;
 	-moz-transition: all .5s ease;
