@@ -440,6 +440,9 @@ h5 {
 	background-image: -o-linear-gradient(left, #eeeeee, #cecece, #eeeeee);
 }
  @media(min-width:1207px) {
+.row.smheader {
+	margin-top:20%;	
+}
 .navbar-default {
 	/*padding: 0px 0px 5px 0px;*/
 	border: 0;
@@ -1135,7 +1138,7 @@ h1.Cob-section-heading2a {
 }
 h1.Cob-section-heading_small {
 	position: relative;
-	top: 150px;
+	top: 200px;
 	font-size: 7em;
 	color: #ffffff;
 	text-shadow: 4px 4px 5px rgb(0, 0, 0);
