@@ -11,6 +11,15 @@
 			position: relative;
 			padding: 15px;
 	}
+	.col-lg-12.text-center .clear_storelocation {
+			margin-top:	530px;
+	}
+	
+	div#insideHeader div.container {
+			overflow: hidden;
+			max-height: 700px;
+			
+	}
 }
 
 
