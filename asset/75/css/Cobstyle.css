@@ -20,6 +20,11 @@
 			max-height: 700px;
 			
 	}
+	div#insideHeadersm div.container {
+			overflow: hidden;
+			max-height: 615px;
+			
+	}
 }
 @media only screen and (min-width: 1596px) {
 
@@ -1138,7 +1143,7 @@ h1.Cob-section-heading2a {
 }
 h1.Cob-section-heading_small {
 	position: relative;
-	top: 200px;
+	top: -75px;
 	font-size: 7em;
 	color: #ffffff;
 	text-shadow: 4px 4px 5px rgb(0, 0, 0);
