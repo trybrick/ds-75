@@ -12,7 +12,7 @@
 			padding: 15px;
 	}
 	.col-lg-12.text-center .clear_storelocation {
-			margin-top:	530px;
+			margin-top:	530px !important;
 	}
 	
 	div#insideHeader div.container {
