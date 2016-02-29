@@ -23,12 +23,8 @@
 }
 @media only screen and (min-width: 1200px) {
 
-header.ng-scope {
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	
- &:before {
+
+header.ng-scope:before {
     content: '';
 		position: absolute;
 		top: 500px;
@@ -38,7 +34,6 @@ header.ng-scope {
 		background-image: linear-gradient(to bottom,rgba(255,255,255,0), rgba(255,255,255,1));
 		opacity: 1; 
   }
-}
 }
 
 /*  Let's go ahead and fix some mobile silly business  */
