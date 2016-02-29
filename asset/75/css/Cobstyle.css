@@ -525,8 +525,10 @@ header .intro-text .intro-heading {
 	font-weight: 700;
 	line-height: 75px;
 	text-shadow: -2px 2px 4px #000000;
-	opacity: 0.9;
+	color: rgba(255,255,255,.8);
 	text-transform: uppercase;
+	position: relative;
+	top: -50px;
 }
 #insideHeader .container .Inside-intro-text {
 	padding-top: 300px;
