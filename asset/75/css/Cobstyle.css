@@ -1079,6 +1079,15 @@ div.portfolio-caption {
 	margin-bottom: 10px;
 }
 /* Brandon's starting to code now!! */
+
+.btn-group .btn.btn-default.btn-sm {
+	background: #fff;
+	color: #aaa;
+} 	
+
+.btn-group .btn.btn-default.btn-sm:hover {
+	color: #8b1e1a;	
+}
 	
 .btn-sm, .btn-group-sm > .btn {
 		font-size: 10px;
@@ -1110,7 +1119,8 @@ div.CircularThumb {
 	width: 135px;
 	margin-left: auto;
 	margin-right: auto;
-	height: 115px;	
+	height: 115px;
+	box-shadow: 2px 2px 5px rgba(0,0,0,.2);	
 }
 	
 div.col-md-12.ng-scope {
