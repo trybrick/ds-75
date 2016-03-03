@@ -105,6 +105,10 @@ body {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+a:hover {
+	font-weight: normal;	
+}
+
 .coupon-container img {
 	margin: 5px;	
 }
