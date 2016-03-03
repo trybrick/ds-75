@@ -1090,7 +1090,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active{
 	}
 a.thumbnail {
 	border-collapse:collapse;
-	border: 1px solid #8b1e1a;	
+	border: 1px solid #fff;	
 	margin-bottom: 5px;
 	transition: all .5s ease
 }
