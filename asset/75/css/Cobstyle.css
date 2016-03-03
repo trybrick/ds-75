@@ -1098,7 +1098,7 @@ div.circularline {
 		padding: 5px 6px;	
 }
 a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active{
-		/*border:	1px solid #8b1e1a;*/
+		border: 1px solid #fff;
 		border-collapse: collapse;
 	}
 a.thumbnail {
