@@ -104,6 +104,11 @@ body {
 	overflow-x: hidden;
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+.form-control.ng-pristine {
+	margin:0;	
+}
+
 #bgvid {
 	width: 100%;
 }
