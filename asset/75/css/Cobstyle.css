@@ -1081,7 +1081,7 @@ div.portfolio-caption {
 /* Brandon's starting to code now!! */
 
 img.dcircular-image {
-	width: 135px;
+	width: 200px;
 }
 
 div.circularline {
@@ -1140,10 +1140,10 @@ div.CircularThumb {
 	position: relative;
 	top: 25px;
 	overflow: hidden;
-	width: 135px;
+	width: 200px;
 	margin-left: auto;
 	margin-right: auto;
-	height: 115px;
+	height: 150px;
 	box-shadow: 2px 2px 5px rgba(0,0,0,.2);
 	 -webkit-transform: rotate(-10deg);
      -moz-transform: rotate(-10deg);
