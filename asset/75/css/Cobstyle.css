@@ -1130,7 +1130,6 @@ div.CircularThumb:hover {
        -o-transform: rotate(-3deg);
       -ms-transform: rotate(-3deg);
           transform: rotate(-3deg);
-		  width: 150px;
 }
 	
 div.CircularThumb {
