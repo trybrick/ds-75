@@ -5,7 +5,22 @@
   <div class="hidden-meta" data-gsn-og-image="{{vm.digitalCirc.Circulars[vm.circIdx - 1].Pages[vm.pageIdx - 1].ImageUrl}}"></div>
   
 
- <div data-ng-include="getThemeUrl('/views/engine//coupons-tabs.html')"></div>
+ <div>
+ 
+ <ul class="nav nav-tabs" style="padding-top: 5px">
+
+
+<li data-ng-class="active">
+		<a class="btn-default" href="/circular">Weekly Ads</a>
+  </li>
+
+
+	<li data-ng-class="Printable Coupons">
+		<a class="btn-default" href="/coupons">Printable Coupons</a>
+  </li>
+  </ul>
+ 
+ </div>
   <div data-ng-show="vm.noCircular">
     <h3>No circular for this store.</h3>
   </div>
