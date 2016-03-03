@@ -1080,6 +1080,15 @@ div.portfolio-caption {
 }
 /* Brandon's starting to code now!! */
 	
+.thumbnail {
+	border: none;	
+}
+	
+div.col-md-2.col-sm-4.dcircular-list-single.ng-scope{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+	
 div.circularcontainer {
 	margin-left:auto;
 	margin-right:auto;	
