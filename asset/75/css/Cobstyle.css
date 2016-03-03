@@ -1080,6 +1080,18 @@ div.portfolio-caption {
 }
 /* Brandon's starting to code now!! */
 
+div.circularline {
+	overflow:hidden;	
+}
+
+img.dcircular-image {
+	 -webkit-transform: rotate(-10deg);
+     -moz-transform: rotate(-10deg);
+       -o-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg);	
+}
+
 .btn-group .btn.btn-default.btn-sm {
 	background: #fff;
 	color: #aaa;
@@ -1094,7 +1106,7 @@ div.portfolio-caption {
 		padding: 5px 6px;	
 }
 a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active{
-		border:	1px solid #8b1e1a;
+		/*border:	1px solid #8b1e1a;*/
 		border-collapse: collapse;
 	}
 a.thumbnail {
