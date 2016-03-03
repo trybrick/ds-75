@@ -79,8 +79,9 @@
   <div class="col-md-12">
    <div data-infinite-scroll="loadMore()">
       <div data-ng-repeat-start="item in allItems" data-ng-class="{ '': $index == 0 || allItems[$index-1][sortBy] != item[sortBy] }">
-      <div style="clear:both;"></div>
-        <div class="row" data-ng-if="$index == 0 || allItems[$index-1][sortBy] != item[sortBy]">
+      
+        <div data-ng-if="$index == 0 || allItems[$index-1][sortBy] != item[sortBy]">
+          <div style="clear:both;"></div>
           <h4>{{item[sortBy]}}</h4>
           
 
