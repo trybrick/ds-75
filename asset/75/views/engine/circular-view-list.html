@@ -114,7 +114,7 @@ jQuery(function ($) {
 		<a class="btn-default" href="/coupons">Printable Coupons</a>
   </li>
   </ul>
-  <div><h2 class="timer count-title" id="count-number" data-to="400" data-speed="1500"></h2><h3 style="text-align:center;">deals this week!</h3></div>
+  
   <div data-ng-show="vm.noCircular">
     <h3>No circular for this store.</h3>
   </div>
@@ -182,6 +182,7 @@ jQuery(function ($) {
       <div data-ng-repeat-start="item in allItems" data-ng-class="{ '': $index == 0 || allItems[$index-1][sortBy] != item[sortBy] }">
         <div data-ng-if="$index == 0 || allItems[$index-1][sortBy] != item[sortBy]">
           <h4>{{item[sortBy]}}</h4>
+          <div><h2 class="timer count-title" id="count-number" data-to="{{allItems.length}}" data-speed="1500"></h2><h3 style="text-align:center;">deals this week!</h3></div>
           <h5>Description</h5>
         </div>
       </div>
