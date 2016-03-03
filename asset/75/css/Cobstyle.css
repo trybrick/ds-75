@@ -1080,6 +1080,10 @@ div.portfolio-caption {
 }
 /* Brandon's starting to code now!! */
 
+img.dcircular-image {
+	width: 145px;
+}
+
 div.circularline {
 	overflow:hidden;
 	box-shadow: 0px 5px 5px -5px rgba(0,0,0,.5);	
