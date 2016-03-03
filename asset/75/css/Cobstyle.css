@@ -1080,6 +1080,14 @@ div.portfolio-caption {
 }
 /* Brandon's starting to code now!! */
 	
+div.CircularThumb {
+	overflow: hidden;
+	width: 135px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 115px;	
+}
+	
 div.col-md-12.ng-scope {
 	padding: 0px !important;
 }

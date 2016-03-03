@@ -22,10 +22,11 @@
   <div style="padding-right: 10px;" data-ng-click="vm.activeItem = null" data-ng-if="!win.html5">
     <div class="dcircular-list" data-ng-hide="vm.circIdx > 0 && vm.pageIdx > 0">
     	<div class="dcircular-list-content">
-    		<div class="col-md-4 col-sm-6 dcircular-list-single" data-ng-repeat="item in vm.digitalCirc.Circulars">
-         <a class="thumbnail dcircular-thumbnail" href="javascript:void(0)" data-ng-click="vm.circIdx = ($index + 1); vm.pageIdx = 1">
-           <img class="dcircular-image" alt="" data-ng-src="{{item.SmallImageUrl}}">
-           <div class="caption dcircular-caption"><h3 style="width: 100%; text-align: center;">{{item.CircularTypeName}}</h3></div>
+        	<h3 style="text-align:center;">Your Ads:</h3>
+    		<div class="col-md-2 dcircular-list-single" data-ng-repeat="item in vm.digitalCirc.Circulars">
+        <a class="thumbnail dcircular-thumbnail" href="javascript:void(0)" data-ng-click="vm.circIdx = ($index + 1); vm.pageIdx = 1">
+           <div class="CircularThumb"><img class="dcircular-image" alt="" data-ng-src="{{item.SmallImageUrl}}"></div>
+           <div class="caption dcircular-caption"><h6 style="width: 100%; text-align: center; text-decoration: none;">{{item.CircularTypeName}}</h6></div>
          </a>
        </div>
      </div>
