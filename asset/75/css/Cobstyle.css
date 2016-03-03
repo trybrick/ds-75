@@ -1138,12 +1138,12 @@ div.CircularThumb:hover {
 	
 div.CircularThumb {
 	position: relative;
-	top: 25px;
+	top: 40px;
 	overflow: hidden;
 	width: 200px;
 	margin-left: auto;
 	margin-right: auto;
-	height: 150px;
+	height: 165px;
 	box-shadow: 2px 2px 5px rgba(0,0,0,.2);
 	 -webkit-transform: rotate(-10deg);
      -moz-transform: rotate(-10deg);
