@@ -1081,7 +1081,12 @@ div.portfolio-caption {
 /* Brandon's starting to code now!! */
 
 div.circularline {
-	overflow:hidden;	
+	overflow:hidden;
+	box-shadow: 0px 5px 5px -5px rgba(0,0,0,.5);	
+	-webkit-box-shadow: 0px 5px 5px -5px rgba(0,0,0,.5);
+	-moz-box-shadow: 0px 5px 5px -5px rgba(0,0,0,.5);
+	-o-box-shadow: 0px 5px 5px -5px rgba(0,0,0,.5);
+	-ms-box-shadow: 0px 5px 5px -5px rgba(0,0,0,.5);
 }
 
 .btn-group .btn.btn-default.btn-sm {
@@ -1118,7 +1123,19 @@ div.circularcontainer {
 	margin-right:auto;	
 }
 	
+div.CircularThumb:hover {
+		top: 13px;
+		 -webkit-transform: rotate(-3deg);
+     -moz-transform: rotate(-3deg);
+       -o-transform: rotate(-3deg);
+      -ms-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+		  width: 150px;
+}
+	
 div.CircularThumb {
+	position: relative;
+	top: 25px;
 	overflow: hidden;
 	width: 135px;
 	margin-left: auto;
@@ -1129,7 +1146,12 @@ div.CircularThumb {
      -moz-transform: rotate(-10deg);
        -o-transform: rotate(-10deg);
       -ms-transform: rotate(-10deg);
-          transform: rotate(-10deg);	
+          transform: rotate(-10deg);
+	transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-ms-transition: all .5s ease;
 }
 	
 div.col-md-12.ng-scope {
