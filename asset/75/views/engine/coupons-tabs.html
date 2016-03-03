@@ -1,4 +1,19 @@
+<script>
+$(function(){
+var activeurl = window.location;
+$('a[href="'+activeurl+'"]').parent('li').addClass('active');
+});
+</script>
+
+
 <ul class="nav nav-tabs" style="padding-top: 5px">
+
+
+<li data-ng-class="">
+		<a class="btn-default" href="/circular">Weekly Ads</a>
+  </li>
+
+
 	<li data-ng-class="{'active' : couponType !== 'digital' && couponType !== 'store' }" data-ng-if="coupons.printable.items.length > 0">
 		<a class="btn-default" href="javascript:void(0)" data-ng-click="goUrl('/coupons')">Printable Coupons</a>
   </li>
