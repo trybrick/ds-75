@@ -1084,14 +1084,6 @@ div.circularline {
 	overflow:hidden;	
 }
 
-img.dcircular-image {
-	 -webkit-transform: rotate(-10deg);
-     -moz-transform: rotate(-10deg);
-       -o-transform: rotate(-10deg);
-      -ms-transform: rotate(-10deg);
-          transform: rotate(-10deg);	
-}
-
 .btn-group .btn.btn-default.btn-sm {
 	background: #fff;
 	color: #aaa;
@@ -1132,7 +1124,12 @@ div.CircularThumb {
 	margin-left: auto;
 	margin-right: auto;
 	height: 115px;
-	box-shadow: 2px 2px 5px rgba(0,0,0,.2);	
+	box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+	 -webkit-transform: rotate(-10deg);
+     -moz-transform: rotate(-10deg);
+       -o-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg);	
 }
 	
 div.col-md-12.ng-scope {
