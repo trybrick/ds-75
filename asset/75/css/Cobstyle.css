@@ -1080,6 +1080,10 @@ div.portfolio-caption {
 }
 /* Brandon's starting to code now!! */
 
+.nav-tabs > li {
+	margin-bottom: -16px;	
+}
+
 img.dcircular-image {
 	width: 200px;
 }
