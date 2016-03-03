@@ -1086,9 +1086,11 @@ div.portfolio-caption {
 }
 a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active{
 		border:	1px solid #8b1e1a;
+		border-collapse: collapse;
 	}
 a.thumbnail {
-	border: none;	
+	border-collapse:collapse;
+	border: 1px solid #8b1e1a;	
 	margin-bottom: 5px;
 	transition: all .5s ease
 }
