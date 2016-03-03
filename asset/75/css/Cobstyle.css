@@ -1080,8 +1080,17 @@ div.portfolio-caption {
 }
 /* Brandon's starting to code now!! */
 	
-.thumbnail {
+.btn-sm, .btn-group-sm > .btn {
+		font-size: 10px;
+		padding: 5px 6px;	
+}
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active{
+		border:	1px solid #8b1e1a;
+	}
+a.thumbnail {
 	border: none;	
+	margin-bottom: 5px;
+	transition: all .5s ease
 }
 	
 div.col-md-2.col-sm-4.dcircular-list-single.ng-scope{
