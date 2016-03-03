@@ -186,7 +186,8 @@ jQuery(function ($) {
           <h5>Description</h5>
         </div>
       </div>
-      <div class="row items thumbnail" itemscope itemtype="http://schema.org/Product">
+      <div class="row">
+      <div class="col-md-6 col-sm-8 items thumbnail" itemscope itemtype="http://schema.org/Product">
         <div class="col-md-8 col-xs-8">
           <div class="hidden meta">
             <div class="product-id">{{item.CircularItemId}}</div>
@@ -208,6 +209,7 @@ jQuery(function ($) {
         <div class="col-md-1 col-xs-3">
           <button class="btn btn-default btn-xs pull-right" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
         </div>
+      </div>
       </div>
       <div class="row" data-ng-repeat-end=""></div>
       <div>
