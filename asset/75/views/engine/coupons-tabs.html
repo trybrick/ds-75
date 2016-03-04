@@ -10,13 +10,16 @@
 
 
 	<li data-ng-class="{'active' : couponType !== 'digital' && couponType !== 'store' }" data-ng-if="coupons.printable.items.length > 0">
-		<a class="btn-default" href="javascript:void(0)" data-ng-click="goUrl('/coupons')">Printable Coupons</a>
+		<a class="btn-default" href="javascript:void(0)" data-ng-click="goUrl('/coupons')">Coupons</a>
   </li>
   <li data-ng-class="{'active' : couponType == 'digital' }" data-ng-if="coupons.digital.items.length > 0">
     <a class="btn-default" href="javascript:void(0)" data-ng-click="goUrl('/coupons/digital')">Digital Coupons</a>
   </li>
   <li data-ng-class="{'active' : couponType == 'store' }" data-ng-if="coupons.store.length > 0">
     <a class="btn-default" href="javascript:void(0)" data-ng-click="goUrl('store')">Store Coupons</a>
+  </li>
+  <li data-ng-class="">
+		<a class="btn-default" href="/mylist">Shopping List</a>
   </li>
 </ul>
 <style>
