@@ -1084,7 +1084,7 @@ div.portfolio-caption {
 }
 /* Brandon's starting to code now!! */
 
-col-md-6.items.thumbnail.ng-scope {
+div.col-md-6.items.thumbnail.ng-scope {
 	height: 150px;
 	overflow: hidden;
 	border: none;
@@ -1094,7 +1094,7 @@ col-md-6.items.thumbnail.ng-scope {
 	margin-bottom: -16px;	
 }
 
-.circularItem img {
+div.col-md-6.items.thumbnail.ng-scope img {
 	max-height: 100px;
 	max-height: 100px;
 }
