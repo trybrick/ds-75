@@ -1330,7 +1330,7 @@ h1.Cob-section-heading {
 	-moz-text-shadow: 4px 4px 5px rgb(0, 0, 0);
 	-webkit-text-shadow: 4px 4px 5px rgb(0, 0, 0);
 	text-transform: none;
-	opacity: 0.5;
+	opacity: 0.8;
 }
 h1.Cob-section-heading2 {
 	position: relative;
@@ -1341,7 +1341,7 @@ h1.Cob-section-heading2 {
 	-moz-text-shadow: 4px 4px 5px rgb(0, 0, 0);
 	-webkit-text-shadow: 4px 4px 5px rgb(0, 0, 0);
 	text-transform: none;
-	opacity: 0.5;
+	opacity: 0.8;
 }
 h1.Cob-section-heading2a {
 	position: relative;
@@ -1352,18 +1352,18 @@ h1.Cob-section-heading2a {
 	-moz-text-shadow: 4px 4px 5px rgb(0, 0, 0);
 	-webkit-text-shadow: 4px 4px 5px rgb(0, 0, 0);
 	text-transform: none;
-	opacity: 0.5;
+	opacity: 0.8;
 }
 h1.Cob-section-heading_small {
 	position: relative;
-	top: -75px;
+	top: 200px;
 	font-size: 7em;
 	color: #ffffff;
 	text-shadow: 4px 4px 5px rgb(0, 0, 0);
 	-moz-text-shadow: 4px 4px 5px rgb(0, 0, 0);
 	-webkit-text-shadow: 4px 4px 5px rgb(0, 0, 0);
 	text-transform: none;
-	opacity: 0.5;
+	opacity: 0.8;
 }
 h4.about-heading {
 	position: relative;
@@ -1372,25 +1372,25 @@ h4.about-heading {
 	text-shadow: 2px 2px 1px rgb(0, 0, 0);
 	-moz-text-shadow: 2px 2px 1px rgb(0, 0, 0);
 	-webkit-text-shadow: 2px 2px 1px rgb(0, 0, 0);
-	opacity: 0.5;
+	opacity: 0.8;
 	font-family: "droid serif", Georgia, sans-serif;
 	font-style: italic;
 }
 h4.about-heading_small {
 	position: relative;
-	top: 150px;
+	top: 180px;
 	color: #ffffff;
 	text-shadow: 2px 2px 1px rgb(0, 0, 0);
 	-moz-text-shadow: 2px 2px 1px rgb(0, 0, 0);
 	-webkit-text-shadow: 2px 2px 1px rgb(0, 0, 0);
-	opacity: 0.5;
+	opacity: 0.8;
 	font-family: "droid serif", Georgia, sans-serif;
 	font-style: italic;
 }
 .DesktopDownArrow {
 	display: inline;
 	font-size: 30px;
-	margin-left: 15px;
+	margin-left: -25px;
 }
 .DesktopDownArrow a {
 	color: #ffffff;
