@@ -82,8 +82,11 @@
       
         <div data-ng-if="$index == 0 || allItems[$index-1][sortBy] != item[sortBy]">
           <div style="clear:both;"></div>
-          <h4>{{item[sortBy]}}</h4>
-          
+          <div class="panel panel-default">
+          	<div class="panel-heading">
+          	<h4 class="panel-title">{{item[sortBy]}}</h4>
+          	</div>
+            <div class="panel-body">          
 
         </div>
       </div>
@@ -111,6 +114,7 @@
         </div>
       </div>
       <div data-ng-repeat-end=""></div>
+      </div></div>
       <div>
       <div style="clear:both;"></div>
         <div class="pull-right">{{allItems.length}} of {{vm.cacheItems.length}}</div>

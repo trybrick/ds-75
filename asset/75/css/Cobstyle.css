@@ -1087,16 +1087,16 @@ div.portfolio-caption {
 col-md-6.items.thumbnail.ng-scope {
 	height: 150px;
 	overflow: hidden;
-	border-bottom: 1px solid #ddd;
-	border-radius: 0;
+	border: none;
 }
 
 .nav-tabs > li {
 	margin-bottom: -16px;	
 }
 
-img.dcircular-image {
-	width: 200px;
+.circularItem img {
+	max-height: 100px;
+	max-height: 100px;
 }
 
 div.circularline {
