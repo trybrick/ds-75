@@ -1088,9 +1088,14 @@ div.portfolio-caption {
 }
 /* Brandon's starting to code now!! */
 
+span.ProductName {
+	font-weight: bold;	
+}
+
 .thumbnail div.col-md-1.col-xs-3 {
 	position: relative;
-	top:-15px;	
+	top:-15px;
+	left:24px;	
 }
 
 .thumbnail p.ng-scope.ng-binding {
@@ -1144,7 +1149,7 @@ li.active .btn-default {
 }
 
 @media (max-width: 760px) {
-	div.col-md-6.items.thumbnail.ng-scope {
+div.col-md-6.items.thumbnail.ng-scope {
 		height:auto !important;
 	}
 }
