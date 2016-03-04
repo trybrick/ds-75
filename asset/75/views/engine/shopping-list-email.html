@@ -42,7 +42,7 @@
   </ul>
  
  </div>
-  <h1>Email My Shopping List</h1>
+  <div style="max-width:900px;"><h1>Email My Shopping List</h1>
   <form role="form" name="myForm" data-ng-submit="emailShoppingList()" data-ng-hide="hasSubmitted && isValidSubmit">
     <div>
       <h4>From:</h4>
@@ -55,7 +55,7 @@
         </div>
         <div class="col-md-2 col-xs-2 noPadLeft">
           <span class="required" data-ng-show="myForm.name.$invalid">Required</span>
-          <span data-ng-show="myForm.name.$valid"><i class="glyphicon glyphicon-ok"></i></span>
+          <span style="color:green; margin:5px;" data-ng-show="myForm.name.$valid"><i class="glyphicon glyphicon-ok"></i></span>
         </div>
       </div>
       <div class="row form-group">
@@ -67,7 +67,7 @@
         </div>
         <div class="col-md-2 col-xs-2 noPadLeft">
           <span class="required" data-ng-show="myForm.emailfrom.$invalid">Required</span>
-          <span data-ng-show="myForm.emailfrom.$valid"><i class="glyphicon glyphicon-ok"></i></span>
+          <span style="color:green; margin:5px;" data-ng-show="myForm.emailfrom.$valid"><i class="glyphicon glyphicon-ok"></i></span>
         </div>
       </div>
       <div class="row form-group">
@@ -79,7 +79,7 @@
         </div>
         <div class="col-md-2 col-xs-2 noPadLeft">
           <span class="required" data-ng-show="myForm.subject.$invalid">Required</span>
-          <span data-ng-show="myForm.subject.$valid"><i class="glyphicon glyphicon-ok"></i></span>
+          <span style="color:green; margin:5px;" data-ng-show="myForm.subject.$valid"><i class="glyphicon glyphicon-ok"></i></span>
         </div>
       </div>
     </div>
@@ -94,7 +94,7 @@
         </div>
         <div class="col-md-2 col-xs-2 noPadLeft">
           <span class="required" data-ng-show="myForm.emailto.$invalid">Required</span>
-          <span data-ng-show="myForm.emailto.$valid"><i class="glyphicon glyphicon-ok"></i></span>
+          <span style="color:green; margin:5px;" data-ng-show="myForm.emailto.$valid"><i class="glyphicon glyphicon-ok"></i></span>
         </div>
       </div>
       <div class="row">
@@ -111,7 +111,7 @@
   </form>
   <div data-ng-show="hasSubmitted && isValidSubmit">
     <h4>Your shopping list has been sent.</h4>
-  </div>
+  </div></div>
 </div>
 <style>
   textarea
