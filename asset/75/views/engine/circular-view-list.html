@@ -104,9 +104,9 @@
           <div data-ng-if="currentPath.indexOf('text') < 0" class="cold-md-4 col-sm-6 col-xs-12 circularItem">
             <img itemprop="image" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
           </div>
-          <p itemprop="description" data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="vm['item' + $index] = $index; showModal();" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }">
-            <span class="ProductName" itemprop="name">{{item.Description}}</span><br />
-            <small>{{item.ItemDescription}}</small>
+          <p style="line-height:14px;" itemprop="description" data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="vm['item' + $index] = $index; showModal();" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }">
+            <span style="font-size:12px;" class="ProductName" itemprop="name">{{item.Description}}</span><br />
+            <small style="font-size:10px;">{{item.ItemDescription}}</small>
           </p>
         </div>
         <div class="col-md-3 col-xs-9">
