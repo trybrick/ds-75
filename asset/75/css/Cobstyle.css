@@ -1143,6 +1143,12 @@ li.active .btn-default {
 	font-weight: bold;	
 }
 
+@media (max-width: 760px) {
+	div.col-md-6.items.thumbnail.ng-scope {
+		height:auto !important;
+	}
+}
+
 div.col-md-6.items.thumbnail.ng-scope {
 	height: 150px;
 	overflow: hidden;
@@ -1156,6 +1162,8 @@ div.col-md-6.items.thumbnail.ng-scope {
 div.col-md-6.items.thumbnail.ng-scope img {
 	max-width: 100px;
 	max-height: 100px;
+	width:auto;
+	height:auto;
 }
 
 div.circularline {
