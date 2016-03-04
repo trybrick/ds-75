@@ -1088,6 +1088,12 @@ div.portfolio-caption {
 }
 /* Brandon's starting to code now!! */
 
+div.row .col-md-5.col-xs-12.text-right .btn-group.dropdown {
+		background: #fff;
+		position: relative;
+		left: 15px;
+}
+
 span.ProductName {
 	font-weight: bold;	
 }
