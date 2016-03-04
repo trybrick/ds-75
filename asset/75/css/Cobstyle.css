@@ -983,6 +983,7 @@ body {
 }
 #socialBar a:hover {
 	color: #8b1e1a;
+	font-weight: bold;
 }
 #inside-socialBar {
 	background: rgb(255,255,255);
