@@ -1084,6 +1084,35 @@ div.portfolio-caption {
 }
 /* Brandon's starting to code now!! */
 
+a.button {
+	color: #fff;
+	background-color: #8b1e1a;
+	display: block;
+	font-weight:normal;
+	padding: 5px 10px;
+	border-radius: 5px;
+	text-align:center;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	transition: all .5s ease;
+	-moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	-o-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	-ms-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	-moz-transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+}
+
+a.button:hover {
+	background-color: #000;
+	-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+	-moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+	-webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+	-o-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+	-ms-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+}
+
 li .btn-default {
 	font-weight: normal;	
 }
