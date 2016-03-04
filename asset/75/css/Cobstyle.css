@@ -1084,6 +1084,14 @@ div.portfolio-caption {
 }
 /* Brandon's starting to code now!! */
 
+li .btn-default {
+	font-weight: normal;	
+}
+
+li.active .btn-default {
+	font-weight: bold;	
+}
+
 div.col-md-6.items.thumbnail.ng-scope {
 	height: 150px;
 	overflow: hidden;
