@@ -56,9 +56,9 @@
     </datalist>
     <div class="col-md-12">
       <form name="circularSearch" class="input-group pull-right" style="width: 300px; padding-top: 5px" data-ng-submit="gvm.searchActive = false">
-        <input type="text" class="form-control" placeholder="Search for..." data-ng-model="vm.filterBy">
+        <input style="margin-top:15px; height:32px;" type="text" class="form-control" placeholder="Search for..." data-ng-model="vm.filterBy">
         <div class="input-group-btn" data-ng-class="{ 'open': gvm.searchActive }"><span class="dropdown-menu dropdown-menu-right" style="padding: 10px"><span class="pull-right">
-          <input style="margin-top:15px; height:32px;" type="text" list="departments" data-ng-model="vm.filter.CategoryName" placeholder="--All Departments--" class="text-center" />
+          <input type="text" list="departments" data-ng-model="vm.filter.CategoryName" placeholder="--All Departments--" class="text-center" />
         </span></span>
           <button style="border-top-right-radius: 5px;
 border-bottom-right-radius: 5px;" class="btn btn-default" type="submit">
