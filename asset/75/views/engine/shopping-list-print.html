@@ -1,21 +1,21 @@
 <div class="col-md-12" style="padding:15px !important;">
-    <h1>My Shopping List</h1>
+    <h1 style="margin-top: 60px;">My Shopping List</h1>
     <p data-gsn-store-info="[store.StoreName] [store.PrimaryAddress], [store.City] location only"></p>
   </div>
-  <button class="btn btn-default pull-right" type="button" onclick="javascript:window.print();" data-analytics-on="click" data-analytics-event="ClickPrint" data-analytics-category="ShoppingList" style="float:right; bottom: 0; margin-right: 5px" data-analytics-label="isLoggedIn">Print</button>
+  <button class="btn btn-default pull-right" type="button" onclick="javascript:window.print();" data-analytics-on="click" data-analytics-event="ClickPrint" data-analytics-category="ShoppingList" style="float:right; bottom: 0; margin-right: 15px" data-analytics-label="isLoggedIn">Print</button>
 </div><div style="clear:both;">
 <div class="col-md-12" data-gsn-shopping-list="">
   <div data-ng-init="canPrint = true">
     <div data-ng-repeat="groupItem in allItems" data-ng-hide="groupItem.fitems.length <= 0">
-      <div style="padding-left: 15px !important; padding-right:15px !important;" class="col-md-6 col-xs-6 itemInfo printCouponCategory">
+      <div style="padding-left: 15px !important; padding-right:15px !important;" class="col-md-6 itemInfo printCouponCategory">
       <div class="panel panel-default">
         <div class="panel-heading"><h4 class="panel-title pull-right">Quantity</h4>
         <h4 class="panel-title">{{groupItem.key}}</h4>
         </div>
         </div>
-        <div class="circular-item" data-ng-repeat="item in groupItem.fitems">
+        <div style="border-bottom: 1px dotted #ccc; margin-bottom: 10px;" class="circular-item" data-ng-repeat="item in groupItem.fitems">
           <div style="font-weight:bold;" class="pull-right">{{item.Quantity}}</div>
-          <div style="border-bottom: 1px dotted #ccc;"><img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.IsCoupon"><span style="font-weight: bold;" data-ng-bind-html="item.Description"></span></div>
+          <div><img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.IsCoupon"><span style="font-weight: bold;" data-ng-bind-html="item.Description"></span></div>
 		  <div data-ng-show="item.Comment">(<span data-ng-bind-html="item.Comment"></span>)</div>
           <div data-ng-hide="item.IsCoupon">
             <span>{{item.PriceString}}</span>
@@ -27,7 +27,7 @@
   </div>
   <!-- Ad Pods -->
   <div class="row">    	
-    <div class="col-md-10 printCouponCategory">
+    <div style="padding: 15px !important;" class="col-md-10 printCouponCategory">
       <h4>Manufacturer Coupon Print Status (must submit all coupons to redeem savings)</h4>
     </div>
   </div>
@@ -90,8 +90,8 @@
     <div data-gsn-modal="getContentUrl('/../common/views/modal-gcprinter-printed.html')" data-show-if="printer.printed != null"></div>
   </div>
 </div>
-<div class="col-md-12" data-ng-if="!gsnApi.browser.isMobile">
-  <p>Trouble printing manufacturer coupons? Download and install the Coupon Printing Plugin:<br />
+<div style="padding: 15px !important;" class="col-md-12" data-ng-if="!gsnApi.browser.isMobile">
+  <br /><br /><br /><p>Trouble printing manufacturer coupons? Download and install the Coupon Printing Plugin:<br />
     <a href="http://cdn.coupons.com/ftp.coupons.com/Partners/CouponPrinter.exe">Windows Coupon Printing Plugin</a>
     <span>| </span>
     <a href="http://cdn.coupons.com/ftp.coupons.com/safari/MacCouponPrinter.dmg">Mac Coupon Printing Plugin</a>
