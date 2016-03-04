@@ -21,7 +21,7 @@
   </div>
   <div class="row" data-ng-repeat="item in topitems | pagingFilter:5:0" style="border-top: 1px solid rgba(204, 204, 204, 0.2); margin: 0; padding-top: 5px">
     <div style="line-height:14px;" class="col-xs-3 generic-content">
-      <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" style="max-height:50px; max-width: 50px; margin: 5px;" />
+      <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" style="max-height:50px; max-width: 50px; margin: 5px;" /><br />
       <span style="font-size: 12px;" class="price">{{item.PriceString}}</span>
     </div>
     <div style="line-height:14px; text-align:left;" class="col-xs-9">
