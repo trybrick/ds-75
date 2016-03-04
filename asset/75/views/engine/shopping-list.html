@@ -47,13 +47,13 @@
 
   <div data-gsn-spinner="{radius:30, width:8, length: 16}" data-show-if="!mylist.hasLoaded()"></div>
   
-  <h1>My Shopping List</h1>
+  <h1 style="font-size: 2em;">My Shopping List</h1>
   <div class="row">
     <div class="col-md-4">
       <div class="input-group addItemManage">
-        <input type="text" class="form-control" data-ng-model="addString" placeholder="add own item" ui-keypress="{13:'doAddOwnItem()'}">
+        <input style="margin-top:15px; height:32px;" type="text" class="form-control" data-ng-model="addString" placeholder="add your own item" ui-keypress="{13:'doAddOwnItem()'}">
         <span class="input-group-btn">
-          <button class="btn btn-default" data-ng-click="doAddOwnItem()" type="button"><i class="fa fa-plus-circle"></i></button>
+          <button class="btn btn-default" data-ng-click="doAddOwnItem()" type="button"><i class="fa fa-plus"></i></button>
         </span>
       </div>
     </div>
@@ -93,7 +93,7 @@
         <input style="height: 20px;" placeholder="Comment" data-ng-hide="item.IsCoupon" data-ng-model="item.Comment" ui-keypress="{13:'doUpdateQuantity(item)'}" />
       </div>
       <div class="col-md-4 col-xs-4">
-        <input class="btn btn-xs quantity" style="width: 35px" data-ng-show="!item.IsCoupon" name="quantity" data-ng-model="item.NewQuantity" />
+        <input style="border: 1px solid gray;" class="btn btn-xs quantity" style="width: 35px" data-ng-show="!item.IsCoupon" name="quantity" data-ng-model="item.NewQuantity" />
         <button class="btn btn-default btn-xs" data-ng-click="doUpdateQuantity(item)" data-ng-hide="item.IsCoupon">Update</button>
         <button class="btn btn-default btn-xs" data-ng-click="doItemRemove(item)">Remove</button>
       </div>
