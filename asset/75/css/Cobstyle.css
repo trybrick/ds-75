@@ -106,7 +106,7 @@ body {
 }
 
 a:hover {
-	font-weight: normal;	
+	/*font-weight: normal*/
 }
 
 img.dcircular-image {
@@ -559,7 +559,7 @@ header .intro-text .intro-lead-in {
 	font-style: italic;
 	line-height: 40px;
 	text-shadow: -2px 2px 4px #000000;
-	opacity: 0.6;
+	opacity: 0.8;
 }
 header .intro-text .intro-heading {
 	margin-bottom: 50px;
