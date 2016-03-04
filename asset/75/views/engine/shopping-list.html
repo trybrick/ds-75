@@ -1,4 +1,8 @@
-
+<style>
+.col-md-4 {
+	padding: 0 !important;	
+}
+</style>
   <!-- custom header -->
 <div id="insideHeader" class="insideHeader sm"> 
   <div class="container">
@@ -87,15 +91,18 @@
           <img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.ItemTypeId == 2"/>
           {{item.PriceString}}
         </span>
-        <div data-ng-bind-html="item.Description"></div>
+        <div style="font-weight: bold;" data-ng-bind-html="item.Description"></div>
         <div data-ng-hide="item.IsCoupon" class="price">{{item.PriceString}}</div>
         <div data-ng-show="item.ItemTypeId == 13">Redeemable one time only.</div>
         <input style="height: 20px;" placeholder="Comment" data-ng-hide="item.IsCoupon" data-ng-model="item.Comment" ui-keypress="{13:'doUpdateQuantity(item)'}" />
       </div>
       <div class="col-md-4 col-xs-4">
+
+        <button style="float:right; margin-right: 0px; margin-top:0px; border-radius: 10px; padding: 1px 6px;" class="btn btn-default btn-xs" data-ng-click="doItemRemove(item)"><i class="fa fa-times"></i></button>
+        <div style="float:left;">
         <input class="btn btn-xs quantity" style="width: 35px; border: 1px solid gray;" data-ng-show="!item.IsCoupon" name="quantity" data-ng-model="item.NewQuantity" />
-        <button style="margin-right: 0px; margin-left: -10px;" class="btn btn-default btn-xs" data-ng-click="doUpdateQuantity(item)" data-ng-hide="item.IsCoupon">Update</button>
-        <button style="float:right; margin-right: 0px; margin-top:0px; border-radius: 10px; padding: 1px 7px;" class="btn btn-default btn-xs" data-ng-click="doItemRemove(item)"><i class="fa fa-times"></i></button>
+        <button style="margin-right: 0px; margin-left: 0px;" class="btn btn-default btn-xs" data-ng-click="doUpdateQuantity(item)" data-ng-hide="item.IsCoupon">Update</button>
+        </div>
       </div>
     </div>
   </div>
