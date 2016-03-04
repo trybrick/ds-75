@@ -1088,6 +1088,23 @@ div.portfolio-caption {
 }
 /* Brandon's starting to code now!! */
 
+.thumbnail div.col-md-1.col-xs-3 {
+	position: relative;
+	top:-15px;	
+}
+
+.thumbnail p.ng-scope.ng-binding {
+	font-size: 12px;
+	line-height: 14px;	
+}
+
+.SalePrice.ng-binding {
+	width:60%;
+	font-weight:bold;
+	font-size: 13px;
+	line-height: 13px;
+}
+
 a.button {
 	color: #fff;
 	background-color: #8b1e1a;
@@ -1137,7 +1154,7 @@ div.col-md-6.items.thumbnail.ng-scope {
 }
 
 div.col-md-6.items.thumbnail.ng-scope img {
-	max-height: 100px;
+	max-width: 100px;
 	max-height: 100px;
 }
 
