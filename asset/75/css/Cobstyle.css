@@ -118,7 +118,9 @@ img.dcircular-image {
 }
 
 .product-description {
-	padding: 10px !important;	
+	padding: 10px !important;
+	margin-left: 0 !important;
+	text-align: justify;	
 }
 
 .coupon-container {
@@ -1087,6 +1089,20 @@ div.portfolio-caption {
 	margin-bottom: 10px;
 }
 /* Brandon's starting to code now!! */
+
+.coupon-container {
+	margin-bottom: 25px;	
+}
+
+.coupon-container:hover {
+	background-color:#fff !important;
+	border: 1px dashed #000 !important;	
+}
+
+.product-description h5 {
+	font-size: 12px;
+	text-align: right;	
+}
 
 div.row .col-md-5.col-xs-12.text-right .btn-group.dropdown {
 		background: #fff;
