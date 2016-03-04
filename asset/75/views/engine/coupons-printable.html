@@ -1,16 +1,122 @@
+<script>
+
+(function ($) {
+	$.fn.countTo = function (options) {
+		options = options || {};
+		
+		return $(this).each(function () {
+			// set options for current element
+			var settings = $.extend({}, $.fn.countTo.defaults, {
+				from:            $(this).data('from'),
+				to:              $(this).data('to'),
+				speed:           $(this).data('speed'),
+				refreshInterval: $(this).data('refresh-interval'),
+				decimals:        $(this).data('decimals')
+			}, options);
+			
+			// how many times to update the value, and how much to increment the value on each update
+			var loops = Math.ceil(settings.speed / settings.refreshInterval),
+				increment = (settings.to - settings.from) / loops;
+			
+			// references & variables that will change with each update
+			var self = this,
+				$self = $(this),
+				loopCount = 0,
+				value = settings.from,
+				data = $self.data('countTo') || {};
+			
+			$self.data('countTo', data);
+			
+			// if an existing interval can be found, clear it first
+			if (data.interval) {
+				clearInterval(data.interval);
+			}
+			data.interval = setInterval(updateTimer, settings.refreshInterval);
+			
+			// initialize the element with the starting value
+			render(value);
+			
+			function updateTimer() {
+				value += increment;
+				loopCount++;
+				
+				render(value);
+				
+				if (typeof(settings.onUpdate) == 'function') {
+					settings.onUpdate.call(self, value);
+				}
+				
+				if (loopCount >= loops) {
+					// remove the interval
+					$self.removeData('countTo');
+					clearInterval(data.interval);
+					value = settings.to;
+					
+					if (typeof(settings.onComplete) == 'function') {
+						settings.onComplete.call(self, value);
+					}
+				}
+			}
+			
+			function render(value) {
+				var formattedValue = settings.formatter.call(self, value, settings);
+				$self.html(formattedValue);
+			}
+		});
+	};
+	
+	$.fn.countTo.defaults = {
+		from: 0,               // the number the element should start at
+		to: 0,                 // the number the element should end at
+		speed: 1000,           // how long it should take to count between the target numbers
+		refreshInterval: 100,  // how often the element should be updated
+		decimals: 0,           // the number of decimal places to show
+		formatter: formatter,  // handler for formatting the value before rendering
+		onUpdate: null,        // callback method for every time the element is updated
+		onComplete: null       // callback method for when the element finishes updating
+	};
+	
+	function formatter(value, settings) {
+		return value.toFixed(settings.decimals);
+	}
+}(jQuery));
+
+jQuery(function ($) {
+  // custom formatting example
+  $('#count-number').data('countToOptions', {
+	formatter: function (value, options) {
+	  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+	}
+  });
+  
+  // start all the timers
+  $('.timer').each(count);  
+  
+  function count(options) {
+	var $this = $(this);
+	options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+	$this.countTo(options);
+  }
+});
+
+
+</script>
+
+
 <div class="hidden-meta" data-gsn-title="{{ChainName}} | coupons"></div>
-<div data-ctrl-coupon-classic="" class="col-md-12" data-ng-init="sortByName = 'About to Expire';">
+<div style="padding:15px !important;" data-ctrl-coupon-classic="" class="col-md-12" data-ng-init="sortByName = 'About to Expire';">
   <div data-ng-include="getThemeUrl('/views/engine//coupons-tabs.html')"></div>
   <h1>Printable Coupons</h1>
   <div class="row">
     <div class="col-md-4 col-xs-12">
       <div style="margin-top: 6px; margin-left: -15px">
+       <h2 class="timer count-title" id="count-number" data-to="{{selectedCoupons.totalSavings}}" data-speed="1500">$</h2>
         <span>Total Savings - ${{selectedCoupons.totalSavings}}</span>
       </div>
     </div>
     <div class="col-md-8 col-xs-12 text-right">
       <span>Sort by: </span>
-      <div class="btn-group dropdown">
+      <div style="background-color: #fff;" class="btn-group dropdown">
         <button style="" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">{{vm.sortByName}} <span class="caret"></span></button>
         <ul class="dropdown-menu" role="menu">
           <li><a href="javascript:void(0)" data-ng-click="vm.sortBy = 'EndDate';vm.sortByName='About to Expire'">About to Expire</a></li>
@@ -24,7 +130,7 @@
   </div>
   <div class="row">
     <form name="printableCouponSearch" class="input-group pull-right" style="width: 300px; padding-top: 5px; padding-right: 5px;">
-      <input type="text" class="form-control" placeholder="Search for..." name="q" data-ng-model="vm.filterBy">
+      <input style="margin-top:15px; height:32px;" type="text" class="form-control" placeholder="Search for..." name="q" data-ng-model="vm.filterBy">
       <div class="input-group-btn">
         <button class="btn btn-default" type="submit">
           <i class="glyphicon glyphicon-search"></i>
