@@ -3,6 +3,18 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+/* Don't Print the Footer */
+
+@media print {
+	footer {
+		display:none !important;	
+	}
+	h1 {
+		margin-top:0px !important;	
+	}
+}
+
+
 /*  Large screen fixes  */
 
 @media only screen and (min-width: 1679px) {
