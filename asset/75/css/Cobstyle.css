@@ -45,6 +45,11 @@ header.ng-scope:before {
 /*  Let's go ahead and fix some mobile silly business  */
 
 @media only screen and (max-width: 438px) {
+
+li.PageNumbers {
+	display:none;	
+}
+
 .Coblogo {
 	padding-right: 0px !important;
 }
@@ -107,6 +112,51 @@ body {
 
 a:hover {
 	/*font-weight: normal*/
+}
+
+.pagination > li:last-child > a, .pagination > li:last-child > span {
+	border:none;
+	padding: 0;
+	top: -3px;
+	margin-left: 5px;	
+}
+
+.pagination > li:last-child > a:hover, .pagination > li:last-child > span:hover {
+	background: none;	
+}
+
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+	border:none;
+	padding: 0;
+	top: -3px;
+	margin-left: 5px;	
+}
+
+.pagination > li:first-child > a:hover, .pagination > li:first-child > span:hover {
+	background: none;	
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+	background-color: #8b1e1a;
+	border-color: #8b1e1a;
+}
+
+.pagination > li > a, .pagination > li > span {
+	color: #e6e6e6;
+	border:none;
+	border-radius: 5px;
+	transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	margin: 0px 1px;
+		
+}
+
+.pagination > li > a:hover, .pagination > li > span:hover {
+	background-color: #e6e6e6;
+	color: #8b1e1a;	
 }
 
 svg#myFlyer {
