@@ -57,8 +57,9 @@
     </div>
     <div class="dcircular-content" data-ng-show="vm.circIdx > 0 && vm.pageIdx > 0" style="position: relative; padding-right: 15px">
       <div style="margin: 0 auto; height: auto; position: relative" data-ng-click="vm.activeItem = null">
-        <div data-ng-if="vm.digitalCirc.Circulars.length > 1"><a href="javascript:void(0)" data-ng-click="vm.circIdx = 0" class="dcircular-back-to-list"><i class="fa fa-arrow-circle-left"></i>
- Choose Another Ad</a><br /></div>
+        
+        <!-- -->
+        
         <div style="width: 100%;" class="text-center">
         <ul class="pagination" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')"></ul></div>
         <div class="myImageMap" data-stop-event="click"
@@ -89,8 +90,11 @@
             data-ng-class="{'onlist' : isOnList(item)}"></rect>
           </svg>
         </div>
-        <div style="width: 100%;" class="text-center">
-        <ul class="pagination" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')"></ul></div>
+        
+        <div data-ng-if="vm.digitalCirc.Circulars.length > 1"><a href="javascript:void(0)" data-ng-click="vm.circIdx = 0" class="dcircular-back-to-list"><i class="fa fa-arrow-circle-left"></i>
+ Choose Another Ad</a><br /></div>
+        <!--<div style="width: 100%;" class="text-center">
+        <ul class="pagination" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')"></ul></div>-->
       </div>
       <div class="myFakeFlyer" data-sync-height="#myFlyer"
         data-gsn-svg-image=".circImage" data-src="{{vm.page.ImageUrl}}" data-watch="vm.pageIdx"></div>
