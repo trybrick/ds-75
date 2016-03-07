@@ -46,6 +46,19 @@ header.ng-scope:before {
 
 @media only screen and (max-width: 438px) {
 	
+header {
+	margin-top: 4.7em !important;	
+}
+
+header .intro-text {
+	position: relative;
+	top: -30px;	
+}
+
+header .intro-text .intro-leadin {
+	font-size: 1em !important;	
+}
+	
 div.hover-zoom a.circAddButton {
 	display: none;
 }
