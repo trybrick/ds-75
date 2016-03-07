@@ -123,9 +123,13 @@ a:hover {
 	/*font-weight: normal*/
 }
 
+.pagination {
+	margin: 0 0 0 35px;	
+}
+
 .myImageMap {
-	margin-left: 15px;
-	margin-right: -15px;	
+	margin-left: 15px !important;
+	margin-right: -15px !important;	
 }
 
 .pagination > li:last-child > a, .pagination > li:last-child > span, .pagination > li:last-child > a:active, .pagination > li:last-child > span:active .pagination > li:last-child > a:visited, .pagination > li:last-child > span:visited {
