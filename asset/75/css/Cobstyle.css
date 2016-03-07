@@ -249,7 +249,7 @@ svg#myFlyer {
 .nav-tabs li a:hover {
 	background-color: #8b1e1a;
 	color: #fff;
-	border: none;
+	border-color: #8b1e1a;
 }
 
 .nav-tabs li.active {
