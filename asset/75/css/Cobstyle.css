@@ -45,6 +45,10 @@ header.ng-scope:before {
 /*  Let's go ahead and fix some mobile silly business  */
 
 @media only screen and (max-width: 438px) {
+	
+div.hover-zoom a.circAddButton {
+	display: none;
+}
 
 .pagination > li:last-child > a, .pagination > li:last-child > span {
 	font-size: 3em !important;	
@@ -125,6 +129,19 @@ a:hover {
 
 .pagination {
 	margin: 0 0 0 35px;	
+}
+
+.close {
+	background: #8b1e1a;
+	z-index: -1;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 0 5px 0 7px;
+	opacity: 1;
+	color:#fff;
+	text-shadow: none;
+	font-weight: normal;
+	padding: 0 5px 0 7px;	
 }
 
 .myImageMap {
