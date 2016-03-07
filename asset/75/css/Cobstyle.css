@@ -144,6 +144,10 @@ a:hover {
 	/*font-weight: normal*/
 }
 
+.mdf_child_menu li a {
+	display:block;	
+}
+
 .pagination {
 	margin: 0 0 0 35px;	
 }
