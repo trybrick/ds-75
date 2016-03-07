@@ -127,6 +127,10 @@ svg#myFlyer {
 	color: #fff;
 }
 
+.nav-tabs li.active {
+	color: #8b1e1a;	
+}
+
 img.dcircular-image {
 	width: 200px;
 }
