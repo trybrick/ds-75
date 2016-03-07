@@ -69,13 +69,20 @@ li.PageNumbers {
 .homestoreselection {
 	font-size: 11px;
 	margin-top: 3px;
+	padding: 0px 10px !important;
 }
+
+#socialBar {
+	padding: 0px 0px 0px 10px !important;
+	margin-top: 0 !important;
+}
+
 #socialicons {
 	float: left !important;
-	padding: 15px 0px 5px 0px;
+	padding: 10px 0px 5px 0px;
 }
 .btn-social-icon {
-	font-size: 20px !important;
+	font-size: .6em !important;
 	padding: 6px 15px !important;
 }
 section {
