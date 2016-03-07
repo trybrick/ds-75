@@ -109,6 +109,22 @@ a:hover {
 	/*font-weight: normal*/
 }
 
+svg#myFlyer {
+	box-shadow: 5px 5px 5px #000;
+	-webkit-box-shadow: 5px 5px 5px #000;
+	-moz-box-shadow: 5px 5px 5px #000;
+	-o-box-shadow: 5px 5px 5px #000;
+	-ms-box-shadow: 5px 5px 5px #000;	
+}
+
+.nav-tabs li a {
+	background-color: #e6e6e6;
+}
+
+.nav-tabs li a:hover {
+	background-color: #8b1e1a;
+}
+
 img.dcircular-image {
 	width: 200px;
 }
