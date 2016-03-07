@@ -1172,9 +1172,9 @@ body {
 #insideHeader {
 	margin-top: 1.5em;
 }
- @media(max-width:767px) {
+ @media(max-width:1206px) {
 #insideHeader {
-/**margin-top: 4em;**/
+	margin-top: 4.7em;
 }
 #inside-socialBar {
 	margin-top: -10px;
