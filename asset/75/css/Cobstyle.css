@@ -387,7 +387,7 @@ div.errorpage {
 }
 /* Login Stuff */
 
-. myLoginForm .form-control {
+.myLoginForm .form-control {
 	margin: 10px;
 }
 .btn {
