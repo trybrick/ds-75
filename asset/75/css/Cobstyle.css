@@ -144,8 +144,8 @@ a:hover {
 	/*font-weight: normal*/
 }
 
-.mdf_child_menu li a {
-	display:block;	
+#mdf_menu div.mdf_sub_wrap a, #mdf_menu ul.mdf_child_menu li a {
+	display:block !important;	
 }
 
 .pagination {
