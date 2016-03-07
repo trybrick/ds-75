@@ -131,7 +131,7 @@ a:hover {
 .pagination > li:last-child > a, .pagination > li:last-child > span, .pagination > li:last-child > a:active, .pagination > li:last-child > span:active .pagination > li:last-child > a:visited, .pagination > li:last-child > span:visited {
 	border:none;
 	padding: 0;
-	top: -3px;
+	top: -4.5px;
 	margin-left: 5px;
 	font-size: 2em;
 	color: #ccc;
@@ -145,7 +145,7 @@ a:hover {
 .pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:first-child > a:active, .pagination > li:first-child > span:active, .pagination > li:first-child > a:visited, .pagination > li:first-child > span:visited {
 	border:none;
 	padding: 0;
-	top: -3px;
+	top: -4.5px;
 	margin-right: 5px;
 	font-size: 2em;
 	color: #ccc;
