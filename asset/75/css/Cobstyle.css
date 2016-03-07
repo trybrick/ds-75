@@ -46,9 +46,6 @@ header.ng-scope:before {
 
 @media only screen and (max-width: 438px) {
 	
-header {
-	margin-top: 4.7em !important;	
-}
 
 header .intro-text {
 	position: relative;
@@ -1193,6 +1190,10 @@ body {
 	margin-top: 1.5em;
 }
  @media(max-width:1206px) {
+header {
+	margin-top: 4.7em !important;	
+}
+
 #insideHeader {
 	margin-top: 4.7em;
 }
