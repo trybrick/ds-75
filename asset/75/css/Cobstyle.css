@@ -3,6 +3,26 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
+/* Feeder */
+
+#feed_wrapper.blog li > a div {
+	background: no-repeat top !important;	
+	background-size: 100% !important;
+}
+
+/* Don't Print the Footer */
+
+@media print {
+	footer {
+		display:none !important;	
+	}
+	h1 {
+		margin-top:0px !important;	
+	}
+}
+
+
 /*  Large screen fixes  */
 
 @media only screen and (min-width: 1679px) {
@@ -46,6 +66,16 @@ header.ng-scope:before {
 
 @media only screen and (max-width: 438px) {
 	
+
+header .intro-text {
+	position: relative;
+	top: -30px;	
+}
+
+header .intro-text .intro-lead-in {
+	font-size: 1em !important;	
+}
+	
 div.hover-zoom a.circAddButton {
 	display: none;
 }
@@ -69,13 +99,20 @@ li.PageNumbers {
 .homestoreselection {
 	font-size: 11px;
 	margin-top: 3px;
+	padding: 8px 10px !important;
 }
+
+#socialBar {
+	padding: 0px 0px 0px 10px !important;
+	margin-top: 0 !important;
+}
+
 #socialicons {
 	float: left !important;
-	padding: 15px 0px 5px 0px;
+	padding: 10px 0px 5px 0px;
 }
 .btn-social-icon {
-	font-size: 20px !important;
+	font-size: 2.2em !important;
 	padding: 6px 15px !important;
 }
 section {
@@ -125,6 +162,10 @@ body {
 
 a:hover {
 	/*font-weight: normal*/
+}
+
+#mdf_menu div.mdf_sub_wrap a, #mdf_menu ul.mdf_child_menu li a {
+	display:block !important;	
 }
 
 .pagination {
@@ -216,7 +257,7 @@ svg#myFlyer {
 .nav-tabs li a:hover {
 	background-color: #8b1e1a;
 	color: #fff;
-	border: none;
+	border-color: #8b1e1a;
 }
 
 .nav-tabs li.active {
@@ -380,8 +421,8 @@ div.errorpage {
 }
 /* Login Stuff */
 
-.form-control {
-	/*margin: 10px;*/
+.myLoginForm .form-control {
+	margin: 10px;
 }
 .btn {
 	margin-right: 10px;
@@ -1173,6 +1214,10 @@ body {
 	margin-top: 1.5em;
 }
  @media(max-width:1206px) {
+header {
+	margin-top: 4.7em !important;	
+}
+
 #insideHeader {
 	margin-top: 4.7em;
 }
