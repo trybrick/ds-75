@@ -3,13 +3,13 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-
 /* Feeder */
 
 #feed_wrapper.blog li > a div {
 	background: no-repeat top !important;	
 	background-size: 100% !important;
 }
+
 
 /* Don't Print the Footer */
 
@@ -1629,7 +1629,3 @@ img.storedirector {
     background: #c2b69c !important;
     color: #000 !important;
 }
-
-
-
-
