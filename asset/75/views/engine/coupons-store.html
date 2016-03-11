@@ -6,7 +6,7 @@
     <div class="col-md-4 col-xs-12 totalSavings"></div>
     <div class="col-md-6 col-xs-12 text-right">
       <span>Sort by: </span>
-      <div class="btn-group dropdown">
+      <div class="btn-group dropdown" data-ng-class="{ 'open': vm.sortActive }">
         <button style="" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">{{vm.sortByName}} <span class="caret"></span></button>
         <ul class="dropdown-menu" role="menu">
           <li><a href="javascript:void(0)" data-ng-click="vm.sortBy = 'EndDate';vm.sortByName='About to Expire'">About to Expire</a></li>
