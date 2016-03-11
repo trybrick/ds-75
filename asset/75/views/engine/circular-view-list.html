@@ -92,8 +92,8 @@ border-bottom-right-radius: 5px;" class="btn btn-default" type="submit">
             </ul>
         </div>
         <div>
-            <div data-ng-repeat-start="item in vm.cacheItems | pagingFilter:itemsPerPage:(vm.currentPage-1)" data-ng-class="{ '': $index == 0 || vm.cacheItems[$index-1][sortBy] != item[sortBy] }">
-                <div data-ng-if="$index == 0 || vm.cacheItems[$index-1][sortBy] != item[sortBy]">
+            <div data-ng-repeat-start="item in vm.cacheItems | pagingFilter:itemsPerPage:(vm.currentPage - 1)">
+                <div data-ng-if="$index == 0 || vm.cacheItems[(vm.currentPage - 1) * itemsPerPage + $index-1][sortBy] !== item[sortBy]">
                     <div style="clear:both;"></div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
