@@ -25,13 +25,10 @@
       </div>
     </div>        
   </div>
-  <!-- Ad Pods -->
-  <div class="row">    	
-    <div style="padding: 15px !important;" class="col-md-10 printCouponCategory">
+  <div class="row" data-ng-hide="manufacturerCoupons.length === 0">    	
+    <div style="padding: 15px !important; clear: both;" class="col-md-10 printCouponCategory">
       <h4>Manufacturer Coupon Print Status (must submit all coupons to redeem savings)</h4>
     </div>
-  </div>
-  <div data-ng-if="true">
     <div class="circular-item" data-ng-repeat="item in manufacturerCoupons">
       <div data-ng-if="item.IsCoupon">
         <img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}">
