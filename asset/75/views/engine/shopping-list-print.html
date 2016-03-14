@@ -49,9 +49,9 @@
         <table width="90%" border="0" cellspacing="0" cellpadding="4"> 
           <tr height="30">
             <td width="150" align="center" rowspan="3">
-              <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}"/>
+              <img class="productImage" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}"/>
               <br />
-              <img data-ng-src="{{item.CouponImageUrl}}"/>
+              <img class="barcodeImage" data-ng-src="{{item.CouponImageUrl}}"/>
             </td>
             <td align="center">
               <div style="background-color:black; width:auto; border:1px solid black; float:left; color:white; padding:4px 10px; text-align:center; text-transform:uppercase">{{ChainName | uppercase}} STORE COUPON</div>
@@ -141,6 +141,19 @@
 .chainLogoImage {
     height: auto;
     max-height: 30px;
+    width: auto;
+}
+.barcodeImage {
+    height: auto;
+    margin: 6px 0 0;
+    max-height: 80px;
+    width: auto;
+}
+.productImage {
+    height: auto;
+    margin: 6px 0 0;
+    max-height: 100px;
+    max-width: 150px;
     width: auto;
 }
 </style>
