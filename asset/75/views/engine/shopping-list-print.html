@@ -45,6 +45,40 @@
       <h4>In store Coupons</h4>
     </div>
   </div>
+  <div class="row">
+    <!-- circular coupons -->
+    <div data-ng-repeat="item in allItems | filter:{ CouponImageUrl: 'http' }">
+      <div class="col-md-6 col-xs-12">
+        <table width="90%" border="0" cellspacing="0" cellpadding="4"> 
+          <tr height="30">
+            <td width="150" align="center" rowspan="3">
+              <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}"/>
+              <br />
+              <img data-ng-src="{{item.CouponImageUrl}}"/>
+            </td>
+            <td align="center">
+              <div>{{ChainName | uppercase}} STORE COUPON</div>
+              <div>EXPIRES {{item.EndDate | date: 'M / dd / yyyy'}}</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div data-ng-show="item.ProductCode"><strong>PLU:</strong>{{item.ProductCode}}</div>
+              <div style="clear:both; font-size:18px; font-weight:bold;">{{item.CircularItemName}}</div>
+              <div style="clear:both; font-size:16px; font-weight:bold;">{{item.PriceString}}</div>
+              <div style="clear:both; font-size:9px; margin-top:10px; ">{{item.CircularItemDescription}}</div>
+              <div style="clear:both; font-size:8px">Limit ONE - One coupon may be used per customer. Good at {{gvm.currentStore.StoreName}}.</div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <img align="right" data-ng-src="{{getContentUrl('/images/printLogo.gif')}}" border="0">
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
   <div class="row" data-ng-if="instoreCoupons.length > 0">
     <div data-ng-repeat="item in instoreCoupons">
       <div class="col-md-6 col-xs-12">
@@ -76,7 +110,7 @@
           </tr>
           <tr>
             <td colspan="2">
-              <img align="right" data-ng-src="{{getContentUrl('/images/logoPrint.png')}}" border="0">
+              <img align="right" data-ng-src="{{getContentUrl('/images/printLogo.gif')}}" border="0">
             </td>
           </tr>
         </table>
