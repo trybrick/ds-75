@@ -54,22 +54,22 @@
               <img data-ng-src="{{item.CouponImageUrl}}"/>
             </td>
             <td align="center">
-              <div>{{ChainName | uppercase}} STORE COUPON</div>
-              <div>EXPIRES {{item.EndDate | date: 'M / dd / yyyy'}}</div>
+              <div style="background-color:black; width:auto; border:1px solid black; float:left; color:white; padding:4px 10px; text-align:center; text-transform:uppercase">{{ChainName | uppercase}} STORE COUPON</div>
+              <div style="background-color:white; width:180px; border:1px solid black; float:left; color:black; padding:4px 10px; text-align:center;">EXPIRES {{item.EndDate | date: 'M / dd / yyyy'}}</div>
             </td>
           </tr>
           <tr>
             <td>
               <div data-ng-show="item.ProductCode"><strong>PLU:</strong>{{item.ProductCode}}</div>
-              <div style="clear:both; font-size:18px; font-weight:bold;">{{item.CircularItemName}}</div>
+              <div style="clear:both; font-size:18px; font-weight:bold;">{{item.Name}}</div>
               <div style="clear:both; font-size:16px; font-weight:bold;">{{item.PriceString}}</div>
-              <div style="clear:both; font-size:9px; margin-top:10px; ">{{item.CircularItemDescription}}</div>
+              <div style="clear:both; font-size:9px; margin-top:10px; ">{{item.Description}}</div>
               <div style="clear:both; font-size:8px">Limit ONE - One coupon may be used per customer. Good at {{gvm.currentStore.StoreName}}.</div>
             </td>
           </tr>
           <tr>
             <td colspan="2">
-              <img align="right" data-ng-src="{{getContentUrl('/images/printLogo.gif')}}" border="0">
+              <img class="chainLogoImage" align="right" data-ng-src="{{getContentUrl('/images/printLogo.gif')}}" border="0">
             </td>
           </tr>
         </table>
@@ -137,5 +137,10 @@
     max-height: 250px;
     padding: 3px;
     width: 640px;
+}
+.chainLogoImage {
+    height: auto;
+    max-height: 30px;
+    width: auto;
 }
 </style>
