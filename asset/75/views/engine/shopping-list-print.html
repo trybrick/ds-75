@@ -61,14 +61,15 @@
           <tr>
             <td>
               <div data-ng-show="item.ProductCode"><strong>PLU:</strong>{{item.ProductCode}}</div>
-              <div style="clear:both; font-size:18px; font-weight:bold;">{{item.Name}}</div>
+              <div style="clear:both; font-size:18px; font-weight:bold;">{{item.Description}}</div>
               <div style="clear:both; font-size:16px; font-weight:bold;">{{item.PriceString}}</div>
-              <div style="clear:both; font-size:9px; margin-top:10px; ">{{item.Description}}</div>
+              <div style="clear:both; font-size:9px; margin-top:10px; ">{{item.ItemDescription}}</div>
               <div style="clear:both; font-size:8px">Limit ONE - One coupon may be used per customer. Good at {{gvm.currentStore.StoreName}}.</div>
             </td>
           </tr>
           <tr>
             <td colspan="2">
+              <br /><br />
               <img class="chainLogoImage" align="right" data-ng-src="{{getContentUrl('/images/printLogo.gif')}}" border="0">
             </td>
           </tr>
