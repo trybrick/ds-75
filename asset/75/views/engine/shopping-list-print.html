@@ -48,7 +48,7 @@
   <div class="row">
     <!-- circular coupons -->
     <div data-ng-repeat="item in allItems | filter:{ CouponImageUrl: 'http' }">
-      <div class="col-md-6 col-xs-12">
+      <div class="col-md-6 col-xs-12 couponContainerDiv">
         <table width="90%" border="0" cellspacing="0" cellpadding="4"> 
           <tr height="30">
             <td width="150" align="center" rowspan="3">
@@ -131,3 +131,14 @@
     <a href="http://cdn.coupons.com/ftp.coupons.com/safari/MacCouponPrinter.dmg">Mac Coupon Printing Plugin</a>
   </p>
 </div>
+<style>
+.couponContainerDiv {
+    border: 1px dashed #999999;
+    clear: both;
+    height: auto;
+    margin: 0 0 5px 5px;
+    max-height: 250px;
+    padding: 3px;
+    width: 640px;
+}
+</style>
