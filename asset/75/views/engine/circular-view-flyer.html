@@ -71,11 +71,13 @@
             data-ng-class="{'active': vm.activeItem.ItemId == item.ItemId }"
             data-ng-click="vm.activeItem = item"
             id="item_{{item.ItemId}}" data-ng-cloak="">
-            <div style="position: relative" class="hover-zoom">
+            <div style="position: relative" class="hover-zoom"
+            data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-show-if="vm['item' + $index]" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }"
+            data-ng-dblclick="showModal()">
               <a class="btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)" data-ng-class="{'circAddButton': !isOnList(item)}">
                 <i class="fa" data-ng-class="{'fa-square-o': !isOnList(item), 'fa-check-square-o': isOnList(item)}"></i> {{ !isOnList(item) ? 'ADD ITEM' : 'ON LIST'}}
               </a>
-              <a class="btn btn-default btn-xs circInfoButton" title="View item details..." data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="showModal()" data-show-if="vm['item' + $index]" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }">
+              <a class="btn btn-default btn-xs circInfoButton" title="View item details..."  data-ng-click="showModal()">
                 <i class="fa fa-info-circle"></i>
               </a>
               <div class="ripple" style="opacity: 0.3"></div>
