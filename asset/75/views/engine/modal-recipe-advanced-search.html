@@ -72,8 +72,8 @@
     <div class="input-group input-group-sm">
       <input type="text" class="form-control" data-gsn-auto-focus="" placeholder="recipe search" data-ng-model="recipeSearch.term" name="recipesearch" data-ui-keyup="{'enter':'doRecipeSearch()'}" /><a class="input-group-addon btn btn-default" href="javascript:void(0)" data-ng-click="doRecipeSearch()">go</a>
     </div>
-    <div class="dropdown">
-      <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Search Tips <i class="fa fa-chevron-down"></i></a>
+    <div class="dropdown" data-ng-class="{'open': vm.searchTipActive}">
+      <a href="javascript:void(0)" data-ng-click="vm.searchTipActive = !vm.searchTipActive">Search Tips <i class="fa fa-chevron-down"></i></a>
       <div class="dropdown-menu" style="padding-left: 5px">
         <h5>Advanced Search Tips:</h5>
         <table>
