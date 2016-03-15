@@ -1072,15 +1072,6 @@ ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li
 	transform: rotate(90deg);
 }
 
-::-moz-selection {
- text-shadow: none;
- background: #fed136;
-}
-::selection {
-	text-shadow: none;
-	/*background: #fed136;*/
-	background: none;
-}
 img::selection {
 	background: 0 0;
 }
