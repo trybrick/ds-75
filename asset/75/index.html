@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="HandheldFriendly" content="true">
 <meta name="description" content="">
 <meta name="author" content="">
 <title>Coborn's</title>
@@ -54,7 +55,8 @@
   <!--endhead-->
   
   <!-- Loyalty -->
-<script src="https://shopper.birdzi.com/shopper_Coborns_003604/js/app_js/shopper.js"></script>
+  <!-- Note: this is causing IE8 to crash, temporary comment out to debug in IE8
+<script src="https://shopper.birdzi.com/shopper_Coborns_003604/js/app_js/shopper.js"></script>-->
 <!-- end --> 
 </head>
 
@@ -97,14 +99,18 @@
 
                 <!-----------------------Order Online------------------------>
         <li class="menu-el">
-          <a><!--<i class="glyphicon glyphicon-circle-arrow-down"></i>-->Order Online</a>
+          <a>Order Online</a>
           <ul class="mdf_child_menu dropdown" data-width="200px" style="display: block; width: 300px;">
-
-                <li><a href="http://www.cobornsdelivers.com" target="_blank"><i class="fa fa-truck"></i>
+<li><a href="http://www.cobornsdelivers.com" target="_blank"><i class="fa fa-truck"></i>
  cobornsdelivers.com</a></li>
-            <li><a href="/gift-cards"><i class="fa fa-gift"></i>
- gift cards</a></li>
-        <li><a href="http://www.floral.coborns.com/" target="_blank"><i class="icon ion-ios-rose"></i> floral</a></li>
+ 
+ <li><a href="http://www.expresswashclub.com/" target="_blank"><i class="icon ion-waterdrop"></i> express car wash club</a></li>
+ 
+ <li><a href="http://www.floral.coborns.com/" target="_blank"><i class="icon ion-ios-rose"></i> floral</a></li>
+ 
+ <li><a href="/gift-cards"><i class="fa fa-gift"></i> gift cards</a></li>
+ 
+ 
                 <li><a href="http://coborns.lifepics.com/" target="_blank"><i class="fa fa-camera"></i>
  photo</a></li>
 
@@ -125,14 +131,14 @@
                                 <li><a href="/bakery"><i class="fa fa-birthday-cake"></i>
 
  bakery</a></li>
-                                <li><a href="/catering"><i class="icon ion-android-restaurant" style="font-size: 14pt;"></i>
+                                <li><a href="/catering"><i class="icon ion-android-restaurant"></i>
  catering</a></li>
                                 <li><a href="/coffee-shops"><i class="fa fa-coffee"></i> coffee shops</a></li>
                                 <li><a href="/convenience-stores"><i class="fa fa-car"></i> convenience stores</a></li>
 
 
-                                <li><a href="/dairy"><i class="ionicons ion-egg" style="font-size: 14pt; margin-right: 8pt;"></i> dairy</a></li>
-                                <li><a href="/deli"><i class="icon ion-pizza" style="font-size: 14pt; margin-right: 8pt;"></i> deli</a></li>
+                                <li><a href="/dairy"><i class="ionicons ion-egg"></i> dairy</a></li>
+                                <li><a href="/deli"><i class="icon ion-pizza"></i> deli</a></li>
               </ul>
             </div>
             <div class="col-sm-3 col-xs-6">
@@ -140,15 +146,17 @@
                 <span style="height:1px;">&nbsp;</span>
               </div>
               <ul class="mdf_child_menu">
-                    <li><a href="http://www.floral.coborns.com/" target="_blank"><i class="icon ion-ios-flower"></i> floral</a></li>
+                    <li><a href="/floral" target="_blank"><i class="icon ion-ios-flower"></i> floral</a></li>
                                 <li><a href="/frozen"><i class="icon ion-icecream"></i> frozen</a></li>
                                 <li><a href="/general-merchandise"><i class="fa fa-lightbulb-o"></i> general merchandise</a></li>
                                 <li><a href="/grocery"><i class="ionicons ion-soup-can-outline"></i> grocery</a></li>
+                                
+                                <li><a href="/guest-services"><i class="fa fa-users"></i> guest services</a></li>
                                 <li><a href="/liquor"><i class="icon ion-beer"></i>
  liquor</a></li>
                                 <li><a href="/meat-and-seafood"><i class="fa fa-cutlery"></i> meat and seafood</a></li>
 
-                                <li><a href="/natural-foods"><i class="fa fa-leaf"></i> natural foods</a></li>
+                                
               </ul>
             </div>
             <div class="col-sm-3 col-xs-6">
@@ -156,17 +164,18 @@
                 <span style="height:1px;">&nbsp;</span>
               </div>
               <ul class="mdf_child_menu">
+              <li><a href="/natural-foods"><i class="fa fa-leaf"></i> natural foods</a></li>
                 <li><a href="/personal-care"><i class="fa fa-female"></i> personal care</a></li>
                                 <li><a href="/pets"><i class="fa fa-paw"></i> pets</a></li>
                                 <li><a href="/pharmacy"><i class="fa fa-heartbeat"></i> pharmacy</a></li>
-                                <li><a href="http://coborns.lifepics.com/" target="_blank"><i class="fa fa-camera"></i> photo</a></li>
+                                <li><a href="/photo"><i class="fa fa-camera"></i> photo</a></li>
 
                 <li><a href="/produce"><i class="fa fa-lemon-o"></i>
  produce</a></li>
 
                                 <li><a href="/video"><i class="fa fa-video-camera"></i> video</a></li>
                                 
-                                <li><a href="/guest-services"><i class="fa fa-users"></i> guest services</a></li>
+                                
               </ul>
             </div>
             <div class="col-sm-3 col-xs-6">
@@ -196,11 +205,14 @@
           <a>Food &amp; Recipes</a>
           <ul class="mdf_child_menu dropdown" data-width="200px" style="display: block; width: 300px;">
 
+                <!-- <li><a href="/all-american-summer"><i class="icon ion-star" style="font-size:14pt;"></i> all american summer</a></li> -->
                 <li><a href="/four-brothers"><i class="icon ion-fireball" style="font-size:14pt;"></i> four brothers</a></li>
                                 
-                <li><a href="#"><i class="icon ion-ios-filing" style="font-size:14pt;"></i> recipe center</a></li>
+                <li><a href="/recipecenter"><i class="icon ion-ios-filing" style="font-size:14pt;"></i> recipe center</a></li>
                                 <li><a href="http://cobornsblog.com/?s=weekly+ad+recipe" target="_blank"><i class="icon ion-ios-paper-outline" style="font-size:14pt;"></i> weekly ad recipes</a></li>
                                 <li><a href="http://cobornsblog.com/" target="_blank"><i class="icon ion-social-rss" style="font-size:14pt;"></i> from our blog</a></li>
+                                
+                                <li><a href="http://celebratemore.net" target="_blank"><i class="fa fa-spoon"></i> celebrate more</a></li>
 
 
           </ul>
@@ -214,8 +226,7 @@
 
                          <li><a href="/nuval"><i class="icon ion-ios-nutrition" style="font-size:14pt; margin-right:6pt;"></i> nuval</a></li>
                                 <li><a href="/dietitians-corner"><i class="icon ion-ios-pulse-strong" style="font-size: 14pt;"></i> dietitians corner</a></li>
-                <li><a href="/events"><i class="fa fa-calendar fa-lg"></i>
- events</a></li>
+               
                                 <li><a href="/food-safety"><i class="icon ion-thermometer" style="font-size:14pt; margin-right:12pt;"></i> food safety</a></li>
 
 
@@ -233,13 +244,13 @@
                 <span style="height:1px;">&nbsp;</span>
               </div>
               <ul class="mdf_child_menu">
-                <li><span class="glyphicon glyphicon-map-marker"></span> <a href="/store/2029">Albertville, MN</a></li>
-                                <li><span class="glyphicon glyphicon-map-marker"></span> <a  href="/store/2042">Belle Plaine, MN</a></li>
-                      <li><span class="glyphicon glyphicon-map-marker"></span> <a href="/store/2031">Big Lake, MN</a></li>
-                      <li><span class="glyphicon glyphicon-map-marker"></span> <a href="/store/2036">Buffalo, MN</a></li>
-                <li><span class="glyphicon glyphicon-map-marker"></span> <a href="/store/2008">Cleawater, MN</a></li>
-                      <li><span class="glyphicon glyphicon-map-marker"></span> <a href="/store/2028">Delano, MN</a></li>
-                    <li><span class="glyphicon glyphicon-map-marker"></span> <a href="/store/2023">Elk River, MN</a></li>
+                <li><a href="/Cobstore2029"><span class="glyphicon glyphicon-map-marker"></span> Albertville, MN</a></li>
+                                <li><a  href="/Cobstore2042"><span class="glyphicon glyphicon-map-marker"></span> Belle Plaine, MN</a></li>
+                      <li><a href="/Cobstore2031"><span class="glyphicon glyphicon-map-marker"></span> Big Lake, MN</a></li>
+                      <li><a href="/Cobstore2036"><span class="glyphicon glyphicon-map-marker"></span> Buffalo, MN</a></li>
+                <li><a href="/Cobstore2008"><span class="glyphicon glyphicon-map-marker"></span> Clearwater, MN</a></li>
+                      <li><a href="/Cobstore2028"><span class="glyphicon glyphicon-map-marker"></span> Delano, MN</a></li>
+                    <li><a href="/Cobstore2023"><span class="glyphicon glyphicon-map-marker"></span> Elk River, MN</a></li>
               </ul>
             </div>
             <div class="col-sm-3 col-xs-6">
@@ -247,13 +258,14 @@
                 <span style="height:1px;">&nbsp;</span>
               </div>
               <ul class="mdf_child_menu">
-                <li><a href="/store/2002"><span class="glyphicon glyphicon-map-marker"></span> Foley, MN</a></li>
-                <li><a href="/store/2027"><span class="glyphicon glyphicon-map-marker"></span> Glencoe, MN</a></li>
-                <li><a href="/store/2037"><span class="glyphicon glyphicon-map-marker"></span> Hastings, MN</a></li>
-                      <li><a href="/store/2006"><span class="glyphicon glyphicon-map-marker"></span> Little Falls, MN</a></li>
-                <li><a href="/store/2016"><span class="glyphicon glyphicon-map-marker"></span> Long Prairie, MN</a></li>
-                <li><a href="/store/2043"><span class="glyphicon glyphicon-map-marker"></span> Melrose, MN</a></li>
-                <li><a href="/store/2017"><span class="glyphicon glyphicon-map-marker"></span> Mora, MN</a></li>
+                <li><a href="/Cobstore2002"><span class="glyphicon glyphicon-map-marker"></span> Foley, MN</a></li>
+                <li><a href="/Cobstore2027"><span class="glyphicon glyphicon-map-marker"></span> Glencoe, MN</a></li>
+                <li><a href="/Cobstore2037"><span class="glyphicon glyphicon-map-marker"></span> Hastings, MN</a></li>
+                      <li><a href="/Cobstore2006"><span class="glyphicon glyphicon-map-marker"></span> Little Falls, MN</a></li>
+                <li><a href="/Cobstore2016"><span class="glyphicon glyphicon-map-marker"></span> Long Prairie, MN</a></li>
+                <li><a href="/Cobstore2043"><span class="glyphicon glyphicon-map-marker"></span> Melrose, MN</a></li>
+                <li><a href="/Cobstore2044"><span class="glyphicon glyphicon-map-marker"></span> Montevideo, MN</a></li>
+                
               </ul>
             </div>
             <div class="col-sm-3 col-xs-6">
@@ -261,14 +273,16 @@
                 <span style="height:1px;">&nbsp;</span>
               </div>
               <ul class="mdf_child_menu">
-                <li><a href="/store/2038"><span class="glyphicon glyphicon-map-marker"></span> New Prague, MN</a></li>
-                <li><a href="/store/2030"><span class="glyphicon glyphicon-map-marker"></span> Park Rapids, MN</a></li>
-                 <li><a href="/store/2034"><span class="glyphicon glyphicon-map-marker"></span> Pipestone, MN</a></li>
-                <li><a href="/store/2033"> <span class="glyphicon glyphicon-map-marker"></span>Ramsey, MN</a></li>
-                 <li><a href="/store/2032"> <span class="glyphicon glyphicon-map-marker"></span>Sartell, MN Pine Cone</a></li>
-                <li><a href="/store/2007"> <span class="glyphicon glyphicon-map-marker"></span>Sartell, MN Riverside</a></li>
+              <li><a href="/Cobstore2017"><span class="glyphicon glyphicon-map-marker"></span> Mora, MN</a></li>
+                <li><a href="/Cobstore2038"><span class="glyphicon glyphicon-map-marker"></span> New Prague, MN</a></li>
+                <li><a href="/Cobstore2030"><span class="glyphicon glyphicon-map-marker"></span> Park Rapids, MN</a></li>
+                 <li><a href="/Cobstore2034"><span class="glyphicon glyphicon-map-marker"></span> Pipestone, MN</a></li>
+                  <li><a href="/Cobstore2019"><span class="glyphicon glyphicon-map-marker"></span> Princeton, MN</a></li>
+                <li><a href="/Cobstore2033"> <span class="glyphicon glyphicon-map-marker"></span>Ramsey, MN</a></li>
+                 <li><a href="/Cobstore2032"> <span class="glyphicon glyphicon-map-marker"></span>Sartell, MN Pine Cone</a></li>
+                <li><a href="/Cobstore2007"> <span class="glyphicon glyphicon-map-marker"></span>Sartell, MN Riverside</a></li>
 
-                <li><a href="/store/2022"> <span class="glyphicon glyphicon-map-marker"></span>Sauk Centre, MN</a></li>
+                
 
               </ul>
             </div>
@@ -277,88 +291,50 @@
                 <span style="height:1px;">&nbsp;</span>
               </div>
               <ul class="mdf_child_menu">
+              <li><a href="/Cobstore2022"> <span class="glyphicon glyphicon-map-marker"></span>Sauk Centre, MN</a></li>
 
-                      <li><a href="/store/2001"><span class="glyphicon glyphicon-map-marker"></span> Sauk Rapids, MN</a></li>
-                <li><a href="/store/2005"><span class="glyphicon glyphicon-map-marker"></span> St. Cloud, MN Centennial</a></li>
-                <li><a href="/store/2035"><span class="glyphicon glyphicon-map-marker"></span> St. Cloud, MN Cooper Ave.</a></li>
-                <li><a href="/store/2039"><span class="glyphicon glyphicon-map-marker"></span> St. Joseph, MN</a></li>
-                <li><a href="/store/2024"><span class="glyphicon glyphicon-map-marker"></span> Huron, SD</a></li>
-                <li><a href="/store/2025"><span class="glyphicon glyphicon-map-marker"></span> Mitchell, SD</a></li>
+                      <li><a href="/Cobstore2001"><span class="glyphicon glyphicon-map-marker"></span> Sauk Rapids, MN</a></li>
+                <li><a href="/Cobstore2005"><span class="glyphicon glyphicon-map-marker"></span> St. Cloud, MN 8th Street North</a></li>
+                <li><a href="/Cobstore2035"><span class="glyphicon glyphicon-map-marker"></span> St. Cloud, MN Cooper Ave.</a></li>
+                <li><a href="/Cobstore2039"><span class="glyphicon glyphicon-map-marker"></span> St. Joseph, MN</a></li>
+                <li><a href="/Cobstore2024"><span class="glyphicon glyphicon-map-marker"></span> Huron, SD</a></li>
+                <li><a href="/Cobstore2025"><span class="glyphicon glyphicon-map-marker"></span> Mitchell, SD</a></li>
                 <li><a href="/storelocator"><span class="glyphicon glyphicon-map-marker"></span> View all locations</a></li>
               </ul>
             </div>
           </div>
         </li>
                 <!-----------------------end------------------------>
-
-                <!-----------------------For Our Guests------------------------>
-        <li class="menu-el">
-          <a>For Our Guests</a>
-          <div class="mdf_sub_wrap demo-grid row mdf_flip">
-
-            <div class="row">
-                        <div class="col-md-4">
-                        <div class="cl-title">
-                <span style="height:1px;">&nbsp;</span>
-              </div>  <ul class="mdf_child_menu">
-                <li><a href="/about-us"><i class="fa fa-smile-o"></i>
-about us</a></li>
-                                <li><a href="/more"><i class="icon ion-cash"></i> more rewards</a></li>
-                <li><a href="/careers"><i class="icon ion-briefcase"></i> careers</a></li>
-                                <li><a href="/coborns-cares"><i class="fa fa-heart"></i>
- coborn's cares</a></li>
-                                <li><a href="/get-social"> <i class="icon ion-ios-people"></i>
-get social</a></li>
-                                <li><a href="/news-room"><i class="fa fa-microphone"></i>
- news room</a></li>
-
-              </ul></div>
-              <div class="col-md-8">
-                            <div class="cl-title">
-                <span style="height:1px;">&nbsp;</span>
-              </div>
-                          <!----------form------------>
-                          <div class="scrollableform">
-                            <div id="wufoo-z1ocz5n71jwabqe">Fill out an <a href="https://coborns.wufoo.com/forms/z1ocz5n71jwabqe">online form</a>.</div>
-<script type="text/javascript">var z1ocz5n71jwabqe;(function(d, t) {
-var s = d.createElement(t), options = {
-'userName':'coborns',
-'formHash':'z1ocz5n71jwabqe',
-'autoResize':true,
-'height':'1499',
-'async':true,
-'host':'wufoo.com',
-'header':'show',
-'ssl':true};
-s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
-s.onload = s.onreadystatechange = function() {
-var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-try { z1ocz5n71jwabqe = new WufooForm();z1ocz5n71jwabqe.initialize(options);z1ocz5n71jwabqe.display(); } catch (e) {}};
-var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-})(document, 'script');</script>
-
-</div>
-<!-------------end form--------------------->
-
-                            </div>
-
-            </div>
-
-          </div>
+                
+                
+                 <!-- New For Our Guests -->
+                <li class="menu-el"><a><!--<i class="glyphicon glyphicon-list-alt"></i>-->For Our Guests</a>
+          <ul class="mdf_child_menu dropdown" data-width="200px" style="display: block; width: 300px;">
+           <li><a href="/about-us"><i class="fa fa-smile-o"></i> about us</a></li>
+           <!-- <li><a href="/more"><i class="icon ion-cash"></i> more rewards</a></li> -->
+           <li><a href="/careers"><i class="icon ion-briefcase"></i> careers</a></li>
+           <li><a href="/coborns-cares"><i class="ion-android-contacts"></i> coborn's cares</a></li>
+           <li><a href="/coborns-loves-kids"><i class="fa fa-heart"></i> coborn's loves kids</a></li>
+           <li><a href="/contact-us"><i class="icon ion-android-textsms"></i> contact us</a></li>
+            <li><a href="/events"><i class="fa fa-calendar"></i> events</a></li>
+           <li><a href="/get-social"> <i class="icon ion-ios-people"></i> get social</a></li>
+           <li><a href="/news-room"><i class="fa fa-microphone"></i> news room</a></li>
+          </ul>
         </li>
-                <!-----------------------end------------------------>
+                 <!-- End New For Our Guests -->
+                
       </ul>
             <!-----------------------end Main menu------------------------>
 
             <!-----------------------Search------------------------>
-            <!-- <ul class="right-nav">
+             <ul class="right-nav">
         <li>
            <div class="search-box">
-                    <input type="text" placeholder="Find Stuff">
-                    <a href="#" class="search-button"><span style="font-size: 16pt; color: rgb(51, 51, 51); margin-top:5px; padding-left:5px;" class="glyphicon glyphicon-search"></span></a>
+                    <input id="appendUrl" type="text" placeholder="Search Coborns.com">
+                    <a id="baseUrl" href="/search?q=" class="search-button"><span style="font-size: 16pt; color: rgb(51, 51, 51); margin-top:5px; padding-left:5px;" class="glyphicon glyphicon-search"></span></a>
                   </div>
         </li>
-      </ul> -->
+      </ul> 
             <!-----------------------end search------------------------>
     </div>
     </div>
@@ -366,7 +342,7 @@ var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s
   <!-- /.container-fluid -->
 </nav>
 
-<div style="padding-right:0px; padding-left: 0px;" class="container" data-ng-view=""></div>
+<div style="padding-right:0px; padding-left: 0px;" class="container" data-ng-include="currentLayout"></div></div>
 
 <footer>
 
@@ -374,7 +350,7 @@ var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s
 <p>
   
   <div class="footerstorename" style="font-size:12px; padding: 0px 15px 10px 15px;" data-ng-if="gvm.currentStore.StoreId">
-    <strong>{{gvm.currentStore.StoreName}}</strong> &bull;
+    <strong><a href="/Cobstore{{gvm.currentStore.StoreNumber}}">{{gvm.currentStore.StoreName}}</a></strong> &bull;
     {{gvm.currentStore.PrimaryAddress}} &bull;
     {{gvm.currentStore.City}}, {{gvm.currentStore.StateName}} {{gvm.currentStore.PostalCode}} <br />
     {{gvm.currentStore.OpenHoursDisplay}}
@@ -434,7 +410,7 @@ var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s
 
 <!-------------------Megamenu jQuery--------------------------->
 <!--  google maps api call / do not defer it, it will mess up your map -->
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=geometry" type="text/javascript"></script>
 <!-- jQuery library -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script><!-- support for plugin that were written for jquery below 1.9 -->
@@ -472,17 +448,36 @@ var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s
 <script src="/asset/75/js/zozo.tabs.min.js"></script>
 
  <!-- bricks scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js?nocache=1"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js?nocache=1"></script>
   <script src="https://clientapix.gsn2.com/api/v1/store/sitecontentscript/[chainid]?nocache=1"></script>
   <script data-brickid="[chainid]" src="http://cdn-staging.gsngrocers.com/script/bricktag/bricktag.min.js?nocache=1"></script> 
   <script src="http://cdn-staging.gsngrocers.com/script/gsncore/latest/gsncore.min.js?nocache=1"></script>
   <script src="https://clientapix.gsn2.com/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/75/storeApp.js?nocache=1"></script>
 
   <!-- angular depencencies -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-sanitize.min.js"></script><!-- security -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.min.js"></script><!-- routing and history -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-animate.min.js"></script><!-- carousel -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-touch.min.js"></script> <!-- touch polyfill for ng-click -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular-sanitize.min.js"></script><!-- security -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular-route.min.js"></script><!-- routing and history -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular-animate.min.js"></script><!-- carousel -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular-touch.min.js"></script> <!-- touch polyfill for ng-click -->
+
+<!-- search script -->
+<script>
+$(function() {
+    $('#baseUrl').click( function() {
+        window.location = $(this).attr('href') + $('#appendUrl').val();
+        return false;
+    });
+});
+
+$("#appendUrl").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#baseUrl").click();
+    }
+});
+
+</script>
+
+<!-- end search -->
 
   <!--begin:analytics-->
   <script>
@@ -523,3 +518,4 @@ if (googleTagId) {
 
 </body>
 </html>
+

@@ -1,18 +1,21 @@
-<div class="col-md-12">
-    <h1>My Shopping List</h1>
+<div class="col-md-12" style="padding:15px !important;">
+    <h1 style="margin-top: 80px;">My Shopping List</h1>
     <p data-gsn-store-info="[store.StoreName] [store.PrimaryAddress], [store.City] location only"></p>
   </div>
-  <button class="btn btn-default pull-right" type="button" onclick="javascript:window.print();" data-analytics-on="click" data-analytics-event="ClickPrint" data-analytics-category="ShoppingList" style="float:right; bottom: 0; margin-right: 5px" data-analytics-label="isLoggedIn">Print</button>
-</div>
+  <button class="btn btn-default pull-right" type="button" onclick="javascript:window.print();" data-analytics-on="click" data-analytics-event="ClickPrint" data-analytics-category="ShoppingList" style="float:right; bottom: 0; margin-right: 15px" data-analytics-label="isLoggedIn">Print</button>
+</div><div style="clear:both;">
 <div class="col-md-12" data-gsn-shopping-list="">
   <div data-ng-init="canPrint = true">
     <div data-ng-repeat="groupItem in allItems" data-ng-hide="groupItem.fitems.length <= 0">
-      <div class="col-md-6 col-xs-6 itemInfo printCouponCategory">
-        <h4 class="pull-right">Quantity</h4>
-        <h4>{{groupItem.key}}</h4>
-        <div class="circular-item" data-ng-repeat="item in groupItem.fitems">
-          <div class="pull-right">{{item.Quantity}}</div>
-          <div><img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.IsCoupon"><span data-ng-bind-html="item.Description"></span></div>
+      <div style="padding-left: 15px !important; padding-right:15px !important;min-height:150px;" class="col-md-6 itemInfo printCouponCategory">
+      <div class="panel panel-default">
+        <div class="panel-heading"><h4 class="panel-title pull-right">Quantity</h4>
+        <h4 class="panel-title">{{groupItem.key}}</h4>
+        </div>
+        </div>
+        <div style="border-bottom: 1px dotted #ccc; margin-bottom: 10px;" class="circular-item" data-ng-repeat="item in groupItem.fitems">
+          <div style="font-weight:bold;" class="pull-right">{{item.Quantity}}</div>
+          <div><img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.IsCoupon"><span style="font-weight: bold;" data-ng-bind-html="item.Description"></span></div>
 		  <div data-ng-show="item.Comment">(<span data-ng-bind-html="item.Comment"></span>)</div>
           <div data-ng-hide="item.IsCoupon">
             <span>{{item.PriceString}}</span>
@@ -22,13 +25,10 @@
       </div>
     </div>        
   </div>
-  <!-- Ad Pods -->
-  <div class="row">    	
-    <div class="col-md-10 printCouponCategory">
+  <div class="row" data-ng-hide="manufacturerCoupons.length === 0">    	
+    <div style="padding: 15px !important; clear: both;" class="col-md-10 printCouponCategory">
       <h4>Manufacturer Coupon Print Status (must submit all coupons to redeem savings)</h4>
     </div>
-  </div>
-  <div data-ng-if="true">
     <div class="circular-item" data-ng-repeat="item in manufacturerCoupons">
       <div data-ng-if="item.IsCoupon">
         <img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}">
@@ -42,38 +42,74 @@
       <h4>In store Coupons</h4>
     </div>
   </div>
-  <div class="row" data-ng-if="instoreCoupons.length > 0">
-    <div data-ng-repeat="item in instoreCoupons">
-      <div class="col-md-6 col-xs-12">
+  <div class="row">
+    <!-- circular coupons -->
+    <div data-ng-repeat="item in circularCoupons">
+      <div class="col-md-6 col-xs-12 couponContainerDiv">
         <table width="90%" border="0" cellspacing="0" cellpadding="4"> 
           <tr height="30">
             <td width="150" align="center" rowspan="3">
-              <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}"/>
+              <img class="productImage" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}"/>
               <br />
-              <img data-ng-src="{{item.BarcodeImageUrl}}"/>
+              <img class="barcodeImage" data-ng-src="{{item.CouponImageUrl}}"/>
             </td>
             <td align="center">
-              <div>{{ChainName | uppercase}} STORE COUPON</div>
-              <div>EXPIRES {{item.EndDate | date: 'M / dd / yyyy'}}</div>
+              <div class="couponTitle1">{{ChainName | uppercase}} STORE COUPON</div>
+              <div class="couponTitle2">EXPIRES {{item.EndDate | date: 'M / dd / yyyy'}}</div>
             </td>
           </tr>
           <tr>
             <td>
               <div data-ng-show="item.ProductCode"><strong>PLU:</strong>{{item.ProductCode}}</div>
-              <div>{{item.Description1}}</div>
-              <div>{{item.Description2}}</div>
-              <div>{{item.TopTagLine}}</div>
-              <div>
-                {{item.Description3}}
-                <br />
-                {{item.Description4}}
-              </div>
-              <div>{{item.BottomTagLine}}</div>
+              <div class="couponDescription1">{{item.Description}}</div>
+              <div class="couponDescription2">{{item.PriceString}}</div>
+              <div class="couponDescription3">{{item.Description2}}</div>
+              <div class="couponDescription4">Limit ONE - One coupon may be used per customer. Good at {{gvm.currentStore.StoreName}}.</div>
             </td>
           </tr>
           <tr>
             <td colspan="2">
-              <img align="right" data-ng-src="{{getContentUrl('/images/logoPrint.png')}}" border="0">
+              <br />
+              <img class="chainLogoImage" align="right" data-ng-src="{{getContentUrl('/images/printLogo.gif')}}" border="0">
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row" data-ng-if="instoreCoupons.length > 0">
+    <div data-ng-repeat="item in instoreCoupons">
+      <div class="col-md-6 col-xs-12 couponContainerDiv">
+        <table width="90%" border="0" cellspacing="0" cellpadding="4"> 
+          <tr height="30">
+            <td width="150" align="center" rowspan="3">
+              <img class="productImage" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}"/>
+              <br />
+              <img class="barcodeImage" data-ng-src="{{item.CouponImageUrl}}"/>
+            </td>
+            <td align="center">
+              <div class="couponTitle1">{{ChainName | uppercase}} STORE COUPON</div>
+              <div class="couponTitle2">EXPIRES {{item.EndDate | date: 'M / dd / yyyy'}}</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div data-ng-show="item.ProductCode"><strong>PLU:</strong>{{item.ProductCode}}</div>
+              <div class="couponDescription1">{{item.Description1}}</div>
+              <div class="couponDescription2">{{item.Description2}}</div>
+              <div class="couponDescription2">{{item.TopTagLine}}</div>
+              <div class="couponDescription3">
+                {{item.Description3}}
+                <br />
+                {{item.Description4}}
+              </div>
+              <div class="couponDescription4">{{item.BottomTagLine}}</div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <br />
+              <img class="chainLogoImage" align="right" data-ng-src="{{getContentUrl('/images/printLogo.gif')}}" border="0">
             </td>
           </tr>
         </table>
@@ -87,10 +123,71 @@
     <div data-gsn-modal="getContentUrl('/../common/views/modal-gcprinter-printed.html')" data-show-if="printer.printed != null"></div>
   </div>
 </div>
-<div class="col-md-12" data-ng-if="!gsnApi.browser.isMobile">
-  <p>Trouble printing manufacturer coupons? Download and install the Coupon Printing Plugin:<br />
+<div style="padding: 15px !important;" class="col-md-12" data-ng-if="!gsnApi.browser.isMobile">
+  <br /><br /><br /><p>Trouble printing manufacturer coupons? Download and install the Coupon Printing Plugin:<br />
     <a href="http://cdn.coupons.com/ftp.coupons.com/Partners/CouponPrinter.exe">Windows Coupon Printing Plugin</a>
     <span>| </span>
     <a href="http://cdn.coupons.com/ftp.coupons.com/safari/MacCouponPrinter.dmg">Mac Coupon Printing Plugin</a>
   </p>
 </div>
+<style>
+.couponTitle1 {
+  background-color:black; 
+  width:auto; 
+  border:1px solid black; 
+  float:left; 
+  color:white; 
+  padding:4px 10px; 
+  text-align:center; 
+  text-transform:uppercase
+}
+.couponTitle2 {
+  background-color:white; 
+  width:180px; 
+  border:1px solid black; 
+  float:left; 
+  color:black; 
+  padding:4px 10px; 
+  text-align:center;
+  clear: both;
+}
+.couponContainerDiv {
+    border: 1px dashed #999999;
+    clear: both;
+    height: auto;
+    margin: 0 0 5px 5px;
+    max-height: 250px;
+    padding: 3px;
+    width: 640px;
+}
+.couponDescription1 {
+  clear:both; font-size:18px; font-weight:bold;
+}
+.couponDescription2 {
+  clear:both; font-size:16px; font-weight:bold;
+}
+.couponDescription3 {
+  clear:both; font-size:9px; margin-top:10px;
+}
+.couponDescription4 {
+  clear:both; font-size:8px
+}
+.chainLogoImage {
+    height: auto;
+    max-height: 30px;
+    width: auto;
+}
+.barcodeImage {
+    height: auto;
+    margin: 6px 0 0;
+    max-height: 80px;
+    width: auto;
+}
+.productImage {
+    height: auto;
+    margin: 6px 0 0;
+    max-height: 100px;
+    max-width: 150px;
+    width: auto;
+}
+</style>

@@ -1246,6 +1246,7 @@ pre code {
 	/*width: 1170px*/
 	width: 100%;
 	height:100%;
+	margin-top:-15px;
 }
 }
 
@@ -1255,6 +1256,7 @@ pre code {
 	height:100%;
 	margin-left:auto;
 	margin-right:auto;
+	margin-top:-200px;
 }
 }
 .container-fluid {
@@ -1263,9 +1265,15 @@ pre code {
 	margin-right: auto;
 	margin-left: auto
 }
+
+/*
+
 .row {
 	margin-right: -15px;
 	margin-left: -15px
+	
+*/
+
 }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
 	position: relative;
@@ -4341,7 +4349,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 	margin-bottom: 20px;
 	background-color: #fff;
 	border: 1px solid transparent;
-	border-radius: 4px;
+	/* border-radius: 4px; */
 	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
 	box-shadow: 0 1px 1px rgba(0,0,0,.05)
 }
@@ -4351,8 +4359,8 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel-heading {
 	padding: 10px 15px;
 	border-bottom: 1px solid transparent;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px
+	/* border-top-left-radius: 3px; */
+	/* border-top-right-radius: 3px */
 }
 .panel-heading>.dropdown .dropdown-toggle {
 	color: inherit
@@ -4479,12 +4487,27 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 	border-bottom: 1px solid #ddd
 }
 .panel-default {
-	border-color: #ddd
+	/* border-color: #ddd */
 }
 .panel-default>.panel-heading {
 	color: #333;
 	background-color: #f5f5f5;
-	border-color: #ddd
+	/* border-color: #ddd; */
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ece6da+0,cfc2ab+50,c2b496+100 */
+
+background: rgb(236,230,218); /* Old browsers */
+
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VjZTZkYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2NmYzJhYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjMmI0OTYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+background: -moz-linear-gradient(top,  rgba(236,230,218,1) 0%, rgba(207,194,171,1) 50%, rgba(194,180,150,1) 100%); /* FF3.6-15 */
+
+background: -webkit-linear-gradient(top,  rgba(236,230,218,1) 0%,rgba(207,194,171,1) 50%,rgba(194,180,150,1) 100%); /* Chrome10-25,Safari5.1-6 */
+
+background: linear-gradient(to bottom,  rgba(236,230,218,1) 0%,rgba(207,194,171,1) 50%,rgba(194,180,150,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ece6da', endColorstr='#c2b496',GradientType=0 ); /* IE6-8 */
 }
 .panel-default>.panel-heading+.panel-collapse>.panel-body {
 	border-top-color: #ddd

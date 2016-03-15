@@ -10,7 +10,7 @@
     </div>
     <div class="modal-footer">
       <button type="submit" class="btn btn-default pull-left" data-ng-hide="!isLoggedIn" data-analytics-on="click" data-analytics-event="RecipeCommentSubmit" data-analytics-label="{{vm.recipe.RecipeTitle}}" data-analytics-category="Recipe" data-analytics-value="{{vm.recipe.RecipeId}}">Save</button>
-      <button type="button" class="btn btn-default" data-ng-click="closeModal()" data-analytics-on="click" data-analytics-event="RecipeCommentCancel" data-analytics-label="{{vm.recipe.RecipeTitle}}" data-analytics-category="Recipe" data-analytics-value="{{vm.recipe.RecipeId}}">Close</button>
+      <button type="button" class="btn btn-default gmodal-close" data-ng-click="closeModal()" data-analytics-on="click" data-analytics-event="RecipeCommentCancel" data-analytics-label="{{vm.recipe.RecipeTitle}}" data-analytics-category="Recipe" data-analytics-value="{{vm.recipe.RecipeId}}">Close</button>
     </div>
   </form>
 </div>
