@@ -54,17 +54,17 @@
               <img class="barcodeImage" data-ng-src="{{item.CouponImageUrl}}"/>
             </td>
             <td align="center">
-              <div style="background-color:black; width:auto; border:1px solid black; float:left; color:white; padding:4px 10px; text-align:center; text-transform:uppercase">{{ChainName | uppercase}} STORE COUPON</div>
-              <div style="background-color:white; width:180px; border:1px solid black; float:left; color:black; padding:4px 10px; text-align:center;">EXPIRES {{item.EndDate | date: 'M / dd / yyyy'}}</div>
+              <div class="couponTitle1">{{ChainName | uppercase}} STORE COUPON</div>
+              <div class="couponTitle2">EXPIRES {{item.EndDate | date: 'M / dd / yyyy'}}</div>
             </td>
           </tr>
           <tr>
             <td>
               <div data-ng-show="item.ProductCode"><strong>PLU:</strong>{{item.ProductCode}}</div>
-              <div style="clear:both; font-size:18px; font-weight:bold;">{{item.Description}}</div>
-              <div style="clear:both; font-size:16px; font-weight:bold;">{{item.PriceString}}</div>
-              <div style="clear:both; font-size:9px; margin-top:10px; ">{{item.ItemDescription}}</div>
-              <div style="clear:both; font-size:8px">Limit ONE - One coupon may be used per customer. Good at {{gvm.currentStore.StoreName}}.</div>
+              <div class="couponDescription1">{{item.Description}}</div>
+              <div class="couponDescription2">{{item.PriceString}}</div>
+              <div class="couponDescription3">{{item.Description2}}</div>
+              <div class="couponDescription4">Limit ONE - One coupon may be used per customer. Good at {{gvm.currentStore.StoreName}}.</div>
             </td>
           </tr>
           <tr>
@@ -79,36 +79,37 @@
   </div>
   <div class="row" data-ng-if="instoreCoupons.length > 0">
     <div data-ng-repeat="item in instoreCoupons">
-      <div class="col-md-6 col-xs-12">
+      <div class="col-md-6 col-xs-12 couponContainerDiv">
         <table width="90%" border="0" cellspacing="0" cellpadding="4"> 
           <tr height="30">
             <td width="150" align="center" rowspan="3">
-              <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}"/>
+              <img class="productImage" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}"/>
               <br />
-              <img data-ng-src="{{item.BarcodeImageUrl}}"/>
+              <img class="barcodeImage" data-ng-src="{{item.CouponImageUrl}}"/>
             </td>
             <td align="center">
-              <div>{{ChainName | uppercase}} STORE COUPON</div>
-              <div>EXPIRES {{item.EndDate | date: 'M / dd / yyyy'}}</div>
+              <div class="couponTitle1">{{ChainName | uppercase}} STORE COUPON</div>
+              <div class="couponTitle2">EXPIRES {{item.EndDate | date: 'M / dd / yyyy'}}</div>
             </td>
           </tr>
           <tr>
             <td>
               <div data-ng-show="item.ProductCode"><strong>PLU:</strong>{{item.ProductCode}}</div>
-              <div>{{item.Description1}}</div>
-              <div>{{item.Description2}}</div>
-              <div>{{item.TopTagLine}}</div>
-              <div>
+              <div class="couponDescription1">{{item.Description1}}</div>
+              <div class="couponDescription2">{{item.Description2}}</div>
+              <div class="couponDescription2">{{item.TopTagLine}}</div>
+              <div class="couponDescription3">
                 {{item.Description3}}
                 <br />
                 {{item.Description4}}
               </div>
-              <div>{{item.BottomTagLine}}</div>
+              <div class="couponDescription4">{{item.BottomTagLine}}</div>
             </td>
           </tr>
           <tr>
             <td colspan="2">
-              <img align="right" data-ng-src="{{getContentUrl('/images/printLogo.gif')}}" border="0">
+              <br />
+              <img class="chainLogoImage" align="right" data-ng-src="{{getContentUrl('/images/printLogo.gif')}}" border="0">
             </td>
           </tr>
         </table>
@@ -130,6 +131,26 @@
   </p>
 </div>
 <style>
+.couponTitle1 {
+  background-color:black; 
+  width:auto; 
+  border:1px solid black; 
+  float:left; 
+  color:white; 
+  padding:4px 10px; 
+  text-align:center; 
+  text-transform:uppercase
+}
+.couponTitle2 {
+  background-color:white; 
+  width:180px; 
+  border:1px solid black; 
+  float:left; 
+  color:black; 
+  padding:4px 10px; 
+  text-align:center;
+  clear: both;
+}
 .couponContainerDiv {
     border: 1px dashed #999999;
     clear: both;
@@ -138,6 +159,18 @@
     max-height: 250px;
     padding: 3px;
     width: 640px;
+}
+.couponDescription1 {
+  clear:both; font-size:18px; font-weight:bold;
+}
+.couponDescription2 {
+  clear:both; font-size:16px; font-weight:bold;
+}
+.couponDescription3 {
+  clear:both; font-size:9px; margin-top:10px;
+}
+.couponDescription4 {
+  clear:both; font-size:8px
 }
 .chainLogoImage {
     height: auto;
