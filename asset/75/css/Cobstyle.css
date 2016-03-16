@@ -771,6 +771,11 @@ section h3.section-subheading {
 	font-style: italic;
 	font-weight: 400;
 }
+
+.modal-body .col-md-5 .list-inline.social-buttons .fa {
+	margin-right:10px;	
+}
+
  @media(min-width:768px) {
 section {
 	padding: 0px 0;
@@ -1277,9 +1282,8 @@ span.ProductName {
 }
 
 .SalePrice.ng-binding {
-	width:60%;
 	font-weight:bold;
-	font-size: 13px;
+	font-size: 3em;
 	line-height: 13px;
 }
 
