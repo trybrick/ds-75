@@ -79,8 +79,8 @@ a.navbar-brand img{
 #mdf_menu .menu-el > a:hover,
 #mdf_menu .menu-el:hover > a{
 	background: #f8f8f8;
-	cursor: pointer;
 	color: #25363d;
+	border-radius: 0;
 }
 #mdf_menu ul li.active > a{
 	background: #f8f8f8;
@@ -125,7 +125,6 @@ a.navbar-brand img{
 	width: 100%;
 	left: 0;
 	border-bottom: 1px solid #333;
-	margin-top: 2px;
 	transform-origin: center top 0px; 
 }
 .mdf_sub_wrap a,
