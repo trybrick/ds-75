@@ -59,6 +59,11 @@ a:hover{
 	display: block;
 	padding: 20px 15px;
 	text-decoration: none;
+	transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-ms-transition: all .5s ease;
 }
 /* a.navbar-brand{
 	padding: 20px 15px;
@@ -81,6 +86,7 @@ a.navbar-brand img{
 	background: #f8f8f8;
 	color: #25363d;
 	border-radius: 0;
+	padding-left: 20px;
 }
 #mdf_menu ul li.active > a{
 	background: #f8f8f8;
