@@ -5,12 +5,12 @@
     <div class="modal-body noPad text-center" itemscope itemtype="http://schema.org/Product" style="position: relative; overflow: auto; display: block">
         <div class="col-md-5" style="text-align: right;">
             <div class="hidden meta">
-            <div class="SalePrice" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}</div>
-            <div class="savings" data-ng-show="item.Savings">SAVE - {{item.SavingsString}}</div>
                 <div class="product-id">{{item.CircularItemId}}</div>
                 <div class="product-brand">{{item.BrandName}}</div>
                 <div class="product-category">{{item.CategoryName}}</div>
             </div>
+             <div class="SalePrice" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}</div>
+            <div class="savings" data-ng-show="item.Savings">SAVE - {{item.SavingsString}}</div>
             <h4>{{item.Description}}</h4>
             <p itemprop="description">{{item.ItemDescription}}</p>
             
