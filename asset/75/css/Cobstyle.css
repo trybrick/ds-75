@@ -1284,7 +1284,7 @@ span.ProductName {
 .SalePrice.ng-binding {
 	font-weight:bold;
 	font-size: 3em;
-	line-height: 13px;
+	line-height: 1em;
 }
 
 a.button {
