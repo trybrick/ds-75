@@ -490,12 +490,12 @@ a:hover, a:focus, a:active, a.active {
 
 }
 h1, h2, h3, h4, h6 {
-	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 700;
 }
 h5 {
 	text-transform: uppercase;
-	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 500;
 }
 .img-centered {
@@ -510,7 +510,7 @@ h5 {
 .btn-primary {
 	border-color: #fed136;
 	text-transform: uppercase;
-	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 700;
 	color: #fff;
 	background-color: #fed136;
@@ -558,7 +558,7 @@ h5 {
 	padding: 20px 40px;
 	border-radius: 3px;
 	text-transform: uppercase;
-	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	font-weight: 500;
 	color: #fff;
@@ -575,7 +575,7 @@ h5 {
 	background-size: 100% 100%;
 }
 .navbar-default .navbar-brand {
-	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 700;
 	color: #333333;
 }
@@ -597,7 +597,7 @@ h5 {
 }
 .navbar-default .nav li a {
 	/*text-transform: uppercase;*/
-	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	/*letter-spacing: 0.5px;*/
 	color: #333333;
@@ -687,7 +687,7 @@ header .intro-text {
 }
 header .intro-text .intro-lead-in {
 	margin-bottom: 25px;
-	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 22px;
 	font-style: italic;
 	line-height: 22px;
@@ -696,7 +696,7 @@ header .intro-text .intro-lead-in {
 header .intro-text .intro-heading {
 	margin-bottom: 25px;
 	text-transform: none;
-	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 50px;
 	font-weight: 700;
 	line-height: 50px;
@@ -735,7 +735,7 @@ header .intro-text .intro-heading {
 }
 #insideHeader .container .Inside-intro-text .intro-lead-in {
 	/*margin-bottom: 25px;*/
-	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 40px;
 	font-style: italic;
 	line-height: 40px;
@@ -745,7 +745,7 @@ header .intro-text .intro-heading {
 #insideHeader .container .Inside-intro-text .intro-heading {
 	margin-bottom: 50px;
 	text-transform: uppercase;
-	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 75px;
 	font-weight: 700;
 	line-height: 75px;
@@ -766,7 +766,7 @@ section h2.section-heading {
 section h3.section-subheading {
 	margin-bottom: 75px;
 	text-transform: none;
-	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	font-style: italic;
 	font-weight: 400;
@@ -880,7 +880,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 	text-transform: none;
 	font-size: 17px;
 	font-weight: 500;
-	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #666;
 }
 #portfolio .portfolio-item .portfolio-caption p {
@@ -940,25 +940,25 @@ section#contact .form-control:focus {
 }
  section#contact::-webkit-input-placeholder {
  text-transform: uppercase;
- font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+ font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
  font-weight: 700;
  color: #bbb;
 }
  section#contact:-moz-placeholder {
  text-transform: uppercase;
- font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+ font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
  font-weight: 700;
  color: #bbb;
 }
  section#contact::-moz-placeholder {
  text-transform: uppercase;
- font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+ font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
  font-weight: 700;
  color: #bbb;
 }
  section#contact:-ms-input-placeholder {
  text-transform: uppercase;
- font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+ font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
  font-weight: 700;
  color: #bbb;
 }
@@ -1029,7 +1029,7 @@ ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li
 }
 .portfolio-modal .modal-content p.item-intro {
 	margin: 20px 0 30px;
-	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	font-style: italic;
 }
@@ -1227,7 +1227,7 @@ div.portfolio-caption {
 	box-shadow: 5px 5px 10px 2px rgba(204,204,204,0.25);
 	margin-bottom: 30px;
 }
-#InnerTop {
+p#InnerTop {
 	padding-left: 50px;
 	padding-right: 50px;
 }
@@ -1523,7 +1523,7 @@ h4.about-heading {
 	-moz-text-shadow: 2px 2px 1px rgb(0, 0, 0);
 	-webkit-text-shadow: 2px 2px 1px rgb(0, 0, 0);
 	opacity: 0.8;
-	font-family: "droid serif", Georgia, sans-serif;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	font-style: italic;
 }
 h4.about-heading_small {
@@ -1534,13 +1534,13 @@ h4.about-heading_small {
 	-moz-text-shadow: 2px 2px 1px rgb(0, 0, 0);
 	-webkit-text-shadow: 2px 2px 1px rgb(0, 0, 0);
 	opacity: 0.8;
-	font-family: "droid serif", Georgia, sans-serif;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	font-style: italic;
 }
 .DesktopDownArrow {
 	display: inline;
 	font-size: 30px;
-	margin-left: -25px;
+	margin-left: 20px;
 }
 .DesktopDownArrow a {
 	color: #ffffff;
