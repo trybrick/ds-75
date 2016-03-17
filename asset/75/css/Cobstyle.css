@@ -1636,3 +1636,11 @@ img.storedirector {
 	color:#bfd955;
 	font-size: larger;
 }
+
+.moreactual1 {
+	font-weight:bolder;
+	color:#dddddd;
+	font-size: larger;
+	text-shadow: 1px 0 #666666;
+	
+}
