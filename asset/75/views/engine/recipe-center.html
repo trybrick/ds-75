@@ -31,10 +31,10 @@
         <img style="margin-right:10px;" align="left" data-ng-src="{{vm.featuredRecipe.Images[0].RecipeImageUrl}}">
         
         
-        <div>{{vm.featuredRecipe.RecipeTitle}}</div>
+        <div style="text-align:left;">{{vm.featuredRecipe.RecipeTitle}}</div>
         <p style="font-weight:normal;text-align:left;">Check back each day for a different recipe to tantilize your taste buds!</p>
         <br />
-      </a></div></div>
+      </a></div>
     </div>
   </div>  
     <div style="padding:0px 15px;" class="col-md-3 col-sm-3">
@@ -43,9 +43,9 @@
       	<h4 style="text-align:left;" class="panel-title">Featured Cooking Tip</h4></div>
         <div class="panel-body">
         <img style="margin-right: 10px;" align="left" data-ng-src="{{vm.cookingTip.ImageUrl}}">
-        <p>{{vm.cookingTip.Title}}</p>
+        <p style="text-align:left;">{{vm.cookingTip.Title}}</p>
         
-        <p style="font-weight:normal;" data-ng-bind="vm.cookingTip.Teaser"></p>
+        <p style="font-weight:normal; style="text-align:left;" data-ng-bind="vm.cookingTip.Teaser"></p>
       </a></div></div>
      </div>
      <div style="padding:0px 15px;" class="col-md-3 col-sm-3">
@@ -53,7 +53,7 @@
       <a href="javascript:void(0)" data-ng-click="goUrl('/article/' + vm.featuredArticle.ArticleId)" data-analytics-on="click" data-analytics-event="ClickFeaturedArticle" data-analytics-label="{{vm.featuredArticle.Title}}" data-analytics-category="Recipe"><h4 style="text-align:left;" class="panel-title">Featured Article</h4></div>
       <div class="panel-body">
        <img style="margin-right:10px;" align="left" data-ng-src="{{vm.featuredArticle.ImageUrl}}">
-        <p>{{vm.featuredArticle.Title}}</p>
+        <p style="text-align:left;">{{vm.featuredArticle.Title}}</p>
        
         <p style="font-weight:normal;text-align:left;" data-ng-bind="vm.featuredArticle.Teaser"></p>
       </a></div></div></div>
