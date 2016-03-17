@@ -1624,3 +1624,14 @@ img.storedirector {
     background: #c2b69c !important;
     color: #000 !important;
 }
+
+/***** more Page *******/
+
+.more-h-title {
+	font-weight:normal;
+}
+
+.moreactual {
+	font-weight:bolder;
+	color:#bfd955;
+}
