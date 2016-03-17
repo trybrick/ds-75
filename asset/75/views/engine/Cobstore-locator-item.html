@@ -25,7 +25,7 @@
     </a>
   </div>
   <div class="generic-content"><i data-ng-if="searchCompleted">{{marker.location.zDistance}} miles</i></div>
-  <div class="generic-content"><b>Store Hours:</b></div>
+  <div style="color:#000;" class="generic-content"><b>Store Hours:</b></div>
   <div class="generic-content" data-ng-bind-html="marker.location.OpenHoursDisplay" itemprop="openingHours"></div>
  <!--  
   <div class="generic-content" data-gsn-dynamic="" dynamic="marker.location.Misc2"></div>
@@ -41,11 +41,11 @@
       <h5>Store Details</h5>
     </a>
   </div>
-  <div data-ng-hide="marker.location.Redirect" class="generic-content hidden-info">
+  <!--<div data-ng-hide="marker.location.Redirect" class="generic-content hidden-info">
     <a class="button" style="box-shadow:none;" href="javascript:void(0)" data-ng-click="goUrl('Cobstore' + marker.location.StoreNumber)">
       Store Details &gt;&gt;
     </a>
-  </div>
+  </div>-->
 </div>
 
 <style>
