@@ -1,8 +1,8 @@
 <div class="store-info-item">
   <div class="panel-heading">
- <a href="javascript:void(0)" data-ng-click="openMarkerInfo(marker, 14)" scroll-to="map_canvas">
+ <!-- <a href="javascript:void(0)" data-ng-click="openMarkerInfo(marker, 14)" scroll-to="map_canvas"> -->
     <h4 class="panel-title" itemprop="name">{{marker.location.StoreName}}</h4>
-  </a>
+ <!-- </a> -->
   </div>
   <div class="hidden meta">
     <div class="store-number">{{marker.location.StoreNumber}}</div>
@@ -36,16 +36,16 @@
     <div data-ng-if="marker.location.PharmacyPhone">Phone: <span itemprop="telephone">{{marker.location.PharmacyPhone}}</span></div><br />
   </div> -->
 
-  <div data-ng-show="marker.location.Redirect" class="generic-content hidden-info">
+  <!-- <div data-ng-show="marker.location.Redirect" class="generic-content hidden-info">
     <a href="javascript:void(0)" data-ng-click="goUrl(decodeServerUrl(marker.location.Redirect))">
       <h5>Store Details</h5>
     </a>
-  </div>
-  <!--<div data-ng-hide="marker.location.Redirect" class="generic-content hidden-info">
+  </div> -->
+  <!-- <div data-ng-hide="marker.location.Redirect" class="generic-content hidden-info">
     <a class="button" style="box-shadow:none;" href="javascript:void(0)" data-ng-click="goUrl('Cobstore' + marker.location.StoreNumber)">
       Store Details &gt;&gt;
     </a>
-  </div>-->
+  </div> -->
 </div>
 
 <style>
