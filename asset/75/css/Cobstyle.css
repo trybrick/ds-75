@@ -1571,6 +1571,11 @@ img.storedirector {
 	background-color: #8b1e1a;
 	border-color: #630502;
 }
+
+p#start {
+    padding-left: 50px;
+    padding-right: 50px;
+}
 /***** Video Page *******/
 
 .videoList {
