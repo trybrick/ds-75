@@ -4,6 +4,7 @@
     <h4 class="panel-title" itemprop="name">{{marker.location.StoreName}}</h4>
  <!-- </a> -->
   </div>
+  <div style="padding:10px;">
   <div class="hidden meta">
     <div class="store-number">{{marker.location.StoreNumber}}</div>
     <div class="store-id">{{marker.location.StoreId}}</div>
@@ -26,7 +27,7 @@
   </div>
   <div class="generic-content"><i data-ng-if="searchCompleted">{{marker.location.zDistance}} miles</i></div>
   <div style="color:#000;" class="generic-content"><b>Store Hours:</b></div>
-  <div class="generic-content" data-ng-bind-html="marker.location.OpenHoursDisplay" itemprop="openingHours"></div>
+  <div style="font-size: .9em;" class="generic-content" data-ng-bind-html="marker.location.OpenHoursDisplay" itemprop="openingHours"></div>
  <!--  
   <div class="generic-content" data-gsn-dynamic="" dynamic="marker.location.Misc2"></div>
   <div class="generic-content" data-ng-if="marker.location.PharmacyHours" itemscope itemtype="http://schema.org/Pharmacy">
@@ -46,14 +47,4 @@
       Store Details &gt;&gt;
     </a>
   </div> -->
-</div>
-
-<style>
-h5.CobStoreDetails {
-    background-color: #930000;
-    padding: 4px;
-    color: #FFF;
-	max-width:200px;
-}
-
-</style>
+</div></div>

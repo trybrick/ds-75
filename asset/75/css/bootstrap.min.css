@@ -2628,8 +2628,17 @@ textarea.input-lg, textarea.form-group-lg .form-control, select[multiple].input-
 	padding: 1px 5px;
 	font-size: 12px;
 	line-height: 1.5;
-	border-radius: 3px
+	border-radius: 3px;
+	color:#fff;
+	background-color: #8b1e1a;
+	transition: all .5s ease;
 }
+
+.btn-xs:hover, .btn-group-xs>.btn:hover {
+	color: #000;
+	background-color: #e6e6e6;
+}
+
 .btn-block {
 	display: block;
 	width: 100%
