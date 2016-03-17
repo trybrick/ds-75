@@ -1649,3 +1649,9 @@ p#start {
 	text-shadow: 1px 0 #666666;
 	
 }
+
+/********** Feed ***********/
+
+.blogfeedbg {
+	background-color: #c2b69c;
+}
