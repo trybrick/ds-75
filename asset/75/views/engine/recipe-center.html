@@ -64,17 +64,21 @@
   </div>
   <div class="col-md-3 col-sm-3">
   <div class="row recipeMenu">
-      <button class="btn col-xs-12 text-left" id="myRecipeBoxMenu" data-ng-click="goUrl('/myrecipes')">
+  </div>
+  <a href="javascript:void(0)" class="button" id="myRecipeBoxMenu" data-ng-click="goUrl('/myrecipes')">My Recipes &gt;&gt;</a>
+      <!--<button class="btn col-xs-12 text-left" id="myRecipeBoxMenu" data-ng-click="goUrl('/myrecipes')">
         <div class="pull-left">
           My Recipe Box (Saved Recipes)
         </div>
         <div class="pull-right">
           <span class="glyphicon glyphicon-chevron-right"></span>
         </div>
-      </button>
+      </button> -->
     </div>
     <div class="row dropdown recipeMenu">
-      <button class="btn col-xs-12 text-left" data-gsn-modal="getThemeUrl('/views/engine/modal-recipe-advanced-search.html')" data-ng-click="showModal()" data-analytics-on="click" data-analytics-event="ClickRecipeAdvanceSearch" data-analytics-category="Recipe">
+    
+    <a href="javascript:void(0)" class="button" data-gsn-modal="getThemeUrl('/views/engine/modal-recipe-advanced-search.html')" data-ng-click="showModal()" data-analytics-on="click" data-analytics-event="ClickRecipeAdvanceSearch" data-analytics-category="Recipe">Search Recipes &gt;&gt;</a>
+      <!-- <button class="btn col-xs-12 text-left" data-gsn-modal="getThemeUrl('/views/engine/modal-recipe-advanced-search.html')" data-ng-click="showModal()" data-analytics-on="click" data-analytics-event="ClickRecipeAdvanceSearch" data-analytics-category="Recipe">
         <div class="pull-left">
           Advanced Recipe Search
         </div>
@@ -82,6 +86,8 @@
           <span class="glyphicon glyphicon-chevron-right"></span>
         </div>
       </button>
+      
+      -->
     </div>
     <a href="javascript:void(0)" data-ng-click="goUrl('/mealplannerfull')">
       <h3>Meal Planner</h3>
