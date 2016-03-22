@@ -1680,6 +1680,14 @@ a.buttonmore:hover {
 	-ms-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.morepanel-body {
+    padding: 15px;
+    border-color: #67b346;
+    border-width: thin;
+    border-style: solid;
+    margin: 10px 0 10px 0;
+}
+
 /********** Feed ***********/
 
 .blogfeedbg {
