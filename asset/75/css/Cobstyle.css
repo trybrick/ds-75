@@ -1690,6 +1690,9 @@ a.buttonmore:hover {
 
 .morelocation td, th {
     padding: 5px 10px 5px 10px;
+}
+
+.morelocation {
 	border-style: solid;
     border-width: thin;
     border-color: #67b346;
