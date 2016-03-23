@@ -35,8 +35,11 @@
   </div>
   <div class="row col-md-12">
     <br style="clear: both;"/><br />
-    <div data-ng-show="selectedCoupons.items.length <= 0 && vm.filterBy">No results returned.</div>
-    <div data-infinite-scroll="loadMore()">
+    <div class="col-md-4 col-sm-6 coupons" data-ng-repeat="item in coupons.store.items" 
+        data-ng-include="getThemeUrl('/views/engine/coupons-item-store.html')">
+
+    </div>
+    <div class="row" data-infinite-scroll="loadMore()">
       <div class="col-md-4 col-sm-6 coupons" data-ng-repeat="item in selectedCoupons.items"
         data-ng-include="getThemeUrl('/views/engine/coupons-item.html')">
       </div>
