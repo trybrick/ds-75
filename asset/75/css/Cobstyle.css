@@ -1585,11 +1585,11 @@ p#start {
 
 /* Gift Cards Page */
 .giftCardSection {
-	margin: 0 0 20px 0;
+    margin: 0px 20px 20px 20px;
     border-style: solid;
     border-width: thin;
     padding: 10px;
-
+    border-color: #c2b69c;
 }
 /***** Video Page *******/
 
