@@ -1582,6 +1582,15 @@ p#start {
     padding-left: 50px;
     padding-right: 50px;
 }
+
+/* Gift Cards Page */
+.giftCardSection {
+	margin: 0 0 20px 0;
+    border-style: solid;
+    border-width: thin;
+    padding: 10px;
+
+}
 /***** Video Page *******/
 
 .videoList {
