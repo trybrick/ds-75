@@ -1715,6 +1715,17 @@ a.buttonmore:hover {
 	margin-top:10px;
 }
 
+/***** Labels for Learning table *******/
+tr.lfl_areatitle {
+    background-color: #c2b69c;
+    font-weight: bolder;
+}
+
+th.lfl_State {
+    color: #ececec;
+    background-color: #8b1e1a;
+}
+
 /********** Feed ***********/
 
 .blogfeedbg {
