@@ -1717,12 +1717,12 @@ a.buttonmore:hover {
 
 /***** Labels for Learning table *******/
 tr.lfl_areatitle {
-    background-color: #c2b69c;
+    background-color: #c2b69c !important;
     font-weight: bolder;
 }
 
 th.lfl_State {
-    color: #ececec;
+    color: #ececec !important;
     background-color: #8b1e1a;
 }
 
