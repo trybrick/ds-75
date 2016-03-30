@@ -390,23 +390,35 @@
   <div class="container">
     <div class="row">
 
-    <div class="col-md-4" style="padding-top:20px;">
+<div class="col-md-4" style="padding-top: 20px;">
 
-      <div class="footernav" style="line-height:0px; font-size:11px; margin-bottom:25px;"><a href="#page-top" class="btn btn-primary btn-default, page-scroll" style="border:none; background-color:transparent; color:#999;"><span class="glyphicon glyphicon-circle-arrow-up"></span> </a> &nbsp;<a href="/privacy-policy">Privacy Policy</a> | <a href="/site-map">Site Map</a> | 
+      <div class="footernav" style="line-height:0px; font-size:11px; margin-bottom:25px;">
+      
+      <table style="text-align:left;" align="center" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+      <td rowspan="2"><a target="_self" href="#page-top" class="btn btn-primary btn-default, page-scroll" style="border:none; background-color:transparent; color:#999; position:relative; top: -7px;"><span class="glyphicon glyphicon-circle-arrow-up"></span> </a>
+      </td>
+      <td>
+       <a target="_self" href="/privacy-policy">Privacy Policy</a> | <a target="_self" href="/site-map">Site Map</a> | 
       
      
-    <a data-ng-cloak="" data-ng-show="isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }" href="javascript:void(0)" data-ng-click="goUrl('/profile')"><i class="fa fa-user"></i> Profile </a> <span data-ng-cloak="" data-ng-show="isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }">|</span> 
-    <a data-ng-cloak="" data-ng-show="isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }" href="javascript:void(0)" data-ng-click="logout()">Sign-out</a>
-     <a data-ng-cloak="" data-ng-if="!isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }" href="javascript:void(0)" data-gsn-modal="getThemeUrl('/views/engine/modal-login.html')" data-show-if="gvm.loginCounter" data-ng-click="showModal()">
+    <a target="_self" class="ng-hide" data-ng-show="isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }" href="javascript:void(0)" data-ng-click="goUrl('/profile')"><i class="fa fa-user"></i> Profile </a> <span class="ng-hide" data-ng-show="isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }">|</span> 
+    <a target="_self" class="ng-hide" data-ng-show="isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }" href="javascript:void(0)" data-ng-click="logout()">Sign-out</a>
+     <!-- ngIf: !isLoggedIn --><a target="_self" class="ng-scope" data-ng-if="!isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }" href="javascript:void(0)" data-gsn-modal="getThemeUrl('/views/engine/modal-login.html')" data-show-if="gvm.loginCounter" data-ng-click="showModal()">
     Sign in
-  </a>
- <span data-ng-cloak="" data-ng-if="!isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }"> | </span>
-  <a data-ng-cloak="" data-ng-if="!isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }" href="javascript:void(0)" data-ng-click="goUrl('/registration')">
+  </a><!-- end ngIf: !isLoggedIn -->
+ <!-- ngIf: !isLoggedIn --><span class="ng-scope" data-ng-if="!isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }"> | </span><!-- end ngIf: !isLoggedIn -->
+  <!-- ngIf: !isLoggedIn --><a target="_self" class="ng-scope" data-ng-if="!isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }" href="javascript:void(0)" data-ng-click="goUrl('/registration')">
     Register
-  </a>
-   <br />
-   <a href="/careers">Careers</a> | 
+  </a><!-- end ngIf: !isLoggedIn -->
+   </td></tr>
+   <tr>
+   <td>
+   <a target="_self" href="/careers">Careers</a> | 
    <a target="_blank" href="https://employee.cobornsinc.com/Login.aspx">Employee Login</a>
+   </td>
+   </tr>
+   </table>
   </div>
 
  </div>
