@@ -27,8 +27,8 @@
   <div class="hidden-meta" data-gsn-og-type="recipe"></div>
   <div class="hidden-meta" data-gsn-og-image="{{vm.recipe.ImageUrl}}"></div>
 
-  <div style="padding: 0px 15px;" class="col-md-8" data-ng-include="getThemeUrl('/views/engine/recipe-content.html')"></div>
-  <div class="hidden-print col-md-4">
+  <div style="padding: 0px 15px;" class="col-md-7" data-ng-include="getThemeUrl('/views/engine/recipe-content.html')"></div>
+  <div class="hidden-print col-md-2">
   <div class="nutrition" itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation" data-ng-show="!vm.recipe.HideNutritionInfo">
     <table class="nutr-table">
       <tbody>
@@ -104,5 +104,8 @@
       </tbody>
     </table>
   </div>
+  </div>
+  <div class="col-md-3">
+	<div style="margin-right:30px; margin-left:30px;" data-ng-include="getThemeUrl('/views/engine/shopping-list-plugin.html')"class="row"><div>
   </div>
 </div>
