@@ -1611,6 +1611,10 @@ p#start {
     padding-bottom: .5em;
 }
 
+.videoList img {
+	min-width:40px;
+}
+
 /***** Food Safety Page *******/
 .FoodSafetytable th {
     padding: 5px;
