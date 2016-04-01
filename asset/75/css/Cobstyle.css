@@ -1502,10 +1502,13 @@ img.storedirector {
 	margin-right: 40px;
 	margin-bottom:20px;
 	min-height: 175px;
-	border-style: solid;
-	border-width: thin;
-	border-color: rgb(236, 236, 236);
-	padding: 10px;
+}
+
+.storeservice_modulTitle {
+	background-color:#ececec;
+	padding:8px;
+	margin-top:-5px;
+	text-transform: capitalize;
 }
 /* PayPal Button */
 .PayPalbtn-info {
