@@ -1499,18 +1499,20 @@ img.storedirector {
 }
 .storeservices_modul {
 	float: left;
-	margin-right: 40px;
-	margin-bottom:20px;
+	margin-right: 20px;
+	margin-bottom: 20px !important;
 	min-height: 175px;
+	min-width: 200px;
+	border-width: thin;
+	border-style: solid;
+	border-color: #ececec;
 }
-
 .storeservice_modulTitle {
-	background-color:#ececec;
-	padding:8px;
-	margin-top:-5px;
+	background-color: #ececec;
+	padding: 8px;
+	margin-top: -5px;
 	text-transform: capitalize;
 	color: #000000;
-	
 }
 /* PayPal Button */
 .PayPalbtn-info {
