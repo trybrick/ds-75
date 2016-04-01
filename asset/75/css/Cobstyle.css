@@ -1509,6 +1509,8 @@ img.storedirector {
 	padding:8px;
 	margin-top:-5px;
 	text-transform: capitalize;
+	color: #000000;
+	font-weight:bold;
 }
 /* PayPal Button */
 .PayPalbtn-info {
