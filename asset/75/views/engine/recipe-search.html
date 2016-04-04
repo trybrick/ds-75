@@ -53,7 +53,7 @@
         <span aria-hidden="true"><i class="fa fa-arrow-circle-left"></i></span>
       </a>
     </li>
-  	<li data-ng-repeat="item in [] | range:0:totalItems/itemsPerPage" data-ng-class="{'active': item == (vm.currentPage - 1)}">
+  	<li id="pagenumbers" data-ng-repeat="item in [] | range:0:totalItems/itemsPerPage" data-ng-class="{'active': item == (vm.currentPage - 1)}">
   	  <a href="javascript:void(0)" data-ng-click="vm.currentPage = item + 1">{{$index + 1}}</a>
   	</li>
   	<li>
@@ -73,6 +73,12 @@
 </div>
 
 <style>
+@media (max-width:400px){
+	#pagenumbers {
+		display:none;	
+	}
+}
+
 .recipeSearchResults a {
   color: #000 !important;
 }
