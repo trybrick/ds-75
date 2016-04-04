@@ -72,7 +72,7 @@
         <p style="font-weight:normal; text-align:left;" data-ng-bind="vm.cookingTip.Teaser"></p>
       </a></div></div>
      </div>
-     <div style="padding:0px 15px;" class="col-md-6 col-sm-6">
+     <div style="padding:0px 15px;" class="col-md-6 col-sm-6 featuredarticle">
        <div class="panel panel-default"><div class="panel-heading">
       <a href="javascript:void(0)" data-ng-click="goUrl('/article/' + vm.featuredArticle.ArticleId)" data-analytics-on="click" data-analytics-event="ClickFeaturedArticle" data-analytics-label="{{vm.featuredArticle.Title}}" data-analytics-category="Recipe"><h4 style="text-align:left;color:#000;" class="panel-title">Featured Article</h4></div>
       <div class="panel-body">
@@ -240,5 +240,10 @@
 .advanced select, .advanced option
 {
   color: #000000;
+}
+@media (min-width: 768px) {
+	.featuredarticle {
+		margin-left: 25%;	
+	}
 }
 </style>

@@ -1,7 +1,7 @@
     <!-- custom header -->
 <div id="insideHeader" class="insideHeader"> 
   <div class="container">
-  <img class="img-responsive" src="http://upload.gsngrocers.com/chainfiles/75/creative/201602/635907206392720914-recipe.jpg" alt="Recipe Center"> 
+  <img style="width:100%" class="img-responsive" src="http://upload.gsngrocers.com/chainfiles/75/creative/201602/635907206392720914-recipe.jpg" alt="Recipe Center"> 
   </div>
 </div>
 <div class="container">
@@ -18,16 +18,35 @@
      	</div>
 	</div>
 </div>
-     
+   <p id="InnerTop"></p> 
 <!-- end header -->
-<div class="hidden-meta" data-gsn-title="{{ChainName}} | recipe search"></div>
-<div style="padding: 0px 15px !important; margin-top:5%" data-ctrl-recipe-search="" class="col-md-12"> 
+<div class="hidden-meta" data-gsn-title="{{ChainName}} | Recipe Search"></div>
+<div style="padding: 0px 15px !important; margin-top:2%" data-ctrl-recipe-search="" class="col-md-8">
+<div>
+ 
+ <ul class="nav nav-tabs" style="padding-top: 5px">
+
+
+<li data-ng-class="">
+		<a class="btn-default" href="/recipecenter">Recipe Center</a>
+  </li>
+
+
+	<li data-ng-class="">
+		<a class="btn-default" href="/myrecipes">My Recipes</a>
+  </li>
+    <li class="active">
+		<a href="javascript:void(0)" class="btn-default" data-gsn-modal="getThemeUrl('/views/engine/modal-recipe-advanced-search.html')" data-ng-click="showModal()" data-analytics-on="click" data-analytics-event="ClickRecipeAdvanceSearch" data-analytics-category="Recipe">Search</a>
+  </li>
+  </ul>
+ 
+ </div> 
   <h1>Recipe Search Result</h1>
-  <button class="btn btn-default btn-xs" data-ng-click="goBack()">Back</button><br />
+  <br />
   <ul class="pagination" data-ng-init="vm.currentPage = 1">
     <li>
       <a href="javascript:void(0)" aria-label="Previous" data-ng-click="vm.currentPage = (vm.currentPage <= 1) ? vm.currentPage = 20 : vm.currentPage - 1">
-        <span aria-hidden="true">&laquo;</span>
+        <span aria-hidden="true"><i class="fa fa-arrow-circle-left"></i></span>
       </a>
     </li>
   	<li data-ng-repeat="item in [] | range:0:totalItems/itemsPerPage" data-ng-class="{'active': item == (vm.currentPage - 1)}">
@@ -35,13 +54,16 @@
   	</li>
   	<li>
       <a href="javascript:void(0)" aria-label="Next" data-ng-click="vm.currentPage = (vm.currentPage >= totalItems/itemsPerPage) ? vm.currentPage = 1 : vm.currentPage + 1">
-        <span aria-hidden="true">&raquo;</span>
+        <span aria-hidden="true"><i class="fa fa-arrow-circle-right"></i></span>
       </a>
     </li>
   </ul>
   <div class="recipeSearchResults" data-ng-repeat="item in vm.searchResult | orderBy:'Relevance':true | pagingFilter:itemsPerPage:(vm.currentPage-1)">
       <a href="javascript:void(0)" data-ng-click="goUrl('/recipe/' + item.RecipeId)">{{item.RecipeTitle}}</a>
   </div>
+</div>
+<div class="col-md-4">
+<div style="margin-right:30px; margin-left:30px;" data-ng-include="getThemeUrl('/views/engine/shopping-list-plugin.html')"class="row"><div>
 </div>
 
 <style>
