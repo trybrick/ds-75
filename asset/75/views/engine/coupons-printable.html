@@ -1,12 +1,12 @@
 <div class="hidden-meta" data-gsn-title="{{ChainName}} | coupons"></div>
 <div style="padding:15px !important;" data-ctrl-coupon-classic="" class="col-md-12" data-ng-init="sortByName = 'About to Expire';">
   <div data-ng-include="getThemeUrl('/views/engine//coupons-tabs.html')"></div>
-  <h1 style="font-size: 2em;">Printable Coupons</h1>
+  
   <div class="row">
     <div class="col-md-8 col-xs-12">
       <div>
        
-        <h3 style="font-style:italic;font-size:1.5em;color:#888;text-align:center;"><span style="color:#8b1e1a;font-style:normal;font-weight:bolder;">${{selectedCoupons.totalSavings}}</span> in coupon savings below!</h3>
+        <h3 style="font-style:italic;font-size:1.5em;color:#888;"><span style="color:#8b1e1a;font-style:normal;font-weight:bolder;"><sup>$</sup>{{selectedCoupons.totalSavings}}</span> in coupon savings!</h3>
       </div>
     </div>
     <div class="col-md-4 col-xs-12 text-right">
