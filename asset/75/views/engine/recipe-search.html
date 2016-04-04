@@ -62,7 +62,7 @@
       </a>
     </li>
   </ul>
-  <div class="recipeSearchResults" data-ng-repeat="item in vm.searchResult | orderBy:'Relevance':true | pagingFilter:itemsPerPage:(vm.currentPage-1)">
+  <div style="padding: 0px 0px 10px 15px;" class="recipeSearchResults" data-ng-repeat="item in vm.searchResult | orderBy:'Relevance':true | pagingFilter:itemsPerPage:(vm.currentPage-1)">
       <a href="javascript:void(0)" data-ng-click="goUrl('/recipe/' + item.RecipeId)">{{item.RecipeTitle}}</a>
   </div>
 </div>
@@ -76,6 +76,9 @@
 @media (max-width:400px){
 	#pagenumbers {
 		display:none;	
+	}
+	.pagination {
+		margin-left: 39%;	
 	}
 }
 
