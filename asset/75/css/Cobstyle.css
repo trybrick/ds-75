@@ -1514,6 +1514,9 @@ img.storedirector {
 	text-transform: capitalize;
 	color: #000000;
 }
+.storeservices_modul p {
+	margin-left: 10px;
+}
 .CobstoreDesc .btn.btn-default {
 	margin-left: 15px;
 }
