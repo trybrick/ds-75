@@ -46,13 +46,13 @@
   </ul>
  
  </div>
-<div class="col-md-8">
+<div class="col-md-8" style="padding: 15px;">
 
   <div style="padding: 0px 15px;" class="col-md-12" data-ng-include="getThemeUrl('/views/engine/recipe-content.html')"></div>
 
   </div>
   <div class="col-md-4">
-    <div class="hidden-print col-md-12">
+    <div style="padding:25px;" class="hidden-print col-md-12">
   <div class="nutrition" itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation" data-ng-show="!vm.recipe.HideNutritionInfo">
     <table style="margin-left:auto;margin-right:auto;" class="nutr-table">
       <tbody>
@@ -129,7 +129,7 @@
     </table>
   </div>
   </div>
-  <br />
+  <br style="clear:both;" />
 	<div style="margin-right:30px; margin-left:30px;" data-ng-include="getThemeUrl('/views/engine/shopping-list-plugin.html')"class="row"><div>
   </div>
 </div>
