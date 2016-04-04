@@ -1514,6 +1514,15 @@ img.storedirector {
 	text-transform: capitalize;
 	color: #000000;
 }
+.CobstoreDesc .btn.btn-default {
+	margin-left: 15px;
+}
+.CobstoreDesc .generic-content {
+	margin-left: 15px;
+}
+.CobstoreDesc .tooltip_group {
+	margin-left: 15px;
+}
 /* PayPal Button */
 .PayPalbtn-info {
 	color: #000;
