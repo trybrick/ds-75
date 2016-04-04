@@ -100,7 +100,7 @@
 
         <button style="float:right; margin-right: 0px; margin-top:0px; border-radius: 10px; padding: 1px 6px;" class="btn btn-default btn-xs" data-ng-click="doItemRemove(item)"><i class="fa fa-times"></i></button>
         <div style="float:left;">
-        <input class="btn btn-xs quantity" style="cursor:text; width: 35px; border: 1px solid gray;background-color:#fff; color:#000;text-align:center;border-radius:5px; font-size:.8em;" data-ng-show="!item.IsCoupon" name="quantity" data-ng-model="item.NewQuantity" />
+        <input class="quantity" style="width: 35px; border: 1px solid gray;background-color:#fff; color:#000;text-align:center;border-radius:5px; font-size:.8em;" data-ng-show="!item.IsCoupon" name="quantity" data-ng-model="item.NewQuantity" />
         <button style="margin-right: 0px; margin-left: 0px;" class="btn btn-default btn-xs" data-ng-click="doUpdateQuantity(item)" data-ng-hide="item.IsCoupon">Update</button>
         </div>
       </div>
