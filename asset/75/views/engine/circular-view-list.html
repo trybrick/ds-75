@@ -120,7 +120,7 @@ border-bottom-right-radius: 5px;" class="btn btn-default" type="submit">
                     </p>
                 </div>
                 <div class="col-md-3 col-xs-9" data-ng-click="vm['item' + $index] = $index; showModal();" >
-                    <div class="SalePrice" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}</div>
+                    <div style="font-size:1.5em; margin-right: 15px; text-align:center;" class="SalePrice" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}</div>
                     <div class="savings" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
                 </div>
                 <div class="col-md-1 col-xs-3">
