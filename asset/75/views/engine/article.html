@@ -30,6 +30,27 @@
   
   <div style="width: 100%; padding: 15px; margin-top: 2%;">
    <p style="text-align:center;" id="InnerTop">&nbsp;</p>
+   
+   <div>
+ 
+ <ul class="nav nav-tabs" style="padding-top: 5px">
+
+
+<li data-ng-class="">
+		<a class="btn-default" href="/recipecenter">Recipe Center</a>
+  </li>
+
+
+	<li data-ng-class="">
+		<a class="btn-default" href="/myrecipes">My Recipes</a>
+  </li>
+    <li class="active">
+		<a href="javascript:void(0)" class="btn-default" data-gsn-modal="getThemeUrl('/views/engine/modal-recipe-advanced-search.html')" data-ng-click="showModal()" data-analytics-on="click" data-analytics-event="ClickRecipeAdvanceSearch" data-analytics-category="Recipe">Search</a>
+  </li>
+  </ul>
+ 
+ </div>
+   
     <h1 itemprop="name">{{article.Title}}</h1>
     <h4 itemprop="about">{{article.Teaser}}</h2>
     <h4 itemprop="alternateName">{{article.SubTitle}}</h4>
