@@ -3,13 +3,13 @@
   <div data-ng-include="getThemeUrl('/views/engine//coupons-tabs.html')"></div>
   <h1 style="font-size: 2em;">Printable Coupons</h1>
   <div class="row">
-    <div class="col-md-4 col-xs-12">
-      <div style="margin-top: 6px; margin-left: -15px">
+    <div class="col-md-8 col-xs-12">
+      <div>
        
-        <h3 style="font-style:italic;font-size:1.5em;color:#888;">${{selectedCoupons.totalSavings}} in coupon savings!</h3>
+        <h3 style="font-style:italic;font-size:1.5em;color:#888;text-align:center;"><span style="color:#8b1e1a;font-style:normal;font-weight:bolder;">${{selectedCoupons.totalSavings}}</span> in coupon savings below!</h3>
       </div>
     </div>
-    <div class="col-md-8 col-xs-12 text-right">
+    <div class="col-md-4 col-xs-12 text-right">
       <span>Sort by: </span>
       <div style="background-color: #fff;" class="btn-group dropdown"  data-ng-class="{ 'open': vm.sortActive }">
         <button style="" type="button" class="btn btn-default dropdown-toggle" data-ng-click="vm.sortActive = !vm.sortActive">{{vm.sortByName}} <span class="caret"></span></button>
