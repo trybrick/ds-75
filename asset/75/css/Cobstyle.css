@@ -1530,6 +1530,10 @@ img.storedirector {
 .ConveninceStoreInfo {
 	margin-left: 15px;
 }
+.tooltipsServices {
+	color:#000000;
+	font-weight:bold;
+}
 /* PayPal Button */
 .PayPalbtn-info {
 	color: #000;
