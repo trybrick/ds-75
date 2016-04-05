@@ -1527,15 +1527,15 @@ img.storedirector {
 	margin-left: 15px;
 }
 /* Conveninece Stores */
-.ConveninceStoreDesc {
-    padding-top: 15px;
+.ConvenienceStoreDesc {
+	padding-top: 15px;
 }
-.ConveninceStoreInfo {
+.ConvenienceStoreInfo {
 	margin-left: 15px;
 }
 .tooltipsServices {
-	color:#000000;
-	font-weight:bold;
+	color: #000000;
+	font-weight: bold;
 }
 /* PayPal Button */
 .PayPalbtn-info {
