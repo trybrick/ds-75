@@ -1619,6 +1619,12 @@ p#start {
 	color: #a6cf39;
 	font-size: larger;
 }
+.moreactual2 {
+    font-weight: bolder;
+    color: #a6cf39;
+    font-size: larger;
+    text-shadow: 1px 1px #67b346;
+}
 .moreactual1 {
 	font-weight: bolder;
 	color: #dddddd;
