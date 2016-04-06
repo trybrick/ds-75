@@ -214,6 +214,11 @@
         path: '/store/:id',
         tpl: gsn.getThemeUrl('/views/engine/store-info.html')
       }
+	        , {
+        login: 0,
+        store: 1,
+        path: '/liquor',
+      }
  /*     , {
         login: 0,
         store: 0,
