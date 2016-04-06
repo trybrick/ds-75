@@ -1627,13 +1627,13 @@ p#start {
 }
 a.buttonmore {
 	color: #fff;
-	background-color: #bd4f5c;
+	background-color: #a6cf39;
 	display: block;
 	font-weight: normal;
 	padding: 5px 10px;
 	border-radius: 5px;
 	text-align: center;
-	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	/*box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 	transition: all .5s ease;
 	-moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 	-webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -1642,7 +1642,7 @@ a.buttonmore {
 	-moz-transition: all .5s ease;
 	-webkit-transition: all .5s ease;
 	-o-transition: all .5s ease;
-	-ms-transition: all .5s ease;
+	-ms-transition: all .5s ease;*/
 }
 a.buttonmore:hover {
 	background-color: #ffac34;
