@@ -1537,6 +1537,35 @@ img.storedirector {
 	color: #000000;
 	font-weight: bold;
 }
+
+a.buttonForce {
+    color: #fff;
+    background-color: #8b1e1a;
+    display: block;
+    font-weight: normal;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: all .5s ease;
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    -o-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    -ms-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+}
+a.buttonForce:hover {
+	background-color: #e6e6e6;
+	color: #000;
+	-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	-o-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	-ms-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
 /* PayPal Button */
 .PayPalbtn-info {
 	color: #000;
