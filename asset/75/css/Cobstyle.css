@@ -1727,3 +1727,8 @@ th.lfl_State {
 	border-width: thin;
 	border-color: #c2b69c;
 }
+
+/* ShareThis */
+.sharethisCoborns {
+	margin: 20px auto 0px auto;
+}
