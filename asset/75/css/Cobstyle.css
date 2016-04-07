@@ -1620,10 +1620,10 @@ p#start {
 	font-size: larger;
 }
 .moreactual2 {
-    font-weight: bolder;
-    color: #a6cf39;
-    font-size: larger;
-    text-shadow: 1px 1px #67b346;
+	font-weight: bolder;
+	color: #a6cf39;
+	font-size: larger;
+	text-shadow: 1px 1px #67b346;
 }
 .moreactual1 {
 	font-weight: bolder;
@@ -1638,8 +1638,7 @@ a.buttonmore {
 	font-weight: normal;
 	padding: 5px 10px;
 	border-radius: 5px;
-	text-align: center;
-	/*box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	text-align: center;/*box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 	transition: all .5s ease;
 	-moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 	-webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -1689,4 +1688,13 @@ th.lfl_State {
 
 .blogfeedbg {
 	background-color: #c2b69c;
+}
+.getSocialfeed {
+	margin-top: 10px;
+	max-width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: solid;
+	border-width: thin;
+	border-color: #c2b69c;
 }
