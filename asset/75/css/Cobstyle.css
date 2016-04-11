@@ -1735,7 +1735,7 @@ th.lfl_State {
 
 /* Side Section */
 @media (min-width: 439px) and (max-width: 767px) {
-.SidefeaturedProfile {
+img.SidefeaturedProfile {
 	max-width:300px;
 	float:left;
 	margin-right:20px;
