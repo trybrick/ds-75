@@ -1734,7 +1734,11 @@ th.lfl_State {
 }
 
 /* Side Section */
-@media (min-width: 439px) and (max-width: 767px) {
+img.SidefeaturedProfile {
+	max-width:300px;
+}
+
+@media (min-width: 439px) and (max-width: 991px) {
 img.SidefeaturedProfile {
 	max-width:300px;
 	float:left;
