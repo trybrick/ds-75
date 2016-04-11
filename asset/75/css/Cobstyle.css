@@ -1732,3 +1732,12 @@ th.lfl_State {
 .sharethisCoborns {
 	margin: 20px auto 0px auto;
 }
+
+/* Side Section */
+@media (min-width: 439px) and (max-width: 767px) {
+.SidefeaturedProfile {
+	max-width:300px;
+	float:left;
+	margin-right:20px;
+}
+}
