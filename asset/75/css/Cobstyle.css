@@ -1722,6 +1722,11 @@ img.glutenfree_product {
 	border-style:solid;
 }
 
+.glutenfree td {
+    padding: 2px !important;
+    border-top: 0px none !important;
+}
+
 /* Feed */
 
 .blogfeedbg {
