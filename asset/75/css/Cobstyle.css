@@ -1727,6 +1727,15 @@ img.glutenfree_product {
     border-top: 0px none !important;
 }
 
+.glutenfree {
+	margin-top:5px;
+	border-width: thin;
+	border-style: solid;
+	border-color: #ececec;
+	padding: 10px;
+	background-color: #bea171;
+
+
 /* Feed */
 
 .blogfeedbg {
