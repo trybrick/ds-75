@@ -1713,6 +1713,15 @@ th.lfl_State {
 	color: #ececec !important;
 	background-color: #8b1e1a;
 }
+
+/* Gluten Free Page */
+img.glutenfree_product {
+	max-width: 300px;
+	border-color:#FFFFFF;
+	border-width:thin;
+	border-style:solid;
+}
+
 /* Feed */
 
 .blogfeedbg {
