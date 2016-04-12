@@ -395,7 +395,7 @@ a.navbar-brand img{
 .search-box a{
 	position: relative;
 	display: block;
-	/*background: url(../images/icon-search.svg) center no-repeat;*/
+	background: url(../images/icon-search.svg) center no-repeat !important;
 	/*border: 1px solid #999;*/
 	width: 34px;
 	height: 35px;
