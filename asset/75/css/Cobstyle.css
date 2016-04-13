@@ -1774,8 +1774,9 @@ img.SidefeaturedProfile {
     border-width: thin;
     border-style: solid;
     padding: 10px 0px 0px 10px;
-    border-color: #c2b69c;
+    border-color: #FFFFFF;
     margin-bottom: 10px;
+	background-color:#FFFFFF;
 }
 .featuredBlog_module {
 	margin-bottom:10px;
@@ -1790,4 +1791,8 @@ img.SidefeaturedProfile {
 .featuredBlog_Clear {
 	clear:both; 
 	margin-bottom:10px;
+}
+
+.featuredBlog_bg {
+	background-color: #ececec;
 }
