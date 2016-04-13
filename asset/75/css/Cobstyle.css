@@ -1770,7 +1770,13 @@ img.SidefeaturedProfile {
 }
 }
 
-
+.featuredBlog_moduleContainer {
+    border-width: thin;
+    border-style: solid;
+    padding: 10px 0px 0px 10px;
+    border-color: #c2b69c;
+    margin-bottom: 10px;
+}
 .featuredBlog_module {
 	margin-bottom:10px;
 }
