@@ -1769,3 +1769,19 @@ img.SidefeaturedProfile {
 	margin-right:20px;
 }
 }
+
+
+.featuredBlog_module {
+	margin-bottom:10px;
+}
+.featuredBlog_Img {
+	float:left; 
+	margin-right:20px;
+}
+.featuredBlog_Title {
+	padding-top: 20px;
+}
+.featuredBlog_Clear {
+	clear:both; 
+	margin-bottom:10px;
+}
