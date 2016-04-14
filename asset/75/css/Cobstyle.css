@@ -1745,6 +1745,14 @@ img.glutenfree_product {
 	padding: 10px;
 	background-color: #c2b69c;
 }
+/* Deli */
+img.DDS {
+	max-width:100px;
+	min-width:100px;
+	border-color:#FFFFFF;
+	border-style:solid;
+	border-width:thin;
+}
 
 
 /* Feed */
