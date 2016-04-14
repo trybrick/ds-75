@@ -1573,7 +1573,7 @@ a.buttonForce:hover {
 	 margin-right:auto;
 }
 
-.noFocus a:focus {
+a.noFocus:focus {
 	text-decoration: none !important;
 }
 /* PayPal Button */
