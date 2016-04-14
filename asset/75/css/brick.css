@@ -516,3 +516,9 @@ footer {
         display: none !important;
     }
 }
+
+html.html-gmodal {
+    overflow: hidden;
+    position:fixed;
+    width: 100%;
+}
