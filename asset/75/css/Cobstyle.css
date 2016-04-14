@@ -1568,10 +1568,13 @@ a.buttonForce:hover {
 }
 /* Buttons */
 .noFocus {
-	 text-decoration: none;
 	 max-width:300px;
 	 margin-left:auto;
 	 margin-right:auto;
+}
+
+.noFocus a:focus {
+	text-decoration: none !important;
 }
 /* PayPal Button */
 .PayPalbtn-info {
