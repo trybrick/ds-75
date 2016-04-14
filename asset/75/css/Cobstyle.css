@@ -1566,6 +1566,10 @@ a.buttonForce:hover {
 	-o-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 	-ms-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
+/* Buttons */
+.noFocus {
+	 text-decoration: none;
+}
 /* PayPal Button */
 .PayPalbtn-info {
 	color: #000;
