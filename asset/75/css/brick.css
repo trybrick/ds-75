@@ -516,7 +516,3 @@ footer {
         display: none !important;
     }
 }
-
-body.modal-open {
-    overflow: visible;
-}
