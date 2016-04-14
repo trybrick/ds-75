@@ -1570,6 +1570,8 @@ a.buttonForce:hover {
 .noFocus {
 	 text-decoration: none;
 	 max-width:300px;
+	 margin-left:auto;
+	 margin-right:auto;
 }
 /* PayPal Button */
 .PayPalbtn-info {
