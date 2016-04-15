@@ -229,13 +229,6 @@
         path: '/unsubscribe',
         tpl: gsn.getThemeUrl('/views/engine/unsubscribe.html')
       }
-      , {
-        login: 0,
-        store: 1,
-        layout: le[0],
-        path: '/liquor',
-		tpl: gsn.getThemeUrl('/views/engine/static-content.html')
-      }
     ];
 
 
