@@ -225,6 +225,9 @@ svg#myFlyer {
 	-o-box-shadow: 0px 0px 6px rgba(0,0,0,.4);
 	-ms-box-shadow: 0px 0px 6px rgba(0,0,0,.4);
 }
+#myFlyer {
+	padding: 5px;
+}
 .nav-tabs li a {
 	background-color: #e6e6e6;
 	color: #555;
