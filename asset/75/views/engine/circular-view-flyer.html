@@ -15,7 +15,7 @@
   </li>
 
 
-	<li data-ng-class="">
+	<li data-ng-class="" class="hidden-xs">
 		<a class="btn-default" href="/coupons">Coupons</a>
   </li>
     <li data-ng-class="">
@@ -46,7 +46,7 @@
             <div class="col-md-4 col-sm-6 dcircular-list-single" data-ng-repeat="item in vm.digitalCirc.Circulars">
         <a class="thumbnail dcircular-thumbnail" href="javascript:void(0)" data-ng-click="vm.circIdx = ($index + 1); vm.pageIdx = 1">
         <div class="circularline">
-           <div class="CircularThumb"><img class="dcircular-image" alt="" data-ng-src="{{item.ImageUrl.replace('upload.gsngrocers.com/', 'upload.gsngrocers.com//rs/500,fit/')}}"></div></div>
+           <div class="CircularThumb"><img class="dcircular-image" alt="" data-ng-src="{{item.ImageUrl.replace('upload.gsngrocers.com/', 'upload.gsngrocers.com/rs/150x/')}}"></div></div>
            <div class="caption dcircular-caption"><h6 style="width: 100%; text-align: center; text-decoration: none;">{{item.CircularTypeName}}</h6></div>
          </a>
          </div>
@@ -71,11 +71,13 @@
             data-ng-class="{'active': vm.activeItem.ItemId == item.ItemId }"
             data-ng-click="vm.activeItem = item"
             id="item_{{item.ItemId}}" data-ng-cloak="">
-            <div style="position: relative" class="hover-zoom">
+            <div style="position: relative" class="hover-zoom"
+            data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-show-if="vm['item' + $index]" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }"
+            data-ng-dblclick="showModal()">
               <a class="btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)" data-ng-class="{'circAddButton': !isOnList(item)}">
                 <i class="fa" data-ng-class="{'fa-square-o': !isOnList(item), 'fa-check-square-o': isOnList(item)}"></i> {{ !isOnList(item) ? 'ADD ITEM' : 'ON LIST'}}
               </a>
-              <a class="btn btn-default btn-xs circInfoButton" title="View item details..." data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="showModal()" data-show-if="vm['item' + $index]" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }">
+              <a class="btn btn-default btn-xs circInfoButton" title="View item details..."  data-ng-click="showModal()">
                 <i class="fa fa-info-circle"></i>
               </a>
               <div class="ripple" style="opacity: 0.3"></div>

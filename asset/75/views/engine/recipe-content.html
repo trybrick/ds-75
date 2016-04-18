@@ -30,12 +30,14 @@
       </div>
     </div>
     <div data-ng-if="vm.recipe.RecipeTitle">
+<!-- hiding social share
       <div class="pull-left">
         <a data-gsn-twitter-share="{ text: vm.recipe.RecipeTitle + ' at ' + ChainName, count: 'horizontal' }" data-url="{{getFullPath('/recipe') + '?id=' + vm.recipe.RecipeId}}"></a>
       </div>
       <div class="pull-left">
         <div data-fb-like="" class="fb-like fb_iframe_widget" data-href="{{getFullPath('/recipe') + '?id=' + vm.recipe.RecipeId}}" data-layout="standard" data-action="like" data-show-faces="false" data-share="false" data-fb-xfbml-state="rendered"></div>
-      </div>
+      </div> 
+       End social share -->
     </div>
   </div>
 </div>
@@ -47,7 +49,8 @@
   <br />
 </div>
 <div class="form-group">
-  <button class="btn btn-default hidden-print" data-ng-click="goBack()">Back</button>
+  <button class="btn btn-default hidden-print" data-ng-click="goBack()"><i class="fa fa-arrow-left"></i>
+&nbsp;Back</button>
 </div>
 <style>
 

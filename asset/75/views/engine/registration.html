@@ -34,7 +34,7 @@ $('a[href^="#"]').on('click', function(event) {
 
 <div id="insideHeader" class="insideHeader"> 
   <div class="container">
-  <img class="img-responsive" src="http://upload.gsngrocers.com/chainfiles/75/creative/201602/635905406391535888-signupheader.jpg" alt="Sign Up Today!"> </div>
+  <img style="width: 100%" class="img-responsive" src="http://upload.gsngrocers.com/chainfiles/75/creative/201602/635905406391535888-signupheader.jpg" alt="Sign Up Today!"> </div>
 </div>
 <section>
   <div class="container">
@@ -52,8 +52,9 @@ Sign Up Today!</h1>
 
 <div class="registrationWrapper">
 <div data-ctrl-Registration="" class="col-md-12">
-  <h3>Fill Out the Registration Form Below</h3>
-  <p>Get an exclusive coupon each week and many other exciting offers. Registering also allows you to save your shopping list on our weekly ad page and on our Coborn's App available on Apple and Android devices.</p>
+<p id="InnerTop">Get an exclusive coupon each week and many other exciting offers. Registering also allows you to save your shopping list on our weekly ad page and on our Coborn's App available on Apple and Android devices.</p>
+  <h3  data-ng-hide="isLoggedIn">Fill Out the Registration Form Below</h3>
+  
   <div class="FormWaist">
   <form role="form" name="myForm" data-ng-submit="registerProfile()" data-ng-hide="isLoggedIn">
     <div class="row">
@@ -132,7 +133,7 @@ Sign Up Today!</h1>
     <div class="row col-md-12">* Indicates required field</div>
   </form>
   <div data-ng-show="isLoggedIn" >
-    <h3>Thank you for your registration.</h3>
+    <h3>Thank you for signing up!</h3>
     <div class="form-group">
       <button class="btn btn-default" data-ng-click="goUrl('/')">Go to Home Page</button>
       <button class="btn btn-default" data-ng-click="goUrl('/profile')">Go to Profile Page</button>

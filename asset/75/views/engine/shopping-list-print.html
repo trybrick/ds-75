@@ -103,7 +103,7 @@
                 <br />
                 {{item.Description4}}
               </div>
-              <div class="couponDescription4">{{item.BottomTagLine}}</div>
+              <div class="couponDescription4">{{item.BottomTagLine.replace('##storename##', gvm.currentStore.StoreName)}}</div>
             </td>
           </tr>
           <tr>

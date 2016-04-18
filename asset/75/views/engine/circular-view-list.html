@@ -4,7 +4,7 @@
         <li class="active">
             <a class="btn-default" href="/circular">Weekly Ads</a>
         </li>
-        <li data-ng-class="">
+        <li data-ng-class="" class="hidden-xs">
             <a class="btn-default" href="/coupons">Coupons</a>
         </li>
         <li data-ng-class="">
@@ -102,8 +102,9 @@ border-bottom-right-radius: 5px;" class="btn btn-default" type="submit">
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 items thumbnail" itemscope itemtype="http://schema.org/Product">
-                <div class="col-md-8 col-xs-8">
+            <div class="col-md-6 items thumbnail" itemscope itemtype="http://schema.org/Product"
+            data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }">
+                <div class="col-md-8 col-xs-8" data-ng-click="vm['item' + $index] = $index; showModal();" >
                     <div class="hidden meta">
                         <div class="product-id">{{item.CircularItemId}}</div>
                         <div class="product-brand">{{item.BrandName}}</div>
@@ -112,14 +113,14 @@ border-bottom-right-radius: 5px;" class="btn btn-default" type="submit">
                     <div data-ng-if="currentPath.indexOf('text') < 0" class="cold-md-4 col-sm-6 col-xs-12 circularItem">
                         <img itemprop="image" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
                     </div>
-                    <p style="line-height:14px;" itemprop="description" data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="vm['item' + $index] = $index; showModal();" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }">
+                    <p style="line-height:14px;" itemprop="description">
                         <span style="font-size:12px;" class="ProductName" itemprop="name">{{item.Description}}</span>
                         <br />
                         <small style="font-size:10px;">{{item.ItemDescription}}</small>
                     </p>
                 </div>
-                <div class="col-md-3 col-xs-9">
-                    <div class="SalePrice" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}</div>
+                <div class="col-md-3 col-xs-9" data-ng-click="vm['item' + $index] = $index; showModal();" >
+                    <div style="font-size:1.5em; margin-right: 15px; text-align:center;" class="SalePrice" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}</div>
                     <div class="savings" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
                 </div>
                 <div class="col-md-1 col-xs-3">
