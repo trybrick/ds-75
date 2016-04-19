@@ -67,10 +67,10 @@
               <div class="couponDescription4">Limit ONE - One coupon may be used per customer. Good at {{gvm.currentStore.StoreName}}.</div>
             </td>
           </tr>
-          <tr>
-            <td colspan="2">
+          <tr data-gsn-ft-config="couponlogo">
+            <td colspan="2" data-ng-if="item.Description">
               <br />
-              <img class="chainLogoImage" align="right" data-ng-src="{{getContentUrl('/images/printLogo.gif')}}" border="0">
+              <img class="chainLogoImage" align="right" data-ng-src="{{item.Description}}" border="0">
             </td>
           </tr>
         </table>
@@ -106,10 +106,10 @@
               <div class="couponDescription4">{{item.BottomTagLine.replace('##storename##', gvm.currentStore.StoreName)}}</div>
             </td>
           </tr>
-          <tr>
-            <td colspan="2">
+          <tr data-gsn-ft-config="couponlogo">
+            <td colspan="2" data-ng-if="item.Description">
               <br />
-              <img class="chainLogoImage" align="right" data-ng-src="{{getContentUrl('/images/printLogo.gif')}}" border="0">
+              <img class="chainLogoImage" align="right" data-ng-src="{{item.Description}}" border="0">
             </td>
           </tr>
         </table>
