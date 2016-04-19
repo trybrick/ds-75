@@ -56,20 +56,18 @@ $('a[href^="#start"]').on('click', function(event) {
 
 });
 </script>
-
 <!-- bootstrap Javascript -->
 <script type="text/javascript" src="/asset/75/js/bootstrap.min.js"></script>
 <!-- end -->
 <!-- Tooltip -->
 <script>
 $(function() {
-  setTimeout(function() {
-    $("a.tooltipLink").tooltip();
-    $('[data-toggle="tooltip"]').tooltip()
-  }, 2000);
+    setTimeout(function() {
+        $("a.tooltipLink").tooltip();
+        $('[data-toggle="tooltip"]').tooltip()
+    }, 2000);
 })
 </script>
-
 <!-- end -->
 <div id="insideHeader" class="insideHeader">
     <div class="container"> <img class="img-responsive" src="http://upload.gsngrocers.com/chainfiles/75/creative/201602/635902710617364963-storelocation_all.jpg" alt="Store Location - All"> </div>
@@ -140,22 +138,18 @@ $(function() {
                 <div class="col-md-8">
                     <div class="tab-content">
                         <div id="mn" class="tab-pane fade in active">
-                        <div data-ng-repeat="marker in myMarkers | filter:{location: {StateName:'MN'}}" class="col-md-4 panel panel-default">
-        <div data-ng-include="getThemeUrl('/views/engine/store-locator-item2.html')"></div>
-      </div>
-                            
+                            <div data-ng-repeat="marker in myMarkers | filter:{location: {StateName:'MN'}}" class="col-md-4 panel panel-default">
+                                <div data-ng-include="getThemeUrl('/views/engine/store-locator-item2.html')"></div>
+                            </div>
                         </div>
-                         <div id="sd" class="tab-pane fade">
-
-                        <div data-ng-repeat="marker in myMarkers | filter:{location: {StateName:'SD'}}" class="col-md-4 panel panel-default">
-        <div data-ng-include="getThemeUrl('/views/engine/store-locator-item2.html')"></div>
-      </div>
-</div>
-                            
+                        <div id="sd" class="tab-pane fade">
+                            <div data-ng-repeat="marker in myMarkers | filter:{location: {StateName:'SD'}}" class="col-md-4 panel panel-default">
+                                <div data-ng-include="getThemeUrl('/views/engine/store-locator-item2.html')"></div>
+                            </div>
+                        </div>
                     </div>
                     <!-- END ALL STORES MAIN  -->
                 </div>
-
                 <!-- SIDE -->
                 <div style="box-shadow:none;" class="col-md-4 panel panel-default">
                     <!-- Email Sign Up -->
@@ -167,16 +161,8 @@ $(function() {
                     </div>
                     <!-- end -->
                 </div>
-
             </div>
             <!-- SIDE -->
         </div>
     </div>
 </section>
-<style>
-.store-tooltip div {
-  float: left;
-  margin-right:10px;
-}
-</style>
-
