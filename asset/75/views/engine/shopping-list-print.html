@@ -46,7 +46,7 @@
     <!-- circular coupons -->
     <div data-ng-repeat="item in circularCoupons">
       <div class="col-md-6 col-xs-12 couponContainerDiv">
-        <table width="90%" border="0" cellspacing="0" cellpadding="4"> 
+        <table border="0" cellspacing="0" cellpadding="4"> 
           <tr height="30">
             <td width="150" align="center" rowspan="3">
               <img class="productImage" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}"/>
@@ -80,7 +80,7 @@
   <div class="row" data-ng-if="instoreCoupons.length > 0">
     <div data-ng-repeat="item in instoreCoupons">
       <div class="col-md-6 col-xs-12 couponContainerDiv">
-        <table width="90%" border="0" cellspacing="0" cellpadding="4"> 
+        <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
           <tr height="30">
             <td width="150" align="center" rowspan="3">
               <img class="productImage" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}"/>
