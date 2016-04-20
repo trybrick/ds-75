@@ -72,21 +72,21 @@ Sign Up Today!</h1>
           <label for="firstname">
             First Name: <span class="required" data-ng-show="myForm.firstname.$invalid">*</span>
           </label>
-          <input type="text" class="form-control" name="firstname" placeholder="Enter first name" data-ng-model="profile.FirstName" data-ng-required="true" />
+          <input type="text" class="form-control" name="firstname" placeholder="Enter first name" data-ng-model="profile.FirstName" data-ng-required="true" data-gsn-auto-fill-sync />
           <span class="glyphicon form-control-feedback" data-ng-class="{'glyphicon-ok': !myForm.firstname.$invalid, 'glyphicon-remove': myForm.firstname.$invalid}"></span>
         </div>
         <div class="form-group has-feedback" data-ng-class="{'has-success': !myForm.lastname.$invalid, 'has-error': myForm.lastname.$invalid}">
           <label for="lastname">
             Last Name: <span class="required" data-ng-show="myForm.lastname.$invalid">*</span>
           </label>
-          <input type="text" class="form-control" name="lastname" placeholder="Enter last name" data-ng-model="profile.LastName" data-ng-required="true" />
+          <input type="text" class="form-control" name="lastname" placeholder="Enter last name" data-ng-model="profile.LastName" data-ng-required="true" data-gsn-auto-fill-sync />
           <span class="glyphicon form-control-feedback" data-ng-class="{'glyphicon-ok': !myForm.lastname.$invalid, 'glyphicon-remove': myForm.lastname.$invalid}"></span>
         </div>
         <div class="form-group has-feedback" data-ng-if="!isFacebook" data-ng-class="{'has-success': !myForm.email.$invalid, 'has-error': myForm.email.$invalid}">
           <label for="email">
             Email address: <span class="required" data-ng-show="myForm.email.$invalid">*</span>
           </label>
-          <input type="email" class="form-control" name="email" placeholder="Enter email address" data-ng-model="profile.Email" data-gsn-valid-user="required" data-ng-required="true" />
+          <input type="email" class="form-control" name="email" placeholder="Enter email address" data-ng-model="profile.Email" data-gsn-valid-user="required" data-ng-required="true" data-gsn-auto-fill-sync />
           <span class="glyphicon form-control-feedback" data-ng-class="{'glyphicon-ok': !myForm.email.$invalid, 'glyphicon-remove': myForm.email.$invalid}"></span>
           <p class="help-block emailInvalid" data-ng-show="myForm.email.$error.gsnValidUser">Email is invalid or not available.</p>
         </div>
@@ -96,7 +96,7 @@ Sign Up Today!</h1>
           <label for="password">
             Password: <span class="required" data-ng-show="myForm.password.$invalid">*</span>
           </label>
-          <input type="password" class="form-control passwordText" name="password" placeholder="Enter password" data-ng-minlength="6" data-ng-model="profile.Password" data-ng-required="true" />
+          <input type="password" class="form-control passwordText" name="password" placeholder="Enter password" data-ng-minlength="6" data-ng-model="profile.Password" data-ng-required="true" data-gsn-auto-fill-sync />
           <span class="glyphicon form-control-feedback" data-ng-class="{'glyphicon-ok': !myForm.password.$invalid, 'glyphicon-remove': myForm.password.$invalid}"></span>
           <p data-ng-show="myForm.password.$error.minlength">* Must be at least 6 characters.</p>
         </div>
@@ -104,7 +104,7 @@ Sign Up Today!</h1>
           <label for="confirmPassword">
             Confirm Password: <span class="required" data-ng-show="myForm.confirmPassword.$invalid">*</span>
           </label>
-          <input type="password" class="form-control passwordText" name="confirmPassword" placeholder="Confirm password" data-ng-required="true" data-ng-model="profile.confirmPassword" data-ui-validate=" '$value==profile.Password' " data-ui-validate-watch=" 'profile.Password' " />
+          <input type="password" class="form-control passwordText" name="confirmPassword" placeholder="Confirm password" data-ng-required="true" data-ng-model="profile.confirmPassword" data-ui-validate=" '$value==profile.Password' " data-ui-validate-watch=" 'profile.Password' " data-gsn-auto-fill-sync />
           <span class="glyphicon form-control-feedback" data-ng-class="{'glyphicon-ok': !myForm.confirmPassword.$invalid, 'glyphicon-remove': myForm.confirmPassword.$invalid}"></span>
           <p data-ng-show="myForm.confirmPassword.$error.validator">* Confirm password must match.</p>
         </div>
