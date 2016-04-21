@@ -47,7 +47,7 @@
  </div> 
   <h1>Recipe Search Result</h1>
   <br />
-  <ul class="pagination" data-ng-init="vm.currentPage = 1">
+  <ul class="pagination" data-ng-hide="totalItems == 0" data-ng-init="vm.currentPage = 1">
     <li>
       <a href="javascript:void(0)" aria-label="Previous" data-ng-click="vm.currentPage = (vm.currentPage <= 1) ? vm.currentPage = 20 : vm.currentPage - 1">
         <span aria-hidden="true"><i class="fa fa-arrow-circle-left"></i></span>
@@ -62,8 +62,11 @@
       </a>
     </li>
   </ul>
-  <div style="padding: 0px 0px 10px 15px;" class="recipeSearchResults" data-ng-repeat="item in vm.searchResult | orderBy:'Relevance':true | pagingFilter:itemsPerPage:(vm.currentPage-1)">
+  <div style="padding: 0px 0px 10px 15px;" class="recipeSearchResults" data-ng-hide="totalItems == 0" data-ng-repeat="item in vm.searchResult | orderBy:'Relevance':true | pagingFilter:itemsPerPage:(vm.currentPage-1)">
       <a href="javascript:void(0)" data-ng-click="goUrl('/recipe/' + item.RecipeId)">{{item.RecipeTitle}}</a>
+  </div>
+  <div data-ng-hide="totalItems > 0">
+	No results found
   </div>
 </div>
 <div class="col-md-4">
