@@ -504,7 +504,7 @@ input{
 	}
 	#mdf_menu ul li .mdf_child_menu.dropdown.bmt{
 		display: none;
-		background: #c2b69c;
+		/*background: #c2b69c;*/
 	}
 	#mdf_menu ul li.menu-el .dropdown .mdf_child_menu{
 		padding-left: 15px
