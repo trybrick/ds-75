@@ -9,10 +9,16 @@
 	.panel-heading {
 		padding: 0px 0px 5px 0px !important;
 		border-bottom: 1px solid #000 !important;
-		font-size: 12px !important;	
+		margin-top: 20px !important;
 	}
 	.donotprint {
 		display:none;	
+	}
+	.panel-title {
+		font-size: 12px !important;	
+	}
+	.panel {
+		margin-bottom: 10px !important;
 	}
 }
 </style>
@@ -34,7 +40,7 @@
         <div style="border-bottom: 1px dotted #ccc; margin-bottom: 10px;" class="circular-item" data-ng-repeat="item in groupItem.fitems">
           <div class="pull-right fontprint">{{item.Quantity}}</div>
           <div><i class="fa fa-square-o" aria-hidden="true"></i>
-<img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.IsCoupon"><span class="fontprint" style="font-weight: bold;" data-ng-bind-html="item.Description"></span>, <span class="fontprint">{{item.PriceString}}</span></div>
+<img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.IsCoupon"><span class="fontprint" data-ng-bind-html="item.Description"></span>, <span class="fontprint">{{item.PriceString}}</span></div>
 		  <div data-ng-show="item.Comment">(<span data-ng-bind-html="item.Comment"></span>)</div>
           <div data-ng-show="item.ItemTypeId == 13">Card Coupon</div>
         </div>
