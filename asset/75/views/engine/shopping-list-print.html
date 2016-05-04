@@ -5,7 +5,7 @@
   <button class="btn btn-default pull-right" type="button" onclick="javascript:window.print();" data-analytics-on="click" data-analytics-event="ClickPrint" data-analytics-category="ShoppingList" style="float:right; bottom: 0; margin-right: 15px" data-analytics-label="isLoggedIn">Print</button>
 </div><div style="clear:both;">
 <div class="col-md-12" data-gsn-shopping-list="">
-  <div data-ng-init="canPrint = true" data-ng-init="print()">
+  <div data-ng-init="canPrint = true">
     <div data-ng-repeat="groupItem in allItems" data-ng-hide="groupItem.fitems.length <= 0">
       <div style="padding-left: 15px !important; padding-right:15px !important;min-height:150px;" class="col-md-6 itemInfo printCouponCategory">
       <div class="panel panel-default">
@@ -42,7 +42,7 @@
       <h4>In store Coupons</h4>
     </div>
   </div>
-  <div class="row">
+  <div class="row" data-ng-init="print()">
     <!-- circular coupons -->
     <div data-ng-repeat="item in circularCoupons">
       <div class="col-md-6 col-xs-12 couponContainerDiv">
