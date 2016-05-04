@@ -4,11 +4,15 @@
 		width: 49%!important;
 	}
 	.fontprint {
-		font-size: 12px !important;	
+		font-size: 10px !important;	
 	}
 	.panel-heading {
 		padding: 0px 0px 5px 0px !important;
-		border-bottom: 1px solid #000 !important;	
+		border-bottom: 1px solid #000 !important;
+		font-size: 12px !important;	
+	}
+	.donotprint {
+		display:none;	
 	}
 }
 </style>
@@ -16,19 +20,19 @@
     <h1 style="margin-top: 80px;">My Shopping List</h1>
     <p data-gsn-store-info="[store.StoreName] [store.PrimaryAddress], [store.City] location only"></p>
   </div>
-  <button class="btn btn-default pull-right" type="button" onclick="javascript:window.print();" data-analytics-on="click" data-analytics-event="ClickPrint" data-analytics-category="ShoppingList" style="float:right; bottom: 0; margin-right: 15px" data-analytics-label="isLoggedIn">Print</button>
+  <button class="btn btn-default pull-right donotprint" type="button" onclick="javascript:window.print();" data-analytics-on="click" data-analytics-event="ClickPrint" data-analytics-category="ShoppingList" style="float:right; bottom: 0; margin-right: 15px" data-analytics-label="isLoggedIn">Print</button>
 </div><div style="clear:both;">
 <div class="col-md-12" data-gsn-shopping-list="">
   <div data-ng-init="canPrint = true">
     <div data-ng-repeat="groupItem in allItems" data-ng-hide="groupItem.fitems.length <= 0">
       <div style="padding-left: 15px !important; padding-right:15px !important;" class="col-md-6 col-sm-6 itemInfo printCouponCategory">
       <div class="panel panel-default">
-        <div class="panel-heading"><h4 class="panel-title pull-right">Quantity</h4>
+        <div class="panel-heading"><h4 class="panel-title pull-right">Qty.</h4>
         <h4 class="panel-title">{{groupItem.key}}</h4>
         </div>
         </div>
         <div style="border-bottom: 1px dotted #ccc; margin-bottom: 10px;" class="circular-item" data-ng-repeat="item in groupItem.fitems">
-          <div style="font-weight:bold;" class="pull-right">{{item.Quantity}}</div>
+          <div class="pull-right fontprint">{{item.Quantity}}</div>
           <div><i class="fa fa-square-o" aria-hidden="true"></i>
 <img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.IsCoupon"><span class="fontprint" style="font-weight: bold;" data-ng-bind-html="item.Description"></span>, <span class="fontprint">{{item.PriceString}}</span></div>
 		  <div data-ng-show="item.Comment">(<span data-ng-bind-html="item.Comment"></span>)</div>
