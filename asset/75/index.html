@@ -5,10 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="HandheldFriendly" content="true">
-<meta name="description" content="Coborn’s Fresh! Our growing retail company is in the business of people serving people – our employees and our guests! Our 30 full-service Coborn’s stores are mostly located throughout Minnesota with two stores in South Dakota.">
+<meta name="description" content="Your Employee-Owned Grocery Store - Stop in today for fresh foods, friendly serivce, convenient shopping, weekly specials and more!">
 <meta name="author" content="Coborn's, Inc.">
 <meta name="google-site-verification" content="LIOTuW0ad_Rr3F7WNMMoR6h2gzLl4THALei3m8pvIO0" />
-<title>Coborn's</title>
+<title>Coborn's | Fresh!</title>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" sizes="57x57" href="/asset/75/favicon/apple-touch-icon-57x57.png">
@@ -522,7 +522,21 @@ $("#appendUrl").keyup(function(event){
 </script>
 
 <!-- end search -->
+<!-- Add Search to google listing -->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "http://www.coborns.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "http://www.coborns.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
 
+<!-- End Google Search -->
 
   <!--begin:analytics-->
   <script>
