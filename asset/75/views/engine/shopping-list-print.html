@@ -1,7 +1,14 @@
 <style>
 @media print {
-	.col-md-6 {
+	.col-md-6.col-sm-6.itemInfo.printCouponCategory {
 		width: 49%!important;
+	}
+	.fontprint {
+		font-size: 12px !important;	
+	}
+	.panel-heading {
+		padding: 0px 0px 5px 0px !important;
+		border-bottom: 1px solid #000 !important;	
 	}
 }
 </style>
@@ -23,11 +30,8 @@
         <div style="border-bottom: 1px dotted #ccc; margin-bottom: 10px;" class="circular-item" data-ng-repeat="item in groupItem.fitems">
           <div style="font-weight:bold;" class="pull-right">{{item.Quantity}}</div>
           <div><i class="fa fa-square-o" aria-hidden="true"></i>
-<img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.IsCoupon"><span style="font-weight: bold;" data-ng-bind-html="item.Description"></span></div>
+<img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.IsCoupon"><span class="fontprint" style="font-weight: bold;" data-ng-bind-html="item.Description"></span>, <span class="fontprint">{{item.PriceString}}</span></div>
 		  <div data-ng-show="item.Comment">(<span data-ng-bind-html="item.Comment"></span>)</div>
-          <div data-ng-hide="item.IsCoupon">
-            <span>{{item.PriceString}}</span>
-          </div>
           <div data-ng-show="item.ItemTypeId == 13">Card Coupon</div>
         </div>
       </div>
