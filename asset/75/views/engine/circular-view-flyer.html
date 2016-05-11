@@ -36,7 +36,7 @@
   <div class="row">
   	<div class="col-md-12" data-ng-include="getThemeUrl('/views/engine/circular-view-type.html')"></div>
   </div>
-  <br/>
+  <p class="onlymobile" style="text-align: left; line-height: 15px; padding: 10px; margin-left: 15px; margin-right: 10px; background: rgb(238, 238, 238) none repeat scroll 0% 0%;"><small><b>To view larger, or add items to your list:</b><br>Tap an item for <i class="fa fa-info-circle"></i> to appear.<br>Tap <i class="fa fa-info-circle"></i> to view item.</small></p>
   <div style="padding-right: 10px;" data-ng-click="vm.activeItem = null" data-ng-if="!win.html5">
     <div class="dcircular-list" data-ng-hide="vm.circIdx > 0 && vm.pageIdx > 0">
     	<div class="dcircular-list-content">
@@ -205,5 +205,13 @@
 svg {
   width: 100%;
   height: 100%;
+}
+
+@media (min-width: 450px) {
+
+	.onlymobile {
+		display: none;	
+	}
+	
 }
 </style>
