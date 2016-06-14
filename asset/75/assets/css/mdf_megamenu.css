@@ -395,7 +395,6 @@ a.navbar-brand img{
 .search-box a{
 	position: relative;
 	display: block;
-	background: url(../images/icon-search.svg) center no-repeat !important;
 	/*border: 1px solid #999;*/
 	width: 34px;
 	height: 35px;
@@ -424,7 +423,7 @@ a.navbar-brand img{
 }
 #mdf_menu.traditional .search-box a,
 #mdf_menu.wireframed ul .search-box a{
-	background: #c8c8c8 url("../images/icon-search.svg") center no-repeat;
+	background: #c8c8c8 center no-repeat;
 }
 input{
         top: 0px!important;
