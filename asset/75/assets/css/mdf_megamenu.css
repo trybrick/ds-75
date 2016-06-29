@@ -30,7 +30,7 @@ a:hover{
 	margin-left: 3px;
 }
 .has-drop:after{
-	content:"\e258";
+	/*content:"\e258";*/
 	position: absolute;
 	font-size: 0.7em;
 	font-family: "Glyphicons Halflings";
@@ -521,7 +521,7 @@ input{
 		display: none;
 	}
 	.has-drop:after{
-		content:"\e252";
+		/*content:"\e252";*/
 		font-size: 16px;
 		padding: 5px;
 		top: -5px;
