@@ -556,7 +556,19 @@ input{
 	    padding-left: 0;
 	}
 	
+	.submenuR {
+    border-left: none !important;
+    /*background-color: #c2b69c !important;*/
+}
 	
+	
+}
+
+.submenuR {
+    border-left-color: #ccc;
+    border-left-style: solid;
+    border-left-width: thin;
+    /*background-color: #c2b69c !important;*/
 }
 
 
