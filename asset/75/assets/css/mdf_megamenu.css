@@ -565,9 +565,9 @@ input{
 }
 
 .submenuR {
-    border-left-color: #ccc;
-    border-left-style: solid;
-    border-left-width: thin;
+    border-left-color: #ccc !important;
+    border-left-style: solid !important;
+    border-left-width: thin !important;
     /*background-color: #c2b69c !important;*/
 }
 
