@@ -549,7 +549,13 @@ input{
 			display:none;
 	}
 }
-@media only screen and (min-width: 1207px){
+.submenuR {
+    border-left-color: #ccc !important;
+    border-left-style: solid !important;
+    border-left-width: thin !important;
+    /*background-color: #c2b69c !important;*/
+}
+@media only screen and (min-width: 1206px){
 	
 	#mdf_menu .navbar-collapse {
 	    padding-right: 0;
@@ -563,14 +569,6 @@ input{
 	
 	
 }
-
-.submenuR {
-    border-left-color: #ccc !important;
-    border-left-style: solid !important;
-    border-left-width: thin !important;
-    /*background-color: #c2b69c !important;*/
-}
-
 
 #mdf_menu .container {
 	width: 100%;
