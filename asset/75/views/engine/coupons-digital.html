@@ -1,6 +1,6 @@
 <div class="hidden-meta" data-gsn-title="{{ChainName}} | coupons"></div>
 <div data-ctrl-coupon-classic="" class="col-md-12" data-ng-init="sortByName = 'About to Expire';">
-  <div data-ng-include="getThemeUrl('/views/engine//coupons-tabs.html')"></div>
+  <div data-ng-include="getThemeUrl('/views/engine/coupons-tabs.html')"></div>
   <div>
     <div data-ng-show="!youtech.hasValidCard()">
       <p>Your loyalty card number could not be validated. Please <a href="javascript:void(0)" data-ng-click="goUrl('/profile')">update your profile</a> or visit a store to sign up for a card.</p>
@@ -52,6 +52,6 @@
     </div>
     <div data-infinite-scroll="loadMore()">
       <div class="col-md-4 col-sm-6 coupons" data-ng-include="getThemeUrl('/views/engine/coupons-item.html')" data-ng-repeat="item in selectedCoupons.items"></div>
-    </div>          
+    </div>
   </div>
 </div>
