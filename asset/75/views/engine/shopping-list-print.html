@@ -43,7 +43,7 @@
 			<i class="fa fa-square-o" aria-hidden="true"></i>
 			<img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.IsCoupon"><span class="fontprint" data-ng-bind-html="item.Description"></span>, 
 			<span class="fontprint">{{item.PriceString}}</span>
-			<div style="font-size: 11px;" data-ng-bind-html="item.LinkedItem.ItemDescription"></div>
+			<div data-ng-bind-html="item.LinkedItem.ItemDescription"></div>
 		  
 		  </div>
 		  <div data-ng-show="item.Comment">(<span data-ng-bind-html="item.Comment"></span>)</div>
