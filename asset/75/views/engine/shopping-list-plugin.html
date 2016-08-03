@@ -26,7 +26,8 @@
     </div>
     <div style="line-height:14px; text-align:left;" class="col-xs-9">
       <a class="btn btn-default btn-xs pull-right" href="javascript:void(0)" data-ng-click="doItemRemove(item)" style="border-radius: 20px; padding: 5px !important; margin-top: -5px; margin-right: 5px !important;"><i class="pull-right glyphicon glyphicon-remove"></i></a>  
-      <span style="font-size: 12px;">{{item.Quantity}} x </span><span style="font-size: 12px;" data-ng-bind-html="item.Description" class="generic-content"></span>  
+      <span style="font-size: 12px;">{{item.Quantity}} x </span><span style="font-weight: bold;font-size: 12px;" data-ng-bind-html="item.Description" class="generic-content"></span> 
+	<div style="font-weight: bold;font-size: 12px;" data-ng-bind-html="item.LinkedItem.ItemDescription"></div>	  
     </div>
   </div>
 </div></div></div>
