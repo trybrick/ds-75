@@ -86,12 +86,13 @@
         <div class="pull-left" style="padding-right: 5px;">
           <img style="width: 60px" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
         </div>
-        <span data-ng-if="item.IsCoupon">
+        <span data-ng-if="item.IsCoupon" style="font-weight: bold;>
           <img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.ItemTypeId == 13"/>
           <img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.ItemTypeId == 2"/>
           {{item.PriceString}}
         </span>
         <div style="font-weight: bold;" data-ng-bind-html="item.Description"></div>
+		<div style="font-weight: bold;" data-ng-bind-html="item.LinkedItem.ItemDescription"></div>
         <div data-ng-hide="item.IsCoupon" class="price">{{item.PriceString}}</div>
         <div data-ng-show="item.ItemTypeId == 13">Redeemable one time only.</div>
         <input style="height: 20px;" placeholder="Comment" data-ng-hide="item.IsCoupon" data-ng-model="item.Comment" ui-keypress="{13:'doUpdateQuantity(item)'}" />
