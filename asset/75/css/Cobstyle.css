@@ -24,10 +24,10 @@ h1 {
 
 /* fix for full background image */
 
-header div.Promocontainer {
+.Promocontainer {
 		position: relative;
 		top: 15px;
-	}
+}
 
 /*  Devices that don't do fixed backgrounds  */
 
@@ -41,7 +41,7 @@ header div.Promocontainer {
 }
 	
 @media (max-width: 1200px) {
-	header div.Promocontainer {
+	.Promocontainer {
 		background: #fff;
 		padding-top: 10px;
 	}
