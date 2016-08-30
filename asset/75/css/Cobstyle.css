@@ -22,6 +22,13 @@ h1 {
 }
 }
 
+/* fix for full background image */
+
+.Promocontainer {
+		position: relative;
+		top: 15px;
+}
+
 /*  Devices that don't do fixed backgrounds  */
 
 @media (max-width: 768px) {
@@ -31,6 +38,14 @@ h1 {
 		background-position: top center !important;
 		background-attachment: scroll !important;
 	}
+}
+	
+@media (max-width: 1200px) {
+	.Promocontainer {
+		background: #fff;
+		padding-top: 10px;
+	}
+	
 }
 
 /*  Large screen fixes  */
