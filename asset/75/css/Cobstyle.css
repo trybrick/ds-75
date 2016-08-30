@@ -33,6 +33,16 @@ h1 {
 	}
 }
 
+@media (max-width: 1200px) {
+	header div.Promocontainer {
+		background: #fff;
+		top: 15px;
+		position: relative;
+		padding-top: 10px;
+	}
+	
+}
+
 /*  Large screen fixes  */
 
 @media only screen and (min-width: 1679px) {
