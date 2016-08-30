@@ -22,6 +22,16 @@ h1 {
 }
 }
 
+/*  Devices that don't do fixed backgrounds  */
+
+@media (max-width: 768px) {
+	body {
+		background-size: 300% !important;
+		background-repeat: no-repeat !important;
+		background-position: top center !important;
+		background-attachment: scroll !important;
+	}
+}
 
 /*  Large screen fixes  */
 
