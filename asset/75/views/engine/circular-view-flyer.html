@@ -46,7 +46,7 @@
             <div class="col-md-4 col-sm-6 dcircular-list-single" data-ng-repeat="item in vm.digitalCirc.Circulars">
         <a class="thumbnail dcircular-thumbnail" href="javascript:void(0)" data-ng-click="goUrl('/circular?c=' + ($index + 1) + '&p=1')">
         <div class="circularline">
-           <div class="CircularThumb"><img class="dcircular-image" alt="" data-ng-src="{{item.ImageUrl.replace('upload.gsngrocers.com/', 'cdn2.gsngrocers.com/rs/300x/up/')}}"></div></div>
+           <div class="CircularThumb"><img class="dcircular-image" alt="" data-ng-src="{{item.ImageUrl.replace('upload.gsngrocers.com/circular', 'cdn2.gsngrocers.com/rs/300x/up/circular').replace('2000x,q50', '300x')}}"></div></div>
            <div class="caption dcircular-caption"><h6 style="width: 100%; text-align: center; text-decoration: none;">{{item.CircularTypeName}}</h6></div>
          </a>
          </div>
@@ -66,7 +66,7 @@
             data-ng-swipe-right="vm.pageIdx = (vm.pageIdx <= 1) ? vm.pageIdx = vm.circular.Pages.length : vm.pageIdx - 1"
             data-ng-swipe-left="vm.pageIdx = (vm.pageIdx >= vm.circular.Pages.length) ? 1 : vm.pageIdx + 1">
           <div data-ng-repeat="item in vm.page.Items"
-            class="myContent"
+            class="myContent" style="display: none" data-ng-show="vm.loadCount > 0"
             data-ui-event="{'mouseover': 'vm.activeItem = item', 'mouseout': 'vm.activeItem = null'}"
             data-ng-class="{'active': vm.activeItem.ItemId == item.ItemId }"
             data-ng-click="vm.activeItem = item"
