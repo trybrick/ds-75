@@ -3210,10 +3210,11 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
 	color: #fff !important;
 	background-color: #005b7f;
-	font-weight: bold;
+	font-weight: bold !important;
 }
 .nav-stacked>li {
-	float: none
+	float: none;
+	margin-top: 5px;
 }
 .nav-stacked>li+li {
 	margin-top: 2px;
