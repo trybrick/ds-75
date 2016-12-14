@@ -3208,11 +3208,13 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 	margin-left: 2px
 }
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
-	color: #fff;
-	background-color: #428bca
+	color: #fff !important;
+	background-color: #005b7f;
+	font-weight: bold !important;
 }
 .nav-stacked>li {
-	float: none
+	float: none;
+	margin-top: 5px;
 }
 .nav-stacked>li+li {
 	margin-top: 2px;
