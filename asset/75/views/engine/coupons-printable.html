@@ -2,7 +2,7 @@
 <div style="padding:15px !important;" data-ctrl-coupon-classic="" class="col-md-12" data-ng-init="sortByName = 'About to Expire'; disableCouponPrinter = true;">
   <div data-ng-include="getThemeUrl('/views/engine/coupons-tabs.html')"></div>
 
-  <div class="row">
+  <div class="row" data-ng-show="coupons.store.items.length > 1">
     <div class="col-md-8 col-xs-12">
       <div>
 
