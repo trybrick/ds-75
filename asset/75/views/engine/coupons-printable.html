@@ -1,5 +1,5 @@
 <div class="hidden-meta" data-gsn-title="{{ChainName}} | coupons"></div>
-<div style="padding:15px !important;" data-ctrl-coupon-classic="" class="col-md-12" data-ng-init="sortByName = 'About to Expire';">
+<div style="padding:15px !important;" data-ctrl-coupon-classic="" class="col-md-12" data-ng-init="sortByName = 'About to Expire'; disableCouponPrinter = true;">
   <div data-ng-include="getThemeUrl('/views/engine/coupons-tabs.html')"></div>
 
   <div class="row">
@@ -23,7 +23,7 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row" data-ng-show="coupons.store.items.length > 1">
     <form name="printableCouponSearch" class="input-group pull-right" style="width: 300px; padding-top: 5px; padding-right: 5px;">
       <input style="margin-top:15px; height:32px;" type="text" class="form-control" placeholder="Search for..." name="q" data-ng-model="vm.filterBy">
       <div class="input-group-btn">
@@ -42,15 +42,14 @@
 
     </div>
     <div data-ng-repeat-end=""></div>
-    <div class="row" data-infinite-scroll="loadMore()">
-  <hr style="clear: both" data-ng-show="coupons.store.items.length > 0"/>
-  <h4 data-ng-show="selectedCoupons.items.length > 0">Manufacturer Coupons</h4>
-    <div data-ng-repeat-start="item in selectedCoupons.items" data-ng-class="{'row': $index % 3 === 0 }"></div>
-      <div class="col-md-4 col-sm-6 coupons"
-        data-ng-include="getThemeUrl('/views/engine/coupons-item.html')">
-      </div>
-      <div data-ng-repeat-end=""></div>
-    </div>
+    <div class="row">
+    <hr style="clear: both" data-ng-show="coupons.store.items.length > 0"/>
+<h4>Manufacturer Coupons</h4>
+<noscript>
+<p>Coupons powered by <a href="https://www.coupons.com?pid=13903&nid=10&zid=xh20&bid=1436600001">Coupons.com</a></p>
+</noscript>
+<script id="scriptId_718x940_161141" type="text/javascript" src="//bcg.coupons.com/?scriptId=161141&bid=1436600001&format=718x940&bannerType=3&channel=cobs">
+</script>
   </div>
   <div class="hidden" style="display:none">
     <div data-gsn-modal="getContentUrl('/../common/views/modal-gcprinter-notinstalled.html')" data-show-if="printer.notinstalled" data-event-to-close="gsnevent:gcprinter-ready"></div>
