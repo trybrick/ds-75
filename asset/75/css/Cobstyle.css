@@ -195,13 +195,13 @@ h1 {
 		background-attachment: scroll !important;
 	}
 }
-	
+
 @media (max-width: 1200px) {
 	.Promocontainer {
 		background: #fff;
 		padding-top: 10px;
 	}
-	
+
 }
 
 /*  Large screen fixes  */
@@ -289,7 +289,7 @@ section {
 }
  @media (max-width: 767px) {
 /* Subscription Box */
-	
+
 .gmodal-left, .gmodal-right {
 	width: 0px
 }
@@ -707,7 +707,7 @@ h5 {
 	background-color: #888;
 }
 .navbar-default {
-	background-image: url(http://upload.gsngrocers.com/chainfiles/75/creative/201511/635824066450013933-mainnav_bg.png);
+	background-image: url(https://upload.gsngrocers.com/chainfiles/75/creative/201511/635824066450013933-mainnav_bg.png);
 	background-repeat: repeat-x;
 	background-size: 100% 100%;
 }
@@ -794,7 +794,7 @@ h5 {
 	border-radius: 3px;
 }
 .navbar-default.navbar-shrink {
-	background-image: url(http://upload.gsngrocers.com/chainfiles/75/creative/201511/635824066450013933-mainnav_bg.png);
+	background-image: url(https://upload.gsngrocers.com/chainfiles/75/creative/201511/635824066450013933-mainnav_bg.png);
 	background-repeat: repeat-x;
 	background-size: 100% 100%;
 }
@@ -1981,14 +1981,14 @@ img.SidefeaturedProfile {
 	margin-bottom:10px;
 }
 .featuredBlog_Img {
-	float:left; 
+	float:left;
 	margin-right:20px;
 }
 .featuredBlog_Title {
 	padding-top: 20px;
 }
 .featuredBlog_Clear {
-	clear:both; 
+	clear:both;
 	margin-bottom:10px;
 }
 
