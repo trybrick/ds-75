@@ -54,7 +54,7 @@ function createCopyTask(chain) {
         }
     });
   });
-  
+
   config.tasksCopy.push('copy-ds-' + chain);
 }
 
@@ -142,7 +142,7 @@ gulp.task('build-deploy', function(cb){
 
 gulp.task('ds-common-config-for-local-cdn', function(){
   return gulp.src(['./git_components/ds-common/asset/config.json'])
-    .pipe(replace('http://cdn-stg.brickinc.net', ''))
+    .pipe(replace('https://cdn-stg.brickinc.net', ''))
     .pipe(gulp.dest('./asset'));
 });
 
