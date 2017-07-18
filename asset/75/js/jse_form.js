@@ -2,7 +2,7 @@
 // ---------- script properties ----------
 
 
-var results_location = "https://www.coborns.com/searchTest";
+var results_location = "/searchTest";
 
 
 // ---------- end of script properties ----------
