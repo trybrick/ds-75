@@ -60,7 +60,7 @@
       <p class="help-block emailInvalid" data-ng-show="myForm.email.$error.gsnValidUser">Email is invalid or not available.</p>
     </div>
     <div class="form-group" data-gsn-ft-config="rewardcard">
-      <div data-ng-if="item.Description" data-ng-include="'https://clientapi.gsn2.com/api/v1/content/meta/' + gsnApi.getChainId() + '/?name=home page&meta=rewardcard&type=text/html'"></div>
+      <div data-ng-if="item.Description" data-ng-include="'https://clientapi-stg.brickinc.net/api/v1/content/meta/' + gsnApi.getChainId() + '/?name=home page&meta=rewardcard&type=text/html'"></div>
     </div>
     <div class="form-group checkbox">
       <label><input type="checkbox" name="receiveemail" data-ng-model="profile.ReceiveEmail"/>
