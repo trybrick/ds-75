@@ -47,16 +47,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- DFP -->
 
-<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+
 <script>
   var googletag = googletag || {};
   googletag.cmd = googletag.cmd || [];
+   (function() {
+      var gads = document.createElement("script");
+      gads.async = true;
+      gads.type = "text/javascript";
+      var useSSL = "https:" == document.location.protocol;
+      gads.src = (useSSL ? "https:" : "http:") +
+      "//www.googletagservices.com/tag/js/gpt.js";
+      var node = document.getElementsByTagName("script")[0];
+      node.parentNode.insertBefore(gads, node);
+    })();
 </script>
 
 <script>
   googletag.cmd.push(function() {
-    googletag.defineSlot('/94606675/Coborns-CircularMOBILE', [320, 50], 'div-gpt-ad-1501264919913-0').addService(googletag.pubads());
-    googletag.defineSlot('/94606675/Coborns-CircularSidebar', [[300, 600], [320, 50], [300, 250]], 'div-gpt-ad-1501264919913-1').setTargeting('refresh').addService(googletag.pubads());
+    // googletag.defineSlot('/94606675/Coborns-CircularMOBILE', [320, 50], 'div-gpt-ad-1501264919913-0').addService(googletag.pubads());
+    var slot1 = googletag.defineSlot('/94606675/Coborns-CircularSidebar', [[300, 600], [320, 50], [300, 250]], 'div-gpt-ad-1501264919913-1').setTargeting('refresh').addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
 	googletag.display('div-gpt-ad-1501264919913-1');
@@ -397,7 +407,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <ul class="mdf_child_menu dropdown" data-width="200px" style="display: block; width: 300px;">
            <li><a href="/about-us"><i class="fa fa-smile-o"></i> about us</a></li>
            <!-- <li><a href="/more"><i class="icon ion-cash"></i> more rewards</a></li> -->
-
+           
            <li><a href="/coborns-cares"><i class="fa fa-heart"></i> coborn's cares</a></li>
            <li><a href="/coborns-loves-kids"><i class="fa fa-heart-o"></i> coborn's loves kids</a></li>
            <li><a href="/contact-us"><i class="icon ion-android-textsms"></i> contact us</a></li>
@@ -553,10 +563,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
  <!-- bricks scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js?nocache=1"></script>
-  <script src="https://clientapi-stg.brickinc.net/api/v1/store/sitecontentscript/[chainid]?nocache=1"></script>
+  <script src="https://clientapix.gsn2.com/api/v1/store/sitecontentscript/[chainid]?nocache=1"></script>
   <script data-brickid="[chainid]" src="https://cdn-stg.brickinc.net/script/bricktag/bricktag.min.js?nocache=1"></script>
   <script src="https://cdn-stg.brickinc.net/script/gsncore/latest/gsncore.min.js?nocache=1"></script>
-  <script src="https://clientapi-stg.brickinc.net/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/75/storeApp.js?nocache=1"></script>
+  <script src="https://clientapix.gsn2.com/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/75/storeApp.js?nocache=1"></script>
 
   <!-- angular depencencies -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular-sanitize.min.js"></script><!-- security -->
