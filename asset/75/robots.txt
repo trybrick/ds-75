@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /store-example
+Disallow: /Cobstore2036
+Disallow: /test_*
