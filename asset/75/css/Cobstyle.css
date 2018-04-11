@@ -1995,3 +1995,11 @@ img.SidefeaturedProfile {
 .featuredBlog_bg {
     /*background-color: #ececec;*/
 }
+
+.clbrtMORE-article {
+	border-bottom-color:#eee; 
+	border-bottom-style:solid; 
+	border-bottom-width:thin; 
+	margin-bottom:5px; 
+	text-align:center;
+}
