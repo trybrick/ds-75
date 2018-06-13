@@ -5,10 +5,10 @@
   <div class="modal-body">
     <div>Get your local deals right here, right now.</div>
     <div class="dropdown open">
-      <i class="fa fa-map-marker" aria-hidden="true"></i> My Store:
+      <i class="fa fa-map-marker" aria-hidden="true"></i>
       <a href="javascript:void(0)" style="margin-right: 10px" data-ng-click="gvm.storeLocatorActive = !gvm.storeLocatorActive">
         {{gvm.currentStore.StoreName}}
-        <span data-ng-if="!gvm.currentStore.StoreId">Choose a Store</span>
+        <span data-ng-if="!gvm.currentStore.StoreId"> -- Select a Store -- </span>
         <i class="glyphicon glyphicon-chevron-down" style="top: 2px;"></i>
         <span class="sr-only">Toggle Store Selection</span>
       </a>
