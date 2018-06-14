@@ -20,15 +20,14 @@
     <tr data-ng-repeat="item in vm.stores">
       <td>
         <a class="col-xs-12" data-ng-click="selectStore(item.point.StoreId, true)" href="javascript:void(0);" style="color: #000 !important;">
-
           <i class="fa fa-star-o pull-right" style="color: yellow; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: orange;" data-ng-if="item.point.StoreId == vm.currentStore.StoreId" title="My Store"></i>
-          <i aria-hidden="true" class="fa fa-map-marker">
-          </i>
-          {{item.point.StoreName}}
-          <br/>
-          <small>
+
+          <i aria-hidden="true" class="fa fa-map-marker"></i>
+          <div>{{item.point.StoreName}}</div>
+          <div><small>
             {{item.point.PrimaryAddress}} {{item.point.City}}, {{item.point.StateName}} {{item.point.PostalCode}}
-          </small>
+          </small></div>
+          <div>Estimated distance: <i>~{{item.distance}}</i> mile(s)</div>
         </a>
       </td>
     </tr>
