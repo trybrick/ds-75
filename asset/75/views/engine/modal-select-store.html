@@ -22,12 +22,11 @@
         <a class="col-xs-12" data-ng-click="selectStore(item.point.StoreId, true)" href="javascript:void(0);" style="color: #000 !important;">
           <i class="fa fa-star-o pull-right" style="color: yellow; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: orange;" data-ng-if="item.point.StoreId == vm.currentStore.StoreId" title="My Store"></i>
 
-          <i aria-hidden="true" class="fa fa-map-marker"></i>
+          <div><i aria-hidden="true" class="fa fa-map-marker"></i> <small><i>{{item.distance.toFixed(2)}}</i> mile(s)</small></div>
           <div>{{item.point.StoreName}}</div>
           <div><small>
             {{item.point.PrimaryAddress}} {{item.point.City}}, {{item.point.StateName}} {{item.point.PostalCode}}
           </small></div>
-          <div><small>Distance (est): <i>{{item.distance}}</i> mile(s)</small></div>
         </a>
       </td>
     </tr>
