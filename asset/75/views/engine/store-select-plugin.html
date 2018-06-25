@@ -1,0 +1,44 @@
+    <div class="dropdown open">
+      <a href="javascript:void(0)" style="display: block; width: 100%" data-ng-click="gvm.storeLocatorActive = !gvm.storeLocatorActive">
+        {{gvm.currentStore.StoreName}} &bull; {{gvm.currentStore.Phone}}
+        <span data-ng-if="!gvm.currentStore.StoreId"> -- Select a Store -- </span>
+        <i class="glyphicon glyphicon-chevron-down" style="float: right"></i>
+        <span class="sr-only">Toggle Store Selection</span>
+      </a>
+
+      <div class="dropdown-menu dropdown-menu-touch" role="menu" style="width: 100%; background: #fff;" data-ng-if="gvm.storeLocatorActive">
+
+<div data-ctrl-store-selector="" style="background: #fff; padding: 5px">
+  <div style="height: 200px; overflow-y: scroll"><table class="table table-hover">
+    <tr data-ng-repeat="item in vm.stores">
+      <td>
+        <a class="col-xs-12" data-ng-click="selectStore(item.point.StoreId, true)" href="javascript:void(0);" data-ng-class="{'mystore': item.point.StoreId == vm.currentStore.StoreId }">
+          <div style="float: right;">
+            <small><i>{{item.distance.toFixed(2)}}</i> mile(s)</small>
+          </div>
+          <div><i aria-hidden="true" class="fa fa-map-marker"></i> {{item.point.StoreName}} &bull; {{item.Phone}}</div>
+          <div><small>
+            {{item.point.PrimaryAddress}} {{item.point.City}}, {{item.point.StateName}} {{item.point.PostalCode}}
+          </small></div>
+        </a>
+      </td>
+    </tr>
+  </table></div>
+  <div class="generic-content" data-ng-if="vm.stores.length > 3" style="padding-top: 10px;">
+    Locate more stores:
+    <br/>
+    <form action="/storelocator" method="get">
+      <div class="input-group">
+        <input class="form-control" name="search" placeholder="City, State or Zip" type="text">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" type="submit">
+              Go
+            </button>
+          </span>
+        </input>
+      </div>
+    </form>
+  </div>
+</div>
+      </div>
+    </div>
