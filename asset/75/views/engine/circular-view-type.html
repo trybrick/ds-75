@@ -1,3 +1,14 @@
+<div class="pull-right dropdown open">
+  <a href="javascript:void(0)" style="display: block; width: 100%" data-ng-click="gvm.storeLocatorActive = !gvm.storeLocatorActive">
+    {{gvm.currentStore.StoreName}} &bull; {{gvm.currentStore.Phone}}
+    <span data-ng-if="!gvm.currentStore.StoreId"> -- Select a Store -- </span>
+    <i class="glyphicon glyphicon-chevron-down" style="float: right"></i>
+    <span class="sr-only">Toggle Store Selection</span>
+  </a>
+
+  <div class="dropdown-menu dropdown-menu-touch" role="menu" style="width: 100%; background: #fff;" data-ng-if="gvm.storeLocatorActive" data-ng-include="getThemeUrl('/views/engine/store-select-plugin.html')">
+  </div>
+</div>
 <div style="position: relative; left: 15px;">
 <a class="btn btn-default" href="javascript:void(0)" data-ng-click="goUrl('/circular')" title="flyer view" data-ng-class="{ 'active': !isListView }">
   <i class="fa fa-picture-o"></i>
@@ -16,54 +27,54 @@
 </a>
 </div>
 <style>
-  .availableVarieties 
+  .availableVarieties
   {
     padding: 5px;
     max-height: 472px;
     width: 300px;
   }
 
-  .varietiesHeader 
+  .varietiesHeader
   {
     margin: -5px -5px 5px;
     padding: 0 0 1px;
   }
 
-  .varietiesHeader h4 
+  .varietiesHeader h4
   {
     font-size: 12px;
     text-align: center;
   }
 
-  .availableVarietiesImage 
+  .availableVarietiesImage
   {
     margin-left: 46px;
 	max-width: 100%;
   }
 
-  .availableDescription 
+  .availableDescription
   {
     height: 90px;
     overflow: hidden;
   }
 
-  .availableVarietiesList 
+  .availableVarietiesList
   {
     height: 118px;
     overflow: scroll;
   }
 
-  .availableVarieties ul 
+  .availableVarieties ul
   {
     padding: 0;
   }
 
-  .availableVarieties ul li 
+  .availableVarieties ul li
   {
     list-style-type: none;
   }
 
-  .varieties li 
+  .varieties li
   {
     padding-bottom: 4px;
   }
