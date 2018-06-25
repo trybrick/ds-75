@@ -1,14 +1,4 @@
-<div class="pull-right dropdown open" style="z-index: 1; width: 300px">
-  <a href="javascript:void(0)" style="display: block; width: 100%" data-ng-click="gvm.storeLocatorActive = !gvm.storeLocatorActive">
-    {{gvm.currentStore.StoreName}} &bull; {{gvm.currentStore.Phone}}
-    <span data-ng-if="!gvm.currentStore.StoreId"> -- Select a Store -- </span>
-    <i class="glyphicon glyphicon-chevron-down" style="float: right" data-ng-hide="gvm.storeLocatorActive"></i><i class="glyphicon glyphicon-chevron-right" style="float: right" data-ng-show="gvm.storeLocatorActive"></i>
-    <span class="sr-only">Toggle Store Selection</span>
-  </a>
-
-  <div class="dropdown-menu dropdown-menu-touch" role="menu" style="width: 100%; background: #fff;" data-ng-if="gvm.storeLocatorActive" data-ng-include="getThemeUrl('/views/engine/store-select-plugin.html')">
-  </div>
-</div>
+<a data-gsn-modal="getThemeUrl('/views/engine/modal-select-store.html')" data-show-if="gvm.showStoreSelectModal" data-hide-on="none" data-ng-init="useBrowserGeo = true" style="z-index: 1;" class="pull-right">Change your Store</a>
 <div style="position: relative; left: 15px;">
 <a class="btn btn-default" href="javascript:void(0)" data-ng-click="goUrl('/circular')" title="flyer view" data-ng-class="{ 'active': !isListView }">
   <i class="fa fa-picture-o"></i>
