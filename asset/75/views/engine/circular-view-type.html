@@ -2,7 +2,7 @@
   <a href="javascript:void(0)" style="display: block; width: 100%" data-ng-click="gvm.storeLocatorActive = !gvm.storeLocatorActive">
     {{gvm.currentStore.StoreName}} &bull; {{gvm.currentStore.Phone}}
     <span data-ng-if="!gvm.currentStore.StoreId"> -- Select a Store -- </span>
-    <i class="glyphicon glyphicon-chevron-down" style="float: right" data-ng-show="gvm.storeLocatorActive"></i><i class="glyphicon glyphicon-chevron-right" style="float: right" data-ng-hide="gvm.storeLocatorActive"></i>
+    <i class="glyphicon glyphicon-chevron-down" style="float: right" data-ng-hide="gvm.storeLocatorActive"></i><i class="glyphicon glyphicon-chevron-right" style="float: right" data-ng-show="gvm.storeLocatorActive"></i>
     <span class="sr-only">Toggle Store Selection</span>
   </a>
 
