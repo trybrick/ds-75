@@ -1,13 +1,3 @@
-    <div class="dropdown open">
-      <a href="javascript:void(0)" style="display: block; width: 100%" data-ng-click="gvm.storeLocatorActive = !gvm.storeLocatorActive">
-        {{gvm.currentStore.StoreName}} &bull; {{gvm.currentStore.Phone}}
-        <span data-ng-if="!gvm.currentStore.StoreId"> -- Select a Store -- </span>
-        <i class="glyphicon glyphicon-chevron-down" style="float: right"></i>
-        <span class="sr-only">Toggle Store Selection</span>
-      </a>
-
-      <div class="dropdown-menu dropdown-menu-touch" role="menu" style="width: 100%; background: #fff;" data-ng-if="gvm.storeLocatorActive">
-
 <div data-ctrl-store-selector="" style="background: #fff; padding: 5px">
   <div style="height: 200px; overflow-y: scroll"><table class="table table-hover">
     <tr data-ng-repeat="item in vm.stores">
@@ -40,5 +30,3 @@
     </form>
   </div>
 </div>
-      </div>
-    </div>

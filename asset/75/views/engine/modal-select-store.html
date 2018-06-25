@@ -5,7 +5,19 @@
   <div class="modal-body">
     <div>Get your local deals right here, right now.</div>
     <br />
-    <div data-ng-include="getThemeUrl('/views/engine/store-select-plugin.html')"></div>
+    <div class="dropdown open">
+      <a href="javascript:void(0)" style="display: block; width: 100%" data-ng-click="gvm.storeLocatorActive = !gvm.storeLocatorActive">
+        {{gvm.currentStore.StoreName}} &bull; {{gvm.currentStore.Phone}}
+        <span data-ng-if="!gvm.currentStore.StoreId"> -- Select a Store -- </span>
+        <i class="glyphicon glyphicon-chevron-down" style="float: right"></i>
+        <span class="sr-only">Toggle Store Selection</span>
+      </a>
+
+      <div class="dropdown-menu dropdown-menu-touch" role="menu" style="width: 100%; background: #fff;" data-ng-if="gvm.storeLocatorActive" data-ng-include="getThemeUrl('/views/engine/store-select-plugin.html')">
+      </div>
+
+      </div>
+    </div>
   </div>
   <div class="modal-footer" style="text-align: left">
     You must select a store to continue.
