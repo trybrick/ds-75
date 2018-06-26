@@ -1,0 +1,32 @@
+<div data-ctrl-store-selector="" style="background: #fff; padding: 5px">
+  <div style="height: 200px; overflow-y: scroll"><table class="table table-hover">
+    <tr data-ng-repeat="item in vm.stores">
+      <td>
+        <a class="col-xs-12" data-ng-click="selectStore(item.point.StoreId, true)" href="javascript:void(0);" data-ng-class="{'mystore': item.point.StoreId == vm.currentStore.StoreId }">
+          <div style="float: right;">
+            <small><i>{{item.distance.toFixed(2)}}</i> mile(s)</small>
+          </div>
+          <div><i aria-hidden="true" class="fa fa-map-marker"></i> {{item.point.StoreName}} &bull; {{item.point.Phone}}</div>
+          <div><small>
+            {{item.point.PrimaryAddress}} {{item.point.City}}, {{item.point.StateName}} {{item.point.PostalCode}}
+          </small></div>
+        </a>
+      </td>
+    </tr>
+  </table></div>
+  <div class="generic-content" data-ng-if="vm.stores.length > 3" style="padding-top: 10px;">
+    Locate more stores:
+    <br/>
+    <form action="/storelocator" method="get">
+      <div class="input-group">
+        <input class="form-control" name="search" placeholder="City, State or Zip" type="text">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" type="submit">
+              Go
+            </button>
+          </span>
+        </input>
+      </div>
+    </form>
+  </div>
+</div>
