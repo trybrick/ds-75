@@ -22,11 +22,11 @@
                 <li>
                     <a href="http://twitter.com/share?url={{encodeURIComponent(getFullPath('/circular/list?cache=no&amp;storenbr=' + gvm.currentStore.StoreNumber + '&q=' + item.ItemId))}}&amp;text={{item.Description}}" rel="nofollow" target="_blank" tabindex="0"><i class="fa fa-twitter"></i></a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="https://plus.google.com/share?url={{getFullPath('/circular/list?cache=no&amp;storenbr=' + gvm.currentStore.StoreNumber + '&amp;q=' + item.ItemId)}}" target="_blank" tabindex="0">
                         <i class="fa fa-google-plus"></i>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="http://pinterest.com/pin/create/button/?url={{getFullPath('/circular/list?cache=no&amp;storenbr=' + gvm.currentStore.StoreNumber + '&amp;q=' + item.ItemId)}}" rel="nofollow" target="_blank" tabindex="0">
                         <i class="fa fa-pinterest"></i>
@@ -36,8 +36,9 @@
             </div>
         </div>
         <div class="col-md-7" style="position: relative; overflow: auto; display: block;">
-            <div style="position: absolute; top: 0px; right: 26px; z-index: 1">
-                <button class="btn btn-default btn-sm" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
+            <div>
+            <small><a target="blank" href="https://morerewards.app.link">Log in to your MORE Rewards account</a> to create your shopping list</small>
+                <!-- <button class="btn btn-default btn-sm" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button> -->
             </div>
             <div style="max-width: 100%; max-height: 300px; text-align: center">
                 <img class="myimage" itemprop="image" data-ng-src="{{item.ImageUrl || getThemeUrl('/images/no_image.jpg')}}" />

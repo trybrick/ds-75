@@ -1,16 +1,24 @@
 <div class="hidden-meta" data-gsn-title="{{ChainName}} | circulars"></div>
 <div style="padding:15px !important;" class="col-md-12" data-ctrl-circular="" data-ng-init="isListView = (currentPath.indexOf('list') > 0 || currentPath.indexOf('text') > 0); vm.currentPage = 1">
-    <ul class="nav nav-tabs" style="padding-top: 5px">
-        <li class="active">
-            <a class="btn-default" href="/circular">Weekly Ads</a>
-        </li>
-        <li data-ng-class="" class="hidden-xs">
-            <a class="btn-default" href="/coupons">Coupons</a>
-        </li>
-        <li data-ng-class="">
-            <a class="btn-default" href="/mylist">My List</a>
-        </li>
-    </ul>
+<ul class="nav-pills" style="font-size:.8em;float:right;background:#fff !important;">
+  
+  <li>
+    <a style="margin-bottom:0;" class="moreicon" href="https://morerewards.app.link"><img alt="Login to your MORE Rewards account" src="https://upload.brickinc.net/chainfiles/129/creative/201807/636669252543548929-morerewards.png" /></a>
+  </li>
+  <li>
+    <a style="margin-bottom:0;" class="moreicon" href="https://morerewards.app.link/?loc-key=BZIALERT11&BirdziShopper=%7B%22Launch%22:%22MyOffers%22%7D"><img alt="Browse 100s of Digital Coupons" src="https://upload.brickinc.net/chainfiles/129/creative/201807/636669252507456266-morerebates.png" /></a></a>
+  </li>
+  <li>
+  <a style="margin-bottom:0;" target="_blank" class="moreicon" href="https://www.celebratemore.com"><img alt="Get Inspired" src="https://upload.brickinc.net/chainfiles/129/creative/201807/636669252472769874-celebratemore.png" /></a>
+  </li>
+  </ul>
+
+<ul class="nav nav-tabs" style="padding-top: 5px">
+<li class="active">
+    <a class="btn-default" href="/circular">Weekly Ads</a>
+  </li>
+
+  </ul>
     <div data-ng-show="vm.noCircular">
         <h3>No circular for this store.</h3>
     </div>
@@ -123,9 +131,9 @@ border-bottom-right-radius: 5px;" class="btn btn-default" type="submit">
                     <div style="font-size:1.5em; margin-right: 15px; text-align:center;" class="SalePrice" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}</div>
                     <div class="savings" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
                 </div>
-                <div class="col-md-1 col-xs-3">
+                <!-- <div class="col-md-1 col-xs-3">
                     <button class="btn btn-default btn-xs pull-right" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
-                </div>
+                </div> -->
             </div>
             <div data-ng-repeat-end=""></div>
             <div>
@@ -139,6 +147,18 @@ border-bottom-right-radius: 5px;" class="btn btn-default" type="submit">
 <style>
 .circularItem img {
     width: auto;
+}
+
+.moreicon img {
+	width:40px;
+	height:40px;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	margin-left:15px;
+}
+.moreicon img:hover {
+	width: 55px;
+	height: 55px;
 }
 
 @media(max-width: 767px) {

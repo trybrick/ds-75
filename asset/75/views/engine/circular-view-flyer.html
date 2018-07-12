@@ -7,20 +7,24 @@
 
  <div>
 
- <ul class="nav nav-tabs" style="padding-top: 5px">
+<ul class="nav-pills" style="font-size:.8em;float:right;background:#fff !important;">
+  
+  <li>
+    <a style="margin-bottom:0;" class="moreicon" href="https://morerewards.app.link"><img alt="Login to your MORE Rewards account" src="https://upload.brickinc.net/chainfiles/129/creative/201807/636669252543548929-morerewards.png" /></a>
+  </li>
+  <li>
+    <a style="margin-bottom:0;" class="moreicon" href="https://morerewards.app.link/?loc-key=BZIALERT11&BirdziShopper=%7B%22Launch%22:%22MyOffers%22%7D"><img alt="Browse 100s of Digital Coupons" src="https://upload.brickinc.net/chainfiles/129/creative/201807/636669252507456266-morerebates.png" /></a></a>
+  </li>
+  <li>
+  <a style="margin-bottom:0;" target="_blank" class="moreicon" href="https://www.celebratemore.com"><img alt="Get Inspired" src="https://upload.brickinc.net/chainfiles/129/creative/201807/636669252472769874-celebratemore.png" /></a>
+  </li>
+  </ul>
 
-
+<ul class="nav nav-tabs" style="padding-top: 5px">
 <li class="active">
-		<a class="btn-default" href="/circular">Weekly Ads</a>
+    <a class="btn-default" href="/circular">Weekly Ads</a>
   </li>
 
-
-	<li data-ng-class="" class="hidden-xs">
-		<a class="btn-default" href="/coupons">Coupons</a>
-  </li>
-    <li data-ng-class="">
-		<a class="btn-default" href="/mylist">My List</a>
-  </li>
   </ul>
 
  </div>
@@ -74,23 +78,27 @@
             <div style="position: relative" class="hover-zoom"
             data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-show-if="vm['item' + $index]" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }"
             data-ng-dblclick="showModal()">
-              <a class="btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)" data-ng-class="{'circAddButton': !isOnList(item)}">
+             <!-- <a class="btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)" data-ng-class="{'circAddButton': !isOnList(item)}">
                 <i class="fa" data-ng-class="{'fa-square-o': !isOnList(item), 'fa-check-square-o': isOnList(item)}"></i> {{ !isOnList(item) ? 'ADD ITEM' : 'ON LIST'}}
-              </a>
+              </a>-->
               <a class="btn btn-default btn-xs circInfoButton" title="View item details..."  data-ng-click="showModal()">
-                <i class="fa fa-info-circle"></i>
+                <i class="fas fa-info-circle"></i>
+              </a>
+              <a class="btn btn-default btn-xs circAddButton" data-ng-click="showModal()">
+                ITEM DETAILS
               </a>
               <div class="ripple" style="opacity: 0.3"></div>
             </div>
           </div>
           <div class="dcircular-static" data-ng-if="vm.page.Items.length <= 0"><strong>* image only/non-interactive flyer</strong></div>
-          <svg id="myFlyer" version="1.1"
+       <svg id="myFlyer" version="1.1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             xml:space="preserve" preserveAspectRatio="xMinYMin meet">
             <image width="1" height="1" xlink:href="" class="circImage" style="display: none"></image>
             <rect ng:attr:x="{{item.rect.x}}" ng:attr:y="{{item.rect.y}}" ng:attr:width="{{item.rect.width}}" ng:attr:height="{{item.rect.height}}" opacity="0" data-ng-repeat="item in vm.page.Items | orderBy:['-ItemId']" ng-cloak="" data-gsn-hover-sync="#item_{{item.ItemId}}" data-ng-click="vm.activeItem = item"
             data-ng-class="{'onlist' : isOnList(item)}"></rect>
           </svg>
+        
         </div>
         <br />
         <div data-ng-if="vm.digitalCirc.Circulars.length > 1"><a href="javascript:void(0)" data-ng-click="goUrl('/circular')" class="dcircular-back-to-list"><i class="fa fa-arrow-circle-left"></i>
@@ -98,18 +106,16 @@
        <div style="width: 100%;" class="text-center">
         <ul class="pagination" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')"></ul></div>
       </div>
+      <!-- DFP MOBILE Ad Unit -->
       
-      <!-- MOBILE DFP Ad Unit -->
-      
-      <!-- /94606675/Coborns-CircularMOBILE -->
-<!-- <div id='div-gpt-ad-1501264919913-0' style='height:50px; width:320px; margin-left:auto; margin-right:auto;'>
+      <!-- /94606675/MPF-CircularMOBILE -->
+<!-- <div id='div-gpt-ad-1501259378763-0' style='height:50px; width:320px; margin-left: auto; margin-right:auto;'>
 <script>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1501264919913-0'); });
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1501259378763-0'); });
 </script>
 </div> -->
       
-      <!-- End MOBILE DFP Ad Unit -->
-      
+      <!-- END DFP MOBILE Ad Unit -->
       
       <div class="myFakeFlyer" data-sync-height="#myFlyer"
         data-gsn-svg-image=".circImage" data-src="{{vm.page.ImageUrl}}" data-watch="vm.page"></div>
@@ -124,6 +130,18 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1501264919913-0');
   <div class="popup-content"></div>
 </div>
 <style>
+.moreicon img {
+	width:40px;
+	height:40px;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	margin-left:15px;
+}
+.moreicon img:hover {
+	width: 55px;
+	height: 55px;
+}
+
 .myFakeFlyer {
   display: none;
 }
