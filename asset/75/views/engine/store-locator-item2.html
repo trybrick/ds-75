@@ -1,23 +1,46 @@
-
-                                        <div class="staticContent" data-ng-if="marker.location.Misc1" data-gsn-dynamic="" dynamic="marker.location.Misc1"></div>
-                                        <div class="infoMarker" data-ui-map-info-window="myInfoWindow">
-                                            <div data-ng-show="marker.location"> <strong>{{marker.location.StoreName}}</strong>
-                                                <br>
-                                                <address>
-                                                    {{marker.location.PrimaryAddress}}
-                                                    <br> {{marker.location.City}}, {{marker.location.StateName}} {{marker.location.PostalCode}}
-                                                </address>
-                                                <div> <a href="javascript:void(0)" class="btn btn-default btn-xs" data-ng-click="selectStore(marker)">Select Store</a> </div>
-                                            </div>
-                                        </div>
-                                        <div data-ng-include="getThemeUrl('/views/engine/Cobstore-locator-item.html')" itemscope="" itemtype="http://schema.org/Store"></div>
-                                        <div class="staticContent" data-ng-if="marker.location.Misc3" data-gsn-dynamic="" dynamic="marker.location.Misc3"></div>
-                                        <br>
-                                        <div style="color:#000; margin-top:-10px;" class="generic-content"><b>Services Offered:</b></div>
-                                        <!-- TOOLTIPS -->
-                                        <div class="store-tooltip" style="font-size:14pt;/* margin-top:-20px; */" data-gsn-dynamic="" dynamic="marker.location.Misc2">
-                                        </div>
-                                        <br>
-                                        <a class="button" style="box-shadow:none;" data-ng-href="/Cobstore{{marker.location.StoreNumber}}"> Store Details &gt;&gt; </a>
-                                        <div style="clear:both;">&nbsp;</div>
-                                        <!-- END TOOLTIPS -->
+<div style="overflow-y:hidden" class="store-info-item">
+ <!-- <a href="javascript:void(0)" data-ng-click="openMarkerInfo(marker, 14)" scroll-to="map_canvas"> -->
+    <h4 itemprop="name"><span data-yext-field="city" data-yext-id="{{marker.location.StoreNumber}}"></span></h4>
+  <!-- </a> -->
+  
+  <div class="hidden meta">
+    <div class="store-number">{{marker.location.StoreNumber}}</div>
+    <div class="store-id">{{marker.location.StoreId}}</div>
+  </div>
+  <div class="generic-content">
+    <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+     <span itemprop="streetAddress"><span data-yext-field="address1" data-yext-id="{{marker.location.StoreNumber}}"></span></span><br /><span data-yext-field="address2" data-yext-id="{{marker.location.StoreNumber}}"></span><br />
+     <span itemprop="addressLocality"><span data-yext-field="city" data-yext-id="{{marker.location.StoreNumber}}"></span></span>, <span itemprop="addressRegion"><span data-yext-field="state" data-yext-id="{{marker.location.StoreNumber}}"></span> <span itemprop="postalCode"><span data-yext-field="zip" data-yext-id="{{marker.location.StoreNumber}}"></span><br />
+     <span itemprop="telephone"><a data-yext-field="phone" data-yext-id="{{marker.location.StoreNumber}}"></a></span>
+   </address>
+	
+  <div>
+     <a href="/circular" data-ng-click="selectStore(marker, true)" class="btn btn-default">
+      <i class="fa fa-square-o" data-ng-hide="isCurrentStore(marker)"></i>
+      <i class="fa fa-check-square-o" data-ng-show="isCurrentStore(marker)"></i> My Store
+    </a>
+  </div>
+  <div class="generic-content"><i data-ng-if="searchCompleted">{{marker.location.zDistance}} miles</i></div>
+  <div class="generic-content">Store Hours:</div>
+  <div class="generic-content" itemprop="openingHours"><div data-yext-field="hours" data-yext-id="{{marker.location.StoreNumber}}"></div></div>
+  <div data-ng-show="marker.location.Redirect" class="generic-content hidden-info">
+   <a href="javascript:void(0)" data-ng-click="goUrl(decodeServerUrl(marker.location.Redirect))"> 
+      <h5>Store Details</h5>
+    </a>
+  </div>
+  <div data-ng-hide="marker.location.Redirect" class="generic-content hidden-info">
+    <a href="javascript:void(0)" data-ng-click="goUrl('/Cobstore' + marker.location.StoreNumber)">
+      <h5>Store Details</h5>
+    </a>
+  </div>
+  <div class="generic-content" data-gsn-dynamic="" dynamic="marker.location.Misc2"></div>
+  <div class="generic-content" data-ng-if="marker.location.PharmacyHours" itemscope itemtype="http://schema.org/Pharmacy">
+    <h5 itemprop="name">{{marker.location.StoreName}} Pharmacy</h5>
+    <div itemprop="description"></div><br />
+    <div>Open: <span itemprop="openingHours" data-ng-bind-html="marker.location.PharmacyHours"></span></div><br />
+    <div data-ng-if="marker.location.PharmacyPhone">Phone: <span itemprop="telephone">{{marker.location.PharmacyPhone}}</span></div><br />
+  </div>
+  	 <div class="generic-content">
+		<a data-yext-field="get-directions-link" data-yext-id="{{marker.location.StoreNumber}}"></a>
+  </div>
+</div>
