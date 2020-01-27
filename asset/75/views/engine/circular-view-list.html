@@ -1,7 +1,7 @@
 <div class="hidden-meta" data-gsn-title="{{ChainName}} | circulars"></div>
 <div style="padding:15px !important;" class="col-md-12" data-ctrl-circular="" data-ng-init="isListView = (currentPath.indexOf('list') > 0 || currentPath.indexOf('text') > 0); vm.currentPage = 1">
 <ul class="nav-pills" style="font-size:.8em;float:right;background:#fff !important;">
-  
+
   <li>
     <a style="margin-bottom:0;" class="moreicon" href="https://morerewards.app.link"><img alt="Login to your MORE Rewards account" src="https://upload.brickinc.net/chainfiles/129/creative/201807/636669252543548929-morerewards.png" /></a>
   </li>
@@ -34,6 +34,7 @@
     <div data-gsn-spinner="{radius:30, width:8, length: 16}" data-show-if="vm.digitalCirc == null || vm.noCircular">
     </div>
     <div class="row">
+      <div class="col-md-12" data-ng-include="getContentUrl('/../common/views/circular-message.html')"></div>
         <div class="col-md-7 col-xs-12">
             <div class="pull-left" data-ng-include="getThemeUrl('/views/engine/circular-view-type.html')"></div>
         </div>

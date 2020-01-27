@@ -52,13 +52,8 @@
   <div data-gsn-spinner="{radius:30, width:8, length: 16}" data-show-if="!mylist.hasLoaded()"></div>
   <div style="max-width:1000px; margin-left:auto;margin-right:auto;">
   <h1 style="font-size: 2em;">My Shopping List</h1>
-<div class="row" style="padding:50px 10px; font-size: 3rem;">
-  <div class="col-md-12" style="text-align:center;"><i class="fa fa-wrench"></i></div>
-  <div class="col-md-12" style="text-align:center;">
-    Under construction: Digital circular/shopping list capability is temporarily being updated. Thank you for your patience while updates are being made.
-  </div>
-</div>
   <div class="row">
+    <div class="col-md-12" data-ng-include="getContentUrl('/../common/views/circular-message.html')"></div>
     <div class="col-md-4">
       <div class="input-group addItemManage">
         <input style="margin-top:15px; height:32px;" type="text" class="form-control" data-ng-model="addString" placeholder="add your own item" ui-keypress="{13:'doAddOwnItem()'}">

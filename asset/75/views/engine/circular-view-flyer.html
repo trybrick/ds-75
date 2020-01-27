@@ -8,7 +8,7 @@
  <div>
 
 <ul class="nav-pills" style="font-size:.8em;float:right;background:#fff !important;">
-  
+
   <li>
     <a style="margin-bottom:0;" class="moreicon" href="https://morerewards.app.link"><img alt="Login to your MORE Rewards account" src="https://upload.brickinc.net/chainfiles/129/creative/201807/636669252543548929-morerewards.png" /></a>
   </li>
@@ -95,6 +95,7 @@
               <div class="ripple" style="opacity: 0.3"></div>
             </div>
           </div>
+          <div class="col-md-12" data-ng-include="getContentUrl('/../common/views/circular-message.html')"></div>
           <div class="dcircular-static" data-ng-if="vm.page.Items.length <= 0"><strong>* image only/non-interactive flyer</strong></div>
        <svg id="myFlyer" version="1.1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -103,7 +104,7 @@
             <rect ng:attr:x="{{item.rect.x}}" ng:attr:y="{{item.rect.y}}" ng:attr:width="{{item.rect.width}}" ng:attr:height="{{item.rect.height}}" opacity="0" data-ng-repeat="item in vm.page.Items | orderBy:['-ItemId']" ng-cloak="" data-gsn-hover-sync="#item_{{item.ItemId}}" data-ng-click="vm.activeItem = item"
             data-ng-class="{'onlist' : isOnList(item)}"></rect>
           </svg>
-        
+
         </div>
         <br />
         <div data-ng-if="vm.digitalCirc.Circulars.length > 1"><a href="javascript:void(0)" data-ng-click="goUrl('/circular')" class="dcircular-back-to-list"><i class="fa fa-arrow-circle-left"></i>
@@ -112,16 +113,16 @@
         <ul class="pagination" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')"></ul></div>
       </div>
       <!-- DFP MOBILE Ad Unit -->
-      
+
       <!-- /94606675/MPF-CircularMOBILE -->
 <!-- <div id='div-gpt-ad-1501259378763-0' style='height:50px; width:320px; margin-left: auto; margin-right:auto;'>
 <script>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1501259378763-0'); });
 </script>
 </div> -->
-      
+
       <!-- END DFP MOBILE Ad Unit -->
-      
+
       <div class="myFakeFlyer" data-sync-height="#myFlyer"
         data-gsn-svg-image=".circImage" data-src="{{vm.page.ImageUrl}}" data-watch="vm.page"></div>
     </div>
