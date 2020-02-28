@@ -1,4 +1,4 @@
-<div style="padding: 15px !important;" class="col-md-12" data-ctrl-circular="" data-ng-init="isListView = (currentPath == '/circular/list' || currentPath == '/circular/text')">
+<div style="padding: 15px !important;" class="col-md-12" data-ctrl-circular-new="" data-ng-init="isListView = (currentPath == '/circular/list' || currentPath == '/circular/text')">
   <div class="hidden-meta" data-gsn-title="{{ChainName}} | circulars"></div>
   <div class="hidden-meta" data-gsn-og-title="{{ChainName}} | circulars"></div>
   <div class="hidden-meta" data-gsn-og-type="circular"></div>
@@ -55,7 +55,7 @@
             <div class="col-md-4 col-sm-6 dcircular-list-single" data-ng-repeat="item in vm.digitalCirc.Circulars">
         <a class="thumbnail dcircular-thumbnail" href="javascript:void(0)" data-ng-click="goUrl('/circular?c=' + ($index + 1) + '&p=1')">
         <div class="circularline">
-           <div class="CircularThumb"><img class="dcircular-image" alt="" data-ng-src="{{item.ImageUrl.replace('upload.gsngrocers.com/', 'upload.brickinc.net/').replace('upload.brickinc.net/', 'cdn2.brickinc.net/rx/300x/up/')}}"></div></div>
+           <div class="CircularThumb"><img class="dcircular-image" alt="" data-ng-src="{{item.SmallImageUrl}}"></div></div>
            <div class="caption dcircular-caption"><h6 style="width: 100%; text-align: center; text-decoration: none;">{{item.CircularTypeName}}</h6></div>
          </a>
          </div>
@@ -95,7 +95,6 @@
               <div class="ripple" style="opacity: 0.3"></div>
             </div>
           </div>
-          <div class="col-md-12" data-ng-include="getContentUrl('/../common/views/circular-message.html')"></div>
           <div class="dcircular-static" data-ng-if="vm.page.Items.length <= 0"><strong>* image only/non-interactive flyer</strong></div>
        <svg id="myFlyer" version="1.1"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
